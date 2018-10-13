@@ -1,11 +1,11 @@
 <nav class="pagination is-centered">
     {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path }}" class="pagination-previous is-info">Previous</a>
+    <a href="{{ site.baseurl }}{{ paginator.previous_page_path }}" class="pagination-previous is-info">Previous</a>
     {% else %}
     <p class="pagination-previous" disabled>Previous</p>
     {% endif %}
     {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path }}" class="pagination-next is-info">Next</a>
+    <a href="{{ site.baseurl }}{{ paginator.next_page_path }}" class="pagination-next is-info">Next</a>
     {% else %}
     <p class="pagination-next" disabled >Next</p>
     {% endif %}
