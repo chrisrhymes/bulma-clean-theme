@@ -4,7 +4,7 @@ tagline: Site Tagline
 email: your-email@domain.com
 description: >
   The website description
-baseurl: ""
+baseurl: "/bulma-clean-theme"
 url: ""
 
 paginate: 5
