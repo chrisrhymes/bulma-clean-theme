@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+  <body>
+    {% include header.html %}
+    {% include hero.html %}
+    <div class="container">
+        <section class="section">
+            <div class="columns is-multiline">
+                <div class="column">
+                    <div class="content">
+                        {{ content }}
+                    </div>
+                </div>
+                {% if site.posts %}
+                <div class="column is-4-desktop is-12-tablet">
+                    {% include latest-posts.html %}
+                </div>
+                {% endif %}
+            </div>
+        </section>
+    </div>
+    {% include footer.html %}
+    <script src="/assets/js/app.js" type="text/javascript"></script>
+  </body>
+</html>
+
