@@ -2,7 +2,7 @@
 <nav class="navbar is-primary" >
     <div class="container">
         <div class="navbar-brand">
-            <a href="/" class="navbar-item">
+            <a href="{{ site.baseurl }}" class="navbar-item">
                 {{ site.title }}
             </a>
             <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
@@ -13,10 +13,10 @@
         </div>
         <div class="navbar-menu" id="navMenu">
             <div class="navbar-start">
-                <a href="/" class="navbar-item">Home</a>
+                <a href="{{ site.baseurl }}" class="navbar-item">Home</a>
                 {% if site.data.navigation %}
                 {% for item in site.data.navigation %}
-                    <a href="/{{ item.link }}" class="navbar-item">{{ item.name }}</a>
+                    <a href="{{ site.baseurl }}/{{ item.link }}" class="navbar-item">{{ item.name }}</a>
                 {% endfor %}
                 {% endif %}
             </div>
