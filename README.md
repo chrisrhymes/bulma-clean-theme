@@ -1,6 +1,6 @@
-# clean-theme
+# bulma-clean-theme
 
-This is a clean and simple Jekyll Theme built with the Bulma framework, providing a modern looking site to start with. 
+This is a clean and simple Jekyll Theme built with the [Bulma](https://bulma.io/) framework, providing a modern looking site to start with. 
 
 
 ## Installation
@@ -17,10 +17,6 @@ And add this line to your Jekyll site's `_config.yml`:
 theme: bulma-clean-theme
 ```
 
-Install the node modules
-
-    $ npm install
-
 And then execute:
 
     $ bundle
@@ -31,9 +27,25 @@ Or install it yourself as:
 
 ## Usage
 
-Create your pages as individual markdown files and use the `layout: default` for normal pages. Set the pages title and subtitle in the frontmatter and it will appear in the hero.
+### Pages 
+
+Create your pages as individual markdown files and use the `layout: page` for normal pages. Set the pages title and subtitle in the frontmatter and it will appear in the hero.
+
+### Posts
 
 If you want posts, create a `_posts` directory to store your posts as per normal Jekyll usage, with the `layout: post`. Next create a `blog` directory with an index.html file that has `layout: blog`
+
+
+### Navigation
+
+For the top navigation, create a navigation.yml file in `_data` directory with the following format with the pages you want to include in the top navigation
+
+```yaml
+- name: Page 1
+  link: page-1
+- name: Blog
+  link: blog
+```
 
 ## Contributing
 

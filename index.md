@@ -1,7 +1,7 @@
 ---
 title: Home
 subtitle: This is the subtitle
-layout: default
+layout: page
 ---
 
 # This is the home page. 
