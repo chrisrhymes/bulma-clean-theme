@@ -1,12 +1,6 @@
 ---
 ---
 
-// Main CSS file
+// Import Main CSS file from theme
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
-
-$family-sans-serif: 'Montserrat', sans-serif;
-$primary: #188eac;
-
-@import "../node_modules/bulma/bulma.sass";
-@import "layout";
+@import "main";

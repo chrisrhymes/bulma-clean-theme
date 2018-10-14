@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.homepage      = "https://www.github.com/chrisrhymes/bulma-clean-theme"
   spec.license       = "MIT"
 
-  spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r!^(assets|_layouts|_includes|_sass|_posts|blog|LICENSE|README|package)!i) }
+  spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r!^(assets|_layouts|_includes|_sass|_posts|blog|LICENSE|README|package|node_modules)!i) }
 
   spec.add_runtime_dependency "jekyll", "~> 3.8"
 
