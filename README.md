@@ -38,13 +38,28 @@ If you want posts, create a `_posts` directory to store your posts as per normal
 
 ### Navigation
 
-For the top navigation, create a navigation.yml file in `_data` directory with the following format with the pages you want to include in the top navigation
+For the top navigation, create a navigation.yml file in `_data` directory with the following format with the pages you want to include in the top navigation. You can now also add items to a dropdown menu.
 
 ```yaml
 - name: Page 1
   link: page-1
 - name: Blog
   link: blog
+  dropdown: 
+    - name: Page 2
+      link: page-2
+```
+
+### Primary Colour
+
+To overwrite the primary theme colour, set a sass variable in `assets/css/app.scss` before importing `main`
+
+```
+---
+---
+$primary: #333333
+// Import Main CSS file from theme
+@import "main";
 ```
 
 ## Contributing

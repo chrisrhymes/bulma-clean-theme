@@ -1,4 +1,7 @@
 - name: Page 1
   link: page-1
+  dropdown:
+    - name: Page 2
+      link: page-2
 - name: Blog
   link: blog
