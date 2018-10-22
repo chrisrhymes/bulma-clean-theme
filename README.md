@@ -57,7 +57,7 @@ To overwrite the primary theme colour, set a sass variable in `assets/css/app.sc
 ```
 ---
 ---
-$primary: #333333
+$primary: #333333;
 // Import Main CSS file from theme
 @import "main";
 ```
