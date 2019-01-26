@@ -2,6 +2,20 @@
 
 This is a clean and simple Jekyll Theme built with the [Bulma](https://bulma.io/) framework, providing a modern looking site to start with. 
 
+## Contents
+
+* [Installation](#installation)
+* [Usage](#usage)
+    * [Pages](#pages)
+    * [Posts](#posts)
+    * [Navigation](#navigation)
+    * [Colours and Styles](#colours-and-styles)
+    * [Sidebar Visibility](#sidebar-visibility)
+    * [Google Analytics](#google-analytics)
+* [Contributing](#contributing)
+* [Development](#development)
+* [Licence](#licence)
+
 
 ## Installation
 
@@ -31,9 +45,18 @@ Or install it yourself as:
 
 Create your pages as individual markdown files and use the `layout: page` for normal pages. Set the pages title and subtitle in the frontmatter and it will appear in the hero.
 
+**New in 0.2** 
+Heros can now display a background image if you provide a `hero_image: /path/to/image.jpg` setting in your page frontmatter, or in the [defaults](https://jekyllrb.com/docs/configuration/front-matter-defaults/) in your sites `_config.yml`
+
+You can also set the height of the hero by providing a bulma hero height class in your frontmatter, such as `hero_height: is-fullwidth`. If you do not provide this, it will revert to is-medium 
+
 ### Posts
 
 If you want posts, create a `_posts` directory to store your posts as per normal Jekyll usage, with the `layout: post`. Next create a `blog` directory with an index.html file that has `layout: blog`
+
+**New in 0.2** It will now display an image in the blog page if you set `image: /path/to/image.jpg` in your post's or page's frontmatter, or in the [defaults](https://jekyllrb.com/docs/configuration/front-matter-defaults/) in your sites `_config.yml`
+
+You can also set the height of the hero by providing a bulma hero height class in your frontmatter, such as `hero_height: is-fullwidth`. If you do not provide this, it will revert to is-medium
 
 
 ### Navigation
@@ -50,7 +73,7 @@ For the top navigation, create a navigation.yml file in `_data` directory with t
       link: page-2
 ```
 
-### Primary Colour
+### Colours and Styles
 
 To overwrite the primary theme colour, set a sass variable in `assets/css/app.scss` before importing `main`
 
@@ -61,6 +84,16 @@ $primary: #333333;
 // Import Main CSS file from theme
 @import "main";
 ```
+
+You can overwrite any of the [Bulma initial variables](http://versions.bulma.io/0.7.0/documentation/overview/variables/) in this way as long as they are declared before the `@import "main"'`
+
+### Sidebar Visibility - New in 0.2
+
+If you want to show the sidebar with latest posts then set `show_sidebar: true` in the pages frontmatter, or in the [defaults](https://jekyllrb.com/docs/configuration/front-matter-defaults/) in your sites `_config.yml`
+
+### Google Anaytics - New in 0.2
+
+To enable Google Analytics add `google_analytics: UA-xxxxxxxx` to your `_config.yml` replacing the UA-xxxxxxxx with your Google Analytics property
 
 ## Contributing
 

@@ -4,22 +4,22 @@
   <body>
     {% include header.html %}
     {% include hero.html %}
-    <div class="container">
-        <section class="section">
+    <section class="section">
+        <div class="container">
             <div class="columns is-multiline">
                 <div class="column">
                     <div class="content">
                         {{ content }}
                     </div>
                 </div>
-                {% if site.posts %}
+                {% if site.posts and page.show_sidebar %}
                 <div class="column is-4-desktop is-12-tablet">
                     {% include latest-posts.html %}
                 </div>
                 {% endif %}
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
     {% include footer.html %}
     <script src="{{ site.baseurl }}/assets/js/app.js" type="text/javascript"></script>
   </body>

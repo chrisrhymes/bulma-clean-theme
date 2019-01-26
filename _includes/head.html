@@ -5,4 +5,7 @@
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/app.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     {% seo %}
+    {%- if site.google_analytics -%}
+      {%- include google-analytics.html -%}
+    {%- endif -%}
 </head>

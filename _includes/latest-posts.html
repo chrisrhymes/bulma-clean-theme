@@ -3,22 +3,7 @@
 <div class="columns is-multiline">
     {% for post in site.posts limit:3 %}
     <div class="column is-12">
-        <div class="card">
-            <header class="card-header">
-                <a class="card-header-title" href="{{ site.baseurl }}{{ post.url }}">{{ post.title}}</a>
-            </header>
-            <div class="card-content">
-                <div class="content">
-                    <p>{{ post.excerpt }}</p>
-                </div>
-                <div class="has-text-centered">
-                    <a href="{{ site.baseurl }}{{ post.url }}" class="button is-primary">Read more</a>
-                </div>
-            </div>
-            <footer class="card-footer">
-                <p class="card-footer-item">Published: {{ post.date | date: "%b %-d, %Y" }}</p>
-            </footer>
-        </div>
+        {% include post-card.html %}
     </div>
     {% endfor %}
 </div>
