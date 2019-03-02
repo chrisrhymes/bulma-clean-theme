@@ -7,6 +7,11 @@
     <section class="section">
         <div class="container">
             <div class="columns is-multiline">
+                {% if page.menubar %}
+                <div class="column is-4-desktop is-4-tablet">
+                    {% include menubar.html %}
+                </div>
+                {% endif %}
                 <div class="column">
                     <div class="content">
                         {{ content }}

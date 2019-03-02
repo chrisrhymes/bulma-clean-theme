@@ -1,19 +1,36 @@
 ---
-title: Home
-subtitle: This is the subtitle
+title: Bulma Clean Theme
+subtitle: This is the demo site for Bulma Clean Theme
 layout: page
 ---
 
-# This is the home page. 
+# Bulma Clean Theme demo website
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sollicitudin ultrices eros id accumsan. Vestibulum dictum volutpat sapien in molestie. Nunc auctor felis quis nibh tincidunt, vel sodales dolor viverra. Donec elementum dolor nisl, nec imperdiet sapien semper in.
+This website showcases the options for the Bulma Clean theme. The theme is available as a ruby gem or can be used with GitHub pages. 
 
-## Another Title 
+## Ruby Gem
 
-Integer ligula magna, vulputate in arcu vel, auctor aliquet enim. Interdum et malesuada fames ac ante ipsum primis in faucibus. In hendrerit commodo ex, in blandit est iaculis id.
+The ruby gem is available on the Ruby Gems website at the following location. [https://rubygems.org/gems/bulma-clean-theme](https://rubygems.org/gems/bulma-clean-theme)
 
-### Subtitle
+## GitHub Pages
 
-Suspendisse potenti. Vivamus vitae felis placerat, consectetur tellus sed, consequat nulla. Sed id semper nulla. Nunc dui ligula, consequat id eleifend non, iaculis ut ex. Aenean fringilla convallis placerat. Aenean pulvinar accumsan magna, molestie aliquet nunc ornare nec. Sed commodo, turpis eget dapibus auctor, metus tellus eleifend quam, ut aliquet libero ligula id erat. Curabitur quis quam sed nibh efficitur vulputate. 
+The theme can be used with GitHub Pages bu setting the `remote_theme` in your Jekyll sites `_config.yml`
 
-Vivamus fringilla quam non augue dictum dictum. Praesent semper dolor et vehicula sagittis. Pellentesque ornare, est non fringilla consequat, quam felis cursus neque, nec vulputate purus nisl et elit.
+```
+remote_theme: chrisrhymes/bulma-clean-theme
+```
+
+## Instructions
+
+For full instructions, please see the Readme at the GitHub repo:
+[https://github.com/chrisrhymes/bulma-clean-theme/blob/master/README.md](https://github.com/chrisrhymes/bulma-clean-theme/blob/master/README.md)
+
+## Page Layouts
+
+This demo site showcases the available page layout options.
+
+* Page With Sidebar
+* Page Without Sidebar
+* Page With Menubar
+* Blog
+* Post

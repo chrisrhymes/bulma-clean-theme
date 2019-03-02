@@ -1,7 +1,11 @@
-- name: Page 1
-  link: page-1
+- name: Pages
+  link: #
   dropdown:
-    - name: Page 2
-      link: page-2
+    - name: Page With Sidebar
+      link: /page-1/
+    - name: Page No Sidebar
+      link: /page-2/
+    - name: Page With Menubar
+      link: /page-3/
 - name: Blog
-  link: blog
+  link: /blog/

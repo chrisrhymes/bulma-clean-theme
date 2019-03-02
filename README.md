@@ -11,6 +11,7 @@ This is a clean and simple Jekyll Theme built with the [Bulma](https://bulma.io/
     * [Navigation](#navigation)
     * [Colours and Styles](#colours-and-styles)
     * [Sidebar Visibility](#sidebar-visibility)
+    * [Menubar](#menubar)
     * [Google Analytics](#google-analytics)
 * [Contributing](#contributing)
 * [Development](#development)
@@ -65,13 +66,15 @@ For the top navigation, create a navigation.yml file in `_data` directory with t
 
 ```yaml
 - name: Page 1
-  link: page-1
+  link: /page-1/
 - name: Blog
-  link: blog
+  link: /blog/
   dropdown: 
     - name: Page 2
-      link: page-2
+      link: /page-2/
 ```
+
+For the current page to have an active class, ensure the `link:` format matches your [permalink](https://jekyllrb.com/docs/permalinks/#extensionless-permalinks) format. The above example will work with `permalink: pretty` setting in your `_config.yml`
 
 ### Colours and Styles
 
@@ -87,11 +90,76 @@ $primary: #333333;
 
 You can overwrite any of the [Bulma initial variables](http://versions.bulma.io/0.7.0/documentation/overview/variables/) in this way as long as they are declared before the `@import "main"'`
 
-### Sidebar Visibility - New in 0.2
+### Sidebar Visibility
+
+**New in 0.2**
 
 If you want to show the sidebar with latest posts then set `show_sidebar: true` in the pages frontmatter, or in the [defaults](https://jekyllrb.com/docs/configuration/front-matter-defaults/) in your sites `_config.yml`
 
-### Google Anaytics - New in 0.2
+### Menubar
+
+**New in 0.3**
+
+The menubar gets its content from a data file in your site's `_data` directory. Simply set the name of your data file in the page's menubar setting in the frontmatter. 
+
+```yml
+show_sidebar: false
+menubar: example_menu
+```
+
+You will probably want to disable the show_sidebar otherwise there will be little room for the page content. 
+
+#### Creating a menubar data file
+
+Create a data file in the _data directory and use the following format (if using yml)
+
+```yml
+- label: Example Menu
+  items:
+    - name: Home
+      link: /
+    - name: Pages
+      link: #
+      items:
+        - name: Page With Sidebar 
+          link: /page-1/
+        - name: Page Without Sidebar
+          link: /page-2/
+        - name: Page With Menubar
+          link: /page-3/
+    - name: Blog
+      link: /blog/
+```
+
+For the current page to have an active class, ensure the `link:` format matches your [permalink](https://jekyllrb.com/docs/permalinks/#extensionless-permalinks) format. The above example will work with `permalink: pretty` setting in your `_config.yml`
+
+### Multiple menus
+
+You may make multiple menus in the same file, separated by the label
+
+```yml
+- label: Menu Label
+  items:
+    - name: Example item
+      link: /example-item/
+- label: Second Menu Label
+  items:
+    - name: Parent Item
+      link: /parent-item/
+      items:
+        - name: Sublink 
+          link: /sublink/
+        - name: Sublink 2
+          link: /sublink2/
+- label: Third Menu Label
+  items:
+    - name: Another example item
+      link: /another-example-item/
+```
+
+### Google Anaytics 
+
+**New in 0.2**
 
 To enable Google Analytics add `google_analytics: UA-xxxxxxxx` to your `_config.yml` replacing the UA-xxxxxxxx with your Google Analytics property
 
