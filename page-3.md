@@ -26,7 +26,7 @@ You will probably want to disable the show_sidebar otherwise there will be littl
 
 Create a data file in the _data directory and use the following format (if using yml)
 
-```
+```yml
 - label: Example Menu
   items:
     - name: Home
@@ -48,7 +48,7 @@ Create a data file in the _data directory and use the following format (if using
 
 You may make multiple menus in the same file, separated by the label
 
-```
+```yml
 - label: Menu Label
   items:
     - name: Example item

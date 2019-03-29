@@ -13,9 +13,8 @@
                 </div>
                 {% endif %}
                 <div class="column">
-                    <div class="content">
-                        {{ content }}
-                    </div>
+                    {% include tabs.html %}
+                    {{ content }}
                 </div>
                 {% if site.posts and page.show_sidebar %}
                 <div class="column is-4-desktop is-12-tablet">

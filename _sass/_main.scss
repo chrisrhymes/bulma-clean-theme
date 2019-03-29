@@ -4,5 +4,9 @@
 $family-sans-serif: 'Montserrat', sans-serif;
 $primary: #188eac !default;
 
+$tabs-link-active-color: $primary;
+$tabs-link-active-border-bottom-color: $primary;
+
 @import "../node_modules/bulma/bulma.sass";
 @import "layout";
+@import "syntax"

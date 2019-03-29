@@ -16,7 +16,7 @@ The ruby gem is available on the Ruby Gems website at the following location. [h
 
 The theme can be used with GitHub Pages bu setting the `remote_theme` in your Jekyll sites `_config.yml`
 
-```
+```yml
 remote_theme: chrisrhymes/bulma-clean-theme
 ```
 
@@ -32,5 +32,6 @@ This demo site showcases the available page layout options.
 * Page With Sidebar
 * Page Without Sidebar
 * Page With Menubar
+* Page With Tabs
 * Blog
 * Post

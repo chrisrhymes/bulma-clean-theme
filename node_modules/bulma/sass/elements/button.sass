@@ -35,6 +35,8 @@ $button-static-border-color: $grey-lighter !default
 =button-small
   border-radius: $radius-small
   font-size: $size-small
+=button-normal
+  font-size: $size-normal
 =button-medium
   font-size: $size-medium
 =button-large
@@ -104,7 +106,8 @@ $button-static-border-color: $grey-lighter !default
     &.is-active
       background-color: darken($button-text-hover-background-color, 5%)
       color: $button-text-hover-color
-    &[disabled]
+    &[disabled],
+    fieldset[disabled] &
       background-color: transparent
       border-color: transparent
       box-shadow: none
@@ -131,7 +134,8 @@ $button-static-border-color: $grey-lighter !default
         background-color: darken($color, 5%)
         border-color: transparent
         color: $color-invert
-      &[disabled]
+      &[disabled],
+      fieldset[disabled] &
         background-color: $color
         border-color: transparent
         box-shadow: none
@@ -140,7 +144,8 @@ $button-static-border-color: $grey-lighter !default
         color: $color
         &:hover
           background-color: darken($color-invert, 5%)
-        &[disabled]
+        &[disabled],
+        fieldset[disabled] &
           background-color: $color-invert
           border-color: transparent
           box-shadow: none
@@ -160,7 +165,8 @@ $button-static-border-color: $grey-lighter !default
         &.is-loading
           &::after
             border-color: transparent transparent $color $color !important
-        &[disabled]
+        &[disabled],
+        fieldset[disabled] &
           background-color: transparent
           border-color: $color
           box-shadow: none
@@ -173,7 +179,8 @@ $button-static-border-color: $grey-lighter !default
         &:focus
           background-color: $color-invert
           color: $color
-        &[disabled]
+        &[disabled],
+        fieldset[disabled] &
           background-color: transparent
           border-color: $color-invert
           box-shadow: none
@@ -181,12 +188,15 @@ $button-static-border-color: $grey-lighter !default
   // Sizes
   &.is-small
     +button-small
+  &.is-normal
+    +button-normal
   &.is-medium
     +button-medium
   &.is-large
     +button-large
   // Modifiers
-  &[disabled]
+  &[disabled],
+  fieldset[disabled] &
     background-color: $button-disabled-background-color
     border-color: $button-disabled-border-color
     box-shadow: $button-disabled-shadow
@@ -225,6 +235,16 @@ $button-static-border-color: $grey-lighter !default
     margin-bottom: -0.5rem
   &:not(:last-child)
     margin-bottom: 1rem
+  // Sizes
+  &.are-small
+    .button:not(.is-normal):not(.is-medium):not(.is-large)
+      +button-small
+  &.are-medium
+    .button:not(.is-small):not(.is-normal):not(.is-large)
+      +button-medium
+  &.are-large
+    .button:not(.is-small):not(.is-normal):not(.is-medium)
+      +button-large
   &.has-addons
     .button
       &:not(:first-child)

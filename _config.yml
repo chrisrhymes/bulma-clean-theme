@@ -16,6 +16,8 @@ plugins:
   - jekyll-paginate
   - jekyll-feed
   - jekyll-seo-tag
+  - kramdown
+  - rouge
 
 exclude: 
   - Gemfile
@@ -51,3 +53,6 @@ defaults:
       layout: post
       image: https://via.placeholder.com/800x600
       show_sidebar: false
+
+markdown: kramdown
+highlighter: rouge
