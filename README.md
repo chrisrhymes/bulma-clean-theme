@@ -1,5 +1,7 @@
 # bulma-clean-theme
 
+[![Gem Version](https://badge.fury.io/rb/bulma-clean-theme.svg)](https://badge.fury.io/rb/bulma-clean-theme)
+
 This is a clean and simple Jekyll Theme built with the [Bulma](https://bulma.io/) framework, providing a modern looking site to start with. 
 
 ## Contents
@@ -14,6 +16,7 @@ This is a clean and simple Jekyll Theme built with the [Bulma](https://bulma.io/
     * [Menubar](#menubar)
     * [Tabs](#tabs)
     * [Google Analytics](#google-analytics)
+    * [Footer](#footer)
 * [Contributing](#contributing)
 * [Development](#development)
 * [Licence](#licence)
@@ -218,6 +221,27 @@ If you don't wish to show icons then simply omit the option from your yaml file.
 **New in 0.2**
 
 To enable Google Analytics add `google_analytics: UA-xxxxxxxx` to your `_config.yml` replacing the UA-xxxxxxxx with your Google Analytics property
+
+### Footer
+
+**New in 0.4.1**
+
+To add some footer links, create a yaml file in the `_data` directory using the following format
+
+```yml
+- name: Blog
+  link: /blog/
+- name: About
+  link: /about/
+- name: Privacy Policy
+  link: /privacy-policy/
+```
+
+Then add the name of your yaml file (without the .yml extension) into the footer_menu setting in the `_config.yml`
+
+```yml
+footer_menu: example_footer_menu
+```
 
 ## Contributing
 

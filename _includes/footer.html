@@ -1,7 +1,20 @@
 <footer class="footer">
     <div class="container">
-        <div class="content is-small">
-            <p class="has-text-centered">Theme built by <a href="https://www.csrhymes.com">C.S. Rhymes</a></a></p>
+        
+        {% if site.footer_menu %}
+        <div class="columns is-multiline">
+            {% for item in site.data[site.footer_menu] %}
+            <div class="column has-text-centered">
+                <div>
+                    <a href="{{ item.link | prepend: site.baseurl }}" class="link">{{ item.name }}</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        <div class="content is-small has-text-centered">
+            <p class="">Theme built by <a href="https://www.csrhymes.com">C.S. Rhymes</a></a></p>
         </div>
     </div>
 </footer>

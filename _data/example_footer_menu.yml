@@ -1,0 +1,8 @@
+- name: Home
+  link: /
+- name: Blog
+  link: /blog/
+- name: About
+  link: /about/
+- name: Privacy Policy
+  link: /privacy-policy/
