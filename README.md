@@ -315,7 +315,7 @@ If you don't want to display an avatar image then a default user icon will be di
 
 #### Product Category Page
 
-To create a page listing your products you will need to create a category page. Create a page, for example `products.md`, with the `layout: category` in the frontmatter. You can set the sort order of the products using `sort: title` to sort by the title, or by any setting in your product pages, such as price, rating or any custom frontmatter tags you wish to set. 
+To create a page listing your products you will need to create a product category page. Create a page, for example `products.md`, with the `layout: product-category` in the frontmatter. You can set the sort order of the products using `sort: title` to sort by the title, or by any setting in your product pages, such as price, rating or any custom frontmatter tags you wish to set. 
 
 ```yml
 ---
