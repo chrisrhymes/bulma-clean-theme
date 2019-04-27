@@ -9,5 +9,7 @@
       link: /page-3/
     - name: Page With Tabs
       link: /page-4/
+- name: Products
+  link: /products/
 - name: Blog
   link: /blog/
