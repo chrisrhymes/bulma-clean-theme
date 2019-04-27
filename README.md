@@ -17,6 +17,7 @@ This is a clean and simple Jekyll Theme built with the [Bulma](https://bulma.io/
     * [Tabs](#tabs)
     * [Google Analytics](#google-analytics)
     * [Footer](#footer)
+    * [Products](#products)
 * [Contributing](#contributing)
 * [Development](#development)
 * [Licence](#licence)
@@ -241,6 +242,89 @@ Then add the name of your yaml file (without the .yml extension) into the footer
 
 ```yml
 footer_menu: example_footer_menu
+```
+
+### Products
+
+**New in 0.5**
+
+Now you can add simple product pages to your site using collections. 
+
+#### Product pages
+
+Start by creating a `_products` directory to hold your product pages and create a new page for each product, such as `product1.md`. In the front matter for this page you can set the standard settings, such as your title, subtitle, description (for meta-description), hero_image, as well as the additional product settings such as price, product_code, image, features and rating. 
+
+```yml
+---
+title: Product 1 Name
+subtitle: Product 1 tagline here
+description: This is a product description
+hero_image: /img/hero-img.jpg
+product_code: ABC124
+layout: product
+image: https://via.placeholder.com/640x480
+price: £1.99 + VAT
+features:
+    - label: Great addition to any home
+      icon: fa-location-arrow
+    - label: Comes in a range of styles
+      icon: fa-grin-stars
+    - label: Available in multiple sizes
+      icon: fa-fighter-jet
+rating: 3
+---
+```
+
+The text you write for the page content will be displayed as the product description. 
+
+Next, add the following to your `_config.yml` to use collections to process the product pages and output them as individual pages. 
+
+```yml
+collections:
+  products: 
+    output: true
+    layout: product
+    image: https://via.placeholder.com/800x600
+    show_sidebar: false
+```
+
+You can also set default product page values here if you like, such as the layout or image. 
+
+#### Product Reviews
+
+To add reviews to your product page, create a `reviews` directory in the `_data` directory and add a yml file with the name of the product_code from the product page, for example `_data/reviews/ABC124.yml`. Create the reviews using the following format:
+
+```yml
+- name: Mr E Xample
+  rating: 4
+  title: Great product, highly recommended
+  date: 01/01/2019
+  avatar: https://bulma.io/images/placeholders/128x128.png
+  description: >
+    The product worked really well. I would recommend this to most people to use. Delivery was quick and reasonable. 
+    Would recommend this to my friends. 
+- name: Mrs R E View
+  rating: 5
+  title: Nice, really liked this
+  date: 02/02/2019
+  description: >
+    The product worked exactly as described. 
+```
+
+If you don't want to display an avatar image then a default user icon will be displayed. If you don't want to display a rating then omit it from the yml.
+
+#### Product Category Page
+
+To create a page listing your products you will need to create a category page. Create a page, for example `products.md`, with the `layout: category` in the frontmatter. You can set the sort order of the products using `sort: title` to sort by the title, or by any setting in your product pages, such as price, rating or any custom frontmatter tags you wish to set. 
+
+```yml
+---
+title: Products
+subtitle: Check out our range of products
+layout: product-category
+show_sidebar: false
+sort: title
+---
 ```
 
 ## Contributing
