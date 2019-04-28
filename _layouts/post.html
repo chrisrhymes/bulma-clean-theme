@@ -2,9 +2,12 @@
 layout: default
 ---
 
-<p>Published: {{ page.date | date: "%b %-d, %Y" }} by {{ page.author }}</p>
+<div class="content">
 
-{{ content }}
+    <p>Published: {{ page.date | date: "%b %-d, %Y" }} by {{ page.author }}</p>
+
+    {{ content }}
+</div>
 
 <div class="tags">
     {% for tag in page.tags %}
