@@ -9,6 +9,8 @@
       link: /page-3/
     - name: Page With Tabs
       link: /page-4/
+    - name: Page Without Footer
+      link: /page-5/
 - name: Products
   link: /products/
 - name: Blog

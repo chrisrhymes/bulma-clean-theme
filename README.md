@@ -18,6 +18,7 @@ This is a clean and simple Jekyll Theme built with the [Bulma](https://bulma.io/
     * [Google Analytics](#google-analytics)
     * [Footer](#footer)
     * [Products](#products)
+    * [Scripts](#scripts)
 * [Contributing](#contributing)
 * [Development](#development)
 * [Licence](#licence)
@@ -244,6 +245,12 @@ Then add the name of your yaml file (without the .yml extension) into the footer
 footer_menu: example_footer_menu
 ```
 
+#### Hiding the footer
+
+**New in 0.5.2**
+
+If you would like to hide the footer on a particular page then set `hide_footer: true` in the page's frontmatter.
+
 ### Products
 
 **New in 0.5**
@@ -326,6 +333,12 @@ show_sidebar: false
 sort: title
 ---
 ```
+
+### Scripts
+
+**New in 0.5.2**
+
+There are two new files within the includes directory called `head-scripts.html` and `footer-scripts.html`. These are empty files by default but allow you to add any additional JavaScript to your site, such as the script for AddThis share buttons, in the `<head>` or after the `<footer>` of the page.
 
 ## Contributing
 

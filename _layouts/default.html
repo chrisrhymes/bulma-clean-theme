@@ -24,8 +24,11 @@
             </div>
         </div>
     </section>
-    {% include footer.html %}
+    {% unless page.hide_footer %}
+        {% include footer.html %}
+    {% endunless %}
     <script src="{{ site.baseurl }}/assets/js/app.js" type="text/javascript"></script>
+    {%- include footer-scripts.html -%}
   </body>
 </html>
 
