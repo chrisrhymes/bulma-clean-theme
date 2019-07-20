@@ -15,5 +15,7 @@
           link: /page-4/
         - name: Page Without Footer
           link: /page-5/
+        - name: Landing Page With Callouts
+          link: /landing/
     - name: Blog
       link: /blog/

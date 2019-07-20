@@ -2,6 +2,8 @@
 title: Bulma Clean Theme
 subtitle: This is the demo site for Bulma Clean Theme
 layout: page
+callouts: home_callouts
+show_sidebar: false
 ---
 
 # Bulma Clean Theme demo website
@@ -33,5 +35,6 @@ This demo site showcases the available page layout options.
 * Page Without Sidebar
 * Page With Menubar
 * Page With Tabs
+* Landing Page With Callouts
 * Blog
 * Post
