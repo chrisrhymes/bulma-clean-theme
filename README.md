@@ -1,6 +1,7 @@
 # bulma-clean-theme
 
 [![Gem Version](https://badge.fury.io/rb/bulma-clean-theme.svg)](https://badge.fury.io/rb/bulma-clean-theme)
+![Gem](https://img.shields.io/gem/dt/bulma-clean-theme.svg)
 
 This is a clean and simple Jekyll Theme built with the [Bulma](https://bulma.io/) framework, providing a modern looking site to start with. 
 
@@ -19,6 +20,7 @@ This is a clean and simple Jekyll Theme built with the [Bulma](https://bulma.io/
     * [Footer](#footer)
     * [Products](#products)
     * [Scripts](#scripts)
+    * [Callouts](#callouts)
 * [Contributing](#contributing)
 * [Development](#development)
 * [Licence](#licence)
@@ -56,6 +58,9 @@ Create your pages as individual markdown files and use the `layout: page` for no
 Heros can now display a background image if you provide a `hero_image: /path/to/image.jpg` setting in your page frontmatter, or in the [defaults](https://jekyllrb.com/docs/configuration/front-matter-defaults/) in your sites `_config.yml`
 
 You can also set the height of the hero by providing a bulma hero height class in your frontmatter, such as `hero_height: is-fullwidth`. If you do not provide this, it will revert to is-medium 
+
+**New in 0.5.4**
+If you would like to add a call to action button in the hero then add `hero_link` and `hero_link_text` to the page's frontmatter.
 
 ### Posts
 
@@ -339,6 +344,45 @@ sort: title
 **New in 0.5.2**
 
 There are two new files within the includes directory called `head-scripts.html` and `footer-scripts.html`. These are empty files by default but allow you to add any additional JavaScript to your site, such as the script for AddThis share buttons, in the `<head>` or after the `<footer>` of the page.
+
+### Callouts
+
+**New in 0.5.4**
+
+You can now add callouts to a page to make a landing page style layout. 
+
+#### Create a callout data file
+
+Create a data file following the below format. The style is for classes to set the background colour and sizes you would like to use of the Bulma hero container for the callouts. 
+
+The items have 5 fields, but only the title and subtitle are required. 
+
+```yml
+style: is-light
+items:
+  - title: Example callout 1
+    subtitle: Example subtitle 1
+    icon: fa-space-shuttle
+    description: >
+      The example description text goes here and can be multiple lines.
+
+      For example, such as this. 
+    call_to_action_name: Call to action 1
+    call_to_action_link: /page-1/
+```
+
+#### Set the callouts in the frontmatter
+
+To display the callouts on your page, add a callouts property in the frontmatter and set it to the name of your data file without the extension.
+
+```yml
+---
+layout: page
+title: Example Landing Page
+subtitle: This is an example landing page
+callouts: example_callouts
+---
+```
 
 ## Contributing
 
