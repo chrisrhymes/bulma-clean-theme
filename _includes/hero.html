@@ -3,6 +3,9 @@
         <div class="container">
             <p class="title is-2">{{ page.title }}</p>
             <p class="subtitle is-3">{{ page.subtitle }}</p>
+            {% if page.hero_link %}
+                <a href="{{ page.hero_link | prepend: site.baseurl  }}" class="button is-info is-large">{{ page.hero_link_text }}</a>
+            {% endif %}
         </div>
     </div>
 </section>

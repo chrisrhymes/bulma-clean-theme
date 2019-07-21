@@ -3,6 +3,8 @@ layout: page
 title: Example Landing Page
 subtitle: This is an example landing page with callouts
 hero_height: is-large
+hero_link: /page-1/
+hero_link_text: Example Call To Action
 show_sidebar: false
 callouts: example_callouts
 ---
@@ -10,6 +12,22 @@ callouts: example_callouts
 ## General page content
 
 This is the rest of the page content. You can add what you like here.
+
+## Hero Link
+
+If you would like to add a call to action button in the hero then add `hero_link` and `hero_link_text` to the page's frontmatter
+
+```yml
+---
+layout: page
+title: Example Landing Page
+subtitle: This is an example landing page with callouts
+hero_height: is-large
+hero_link: /page-1/
+hero_link_text: Example Call To Action
+---
+```
+
 
 ## Create a callout data file
 
@@ -58,8 +76,6 @@ To display the callouts on your page, add a callouts property in the frontmatter
 layout: page
 title: Example Landing Page
 subtitle: This is an example landing page
-hero_height: is-large
-show_sidebar: false
 callouts: example_callouts
 ---
 ```

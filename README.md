@@ -59,6 +59,9 @@ Heros can now display a background image if you provide a `hero_image: /path/to/
 
 You can also set the height of the hero by providing a bulma hero height class in your frontmatter, such as `hero_height: is-fullwidth`. If you do not provide this, it will revert to is-medium 
 
+**New in 0.5.4**
+If you would like to add a call to action button in the hero then add `hero_link` and `hero_link_text` to the page's frontmatter.
+
 ### Posts
 
 If you want posts, create a `_posts` directory to store your posts as per normal Jekyll usage, with the `layout: post`. Next create a `blog` directory with an index.html file that has `layout: blog`
