@@ -1,3 +1,10 @@
+{% if page.menubar and page.show_sidebar %} 
+    {% assign content_width = 'is-4' %} 
+{% elsif page.menubar or page.show_sidebar %} 
+    {% assign content_width = 'is-8' %} 
+{% else %} 
+    {% assign content_width = 'is-12' %} 
+{% endif %}
 <!DOCTYPE html>
 <html>
   {% include head.html %}
@@ -7,13 +14,13 @@
     {% include callouts.html %}
     <section class="section">
         <div class="container">
-            <div class="columns is-multiline">
+            <div class="columns">
                 {% if page.menubar %}
                 <div class="column is-4-desktop is-4-tablet">
                     {% include menubar.html %}
                 </div>
                 {% endif %}
-                <div class="column">
+                <div class="column {{ content_width }}">
                     {% include tabs.html %}
                     {{ content }}
                 </div>
