@@ -1,0 +1,41 @@
+intro: >
+  This is some introduction text for the showcases.
+
+  This is an example showcase page to show you how you can use to showcase some of your work.
+items:
+  - title: C.S. Rhymes Website
+    description: >
+      The C.S. Rhymes website is built using Bulma Clean Theme.
+
+      This website utilises the built in blog and products layouts that come included with the theme.
+    image: /bulma-clean-theme/img/csrhymes-com.jpg
+    link: https://www.csrhymes.com
+    link_text: View the CS Rhymes Website
+    tags: Bulma,CSS,Jekyll
+  - title: Example showcase item
+    description: >
+      This is the example description for this item that you are showcasing and has a background image, title, description, tags and a link.
+
+      The description content will be displayed here.
+
+      The tags are displayed below the text.
+    features:
+      - This is a feature
+      - This is a feature
+      - This is a feature
+    image: https://via.placeholder.com/1024x788
+    link: https://www.csrhymes.com
+    link_text: View example
+    tags: PHP,CSS,JavaScript
+  - title: Third showcase item
+    description: >
+      This is the example description for the third item that you are showcasing.
+
+      The description content will be displayed here.
+    features:
+      - This is a feature
+      - This is a feature
+      - This is a feature
+    image: https://via.placeholder.com/1024x788
+    link: https://www.csrhymes.com
+    link_text: View example
