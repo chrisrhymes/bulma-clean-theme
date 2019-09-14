@@ -10,7 +10,7 @@
   {% include head.html %}
   <body>
     {% include header.html %}
-    {% unless page.no_hero %}
+    {% unless page.hide_hero %}
         {% include hero.html %}
     {% endunless %}
     {% include callouts.html %}
