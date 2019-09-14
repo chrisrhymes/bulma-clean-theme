@@ -1,5 +1,5 @@
 - name: Pages
-  link: #
+  link: /#
   dropdown:
     - name: Page With Sidebar
       link: /page-1/
@@ -11,6 +11,8 @@
       link: /page-4/
     - name: Page Without Footer
       link: /page-5/
+    - name: Page Without Hero
+      link: /page-without-hero/
     - name: Landing Page With Callouts
       link: /landing/
 - name: Products

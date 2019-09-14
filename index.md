@@ -38,6 +38,8 @@ This demo site showcases the available page layout options.
 * Page Without Sidebar
 * Page With Menubar
 * Page With Tabs
+* Page Without Footer
+* Page Without Hero
 * Landing Page With Callouts
 * Blog
 * Post
