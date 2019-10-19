@@ -10,6 +10,8 @@ This is a clean and simple Jekyll Theme built with the [Bulma](https://bulma.io/
 * [Installation](#installation)
 * [Usage](#usage)
     * [Pages](#pages)
+        * [Page Hero](#page-hero)
+        * [Table Of Contents](#table-of-contents)
     * [Posts](#posts)
     * [Navigation](#navigation)
     * [Colours and Styles](#colours-and-styles)
@@ -21,6 +23,7 @@ This is a clean and simple Jekyll Theme built with the [Bulma](https://bulma.io/
     * [Products](#products)
     * [Scripts](#scripts)
     * [Callouts](#callouts)
+    * [Favicon](#favicon)
 * [Contributing](#contributing)
 * [Development](#development)
 * [Licence](#licence)
@@ -52,26 +55,33 @@ Or install it yourself as:
 
 ### Pages 
 
-Create your pages as individual markdown files and use the `layout: page` for normal pages. Set the pages title and subtitle in the frontmatter and it will appear in the hero.
+Create your pages as individual markdown files and use the `layout: page` for normal pages. Set the pages title and subtitle in the front matter and it will appear in the hero.
+
+#### Page Hero
 
 **New in 0.2** 
-Heros can now display a background image if you provide a `hero_image: /path/to/image.jpg` setting in your page frontmatter, or in the [defaults](https://jekyllrb.com/docs/configuration/front-matter-defaults/) in your sites `_config.yml`
+Heros can now display a background image if you provide a `hero_image: /path/to/image.jpg` setting in your page front matter, or in the [defaults](https://jekyllrb.com/docs/configuration/front-matter-defaults/) in your sites `_config.yml`
 
-You can also set the height of the hero by providing a bulma hero height class in your frontmatter, such as `hero_height: is-fullwidth`. If you do not provide this, it will revert to is-medium 
+You can also set the height of the hero by providing a bulma hero height class in your front matter, such as `hero_height: is-fullwidth`. If you do not provide this, it will revert to is-medium 
 
 **New in 0.5.4**
-If you would like to add a call to action button in the hero then add `hero_link` and `hero_link_text` to the page's frontmatter.
+If you would like to add a call to action button in the hero then add `hero_link` and `hero_link_text` to the page's front matter.
 
 **New in 0.5.7**
-If you would like to hide the hero, you can set `hide_hero: true` in the page's frontmatter.
+If you would like to hide the hero, you can set `hide_hero: true` in the page's front matter.
+
+#### Table Of Contents
+
+**New in 0.5.8**
+If you want to display a table of contents (toc) then add `toc: true` to your page's front matter. You can customise the default table of contents title by setting `toc_title: My Custom Title` in the page's front matter. 
 
 ### Posts
 
 If you want posts, create a `_posts` directory to store your posts as per normal Jekyll usage, with the `layout: post`. Next create a `blog` directory with an index.html file that has `layout: blog`
 
-**New in 0.2** It will now display an image in the blog page if you set `image: /path/to/image.jpg` in your post's or page's frontmatter, or in the [defaults](https://jekyllrb.com/docs/configuration/front-matter-defaults/) in your sites `_config.yml`
+**New in 0.2** It will now display an image in the blog page if you set `image: /path/to/image.jpg` in your post's or page's front matter, or in the [defaults](https://jekyllrb.com/docs/configuration/front-matter-defaults/) in your sites `_config.yml`
 
-You can also set the height of the hero by providing a bulma hero height class in your frontmatter, such as `hero_height: is-fullwidth`. If you do not provide this, it will revert to is-medium
+You can also set the height of the hero by providing a Bulma hero height class in your front matter, such as `hero_height: is-fullwidth`. If you do not provide this, it will revert to is-medium
 
 
 ### Navigation
@@ -175,7 +185,7 @@ You may make multiple menus in the same file, separated by the label
 
 **New in 0.4**
 
-The tabs gets its content from a data file in your site's `_data` directory. Simply set the name of your data file in the page's menubar setting in the frontmatter. 
+The tabs gets its content from a data file in your site's `_data` directory. Simply set the name of your data file in the page's menubar setting in the front matter. 
 
 ```yaml
 title: Page with tabs
@@ -383,6 +393,10 @@ title: Example Landing Page
 subtitle: This is an example landing page
 callouts: example_callouts
 ```
+
+### Favicon
+
+The default favicon path is `{{ site.baseurl }}/favicon.png` but you can overwrite it in the sites `_config.yml` like this `favicon: /path/to/favicon.png`
 
 ## Contributing
 

@@ -40,6 +40,7 @@ This demo site showcases the available page layout options.
 * Page With Tabs
 * Page Without Footer
 * Page Without Hero
+* Page With Contents
 * Landing Page With Callouts
 * Blog
 * Post

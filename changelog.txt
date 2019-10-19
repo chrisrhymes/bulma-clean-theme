@@ -1,3 +1,7 @@
+# 0.5.8
+* Added table of contents to pages
+* Ability to override default favicon path
+
 # 0.5.7
 * Add option to hide hero - pull request #15 from risa2000
 * Add ability to override the height of callouts - pull request #14 from agardnerIT
