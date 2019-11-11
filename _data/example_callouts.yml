@@ -1,4 +1,5 @@
 style: is-light
+height: is-medium
 items:
   - title: Example callout 1
     subtitle: Example subtitle 1

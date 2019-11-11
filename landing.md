@@ -17,26 +17,27 @@ This is the rest of the page content. You can add what you like here.
 
 If you would like to add a call to action button in the hero then add `hero_link` and `hero_link_text` to the page's frontmatter
 
-```yml
----
+```yaml
 layout: page
 title: Example Landing Page
 subtitle: This is an example landing page with callouts
 hero_height: is-large
 hero_link: /page-1/
 hero_link_text: Example Call To Action
----
 ```
 
 
 ## Create a callout data file
 
-Create a data file following the below format. The style is for classes to set the background colour and sizes you would like to use of the Bulma hero container for the callouts.  
+Create a data file following the below format. The style is for classes to set the background colour and sizes you would like to use of the Bulma hero container for the callouts.
+
+**New in 0.5.7** You can set the height of the callouts in the data file, such as is-small, is-medium or is-large. If unset it will be is-medium by default.
 
 The items have 5 fields, but only the title and subtitle are required. 
 
-```yml
+```yaml
 style: is-light
+height: is-medium
 items:
   - title: Example callout 1
     subtitle: Example subtitle 1
@@ -71,11 +72,9 @@ items:
 
 To display the callouts on your page, add a callouts property in the frontmatter and set it to the name of your data file without the extension.
 
-```yml
----
+```yaml
 layout: page
 title: Example Landing Page
 subtitle: This is an example landing page
 callouts: example_callouts
----
 ```
