@@ -1,3 +1,6 @@
+# 0.6
+* Added showcase page layout
+
 # 0.5.8
 * Added table of contents to pages
 * Ability to override default favicon path
