@@ -24,6 +24,7 @@ This is a clean and simple Jekyll Theme built with the [Bulma](https://bulma.io/
     * [Scripts](#scripts)
     * [Callouts](#callouts)
     * [Favicon](#favicon)
+    * [Showcases](#showcases)
 * [Contributing](#contributing)
 * [Development](#development)
 * [Licence](#licence)
@@ -78,6 +79,13 @@ If you want to display a table of contents (toc) then add `toc: true` to your pa
 ### Posts
 
 If you want posts, create a `_posts` directory to store your posts as per normal Jekyll usage, with the `layout: post`. Next create a `blog` directory with an index.html file that has `layout: blog`
+
+Set the paginate and the paginate_path up in the `_config.yaml` to configure the posts per page and the blog pagination path.
+
+```yaml
+paginate: 5
+paginate_path: "/blog/page:num"
+```
 
 **New in 0.2** It will now display an image in the blog page if you set `image: /path/to/image.jpg` in your post's or page's front matter, or in the [defaults](https://jekyllrb.com/docs/configuration/front-matter-defaults/) in your sites `_config.yml`
 
@@ -397,6 +405,52 @@ callouts: example_callouts
 ### Favicon
 
 The default favicon path is `{{ site.baseurl }}/favicon.png` but you can overwrite it in the sites `_config.yml` like this `favicon: /path/to/favicon.png`
+
+### Showcases
+
+Showcases allow you to display your work to others using a simple layout. 
+
+#### Creating A Showcase Datafile
+
+Create a datafile in your sites `_data` directory in the following format. Subtitle, features and tags are not required. 
+
+The description text accepts markdown and is run through the markdownify filter on the page.
+
+The image_ratio will default to is-16by9 if it is not defined and accepts the [Bulma image](https://bulma.io/documentation/elements/image/) classes.
+
+```yaml
+intro: |-
+  This is some introduction text for the showcases.
+  
+  ## Example Heading
+  It can convert markdown format
+
+items:
+  - title: Example showcase item
+    subtitle: Example subtitle
+    description: |-
+      This is the example description for this item that you are showcasing and has an image, title, description, tags and a link.
+    features:
+      - This is a feature
+      - This is a feature
+    image: https://via.placeholder.com/1024x788
+    image_ratio: is-16by9
+    link: http://www.example.com
+    link_text: View example
+    tags: PHP,CSS,JavaScript
+```
+
+#### Displaying the Showcase
+
+Set the showcase in the page's front matter to be the name of the showcase data file without the extension. This gives you the ability to create multiple showcases to be used on different pages. 
+
+```yaml
+title: Showcase
+subtitle: An example showcase page
+layout: page
+showcase: showcase_example
+show_sidebar: false
+```
 
 ## Contributing
 

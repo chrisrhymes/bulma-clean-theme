@@ -1,0 +1,15 @@
+.showcase {
+    margin-bottom: 3rem;
+    box-shadow: $box-shadow;
+
+    &-content {
+        padding: 1.5rem;
+        text-align: center;
+    }
+
+    &-feature {
+        background: $light;
+        margin-bottom: 0.2rem;
+        padding: 0.5rem;
+    }
+}

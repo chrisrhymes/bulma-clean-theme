@@ -1,0 +1,48 @@
+{% if page.showcase %}
+    {% assign showcase = site.data.[page.showcase] %}
+
+    <div class="content">
+        <p>{{ showcase.intro | markdownify }}</p>
+    </div>
+
+    {% for showcase in showcase.items %}
+        <section class="showcase">
+            <figure class="image {% if showcase.image_ratio %} {{ showcase.image_ratio }} {% else %} is-16by9 {% endif %}">
+                <img src="{{ showcase.image | prepend: site.baseurl }}" />
+            </figure>
+            <div class="showcase-content">
+                <div class="columns is-centered">
+                    <div class="column is-8-desktop is-12-tablet">
+                        <p class="title">{{ showcase.title }}</p>
+                        <p class="subtitle">{{ showcase.subtitle }}</p>
+                        <div class="content">
+                            <p>{{ showcase.description | markdownify }}</p>
+
+                            {% if showcase.features %}
+                            <div class="showcase-features">
+                                {% for feature in showcase.features %}
+                                <div class="showcase-feature">{{ feature }}</div>
+                                {% endfor %}
+                            </div>
+                            {% endif %}
+                        </div>
+
+                        {% if showcase.tags %}
+                        {% assign tags = showcase.tags | split: "," %}
+                        <div class="tags is-centered">
+                            {% for tag in tags %}
+                            <div class="tag is-dark">{{ tag }}</div>
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+
+                        <a href="{{ showcase.link }}" class="button is-primary">
+                            {{ showcase.link_text }}
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    {% endfor %}
+{% endif %}
