@@ -80,7 +80,8 @@ If you want to display a table of contents (toc) then add `toc: true` to your pa
 
 If you want posts, create a `_posts` directory to store your posts as per normal Jekyll usage, with the `layout: post`. Next create a `blog` directory with an index.html file that has `layout: blog`
 
-Set the paginate and the paginate_path up in the _config.yaml to configure the posts per page and the blog pagination path.
+Set the paginate and the paginate_path up in the `_config.yaml` to configure the posts per page and the blog pagination path.
+
 ```yaml
 paginate: 5
 paginate_path: "/blog/page:num"
