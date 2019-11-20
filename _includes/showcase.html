@@ -15,6 +15,21 @@
                     <div class="column is-8-desktop is-12-tablet">
                         <p class="title">{{ showcase.title }}</p>
                         <p class="subtitle">{{ showcase.subtitle }}</p>
+
+                        {% if showcase.github %}
+                        <div class="buttons is-centered">
+                            <a href="https://github.com/{{ showcase.github }}/stargazers" class="button is-white is-small">
+                                <img alt="GitHub stars" src="https://img.shields.io/github/stars/{{ showcase.github }}?style=social">
+                            </a>
+                            <a href="https://github.com/{{ showcase.github }}/network/members" class="button is-white is-small">
+                                <img alt="GitHub forks" src="https://img.shields.io/github/forks/{{ showcase.github }}?style=social">
+                            </a>
+                            <a href="https://github.com/{{ showcase.github }}/watchers" class="button is-white is-small">
+                                <img alt="GitHub watchers" src="https://img.shields.io/github/watchers/{{ showcase.github }}?style=social">
+                            </a>
+
+                        </div>
+                        {% endif %}
                         <div class="content">
                             <p>{{ showcase.description | markdownify }}</p>
 

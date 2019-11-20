@@ -418,6 +418,8 @@ The description text accepts markdown and is run through the markdownify filter 
 
 The image_ratio will default to is-16by9 if it is not defined and accepts the [Bulma image](https://bulma.io/documentation/elements/image/) classes.
 
+To display GitHub Stars, Forks and Watchers badges add your GitHub user and repo name to the github setting, such as `chrisrhymes/bulma-clean-theme`
+
 ```yaml
 intro: |-
   This is some introduction text for the showcases.
@@ -438,6 +440,7 @@ items:
     link: http://www.example.com
     link_text: View example
     tags: PHP,CSS,JavaScript
+    github: user/repo-name
 ```
 
 #### Displaying the Showcase
