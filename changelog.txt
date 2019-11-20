@@ -1,3 +1,6 @@
+# 0.6.1
+* Added GitHub stars, forks and watchers to showcase
+
 # 0.6
 * Added showcase page layout
 
