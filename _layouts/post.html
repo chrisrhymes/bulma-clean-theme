@@ -14,3 +14,7 @@ layout: default
     <span class="tag is-primary">{{ tag }}</span>
     {% endfor %}
 </div>
+
+{% if site.disqus.shortname %}
+  {% include disqus_comments.html %}
+{% endif %}

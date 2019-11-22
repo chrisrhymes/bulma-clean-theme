@@ -25,6 +25,7 @@ This is a clean and simple Jekyll Theme built with the [Bulma](https://bulma.io/
     * [Callouts](#callouts)
     * [Favicon](#favicon)
     * [Showcases](#showcases)
+    * [Disqus](#disqus)
 * [Contributing](#contributing)
 * [Development](#development)
 * [Licence](#licence)
@@ -454,6 +455,20 @@ layout: page
 showcase: showcase_example
 show_sidebar: false
 ```
+
+### Disqus
+
+Disqus comments are available for posts. To be able to use them, you need to set your disqus shortname in `_config.yml`. Then you need to set your Jekyll environment to production: 
+
+```JEKYLL_ENV=production bundle exec jekyll build```. 
+
+Comments are enabled by default. If you want to disable them, set in the front matter this setting: 
+
+```markdown
+comments: false
+```
+
+
 
 ## Contributing
 
