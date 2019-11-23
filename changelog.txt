@@ -1,3 +1,6 @@
+# 0.6.2
+* Added support for disqus to posts - pull request #28 from Funeoz
+
 # 0.6.1
 * Added GitHub stars, forks and watchers to showcase
 
