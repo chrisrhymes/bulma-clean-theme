@@ -28,6 +28,7 @@ items:
       - Landing Page With Callouts
       - Blog and Posts
       - Showcases
+    features_styles: is-centered is-outlined
     image: /img/bulma-clean-theme-4by3.jpg
     image_ratio: is-4by3
     link: https://github.com/chrisrhymes/bulma-clean-theme

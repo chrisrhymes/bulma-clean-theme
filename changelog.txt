@@ -1,3 +1,7 @@
+# 0.6.3
+* Update Bulma to 0.8
+* Use bulma-block-list in showcase
+
 # 0.6.2
 * Added support for disqus to posts - pull request #28 from Funeoz
 
