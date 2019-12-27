@@ -421,6 +421,8 @@ The image_ratio will default to is-16by9 if it is not defined and accepts the [B
 
 To display GitHub Stars, Forks and Watchers badges add your GitHub user and repo name to the github setting, such as `chrisrhymes/bulma-clean-theme`
 
+To change the default styles of the features, set `features_styles`. This uses the styles from [bulma-block-list](https://www.csrhymes.com/bulma-block-list/) npm package.
+
 ```yaml
 intro: |-
   This is some introduction text for the showcases.
@@ -436,6 +438,7 @@ items:
     features:
       - This is a feature
       - This is a feature
+    features_styles: is-centered is-outlined is-primary
     image: https://via.placeholder.com/1024x788
     image_ratio: is-16by9
     link: http://www.example.com
