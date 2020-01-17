@@ -1,3 +1,7 @@
+# 0.6.4
+* Fix pagination
+* Add RSS subscibe button to blog page
+
 # 0.6.3
 * Update Bulma to 0.8
 * Use bulma-block-list in showcase
