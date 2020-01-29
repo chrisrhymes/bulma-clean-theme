@@ -11,4 +11,4 @@ $tabs-link-active-border-bottom-color: $primary;
 @import "layout";
 @import "syntax";
 @import "showcase";
-@import "block-list"
+@import "../node_modules/bulma-block-list/src/block-list.scss"

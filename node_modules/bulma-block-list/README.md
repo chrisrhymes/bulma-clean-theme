@@ -1,4 +1,7 @@
 # bulma-block-list
+
+![npm](https://img.shields.io/npm/dw/bulma-block-list)
+
 A simple scss package extending Bulma with block style list elements
 
 * `npm i -S bulma-block-list`

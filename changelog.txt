@@ -1,3 +1,7 @@
+# 0.6.5
+* Update bulma-block-list
+* Fix subscribe typo
+
 # 0.6.4
 * Fix pagination
 * Add RSS subscibe button to blog page
