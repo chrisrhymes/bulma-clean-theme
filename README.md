@@ -25,6 +25,7 @@ This is a clean and simple Jekyll Theme built with the [Bulma](https://bulma.io/
     * [Callouts](#callouts)
     * [Favicon](#favicon)
     * [Showcases](#showcases)
+    * [Sponsors](#sponsors)
     * [Disqus](#disqus)
 * [Contributing](#contributing)
 * [Development](#development)
@@ -32,6 +33,8 @@ This is a clean and simple Jekyll Theme built with the [Bulma](https://bulma.io/
 
 
 ## Installation
+
+**This theme requires Jekyll 3.8 so it is compatible with GitHub Pages.**
 
 Add this line to your Jekyll site's `Gemfile`:
 
@@ -457,6 +460,49 @@ subtitle: An example showcase page
 layout: page
 showcase: showcase_example
 show_sidebar: false
+```
+
+### Sponsors
+
+#### Sponsor link in navbar
+
+If you have a GitHub sponsors account set up, you can add your username to `gh_sponsor` in the `_config.yml` file and it will display a link to your profile on the right of the navbar.
+
+```yaml
+gh_sponsor: chrisrhymes
+```
+
+#### Creating a Sponsors Datafile
+
+If you would like to create a page to thank your sponsors then create a data file, such as my_sponsors.yml file with the following structure:
+
+```yaml
+- tier_name: Platinum Sponsors
+  description: |-
+    This is the description for the Platinum Tier
+  sponsors:
+    - name: Dave McDave
+      profile: https://github.com/
+    - name: Sarah Lee-Cheesecake
+      profile: https://github.com/
+- tier_name: Gold Sponsors
+  description: |-
+    This is the description for the Gold Tier
+  sponsors:
+    - name: Dave McDave
+      profile: https://github.com/
+```
+
+The `tier_name` and `description` are required. The sponsors require a name, but not a profile link.
+
+#### Displaying the Sponsors
+
+To display the sponsors on your page, set the sponsors to the filename without the extension in the page's front matter
+
+```yaml
+layout: page
+title: My Sponsors Page
+sponsors: my_sponsors
 ```
 
 ### Disqus
