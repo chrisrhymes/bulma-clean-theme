@@ -135,7 +135,7 @@ And then push up your changes to Github as normal.
 
 There seems to be an issue where Jekyll doesn't work locally with remote_theme, so when working locally you have to add theme back in, but remember to comment theme out again before pushing back up to GitHub or you will probably get a build warning email.
 
-## I hope your not feeling overwhelmed
+## I hope you're not feeling overwhelmed
 
 It may seem like there is a lot to do to get started, but really it shouldn't take very long to get a site up and running. All the options are there just in case you want to further customise the theme to be more personal to you, but you can just use the basic minimal settings to get yourself up and running. 
 
