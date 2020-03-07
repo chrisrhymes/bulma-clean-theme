@@ -20,6 +20,7 @@ If you would like to create a page to thank your sponsors then create a data fil
 
 ```yaml
 - tier_name: Platinum Sponsors
+  size: large
   description: |-
     This is the description for the Platinum Tier
   sponsors:
@@ -35,7 +36,9 @@ If you would like to create a page to thank your sponsors then create a data fil
       profile: https://github.com/
 ```
 
-The `tier_name` and `description` are required. The sponsors require a name, but not a profile link.
+The `tier_name` and `description` are required. The `size` is not required, but can be overwritten to 'large' or 'small' to increase or decrease the size of the box and the text size.
+ 
+The sponsors require a name, but not a profile link.
 
 ## Displaying the Sponsors
 

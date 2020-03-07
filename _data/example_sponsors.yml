@@ -1,8 +1,9 @@
 - tier_name: Platinum Sponsors
+  size: large
   description: |-
     This is the description for the Platinum Tier.
 
-    It can contain multiple lines.
+    It can contain multiple lines. It has the size set to 'large'.
   sponsors:
     - name: Dave McDave
       profile: https://github.com/
@@ -19,8 +20,13 @@
     - name: John Smith
       profile: https://github.com/
 - tier_name: Standard Sponsors
+  size: small
   description: |-
-    This is the description for the Standard Tier
+    This is the description for the Standard Tier.
+
+    It has the size set to 'small'.
+
+    The profile is not required so if it's not set the link will not appear.
   sponsors:
     - name: Dave McDave
       profile: https://github.com/
