@@ -17,6 +17,8 @@
       link: /page-with-contents/
     - name: Landing Page With Callouts
       link: /landing/
+    - name: Sponsors Page
+      link: /sponsors/
 - name: Products
   link: /products/
 - name: Showcase

@@ -11,4 +11,8 @@ $tabs-link-active-border-bottom-color: $primary;
 @import "layout";
 @import "syntax";
 @import "showcase";
-@import "../node_modules/bulma-block-list/src/block-list.scss"
+@import "../node_modules/bulma-block-list/src/block-list.scss";
+
+.gh-sponsor {
+  color: #ea4aaa;
+}
