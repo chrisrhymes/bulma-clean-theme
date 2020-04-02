@@ -1,3 +1,6 @@
+# 0.7.1
+* Added hero_darken - pull request #43 from haru398801
+
 # 0.7
 * Added Sponsors layout
 
