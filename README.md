@@ -75,6 +75,9 @@ If you would like to add a call to action button in the hero then add `hero_link
 **New in 0.5.7**
 If you would like to hide the hero, you can set `hide_hero: true` in the page's front matter.
 
+**New in 0.7.1**
+If you would like to darken the hero so the title stands out more, you can set `hero_darken: true` in the page's front matter. You can overwrite the default background colour by setting the `$hero-darken` sass variable.
+
 #### Table Of Contents
 
 **New in 0.5.8**
