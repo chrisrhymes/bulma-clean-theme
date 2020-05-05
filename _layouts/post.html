@@ -15,6 +15,10 @@ layout: default
     {% endfor %}
 </div>
 
+{% if site.share_buttons %}
+{% include share-buttons.html %}
+{% endif %}
+
 {% if site.disqus.shortname %}
   {% include disqus.html %}
 {% endif %}
