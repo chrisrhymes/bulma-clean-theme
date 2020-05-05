@@ -7107,106 +7107,135 @@ label.panel-block {
     padding: 16px;
     background: whitesmoke;
     margin-bottom: 0.25rem; }
-  .block-list.is-left li {
+  .block-list li.is-left,
+  .block-list.is-left > li {
     text-align: left; }
-  .block-list.is-centered li {
+  .block-list li.is-centered,
+  .block-list.is-centered > li {
     text-align: center; }
-  .block-list.is-right li {
+  .block-list li.is-right,
+  .block-list.is-right > li {
     text-align: right; }
-  .block-list.is-small li {
+  .block-list li.is-small,
+  .block-list.is-small > li {
     font-size: 0.875em;
     padding: 10.66667px; }
-  .block-list.is-normal li {
+  .block-list li.is-normal,
+  .block-list.is-normal > li {
     font-size: 1em; }
-  .block-list.is-large li {
+  .block-list li.is-large,
+  .block-list.is-large > li {
     font-size: 1.5rem; }
-  .block-list.is-white li {
+  .block-list li.has-radius,
+  .block-list.has-radius > li {
+    border-radius: 4px; }
+  .block-list li.is-white,
+  .block-list.is-white > li {
     background: white;
     color: #0a0a0a; }
-  .block-list.is-white.is-outlined li {
-    background: transparent;
-    color: white;
-    border: 1px solid white; }
-  .block-list.is-white.has-radius li {
-    border-radius: 4px; }
-  .block-list.is-black li {
+    .block-list li.is-white.is-outlined,
+    .block-list li.is-white.is-outlined > li,
+    .block-list.is-white > li.is-outlined,
+    .block-list.is-white > li.is-outlined > li {
+      background: transparent;
+      color: white;
+      border: 1px solid white; }
+  .block-list li.is-black,
+  .block-list.is-black > li {
     background: #0a0a0a;
     color: white; }
-  .block-list.is-black.is-outlined li {
-    background: transparent;
-    color: #0a0a0a;
-    border: 1px solid #0a0a0a; }
-  .block-list.is-black.has-radius li {
-    border-radius: 4px; }
-  .block-list.is-light li {
+    .block-list li.is-black.is-outlined,
+    .block-list li.is-black.is-outlined > li,
+    .block-list.is-black > li.is-outlined,
+    .block-list.is-black > li.is-outlined > li {
+      background: transparent;
+      color: #0a0a0a;
+      border: 1px solid #0a0a0a; }
+  .block-list li.is-light,
+  .block-list.is-light > li {
     background: whitesmoke;
     color: rgba(0, 0, 0, 0.7); }
-  .block-list.is-light.is-outlined li {
-    background: transparent;
-    color: whitesmoke;
-    border: 1px solid whitesmoke; }
-  .block-list.is-light.has-radius li {
-    border-radius: 4px; }
-  .block-list.is-dark li {
+    .block-list li.is-light.is-outlined,
+    .block-list li.is-light.is-outlined > li,
+    .block-list.is-light > li.is-outlined,
+    .block-list.is-light > li.is-outlined > li {
+      background: transparent;
+      color: whitesmoke;
+      border: 1px solid whitesmoke; }
+  .block-list li.is-dark,
+  .block-list.is-dark > li {
     background: #363636;
     color: #fff; }
-  .block-list.is-dark.is-outlined li {
-    background: transparent;
-    color: #363636;
-    border: 1px solid #363636; }
-  .block-list.is-dark.has-radius li {
-    border-radius: 4px; }
-  .block-list.is-primary li {
+    .block-list li.is-dark.is-outlined,
+    .block-list li.is-dark.is-outlined > li,
+    .block-list.is-dark > li.is-outlined,
+    .block-list.is-dark > li.is-outlined > li {
+      background: transparent;
+      color: #363636;
+      border: 1px solid #363636; }
+  .block-list li.is-primary,
+  .block-list.is-primary > li {
     background: #00d1b2;
     color: #fff; }
-  .block-list.is-primary.is-outlined li {
-    background: transparent;
-    color: #00d1b2;
-    border: 1px solid #00d1b2; }
-  .block-list.is-primary.has-radius li {
-    border-radius: 4px; }
-  .block-list.is-link li {
+    .block-list li.is-primary.is-outlined,
+    .block-list li.is-primary.is-outlined > li,
+    .block-list.is-primary > li.is-outlined,
+    .block-list.is-primary > li.is-outlined > li {
+      background: transparent;
+      color: #00d1b2;
+      border: 1px solid #00d1b2; }
+  .block-list li.is-link,
+  .block-list.is-link > li {
     background: #3273dc;
     color: #fff; }
-  .block-list.is-link.is-outlined li {
-    background: transparent;
-    color: #3273dc;
-    border: 1px solid #3273dc; }
-  .block-list.is-link.has-radius li {
-    border-radius: 4px; }
-  .block-list.is-info li {
+    .block-list li.is-link.is-outlined,
+    .block-list li.is-link.is-outlined > li,
+    .block-list.is-link > li.is-outlined,
+    .block-list.is-link > li.is-outlined > li {
+      background: transparent;
+      color: #3273dc;
+      border: 1px solid #3273dc; }
+  .block-list li.is-info,
+  .block-list.is-info > li {
     background: #3298dc;
     color: #fff; }
-  .block-list.is-info.is-outlined li {
-    background: transparent;
-    color: #3298dc;
-    border: 1px solid #3298dc; }
-  .block-list.is-info.has-radius li {
-    border-radius: 4px; }
-  .block-list.is-success li {
+    .block-list li.is-info.is-outlined,
+    .block-list li.is-info.is-outlined > li,
+    .block-list.is-info > li.is-outlined,
+    .block-list.is-info > li.is-outlined > li {
+      background: transparent;
+      color: #3298dc;
+      border: 1px solid #3298dc; }
+  .block-list li.is-success,
+  .block-list.is-success > li {
     background: #48c774;
     color: #fff; }
-  .block-list.is-success.is-outlined li {
-    background: transparent;
-    color: #48c774;
-    border: 1px solid #48c774; }
-  .block-list.is-success.has-radius li {
-    border-radius: 4px; }
-  .block-list.is-warning li {
+    .block-list li.is-success.is-outlined,
+    .block-list li.is-success.is-outlined > li,
+    .block-list.is-success > li.is-outlined,
+    .block-list.is-success > li.is-outlined > li {
+      background: transparent;
+      color: #48c774;
+      border: 1px solid #48c774; }
+  .block-list li.is-warning,
+  .block-list.is-warning > li {
     background: #ffdd57;
     color: rgba(0, 0, 0, 0.7); }
-  .block-list.is-warning.is-outlined li {
-    background: transparent;
-    color: #ffdd57;
-    border: 1px solid #ffdd57; }
-  .block-list.is-warning.has-radius li {
-    border-radius: 4px; }
-  .block-list.is-danger li {
+    .block-list li.is-warning.is-outlined,
+    .block-list li.is-warning.is-outlined > li,
+    .block-list.is-warning > li.is-outlined,
+    .block-list.is-warning > li.is-outlined > li {
+      background: transparent;
+      color: #ffdd57;
+      border: 1px solid #ffdd57; }
+  .block-list li.is-danger,
+  .block-list.is-danger > li {
     background: #f14668;
     color: #fff; }
-  .block-list.is-danger.is-outlined li {
-    background: transparent;
-    color: #f14668;
-    border: 1px solid #f14668; }
-  .block-list.is-danger.has-radius li {
-    border-radius: 4px; }
+    .block-list li.is-danger.is-outlined,
+    .block-list li.is-danger.is-outlined > li,
+    .block-list.is-danger > li.is-outlined,
+    .block-list.is-danger > li.is-outlined > li {
+      background: transparent;
+      color: #f14668;
+      border: 1px solid #f14668; }

@@ -11,42 +11,41 @@ $block-list-separator: 0.25rem !default;
         margin-bottom: $block-list-separator;
     }
 
-    &.is-left {
-        li {
-            text-align: left;
-        }
+    li.is-left,
+    &.is-left > li {
+        text-align: left;
     }
 
 
-    &.is-centered {
-        li {
-            text-align: center;
-        }
+    li.is-centered,
+    &.is-centered > li {
+        text-align: center;
     }
 
-    &.is-right {
-        li {
-            text-align: right;
-        }
+    li.is-right,
+    &.is-right > li {
+        text-align: right;
     }
 
-    &.is-small {
-        li {
-            font-size: $small-font-size;
-            padding: ($gap / 3);
-        }
-    }
-    
-    &.is-normal {
-        li {
-            font-size: $body-font-size;
-        }
+    li.is-small,
+    &.is-small > li {
+        font-size: $small-font-size;
+        padding: ($gap / 3);
     }
 
-    &.is-large {
-        li {
-            font-size: $size-large;
-        }
+    li.is-normal,
+    &.is-normal > li {
+        font-size: $body-font-size;
+    }
+
+    li.is-large,
+    &.is-large > li {
+        font-size: $size-large;
+    }
+
+    li.has-radius,
+    &.has-radius > li {
+        border-radius: $radius;
     }
 
     @each $name, $pair in $colors {
@@ -54,26 +53,17 @@ $block-list-separator: 0.25rem !default;
         $color: nth($pair, 1);
         $color-invert: nth($pair, 2);
 
-        &.is-#{$name} {
-            li {
-                background: $color;
-                color: $color-invert;
-            }
+        li.is-#{$name},
+        &.is-#{$name} > li {
+            background: $color;
+            color: $color-invert;
 
-            &.is-outlined {
-                li {
-                    background: transparent;
-                    color: $color;
-                    border: 1px solid $color;
-                }
-            }
-
-            &.has-radius {
-                li {
-                    border-radius: $radius;
-                }
+            &.is-outlined,
+            &.is-outlined > li {
+                background: transparent;
+                color: $color;
+                border: 1px solid $color;
             }
         }
     }
-
 }

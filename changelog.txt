@@ -1,3 +1,7 @@
+# 0.7.2
+* Fix for Pagination - pull request #44 from donkirkby
+* Update bulma-block-list
+
 # 0.7.1
 * Added hero_darken - pull request #43 from haru398801
 
