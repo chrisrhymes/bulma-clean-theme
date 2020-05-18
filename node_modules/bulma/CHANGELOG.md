@@ -1,5 +1,24 @@
 # Bulma Changelog
 
+## 0.8.2
+
+### Bug fixes
+
+* Fix #2885 -> Revert `$input-color: $text-strong`
+
+## 0.8.1
+
+### Improvements
+
+* #2709 Add light colors to the `notification` element
+* #2740 Fixes #2739 -> Add variables size for layout `hero`
+* Fix #2741 -> Create `bulmaRgba()` function to support `inherit` value
+* #2756 Add `$button-text-decoration` variable 
+
+### Bug fixes
+
+* #2664 Fixes #2671 -> Add `$panel-colors` variable
+
 ## 0.8.0
 
 ### Big update
@@ -122,7 +141,7 @@ That is also why most of the codebase now references **derived** variables (`$te
 ### Deprecation warning
 
 The `form.sass` file is **deprecated**. It has moved into its own `/form` folder. If you were importing `form.sass`, please import `sass/form/_all.sass` now.
-If you were simply importing the whole of Bulma with `@import "~/bulma/bulma.sass"` or similar, you won't have to change anything, and everything will work as bbefore.
+If you were simply importing the whole of Bulma with `@import "~/bulma/bulma.sass"` or similar, you won't have to change anything, and everything will work as before.
 
 ### New features
 

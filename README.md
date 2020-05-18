@@ -98,6 +98,10 @@ paginate_path: "/blog/page:num"
 
 You can also set the height of the hero by providing a Bulma hero height class in your front matter, such as `hero_height: is-fullwidth`. If you do not provide this, it will revert to is-medium
 
+#### Social Share Buttons
+
+Share buttons will be displayed on your posts unless you hide them by adding `hide_share_buttons: true` to your config file.
+
 
 ### Navigation
 

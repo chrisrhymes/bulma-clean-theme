@@ -15,9 +15,9 @@ layout: default
     {% endfor %}
 </div>
 
-{% if site.share_buttons %}
+{% unless site.hide_share_buttons %}
 {% include share-buttons.html %}
-{% endif %}
+{% endunless %}
 
 {% if site.disqus.shortname %}
   {% include disqus.html %}

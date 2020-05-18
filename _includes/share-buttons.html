@@ -1,5 +1,5 @@
-<p class=""><strong>Share</strong></p>
-<div class="buttons">
+<p><strong>Share</strong></p>
+<div class="buttons {% if include.centered %} is-centered {% endif %}">
     <a class="button is-medium is-facebook"
        onclick="window.open('https://www.facebook.com/share.php?u={{ site.url }}{{ page.url | prepend: site.baseurl }}');">
         <span class="icon"><i class="fab fa-facebook fa-lg"></i></span>
