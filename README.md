@@ -385,7 +385,7 @@ Create a data file following the below format. The style is for classes to set t
 
 **New in 0.5.7** You can set the height of the callouts in the data file, such as is-small, is-medium or is-large. If unset it will be is-medium by default.
 
-The items have 5 fields, but only the title and subtitle are required. 
+The items have 6 fields, but only the title and subtitle are required. If the icon is a brand icon, such as GitHub in the below example, set `icon_brand: true`.
 
 ```yaml
 style: is-light
@@ -393,7 +393,8 @@ height: is-medium
 items:
   - title: Example callout 1
     subtitle: Example subtitle 1
-    icon: fa-space-shuttle
+    icon: fa-github
+    icon_brand: true
     description: >
       The example description text goes here and can be multiple lines.
 
