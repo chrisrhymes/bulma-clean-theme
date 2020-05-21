@@ -8,7 +8,11 @@
                         <div class="column is-4 has-text-centered">
                             {% if callout.icon %}
                             <div class="icon is-large">
+                            {% if callout.icon_brand %}
+                                <i class="fab {{ callout.icon }} fa-4x"></i>
+                            {% else %}
                                 <i class="fas {{ callout.icon }} fa-4x"></i>
+                            {% endif %}
                             </div>
                             {% endif %}
                             <p class="title is-5">{{ callout.title }}</p>
