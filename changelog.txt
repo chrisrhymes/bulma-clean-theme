@@ -1,4 +1,4 @@
-# 0.7.3
+# 0.8
 * Add social share buttons
 * Update Bulma to 0.8.2
 * Update font awesome
