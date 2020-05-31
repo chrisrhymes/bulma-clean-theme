@@ -18,7 +18,6 @@ This is a clean and simple Jekyll Theme built with the [Bulma](https://bulma.io/
     * [Sidebar Visibility](#sidebar-visibility)
     * [Menubar](#menubar)
     * [Tabs](#tabs)
-    * [Google Analytics](#google-analytics)
     * [Footer](#footer)
     * [Products](#products)
     * [Scripts](#scripts)
@@ -253,13 +252,6 @@ It will automatically mark the active tab based on the current page.
 You can add icons to your tab by passing in the [Font Awesome icon class](https://fontawesome.com/icons?d=gallery).
 
 If you don't wish to show icons then simply omit the option from your yaml file.
-
-
-### Google Analytics 
-
-**New in 0.2**
-
-To enable Google Analytics add `google_analytics: UA-xxxxxxxx` to your `_config.yml` replacing the UA-xxxxxxxx with your Google Analytics property
 
 ### Footer
 
