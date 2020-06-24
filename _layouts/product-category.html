@@ -14,7 +14,7 @@ show_sidebar: false
   {% for product in sorted_products %}
   <div class="column is-4-desktop is-6-tablet">
 
-    <a href="{{ product.url | prepend: site.baseurl }}">
+    <a href="{{ product.url | absolute_url }}">
 
       <div class="card">
 

@@ -4,7 +4,7 @@
     <title>{{ page.title }} - {{ site.title }}</title>
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/app.css">
     <link rel="shortcut icon" type="image/png"
-          {% if site.favicon %} href="{{ site.favicon | prepend: site.baseurl }}" {% else %} href="{{ site.baseurl }}/favicon.png" {% endif %}
+          {% if site.favicon %} href="{{ site.favicon | absolute_url }}" {% else %} href="{{ site.baseurl }}/favicon.png" {% endif %}
     />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
     {% unless site.hide_share_buttons %}
