@@ -1,3 +1,6 @@
+# 0.8.1
+* Replace prepend: base_url with absolute_url - pull request #49 by donkirkby
+
 # 0.8
 * Add social share buttons
 * Update Bulma to 0.8.2
