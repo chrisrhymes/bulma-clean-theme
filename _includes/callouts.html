@@ -25,7 +25,7 @@
                             {% endif %}
 
                             {% if callout.call_to_action_name %}
-                            <a href="{{ callout.call_to_action_link | absolute_url }}" class="button is-primary">
+                            <a href="{{ callout.call_to_action_link | relative_url }}" class="button is-primary">
                                 {{ callout.call_to_action_name }}
                             </a>
                             {% endif %}

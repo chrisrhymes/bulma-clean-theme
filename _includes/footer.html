@@ -6,7 +6,7 @@
             {% for item in site.data[site.footer_menu] %}
             <div class="column has-text-centered">
                 <div>
-                    <a href="{{ item.link | absolute_url }}" class="link">{{ item.name }}</a>
+                    <a href="{{ item.link | relative_url }}" class="link">{{ item.name }}</a>
                 </div>
             </div>
             {% endfor %}
