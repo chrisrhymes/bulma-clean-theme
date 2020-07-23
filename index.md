@@ -42,6 +42,8 @@ This demo site showcases the available page layout options.
 * Page Without Hero
 * Page With Contents
 * Landing Page With Callouts
+* Sponsors Page
+* Image Gallery
 * Blog
 * Post
 
