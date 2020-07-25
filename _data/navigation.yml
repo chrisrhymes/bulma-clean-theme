@@ -19,6 +19,8 @@
       link: /landing/
     - name: Sponsors Page
       link: /sponsors/
+    - name: Image Gallery
+      link: /gallery/
 - name: Products
   link: /products/
 - name: Showcase

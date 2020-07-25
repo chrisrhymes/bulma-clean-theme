@@ -23,5 +23,7 @@
           link: /landing/
         - name: Sponsors Page
           link: /sponsors/
+        - name: Image Gallery
+          link: /gallery/
     - name: Blog
       link: /blog/

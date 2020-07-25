@@ -1,3 +1,8 @@
+# 0.9
+* Update Bulma to 0.9
+* Update Bulma block list to 0.4
+* Add image gallery layout
+
 # 0.8.1
 * Replace prepend: base_url with absolute_url - pull request #49 by donkirkby
 
