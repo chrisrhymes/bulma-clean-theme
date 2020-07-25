@@ -8,7 +8,7 @@
     {% for item in showcase.items %}
         <section class="showcase">
             <figure class="image {% if item.image_ratio %} {{ item.image_ratio }} {% else %} is-16by9 {% endif %}">
-                <img src="{{ item.image | absolute_url }}" />
+                <img src="{{ item.image | relative_url }}" />
             </figure>
             <div class="showcase-content">
                 <div class="columns is-centered">
