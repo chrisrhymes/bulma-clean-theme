@@ -1,3 +1,6 @@
+# 0.9.1
+* Add YouTube video include
+
 # 0.9
 * Update Bulma to 0.9
 * Update Bulma block list to 0.4
