@@ -27,6 +27,9 @@
                     {% include showcase.html %}
                     {% include sponsors.html %}
                     {% include gallery.html %}
+                    {% if page.toc == true %}
+                      {% include toc-wrapper.html %}
+                    {% endif %}
                     {{ content }}
                 </div>
                 {% if site.posts and page.show_sidebar %}

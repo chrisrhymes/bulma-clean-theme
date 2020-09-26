@@ -1,6 +1,9 @@
 {% assign menus = site.data.[page.menubar] %}
 
-<aside class="menu">
+<aside class="menu{% if page.menubar_sticky %} sticky{% endif %}">
+{% if page.toc == "menubar" %}
+  {% include toc-wrapper.html %}
+{% else %}
 {% for menu in menus %}
     <p class="menu-label">{{ menu.label }}</p>
     <ul class="menu-list">
@@ -18,4 +21,11 @@
         {% endfor %}    
     </ul>
 {% endfor %}
+{% endif %}
 </aside>
+{% if page.menubar_sticky and page.toc == "menubar" %}
+<script src="{{ site.baseurl }}/assets/js/stickytoc.js" type="text/javascript"></script>
+<script type="text/javascript">
+  attachStickyMenuObserver({{ h_min }}, {{ h_max }});
+</script>
+{% endif %}

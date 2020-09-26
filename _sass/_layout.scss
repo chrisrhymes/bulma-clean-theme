@@ -12,7 +12,7 @@ div.highlight {
     }
 }
 
-.contents {
+div > div.contents {
     box-shadow: $box-shadow;
     padding: 1.5rem;
     margin-bottom: 3rem;
@@ -20,4 +20,10 @@ div.highlight {
 
 .hero-darken {
     background-color: rgba($hero-darken, 0.5);
+}
+
+aside.sticky {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 20px;
 }

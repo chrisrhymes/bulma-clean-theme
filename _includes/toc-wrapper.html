@@ -1,0 +1,4 @@
+{% assign contentsTitle = page.toc_title | default: 'Contents' %}
+{% assign h_min = page.toc_min | default: site.toc_min | default: 2 %}
+{% assign h_max = page.toc_max | default: site.toc_max | default: 3 %}
+{% include toc.html html=content class='menu-list' h_min=h_min h_max=h_max contents_title=contentsTitle %}
