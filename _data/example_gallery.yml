@@ -1,14 +1,17 @@
 - title: Image Gallery Title
   images:
-    - link: https://via.placeholder.com/800x450
+    - link: https://via.placeholder.com/400x225
+      large_link: https://via.placeholder.com/1200x675
       alt: The alt text for the image
       description: The image description
       ratio: is-16by9
-    - link: https://via.placeholder.com/800x600
+    - link: https://via.placeholder.com/400x300
+      large_link: https://via.placeholder.com/1200x900
       alt: The alt text for the image
       description: The image description
       ratio: is-4by3
-    - link: https://via.placeholder.com/800x600
+    - link: https://via.placeholder.com/400x300
+      large_link: https://via.placeholder.com/1200x900
       alt: The alt text for the image
       description: |-
         ### A title
