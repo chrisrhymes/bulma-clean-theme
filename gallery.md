@@ -7,21 +7,23 @@ gallery: example_gallery
 show_sidebar: false
 ---
 
-This is a page displaying a simple image gallery. 
+This is a page displaying a simple image gallery.
 
 ## Create an image gallery data file
 
-Start by creating a gallery data file using the below format, for example `my_gallery.yml`. 
+Start by creating a gallery data file using the below format, for example `my_gallery.yml`. The image (link) will display on the page and when you click on the image, it will display the large_link image in a modal window. 
 
 ```yaml
 - title: Image Gallery Title
   images:
     - link: https://via.placeholder.com/800x450
+      large_link: https://via.placeholder.com/1200x675
       alt: The alt text for the image
       description: |-
         The image description can be written in **markdown** if required
       ratio: is-16by9
     - link: https://via.placeholder.com/800x600
+      large_link: https://via.placeholder.com/1200x900
       alt: The alt text for the image
       description: The image description
       ratio: is-4by3

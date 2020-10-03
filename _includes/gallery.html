@@ -9,9 +9,7 @@
         <div class="column is-4-desktop is-6-tablet">
             <div class="card">
                 <div class="card-image">
-                    <figure class="image {{ image.ratio | default: is-16by9 }}">
-                        <img src="{{ image.link | absolute_url }}" alt="{{ image.alt }}">
-                    </figure>
+                    {% include image-modal.html ratio=image.ratio link=image.link alt=image.alt large_link=image.large_link %}
                 </div>
                 <div class="card-content">
                     <div class="content">

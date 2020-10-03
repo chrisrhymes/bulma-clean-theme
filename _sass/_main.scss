@@ -7,6 +7,8 @@ $primary: #188eac !default;
 $tabs-link-active-color: $primary;
 $tabs-link-active-border-bottom-color: $primary;
 
+$modal-content-width: 800px;
+
 @import "../node_modules/bulma/bulma.sass";
 $hero-darken: $dark !default;
 

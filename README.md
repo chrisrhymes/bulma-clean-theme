@@ -529,11 +529,13 @@ Start by creating a gallery data file using the below format, for example `my_ga
 - title: Image Gallery Title
   images:
     - link: https://via.placeholder.com/800x450
+      large_link: https://via.placeholder.com/1200x675
       alt: The alt text for the image
       description: |-
         The image description can be written in **markdown** if required
       ratio: is-16by9
     - link: https://via.placeholder.com/800x600
+      large_link: https://via.placeholder.com/1200x675
       alt: The alt text for the image
       description: The image description
       ratio: is-4by3
@@ -542,6 +544,7 @@ Start by creating a gallery data file using the below format, for example `my_ga
 * If a ratio is not provided it will default to 16 by 9. Use [Bulma image](https://bulma.io/documentation/elements/image/) classes to define the image ratio required. 
 * The description can be plain text or it can be markdown if required. 
 * The alt will be used as the images alt text.
+* The large_link displays in a modal when the image is clicked
 
 #### Displaying the gallery
 

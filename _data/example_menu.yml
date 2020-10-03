@@ -21,6 +21,8 @@
           link: /page-with-contents/
         - name: Page With Video
           link: /page-with-video/
+        - name: Page With Image Modal
+          link: /page-with-image-modal/
         - name: Landing Page With Callouts
           link: /landing/
         - name: Sponsors Page
