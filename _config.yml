@@ -27,8 +27,7 @@ plugins:
   - jekyll-paginate
   - jekyll-feed
   - jekyll-seo-tag
-  - kramdown
-  - rouge
+  - kramdown-parser-gfm
 
 exclude: 
   - Gemfile
