@@ -1,3 +1,7 @@
+# 0.10
+* Update to Jekyll 3.9 as per GitHub-Pages gem
+* Update dependencies in Gemspec so you will need to run `bundle update`
+
 # 0.9.2
 * Added image modal
 * Update image gallery to use image modal
