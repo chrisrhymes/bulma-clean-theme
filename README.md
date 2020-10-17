@@ -99,6 +99,19 @@ paginate_path: "/blog/page:num"
 
 You can also set the height of the hero by providing a Bulma hero height class in your front matter, such as `hero_height: is-fullwidth`. If you do not provide this, it will revert to is-medium
 
+#### Post Excerpt and Summary
+
+By default the blog page and the latest posts will use the automatically generated post excerpt. If you would like to override this you can set the summary in the post's front matter. 
+
+```yaml
+layout: post
+title: The post title
+summary: |-
+    This is the custom summary for the post.
+
+    It can be in **markdown format** if required.
+```
+
 #### Social Share Buttons
 
 Share buttons will be displayed on your posts unless you hide them by adding `hide_share_buttons: true` to your config file.
