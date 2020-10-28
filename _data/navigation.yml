@@ -19,6 +19,8 @@
       link: /page-with-video/
     - name: Page With Image Modal
       link: /page-with-image-modal/
+    - name: Page With Notifications
+      link: /page-with-notification/
     - name: Landing Page With Callouts
       link: /landing/
     - name: Sponsors Page

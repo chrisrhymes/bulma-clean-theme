@@ -1,6 +1,7 @@
 # 0.10.1
 * Allow overriding post excerpt with post summary
 * Add margin below callout icons
+* Added Notifictions
 
 # 0.10
 * Update to Jekyll 3.9 as per GitHub-Pages gem
