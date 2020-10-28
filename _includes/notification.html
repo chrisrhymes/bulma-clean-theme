@@ -1,0 +1,10 @@
+<div class="notification {{ include.status | default: 'is-warning' }}" markdown="0">
+    <article class="media">
+        <div class="media-left">
+            <span class="icon"><i class="{{ include.icon | default: 'fas fa-exclamation-circle' }} fa-lg"></i></span>
+        </div>
+        <div class="media-content">
+            <div class="content">{{ include.message | markdownify }}</div>
+        </div>
+    </article>
+</div>

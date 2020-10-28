@@ -18,6 +18,7 @@ This is a clean and simple Jekyll Theme built with the [Bulma](https://bulma.io/
     * [Sidebar Visibility](#sidebar-visibility)
     * [Menubar](#menubar)
     * [Tabs](#tabs)
+    * [Notifications](#notifications)
     * [Google Analytics](#google-analytics)
     * [Footer](#footer)
     * [Products](#products)
@@ -98,6 +99,19 @@ paginate_path: "/blog/page:num"
 **New in 0.2** It will now display an image in the blog page if you set `image: /path/to/image.jpg` in your post's or page's front matter, or in the [defaults](https://jekyllrb.com/docs/configuration/front-matter-defaults/) in your sites `_config.yml`
 
 You can also set the height of the hero by providing a Bulma hero height class in your front matter, such as `hero_height: is-fullwidth`. If you do not provide this, it will revert to is-medium
+
+#### Post Excerpt and Summary
+
+By default the blog page and the latest posts will use the automatically generated post excerpt. If you would like to override this you can set the summary in the post's front matter. 
+
+```yaml
+layout: post
+title: The post title
+summary: |-
+    This is the custom summary for the post.
+
+    It can be in **markdown format** if required.
+```
 
 #### Social Share Buttons
 
@@ -255,6 +269,13 @@ You can add icons to your tab by passing in the [Font Awesome icon class](https:
 
 If you don't wish to show icons then simply omit the option from your yaml file.
 
+### Notifications
+
+You can include a notification in a page or post using the below include. The message is required but the status defaults to 'is-warning' and the icon defaults to 'fas fa-exclamation-circle', but can be overwritten by setting the values in the includes. The message can also be written in Markdown format.
+
+```liquid
+{% include notification.html message="This is the message for the notification" %}
+```
 
 ### Google Analytics 
 

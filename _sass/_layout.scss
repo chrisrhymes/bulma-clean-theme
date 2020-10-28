@@ -27,3 +27,11 @@ div.highlight {
         margin: 0;
     }
 }
+
+.callout {
+    &-icon {
+        width: 4rem;
+        height: 4rem;
+        margin-bottom: 0.75rem;
+    }
+}
