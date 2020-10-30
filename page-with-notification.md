@@ -74,3 +74,21 @@ status="is-info"
 dismissable="yes" %}
 ```
 {% endraw %}
+
+## Iconless Notifications
+
+Omit the icon by setting icon to 'none'
+
+{% include notification.html
+message="This notification does not have an icon."
+icon="none"
+status="is-success" %}
+
+{% raw %}
+```liquid
+{% include notification.html
+message="This notification does not have an icon."
+icon="none"
+status="is-success" %}
+```
+{% endraw %}

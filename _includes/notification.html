@@ -3,9 +3,11 @@
         <button class="delete"></button>
     {% endif %}
     <article class="media">
-        <div class="media-left">
-            <span class="icon"><i class="{{ include.icon | default: 'fas fa-exclamation-circle' }} fa-lg"></i></span>
-        </div>
+        {% unless include.icon == "none" %}
+            <div class="media-left">
+                <span class="icon"><i class="{{ include.icon | default: 'fas fa-exclamation-circle' }} fa-lg"></i></span>
+            </div>
+        {% endunless %}
         <div class="media-content">
             <div class="content">{{ include.message | markdownify }}</div>
         </div>
