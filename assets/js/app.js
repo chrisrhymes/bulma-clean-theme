@@ -22,4 +22,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Get all dismissable notifications and add dismiss action
+  (document.querySelectorAll('.notification .delete') || []).forEach(($delete) => {
+    var $notification = $delete.parentNode;
+
+    $delete.addEventListener('click', () => {
+      $notification.parentNode.removeChild($notification);
+    });
+  });
+
 });

@@ -57,3 +57,20 @@ It also contains a second paragraph.
 ```
 {% endraw %}
 
+## Dismissible Notifications
+
+To set a notification to be dismissible, set dismissible to 'yes'
+
+{% include notification.html
+message="This notification is dismissable"
+status="is-info"
+dismissable="yes" %}
+
+{% raw %}
+```liquid
+{% include notification.html
+message="This notification is dismissable"
+status="is-info"
+dismissable="yes" %}
+```
+{% endraw %}
