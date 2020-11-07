@@ -57,3 +57,38 @@ It also contains a second paragraph.
 ```
 {% endraw %}
 
+## Dismissible Notifications
+
+To set a notification to be dismissible, set dismissible to 'true'
+
+{% include notification.html
+message="This notification is dismissable"
+status="is-info"
+dismissable="true" %}
+
+{% raw %}
+```liquid
+{% include notification.html
+message="This notification is dismissable"
+status="is-info"
+dismissable="true" %}
+```
+{% endraw %}
+
+## Iconless Notifications
+
+Omit the icon by setting icon to 'false'
+
+{% include notification.html
+message="This notification does not have an icon."
+icon="false"
+status="is-success" %}
+
+{% raw %}
+```liquid
+{% include notification.html
+message="This notification does not have an icon."
+icon="false"
+status="is-success" %}
+```
+{% endraw %}

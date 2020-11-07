@@ -277,6 +277,26 @@ You can include a notification in a page or post using the below include. The me
 {% include notification.html message="This is the message for the notification" %}
 ```
 
+#### Dismissible Notifications
+
+To set a notification to be dismissible, set dismissible to 'true'
+
+```liquid
+{% include notification.html
+message="This notification is dismissable"
+dismissable="true" %}
+```
+
+#### Iconless Notifications
+
+Omit the icon by setting icon to 'false'
+
+```liquid
+{% include notification.html
+message="This notification does not have an icon."
+icon="false" %}
+```
+
 ### Google Analytics 
 
 **New in 0.2**
