@@ -148,6 +148,10 @@ $primary: #333333;
 
 You can overwrite any of the [Bulma initial variables](http://versions.bulma.io/0.7.0/documentation/overview/variables/) in this way as long as they are declared before the `@import "main"'`
 
+#### Theme Color Meta Tag
+
+If you want to update the theme color meta tag then set `theme_color: '#333333'` in your `_config.yml` file. 
+
 ### Sidebar Visibility
 
 **New in 0.2**
