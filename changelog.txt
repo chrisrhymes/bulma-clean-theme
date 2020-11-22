@@ -1,3 +1,7 @@
+# 0.10.3
+* Contents can be displayed in menubar - inspired by #57 by Kazkansouh
+* Ability to set theme-color meta tag
+
 # 0.10.2
 * Dismissable and iconless notifications - pull request #68 by LittleKitacho
 
