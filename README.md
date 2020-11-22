@@ -85,6 +85,9 @@ If you would like to darken the hero so the title stands out more, you can set `
 **New in 0.5.8**
 If you want to display a table of contents (toc) then add `toc: true` to your page's front matter. You can customise the default table of contents title by setting `toc_title: My Custom Title` in the page's front matter. 
 
+**New in 0.10.3**
+If you would prefer to display the contents in the menubar at the side of the page, then use `menubar_toc: true` instead of `toc: true`. This will also override the page's `menubar` setting.
+
 ### Posts
 
 If you want posts, create a `_posts` directory to store your posts as per normal Jekyll usage, with the `layout: post`. Next create a `blog` directory with an index.html file that has `layout: blog`
