@@ -1,5 +1,13 @@
 
+{% if site.fixed_navbar %}
+    {% if site.fixed_navbar == "bottom" %}
+<nav class="navbar is-primary is-fixed-bottom">
+    {% else %}
+<nav class="navbar is-primary is-fixed-top">
+    {% endif %}
+{% else %}
 <nav class="navbar is-primary" >
+{% endif %}
     <div class="container">
         <div class="navbar-brand">
             <a href="{{ site.baseurl }}/" class="navbar-item">
