@@ -61,6 +61,12 @@ $block-list-highlight-width: 5px !default;
         border-left: $block-list-highlight-width $dark solid;
     }
 
+    @mixin outlined($color) {
+        background: transparent;
+        color: $color;
+        border: 1px solid $color;
+    }
+
     @each $name, $pair in $colors {
 
         $color: nth($pair, 1);
@@ -71,20 +77,25 @@ $block-list-highlight-width: 5px !default;
             background: $color;
             color: $color-invert;
         }
+        
+        li.is-#{$name}.is-outlined {
+            @include outlined($color);
+        }
+
+        li.is-#{$name}.is-highlighted {
+            @include outlined($color);
+            border-left: $block-list-highlight-width $color solid;
+        }
 
         &.is-#{$name} {
             li.is-outlined,
             &.is-outlined > li {
-                background: transparent;
-                color: $color;
-                border: 1px solid $color;
+                @include outlined($color);
             }
 
             li.is-highlighted,
             &.is-highlighted > li {
-                background: transparent;
-                color: $color;
-                border: 1px solid $color;
+                @include outlined($color);
                 border-left: $block-list-highlight-width $color solid;
             }
         }
