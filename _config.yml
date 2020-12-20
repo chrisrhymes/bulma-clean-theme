@@ -11,7 +11,7 @@ permalink: pretty
 gh_sponsor: chrisrhymes
 #hide_share_buttons: true
 #theme_color: '#eeeeee'
-fixed_navbar: bottom
+#fixed_navbar: top
 
 paginate: 5
 paginate_path: "/blog/page:num"
