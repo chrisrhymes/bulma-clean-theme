@@ -137,6 +137,11 @@ For the top navigation, create a navigation.yml file in `_data` directory with t
 
 For the current page to have an active class, ensure the `link:` format matches your [permalink](https://jekyllrb.com/docs/permalinks/#extensionless-permalinks) format. The above example will work with `permalink: pretty` setting in your `_config.yml`
 
+#### Fixed Navbar
+
+To have a fixed navbar, you can set `fixed_navbar: top` of `fixed_navbar: bottom` respectively in your
+`_config.yml`.
+
 ### Colours and Styles
 
 To overwrite the primary theme colour, set a sass variable in `assets/css/app.scss` before importing `main`
