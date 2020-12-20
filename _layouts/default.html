@@ -6,15 +6,7 @@
     {% assign content_width = 'is-12' %} 
 {% endif %}
 <!DOCTYPE html>
-{% if site.fixed_navbar %}
-{% if site.fixed_navbar == "bottom" %}
-<html class="has-navbar-fixed-bottom">
-{% else %}
-<html class="has-navbar-fixed-top">
-{% endif %}
-{% else %}
-<html>
-{% endif %}
+<html {% if site.fixed_navbar %} class="has-navbar-fixed-{{ site.fixed_navbar }}" {% endif %}>
   {% include head.html %}
   <body>
     {% include header.html %}
