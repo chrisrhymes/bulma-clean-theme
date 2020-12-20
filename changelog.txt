@@ -1,3 +1,7 @@
+# 0.10.4
+* Added support for fixed navbar top or bottom - pull request #77 by schlpbch
+* Updated bulma-block-list
+
 # 0.10.3
 * Contents can be displayed in menubar - inspired by #57 by Kazkansouh
 * Ability to set theme-color meta tag
