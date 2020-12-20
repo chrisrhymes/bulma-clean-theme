@@ -139,7 +139,7 @@ For the current page to have an active class, ensure the `link:` format matches 
 
 #### Fixed Navbar
 
-To have a fixed navbar, you can set `fixed_navbar: top` of `fixed_navbar: bottom` respectively in your
+To have a fixed navbar, you can set `fixed_navbar: top` or `fixed_navbar: bottom` respectively in your
 `_config.yml`.
 
 ### Colours and Styles
