@@ -394,7 +394,7 @@ To add reviews to your product page, create a `reviews` directory in the `_data`
 - name: Mr E Xample
   rating: 4
   title: Great product, highly recommended
-  date: 01/01/2019
+  date: 2019-01-01
   avatar: https://bulma.io/images/placeholders/128x128.png
   description: >
     The product worked really well. I would recommend this to most people to use. Delivery was quick and reasonable. 
@@ -402,7 +402,7 @@ To add reviews to your product page, create a `reviews` directory in the `_data`
 - name: Mrs R E View
   rating: 5
   title: Nice, really liked this
-  date: 02/02/2019
+  date: 2019-02-02
   description: >
     The product worked exactly as described. 
 ```
