@@ -1,3 +1,7 @@
+# 0.10.5
+* Fix for content width with menubar_toc - pull request #85 by wangjunlem
+* Remove duplicate title tag in head - pull request #75 by cketti
+
 # 0.10.4
 * Added support for fixed navbar top or bottom - pull request #77 by schlpbch
 * Updated bulma-block-list
