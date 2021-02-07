@@ -1,3 +1,7 @@
+# 0.10.6
+* Create tag partial - pull request #87 by DarthGandalf
+* Update navbar to use Alpine js
+
 # 0.10.5
 * Fix for content width with menubar_toc - pull request #85 by wangjunlem
 * Remove duplicate title tag in head - pull request #75 by cketti
