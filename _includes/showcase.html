@@ -47,7 +47,7 @@
                         {% assign tags = item.tags | split: "," %}
                         <div class="tags is-centered">
                             {% for tag in tags %}
-                            <div class="tag is-dark">{{ tag }}</div>
+                                {% include tag.html tag=tag style="is-dark" %}
                             {% endfor %}
                         </div>
                         {% endif %}

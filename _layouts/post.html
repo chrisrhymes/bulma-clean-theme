@@ -11,7 +11,7 @@ layout: default
 
 <div class="tags">
     {% for tag in page.tags %}
-    {% include tag.html %}
+      {% include tag.html tag=tag %}
     {% endfor %}
 </div>
 

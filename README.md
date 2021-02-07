@@ -19,6 +19,7 @@ This is a clean and simple Jekyll Theme built with the [Bulma](https://bulma.io/
     * [Menubar](#menubar)
     * [Tabs](#tabs)
     * [Notifications](#notifications)
+    * [Tags](#tags)
     * [Google Analytics](#google-analytics)
     * [Footer](#footer)
     * [Products](#products)
@@ -307,6 +308,20 @@ Omit the icon by setting icon to 'false'
 {% include notification.html
 message="This notification does not have an icon."
 icon="false" %}
+```
+
+### Tags
+
+To include a tag use the following include. 
+
+```liquid
+{% include tag.html tag="The tag text" %}
+```
+
+You can overwrite the default style (is-primary) by passing in the style in the include tag.
+
+```liquid
+{% include tag.html tag="The tag text" style="is-light" %}
 ```
 
 ### Google Analytics 
