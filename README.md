@@ -5,6 +5,8 @@
 
 This is a clean and simple Jekyll Theme built with the [Bulma](https://bulma.io/) framework, providing a modern looking site to start with. 
 
+The theme uses [Alpine.js](https://github.com/alpinejs/alpine) for it's interactive components, such as mobile navbar and notifications.
+
 ## Contents
 
 * [Installation](#installation)
