@@ -628,7 +628,14 @@ gallery: my_gallery
 
 ### Disqus
 
-Disqus comments are available for posts. To be able to use them, you need to set your disqus shortname in `_config.yml`. Then you need to set your Jekyll environment to production: 
+Disqus comments are available for posts. To be able to use them, you need to set your disqus shortname in `_config.yml`. 
+```
+disqus.shortname=<example-com.disqus.com>  
+```
+
+Need help finding your Disqus Shortname?  [See this helpful post by Disqus on the matter.](https://help.disqus.com/en/articles/1717111-what-s-a-shortname)  
+
+Then you need to set your Jekyll environment to production: 
 
 ```JEKYLL_ENV=production bundle exec jekyll build```. 
 
