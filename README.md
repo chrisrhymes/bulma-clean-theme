@@ -39,7 +39,7 @@ The theme uses [Alpine.js](https://github.com/alpinejs/alpine) for its interacti
 
 ## Installation
 
-**This theme requires Jekyll 3.8 to be compatible with GitHub Pages.**
+**This theme requires Jekyll 3.9 to be compatible with GitHub Pages.**
 
 Add this line to your Jekyll site's `Gemfile`:
 
