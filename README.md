@@ -3,9 +3,9 @@
 [![Gem Version](https://badge.fury.io/rb/bulma-clean-theme.svg)](https://badge.fury.io/rb/bulma-clean-theme)
 ![Gem](https://img.shields.io/gem/dt/bulma-clean-theme.svg)
 
-This is a clean and simple Jekyll Theme built with the [Bulma](https://bulma.io/) framework, providing a modern looking site to start with. 
+This is a clean and simple Jekyll Theme built with the [Bulma](https://bulma.io/) framework, providing a modern-looking site to start with. 
 
-The theme uses [Alpine.js](https://github.com/alpinejs/alpine) for it's interactive components, such as mobile navbar and notifications.
+The theme uses [Alpine.js](https://github.com/alpinejs/alpine) for its interactive components, such as mobile navbar and notifications.
 
 ## Contents
 
@@ -39,7 +39,7 @@ The theme uses [Alpine.js](https://github.com/alpinejs/alpine) for it's interact
 
 ## Installation
 
-**This theme requires Jekyll 3.8 so it is compatible with GitHub Pages.**
+**This theme requires Jekyll 3.8 to be compatible with GitHub Pages.**
 
 Add this line to your Jekyll site's `Gemfile`:
 
@@ -63,52 +63,46 @@ Or install it yourself as:
 
 ## Usage
 
-### Pages 
+### Pages
 
-Create your pages as individual markdown files and use the `layout: page` for normal pages. Set the pages title and subtitle in the front matter and it will appear in the hero.
+Create your pages as individual Markdown files and use `layout: page` for normal pages. Set the page's title and subtitle in the front matter and it will appear in the hero.
 
 #### Page Hero
 
-**New in 0.2** 
-Heros can now display a background image if you provide a `hero_image: /path/to/image.jpg` setting in your page front matter, or in the [defaults](https://jekyllrb.com/docs/configuration/front-matter-defaults/) in your sites `_config.yml`
+**New in 0.2** - Heros can now display a background image if you provide a `hero_image: /path/to/image.jpg` setting in your page front matter, or in the [defaults](https://jekyllrb.com/docs/configuration/front-matter-defaults/) in your site's `_config.yml`.
 
-You can also set the height of the hero by providing a bulma hero height class in your front matter, such as `hero_height: is-fullwidth`. If you do not provide this, it will revert to is-medium 
+You can also set the height of the hero by providing a Bulma hero height class in your front matter, such as `hero_height: is-fullwidth`. If you do not provide this, it will revert to `is-medium`.
 
-**New in 0.5.4**
-If you would like to add a call to action button in the hero then add `hero_link` and `hero_link_text` to the page's front matter.
+**New in 0.5.4** - If you would like to add a call to action button in the hero then add `hero_link` and `hero_link_text` to the page's front matter.
 
-**New in 0.5.7**
-If you would like to hide the hero, you can set `hide_hero: true` in the page's front matter.
+**New in 0.5.7** - If you would like to hide the hero, you can set `hide_hero: true` in the page's front matter.
 
-**New in 0.7.1**
-If you would like to darken the hero so the title stands out more, you can set `hero_darken: true` in the page's front matter. You can overwrite the default background colour by setting the `$hero-darken` sass variable.
+**New in 0.7.1** - If you would like to darken the hero so the title stands out more, you can set `hero_darken: true` in the page's front matter. You can overwrite the default background colour by setting the `$hero-darken` sass variable.
 
 #### Table Of Contents
 
-**New in 0.5.8**
-If you want to display a table of contents (toc) then add `toc: true` to your page's front matter. You can customise the default table of contents title by setting `toc_title: My Custom Title` in the page's front matter. 
+**New in 0.5.8** - If you want to display a table of contents (toc) then add `toc: true` to your page's front matter. You can customise the default table of contents title by setting `toc_title: My Custom Title` in the page's front matter. 
 
-**New in 0.10.3**
-If you would prefer to display the contents in the menubar at the side of the page, then use `menubar_toc: true` instead of `toc: true`. This will also override the page's `menubar` setting.
+**New in 0.10.3** - If you would prefer to display the contents in the menubar at the side of the page, then use `menubar_toc: true` instead of `toc: true`. This will also override the page's `menubar` setting.
 
 ### Posts
 
-If you want posts, create a `_posts` directory to store your posts as per normal Jekyll usage, with the `layout: post`. Next create a `blog` directory with an index.html file that has `layout: blog`
+If you want posts, create a `_posts` directory to store your posts as per normal Jekyll usage, with `layout: post`. Next, create a `blog` directory with an index.html file that has `layout: blog`.
 
-Set the paginate and the paginate_path up in the `_config.yaml` to configure the posts per page and the blog pagination path.
+Set `paginate` and `paginate_path` in your site's `_config.yaml` to configure the posts per page and blog pagination path.
 
 ```yaml
 paginate: 5
 paginate_path: "/blog/page:num"
 ```
 
-**New in 0.2** It will now display an image in the blog page if you set `image: /path/to/image.jpg` in your post's or page's front matter, or in the [defaults](https://jekyllrb.com/docs/configuration/front-matter-defaults/) in your sites `_config.yml`
+**New in 0.2** - It will now display an image in the blog page if you set `image: /path/to/image.jpg` in your post's or page's front matter, or in the [defaults](https://jekyllrb.com/docs/configuration/front-matter-defaults/) in your site's `_config.yml`.
 
-You can also set the height of the hero by providing a Bulma hero height class in your front matter, such as `hero_height: is-fullwidth`. If you do not provide this, it will revert to is-medium
+You can also set the height of the hero by providing a Bulma hero height class in your front matter, such as `hero_height: is-fullwidth`. If you do not provide this, it will revert to `is-medium`.
 
 #### Post Excerpt and Summary
 
-By default the blog page and the latest posts will use the automatically generated post excerpt. If you would like to override this you can set the summary in the post's front matter. 
+By default, the blog page and the latest posts will use the automatically generated post excerpt. If you would like to override this you can set the summary in the post's front matter. 
 
 ```yaml
 layout: post
@@ -116,7 +110,7 @@ title: The post title
 summary: |-
     This is the custom summary for the post.
 
-    It can be in **markdown format** if required.
+    It can be in **Markdown format** if required.
 ```
 
 #### Social Share Buttons
@@ -126,7 +120,7 @@ Share buttons will be displayed on your posts unless you hide them by adding `hi
 
 ### Navigation
 
-For the top navigation, create a navigation.yml file in `_data` directory with the following format with the pages you want to include in the top navigation. You can now also add items to a dropdown menu.
+For the top navigation, create a navigation.yml file in the `_data` directory with the following format with the pages you want to include in the top navigation. You can now also add items to a dropdown menu.
 
 ```yaml
 - name: Page 1
@@ -138,16 +132,16 @@ For the top navigation, create a navigation.yml file in `_data` directory with t
       link: /page-2/
 ```
 
-For the current page to have an active class, ensure the `link:` format matches your [permalink](https://jekyllrb.com/docs/permalinks/#extensionless-permalinks) format. The above example will work with `permalink: pretty` setting in your `_config.yml`
+For the current page to have an active class, ensure the `link:` format matches your [permalink](https://jekyllrb.com/docs/permalinks/#extensionless-permalinks) format. The above example will work with a `permalink: pretty` setting in your `_config.yml`.
 
 #### Fixed Navbar
 
-To have a fixed navbar, you can set `fixed_navbar: top` or `fixed_navbar: bottom` respectively in your
+To have a fixed navbar on the top or bottom of your site, you can set `fixed_navbar: top` or `fixed_navbar: bottom` respectively in your
 `_config.yml`.
 
 ### Colours and Styles
 
-To overwrite the primary theme colour, set a sass variable in `assets/css/app.scss` before importing `main`
+To overwrite the primary theme colour, set a sass variable in `assets/css/app.scss` before importing `main`.
 
 ```
 ---
@@ -157,7 +151,7 @@ $primary: #333333;
 @import "main";
 ```
 
-You can overwrite any of the [Bulma initial variables](http://versions.bulma.io/0.7.0/documentation/overview/variables/) in this way as long as they are declared before the `@import "main"'`
+You can overwrite any of the [Bulma initial variables](http://versions.bulma.io/0.7.0/documentation/overview/variables/) in this way as long as they are declared before the `@import "main";`.
 
 #### Theme Color Meta Tag
 
@@ -165,26 +159,22 @@ If you want to update the theme color meta tag then set `theme_color: '#333333'`
 
 ### Sidebar Visibility
 
-**New in 0.2**
-
-If you want to show the sidebar with latest posts then set `show_sidebar: true` in the pages frontmatter, or in the [defaults](https://jekyllrb.com/docs/configuration/front-matter-defaults/) in your sites `_config.yml`
+**New in 0.2** - If you want to show the sidebar with latest posts then set `show_sidebar: true` in the page's frontmatter, or in the [defaults](https://jekyllrb.com/docs/configuration/front-matter-defaults/) in your site's `_config.yml`.
 
 ### Menubar
 
-**New in 0.3**
-
-The menubar gets its content from a data file in your site's `_data` directory. Simply set the name of your data file in the page's menubar setting in the frontmatter. 
+**New in 0.3** - The menubar gets its content from a data file in your site's `_data` directory. Simply set the name of your data file in the page's menubar setting in the frontmatter. 
 
 ```yaml
 show_sidebar: false
 menubar: example_menu
 ```
 
-You will probably want to disable the show_sidebar otherwise there will be little room for the page content. 
+You will probably want to disable `show_sidebar`. Otherwise there will be little room for the page content. 
 
 #### Creating a menubar data file
 
-Create a data file in the _data directory and use the following format (if using yml)
+Create a data file in the `_data` directory and use the following format (if using yml).
 
 ```yaml
 - label: Example Menu
@@ -204,11 +194,11 @@ Create a data file in the _data directory and use the following format (if using
       link: /blog/
 ```
 
-For the current page to have an active class, ensure the `link:` format matches your [permalink](https://jekyllrb.com/docs/permalinks/#extensionless-permalinks) format. The above example will work with `permalink: pretty` setting in your `_config.yml`
+For the current page to have an active class, ensure the `link:` format matches your [permalink](https://jekyllrb.com/docs/permalinks/#extensionless-permalinks) format. The above example will work with `permalink: pretty` setting in your `_config.yml`.
 
 #### Multiple menus
 
-You may make multiple menus in the same file, separated by the label
+You may make multiple menus in the same file, separated by labels.
 
 ```yaml
 - label: Menu Label
@@ -232,9 +222,7 @@ You may make multiple menus in the same file, separated by the label
 
 ### Tabs
 
-**New in 0.4**
-
-The tabs gets its content from a data file in your site's `_data` directory. Simply set the name of your data file in the page's menubar setting in the front matter. 
+**New in 0.4** - `tabs` gets its content from a data file in your site's `_data` directory. Simply set the name of your data file in the page's menubar setting in the front matter. 
 
 ```yaml
 title: Page with tabs
@@ -249,7 +237,7 @@ Tabs can be used in conjunction with menubar and/or sidebar if you wish.
 
 #### Creating a tabs data file
 
-Create a data file in the _data directory and use the following format (if using yml)
+Create a data file in the `_data` directory and use the following format (if using yml).
 
 ```yaml
 alignment: is-left
@@ -272,7 +260,7 @@ items:
 
 #### Settings
 
-You can control the alignment, style and size of the tabs by using the relevant [Bulma tabs classes](https://bulma.io/documentation/components/tabs/). 
+You can control the alignment, style, and size of tabs by using the relevant [Bulma tabs classes](https://bulma.io/documentation/components/tabs/). 
 
 #### Active Tab Highlighting
 
@@ -280,9 +268,7 @@ It will automatically mark the active tab based on the current page.
 
 #### Icons
 
-You can add icons to your tab by passing in the [Font Awesome icon class](https://fontawesome.com/icons?d=gallery).
-
-If you don't wish to show icons then simply omit the option from your yaml file.
+You can add icons to your tab by passing in the [Font Awesome icon class](https://fontawesome.com/icons?d=gallery). If you don't wish to show icons then simply omit the option from your yaml file.
 
 ### Notifications
 
@@ -328,15 +314,11 @@ You can overwrite the default style (is-primary) by passing in the style in the 
 
 ### Google Analytics 
 
-**New in 0.2**
-
-To enable Google Analytics add `google_analytics: UA-xxxxxxxx` to your `_config.yml` replacing the UA-xxxxxxxx with your Google Analytics property
+**New in 0.2** - To enable Google Analytics add `google_analytics: UA-xxxxxxxx` to your `_config.yml` replacing the UA-xxxxxxxx with your Google Analytics property.
 
 ### Footer
 
-**New in 0.4.1**
-
-To add some footer links, create a yaml file in the `_data` directory using the following format
+**New in 0.4.1** - To add some footer links, create a yaml file in the `_data` directory using the following format.
 
 ```yaml
 - name: Blog
@@ -347,7 +329,7 @@ To add some footer links, create a yaml file in the `_data` directory using the 
   link: /privacy-policy/
 ```
 
-Then add the name of your yaml file (without the .yml extension) into the footer_menu setting in the `_config.yml`
+Then add the name of your yaml file (without the .yml extension) into the `footer_menu` setting in the `_config.yml`.
 
 ```yaml
 footer_menu: example_footer_menu
@@ -355,19 +337,15 @@ footer_menu: example_footer_menu
 
 #### Hiding the footer
 
-**New in 0.5.2**
-
-If you would like to hide the footer on a particular page then set `hide_footer: true` in the page's frontmatter.
+**New in 0.5.2** - If you would like to hide the footer on a particular page then set `hide_footer: true` in the page's frontmatter.
 
 ### Products
 
-**New in 0.5**
-
-Now you can add simple product pages to your site using collections. 
+**New in 0.5** - Now you can add simple product pages to your site using collections. 
 
 #### Product pages
 
-Start by creating a `_products` directory to hold your product pages and create a new page for each product, such as `product1.md`. In the front matter for this page you can set the standard settings, such as your title, subtitle, description (for meta-description), hero_image, as well as the additional product settings such as price, product_code, image, features and rating. 
+Start by creating a `_products` directory to hold your product pages and create a new page for each product, such as `product1.md`. In the front matter for this page you can set the standard settings, such as your title, subtitle, description (for meta-description), hero_image, as well as the additional product settings such as price, product_code, image, features, and rating. 
 
 ```yaml
 title: Product 1 Name
@@ -405,7 +383,7 @@ You can also set default product page values here if you like, such as the layou
 
 #### Product Reviews
 
-To add reviews to your product page, create a `reviews` directory in the `_data` directory and add a yml file with the name of the product_code from the product page, for example `_data/reviews/ABC124.yml`. Create the reviews using the following format:
+To add reviews to your product page, create a `reviews` directory in the `_data` directory and add a yaml file with the name of the product_code from the product page, for example `_data/reviews/ABC124.yml`. Create the reviews using the following format:
 
 ```yaml
 - name: Mr E Xample
@@ -424,7 +402,7 @@ To add reviews to your product page, create a `reviews` directory in the `_data`
     The product worked exactly as described. 
 ```
 
-If you don't want to display an avatar image then a default user icon will be displayed. If you don't want to display a rating then omit it from the yml.
+If you don't want to display an avatar image then a default user icon will be displayed. If you don't want to display a rating then omit it from the yaml file.
 
 #### Product Category Page
 
@@ -440,23 +418,19 @@ sort: title
 
 ### Scripts
 
-**New in 0.5.2**
-
-There are two new files within the includes directory called `head-scripts.html` and `footer-scripts.html`. These are empty files by default but allow you to add any additional JavaScript to your site, such as the script for AddThis share buttons, in the `<head>` or after the `<footer>` of the page.
+**New in 0.5.2** - There are two new files within the includes directory called `head-scripts.html` and `footer-scripts.html`. These are empty files by default but allow you to add any additional JavaScript to your site, such as the script for AddThis share buttons, in the `<head>` or after the `<footer>` of the page.
 
 ### Callouts
 
-**New in 0.5.4**
-
-You can now add callouts to a page to make a landing page style layout. 
+**New in 0.5.4** - You can now add callouts to a page to make a landing page style layout. 
 
 #### Create a callout data file
 
 Create a data file following the below format. The style is for classes to set the background colour and sizes you would like to use of the Bulma hero container for the callouts. 
 
-**New in 0.5.7** You can set the height of the callouts in the data file, such as is-small, is-medium or is-large. If unset it will be is-medium by default.
+**New in 0.5.7** - You can set the height of the callouts in the data file, such as `is-small`, `is-medium`, or `is-large`. If unset it will be `is-medium` by default.
 
-The items have 6 fields, but only the title and subtitle are required. If the icon is a brand icon, such as GitHub in the below example, set `icon_brand: true`.
+The items have six fields, but only the title and subtitle are required. If the icon is a brand icon, such as GitHub in the below example, set `icon_brand: true`.
 
 ```yaml
 style: is-light
@@ -476,7 +450,7 @@ items:
 
 #### Set the callouts in the frontmatter
 
-To display the callouts on your page, add a callouts property in the frontmatter and set it to the name of your data file without the extension.
+To display the callouts on your page, add a `callouts` property in the frontmatter and set it to the name of your data file without the extension.
 
 ```yaml
 layout: page
@@ -487,7 +461,7 @@ callouts: example_callouts
 
 ### Favicon
 
-The default favicon path is `{{ site.baseurl }}/favicon.png` but you can overwrite it in the sites `_config.yml` like this `favicon: /path/to/favicon.png`
+The default favicon path is `{{ site.baseurl }}/favicon.png` but you can overwrite it in the site's `_config.yml` like this `favicon: /path/to/favicon.png`
 
 ### Showcases
 
@@ -495,13 +469,13 @@ Showcases allow you to display your work to others using a simple layout.
 
 #### Creating A Showcase Datafile
 
-Create a datafile in your sites `_data` directory in the following format. Subtitle, features and tags are not required. 
+Create a datafile in your site's `_data` directory in the following format. Subtitle, features and tags are not required. 
 
-The description text accepts markdown and is run through the markdownify filter on the page.
+The description text accepts Markdown and is run through the markdownify filter on the page.
 
-The image_ratio will default to is-16by9 if it is not defined and accepts the [Bulma image](https://bulma.io/documentation/elements/image/) classes.
+The `image_ratio` will default to `is-16by9` if it is not defined and accepts the [Bulma image](https://bulma.io/documentation/elements/image/) classes.
 
-To display GitHub Stars, Forks and Watchers badges add your GitHub user and repo name to the github setting, such as `chrisrhymes/bulma-clean-theme`
+To display GitHub Stars, Forks, and Watchers badges, add your GitHub user and repo name to the `github` setting, such as `chrisrhymes/bulma-clean-theme`.
 
 To change the default styles of the features, set `features_styles`. This uses the styles from [bulma-block-list](https://www.csrhymes.com/bulma-block-list/) npm package.
 
@@ -510,7 +484,7 @@ intro: |-
   This is some introduction text for the showcases.
   
   ## Example Heading
-  It can convert markdown format
+  It can convert Markdown format
 
 items:
   - title: Example showcase item
@@ -602,7 +576,7 @@ Start by creating a gallery data file using the below format, for example `my_ga
       large_link: https://via.placeholder.com/1200x675
       alt: The alt text for the image
       description: |-
-        The image description can be written in **markdown** if required
+        The image description can be written in **Markdown** if required
       ratio: is-16by9
     - link: https://via.placeholder.com/800x600
       large_link: https://via.placeholder.com/1200x675
@@ -612,13 +586,13 @@ Start by creating a gallery data file using the below format, for example `my_ga
 ```
 
 * If a ratio is not provided it will default to 16 by 9. Use [Bulma image](https://bulma.io/documentation/elements/image/) classes to define the image ratio required. 
-* The description can be plain text or it can be markdown if required. 
-* The alt will be used as the images alt text.
-* The large_link displays in a modal when the image is clicked
+* The description can be plaintext or it can be Markdown if required. 
+* The alt will be used as the image's alt text.
+* The large_link displays in a modal when the image is clicked.
 
 #### Displaying the gallery
 
-In your pages front matter add a gallery with the datafiles filename without the extension.
+In your page's front matter add a gallery with the datafile's filename without the extension.
 
 ```yaml
 layout: page
@@ -645,8 +619,6 @@ Comments are enabled by default. If you want to disable them, set in the front m
 comments: false
 ```
 
-
-
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/chrisrhymes/bulma-clean-theme. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
@@ -655,7 +627,7 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/chrisr
 
 To set up your environment to develop this theme, run `bundle install`.
 
-Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
+Your theme is set up just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
 
 ## License
 
