@@ -5,7 +5,7 @@
     - name: Pages
       link: /#
       items:
-        - name: Page With Sidebar 
+        - name: Page With Sidebar
           link: /page-1/
         - name: Page Without Sidebar
           link: /page-2/
@@ -31,5 +31,7 @@
           link: /sponsors/
         - name: Image Gallery
           link: /gallery/
+        - name: Recipe Page
+          link: /example-recipe/
     - name: Blog
       link: /blog/

@@ -1,3 +1,6 @@
+# 0.11
+* Added Recipe page layout
+
 # 0.10.6
 * Create tag partial - pull request #87 by DarthGandalf
 * Update navbar to use Alpine js
