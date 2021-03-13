@@ -11,6 +11,7 @@ The theme uses [Alpine.js](https://github.com/alpinejs/alpine) for its interacti
 
 * [Installation](#installation)
 * [Usage](#usage)
+    * [Lang](#lang)
     * [Pages](#pages)
         * [Page Hero](#page-hero)
         * [Table Of Contents](#table-of-contents)
@@ -62,6 +63,10 @@ Or install it yourself as:
     $ gem install bulma-clean-theme
 
 ## Usage
+
+### Lang
+
+The html lang attribute is set to `en` by default but you can override this in the _config.yml file `lang: en`
 
 ### Pages
 
