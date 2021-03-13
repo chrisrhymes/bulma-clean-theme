@@ -44,6 +44,7 @@ This demo site showcases the available page layout options.
 * Landing Page With Callouts
 * Sponsors Page
 * Image Gallery
+* Recipe Page
 * Blog
 * Post
 
