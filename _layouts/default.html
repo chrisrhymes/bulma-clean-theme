@@ -2,16 +2,18 @@
     {% assign has_left_sidebar = true %}
 {% endif %}
 
-{% if page.show_sidebar and has_left_sidebar  %} 
-    {% assign content_width = 'is-4' %} 
-{% elsif page.show_sidebar or has_left_sidebar %} 
-    {% assign content_width = 'is-8' %} 
-{% else %} 
-    {% assign content_width = 'is-12' %} 
+{% if page.show_sidebar and has_left_sidebar  %}
+    {% assign content_width = 'is-4' %}
+{% elsif page.show_sidebar or has_left_sidebar %}
+    {% assign content_width = 'is-8' %}
+{% else %}
+    {% assign content_width = 'is-12' %}
 {% endif %}
 
 <!DOCTYPE html>
-<html {% if site.fixed_navbar %} class="has-navbar-fixed-{{ site.fixed_navbar }}" {% endif %}>
+<html
+ lang="{{ site.lang | default: 'en' }}"{% if site.fixed_navbar %}
+ class="has-navbar-fixed-{{ site.fixed_navbar }}"{% endif %}>
   {% include head.html %}
   <body>
     {% include header.html %}
@@ -54,4 +56,3 @@
     {%- include footer-scripts.html -%}
   </body>
 </html>
-
