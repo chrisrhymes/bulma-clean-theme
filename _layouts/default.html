@@ -11,9 +11,9 @@
 {% endif %}
 
 <!DOCTYPE html>
-<html {% if site.fixed_navbar %}
- class="has-navbar-fixed-{{ site.fixed_navbar }}"{% endif %}{% if site.lang %}
- lang="{{ site.lang }}"{% endif %}>
+<html
+ lang="{{ site.lang | default: 'en' }}"{% if site.fixed_navbar %}
+ class="has-navbar-fixed-{{ site.fixed_navbar }}"{% endif %}>
   {% include head.html %}
   <body>
     {% include header.html %}
