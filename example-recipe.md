@@ -28,11 +28,11 @@ method:
     - Add the minced beef to the pan, breaking it up with a wooden spoon and cook until browned off
     - Add the chopped tomatoes, tomato puree, beef stock, worcestershire sauce and italian herbs and stir. Add a pinch of salt and pepper then stir through
     - Bring to a gentle simmer and cook for 30 minutes
-prep_time: PT10M
+prep_time: PT0H10M
 cook_time: PT1H
 total_time: PT1H10M
 keywords: recipe,cooking
-recipie_yield: 4
+recipe_yield: 4
 recipe_category: Main course
 recipe_cuisine: Italian
 calories: 500 calories
@@ -78,11 +78,11 @@ method:
     - Add the minced beef to the pan, breaking it up with a wooden spoon and cook until browned off
     - Add the chopped tomatoes, tomato puree, beef stock, worcestershire sauce and italian herbs and stir. Add a pinch of salt and pepper then stir through
     - Bring to a gentle simmer and cook for 30 minutes
-prep_time: PT10M
+prep_time: PT0H10M
 cook_time: PT1H
 total_time: PT1H10M
 keywords: recipe,cooking
-recipie_yield: 4
+recipe_yield: 4
 recipe_category: Main course
 recipe_cuisine: Italian
 calories: 500 calories

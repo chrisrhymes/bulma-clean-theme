@@ -48,6 +48,21 @@ layout: default
 
 <div class="columns is-multiline">
     <div class="column is-4">
+        <div class="box has-text-centered">
+            <strong>Serves:</strong> {{ page.recipe_yield }}
+        </div>
+    </div>
+    <div class="column is-4">
+        <div class="box has-text-centered">
+            <strong>Prep time:</strong> {{ page.prep_time | date: "%k hours %M minutes" }}
+        </div>
+    </div>
+    <div class="column is-4">
+        <div class="box has-text-centered">
+            <strong>Cook time:</strong> {{ page.cook_time | date: "%k hours %M minutes" }}
+        </div>
+    </div>
+    <div class="column is-4">
         <div class="box">
             <p class="title is-4">Ingredients</p>
             <div class="content">
@@ -67,6 +82,13 @@ layout: default
                     <li>{{ step }}</li>
                 {% endfor %}
             </ol>
+            <div class="tags">
+                {% assign tags = page.keywords | split: "," %}
+                {% for tag in tags %}
+                    {% include tag.html tag=tag %}
+                {% endfor %}
+            </div>
+            
             <p>Published: {{ page.date | date: "%b %-d, %Y" }} by {{ page.author }}</p>
         </div>
         <div class="content">
