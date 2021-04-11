@@ -430,6 +430,8 @@ sort: title
 
 **New in 0.5.4** - You can now add callouts to a page to make a landing page style layout. 
 
+* [Example of page with callouts - notice the 'calls to action' below the header.](http://www.csrhymes.com/bulma-clean-theme/landing/)
+
 #### Create a callout data file
 
 Create a data file following the below format. The style is for classes to set the background colour and sizes you would like to use of the Bulma hero container for the callouts. 
