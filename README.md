@@ -52,7 +52,7 @@ gem "bulma-clean-theme"
 And add this line to your Jekyll site's `_config.yml`:
 
 ```yaml
-theme: bulma-clean-theme
+remote_theme: bulma-clean-theme
 ```
 
 And then execute:
