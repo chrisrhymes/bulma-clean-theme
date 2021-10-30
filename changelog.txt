@@ -1,3 +1,8 @@
+# 0.12
+* Add blog post series
+* Update npm dependencies
+* Update gems
+
 # 0.11.2
 * Fix for sidebar is-tablet layout
 

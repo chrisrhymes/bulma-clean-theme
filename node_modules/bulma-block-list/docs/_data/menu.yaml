@@ -14,6 +14,8 @@
       link: '/#has-radius'
     - name: Is Highlighted
       link: '/#highlighted'
+    - name: Has Icon
+      link: '/#has-icon'
     - name: List Item Overrides
       link: '/#list-item-overrides'
     - name: Combinations

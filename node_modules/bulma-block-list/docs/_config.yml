@@ -13,3 +13,5 @@ markdown: kramdown
 plugins:
   - jekyll-feed
   - github-pages
+
+livereload: true
