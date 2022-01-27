@@ -86,7 +86,7 @@ Create your pages as individual Markdown files and use `layout: page` for normal
 
 **New in 0.2** - Heros can now display a background image if you provide a `hero_image: /path/to/image.jpg` setting in your page front matter, or in the [defaults](https://jekyllrb.com/docs/configuration/front-matter-defaults/) in your site's `_config.yml`.
 
-You can also set the height of the hero by providing a Bulma hero height class in your front matter, such as `hero_height: is-fullwidth`. If you do not provide this, it will revert to `is-medium`.
+You can also set the height of the hero by providing a Bulma hero height class in your front matter, such as `hero_height: is-fullheight`. If you do not provide this, it will revert to `is-medium`.
 
 **New in 0.5.4** - If you would like to add a call to action button in the hero then add `hero_link` and `hero_link_text` to the page's front matter.
 
