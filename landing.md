@@ -1,5 +1,5 @@
 ---
-layout: page
+ layout: page
 title: Example Landing Page
 subtitle: This is an example landing page with callouts
 hero_height: is-large
