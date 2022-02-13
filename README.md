@@ -1,9 +1,13 @@
+---
 layout: page
 title: Healthy Habits for the Sustainable Cheapskate
 subtitle: Tips and tricks for those trying to make healthy lifestyle changes
 hero_height: is-medium 
 callouts: home_callouts
-show_sidebar: true 
+show_sidebar: true
+---
+
+
 
 # bulma-clean-theme
 
