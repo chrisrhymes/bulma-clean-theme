@@ -162,4 +162,5 @@ An example [landing page layout](https://www.csrhymes.com/bulma-clean-theme/land
 
 I’ve tried to make these additions easy to use and flexible where possible. I’ve updated the readme file and the theme demo site with more information to help you get started with these new features. 
 
-If you decide to give the theme a go, it would be great to see how you are using it and if you have any ideas of how it can be developed further. You never know, if I get enough responses then I may even make a showcase page on the demo theme site to highlight how others are using it. 
+If you decide to give the theme a go, it would be great to see how you are using it and if you have any ideas of how it can be developed further. You never know, if I get enough responses then I may even make a showcase page on the demo theme site to highlight how others are using it.  
+
