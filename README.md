@@ -1,4 +1,12 @@
+---
+layout: page
+title: this is a title
+subtitle: this is a subtitle
+---
+
 # bulma-clean-theme
+
+subtitle: this is a subtitle
 
 [![Gem Version](https://badge.fury.io/rb/bulma-clean-theme.svg)](https://badge.fury.io/rb/bulma-clean-theme)
 ![Gem](https://img.shields.io/gem/dt/bulma-clean-theme.svg)
