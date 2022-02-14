@@ -9,9 +9,9 @@ baseurl: "/bulma-clean-theme"
 url: "https://www.csrhymes.com"
 permalink: pretty
 #favicon: /path/to/favicon.png
-gh_sponsor: chrisrhymes
+#gh_sponsor: chrisrhymes
 #hide_share_buttons: true
-#theme_color: '#db9234'
+theme_color: '#db9234'
 #fixed_navbar: top
 
 paginate: 5
