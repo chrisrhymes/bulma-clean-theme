@@ -1,8 +1,9 @@
 ---
 layout: page
 title: Healthy Habits for the Sustainable Cheapskate
-subtitle: Tips and tricks for those trying to make healthy lifestyle changes
+subtitle: Tips and tricks for healthy lifestyle changes
 hero_height: is-medium 
+hero_image: /path/to/image.jpg`
 callouts: home_callouts
 show_sidebar: true
 ---

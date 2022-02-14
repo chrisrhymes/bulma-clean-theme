@@ -29,8 +29,8 @@
       link: /gallery/
     - name: Recipe Page
       link: /example-recipe/
-- name: Products
-  link: /products/
+- name: Test tab
+  link: /test/
 - name: Showcase
   link: /showcase/
 - name: Blog
