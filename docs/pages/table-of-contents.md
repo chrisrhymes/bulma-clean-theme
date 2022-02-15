@@ -1,28 +1,24 @@
 ---
 layout: page
-title: Page With Contents
-subtitle: Example page with contents
-toc: true
-#toc_title: Custom Title
-menubar: example_menu
+title: Table of Contents
+subtitle: Pages
+menubar: docs_menu
 show_sidebar: false
+redirect_from:
+    - /page-with-contents/
 ---
 
 ## Introduction
 
-This is an example page with contents that are generated from the page content. 
-
-The page contents are generated automatically using [Jekyll TOC](https://github.com/allejo/jekyll-toc).
+The table of contents are generated automatically from the page content using [Jekyll TOC](https://github.com/allejo/jekyll-toc).
 
 ## Set Up
 
-To add contents to your page add `toc: true` to the page's front matter. 
+To add contents to your page add `toc: true` to the page's front matter. The contents will be displayed at the top of the page, above the content. You can also make the contents in the [menubar](#displaying-the-contents-in-the-menubar).
 
-### Contents Title
+## Contents Title
 
 To overwrite the default title for the contents, set `toc_title: My Custom Title` in the page's front matter.
-
-### Example Front Matter 
 
 ```yaml
 layout: page

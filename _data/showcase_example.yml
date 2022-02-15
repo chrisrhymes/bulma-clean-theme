@@ -1,5 +1,7 @@
 intro: |-
   This is an example showcase page to show you how you can use it to easily showcase your work.
+
+  [View the showcase docs](/bulma-clean-theme/docs/showcases/)
 items:
   - title: C.S. Rhymes Website
     subtitle: csrhymes.com

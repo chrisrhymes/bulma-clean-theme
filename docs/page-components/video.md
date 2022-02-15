@@ -1,22 +1,29 @@
 ---
 layout: page
-title: Page With Video
-description: A page with an embedded YouTube video
-menubar: example_menu
+title: Video
+subtitle: Page Components
+menubar: docs_menu
 show_sidebar: false
+toc: true
+redirect_from: 
+    - /page-with-video/
 ---
 
-This is an example page with an embedded YouTube video. 
+## Example
 
 {% include youtube.html video="iRuJufELrWo" %}
 
-To embed the video, use an include where you want the video to appear and then pass in the YouTube id as the video variable. 
+## YouTube
+
+To embed the YouTube video, include the youtube.html where you want the video to appear and then pass in the YouTube id as the video variable. 
 
 {% raw %}
 ```liquid
 {% include youtube.html video="videoid" %}
 ```
 {% endraw %}
+
+### Start Time
 
 You can optionally include a start time in seconds. This works the same as the ?t= parameter in Youtube URLs.
 
@@ -26,8 +33,10 @@ You can optionally include a start time in seconds. This works the same as the ?
 ```
 {% endraw %}
 
-It is also possible to embed Vimeo videos in a similar way
 
+## Vimeo Video
+
+It is also possible to embed Vimeo videos in a similar way by including the vimeo.html and passing in the video id.
 
 {% raw %}
 ```liquid

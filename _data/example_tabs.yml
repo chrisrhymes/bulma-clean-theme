@@ -3,14 +3,14 @@ style: is-boxed
 size: is-large
 items:
   - name: Tabs
-    link: /page-4/
+    link: /docs/page-components/tabs/
     icon: fa-smile-wink
-  - name: Sidebar
-    link: /page-1/
+  - name: Tab 2
+    link: #
     icon: fa-angle-double-right
-  - name: No Sidebar
-    link: /page-2/
+  - name: Tab 3
+    link: #
     icon: fa-ellipsis-v
-  - name: Menubar
-    link: /page-3/
+  - name: Tab 4
+    link: #
     icon: fa-bars
