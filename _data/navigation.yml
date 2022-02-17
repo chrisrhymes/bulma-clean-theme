@@ -1,7 +1,7 @@
 - name: Articles
   link: /#
   dropdown:
-    - name: Page With Sidebar
+    - name: When the Bears Come Marching In
       link: /page-1/
     - name: Page No Sidebar
       link: /page-2/
