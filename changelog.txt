@@ -1,3 +1,8 @@
+# 0.13
+* Allow use with Jekyll 4 - pull request #113 by eheinrich
+* Navbar item highlights when subpage is active - pull request #107 by nextensible
+* Revamp the docs out of the readme and into the demo site
+
 # 0.12
 * Add blog post series
 * Update npm dependencies

@@ -1,5 +1,7 @@
 - label: Docs
   items:
+    - name: Installation
+      link: '/#installation'
     - name: How To Use
       link: '/#how-to-use'
     - name: Alignment
