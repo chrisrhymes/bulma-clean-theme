@@ -4,11 +4,11 @@
             <button class="delete" x-on:click="visible = false"></button>
         {% endif %}
         <article class="media">
-            {% unless include.icon %}
+            {% if include.icon != 'false' %}
                 <div class="media-left">
                     <span class="icon"><i class="{{ include.icon | default: 'fas fa-exclamation-circle' }} fa-lg"></i></span>
                 </div>
-            {% endunless %}
+            {% endif %}
             <div class="media-content">
                 <div class="content">{{ include.message | markdownify }}</div>
             </div>

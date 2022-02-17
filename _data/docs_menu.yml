@@ -1,0 +1,77 @@
+- label: Getting Started
+  items:
+    - name: Installation
+      link: /docs/getting-started/installation/
+    - name: Configuration
+      link: /docs/getting-started/configuration/
+    - name: Theming
+      link: /docs/getting-started/theming/
+    - name: Sidebar
+      link: /docs/getting-started/sidebar/
+    - name: Scripts
+      link: /docs/getting-started/scripts/
+
+
+- label: Navigation
+  items:
+    - name: Top navigation
+      link: /docs/navigation/top-navigation/
+    - name: Footer navigation
+      link: /docs/navigation/footer-navigation/
+    - name: Menubar
+      link: /docs/navigation/menubar/
+
+- label: Pages
+  items:
+    - name: Creating a page
+      link: /docs/pages/creating-a-page/
+    - name: Hero
+      link: /docs/pages/hero/
+    - name: Table of Contents
+      link: /docs/pages/table-of-contents/
+
+- label: Posts
+  items:
+    - name: Creating a Post
+      link: /docs/posts/creating-a-post/
+    - name: Excerpt & Summary
+      link: /docs/posts/post-excerpt-summary/
+    - name: Series
+      link: /docs/posts/post-series/
+
+- label: Page Components
+  items: 
+    - name: Callouts
+      link: /docs/page-components/callouts/
+    - name: Image Gallery
+      link: /docs/page-components/image-gallery/
+    - name: Image Modal
+      link: /docs/page-components/image-modal/
+    - name: Notifications
+      link: /docs/page-components/notifications/
+    - name: Showcases
+      link: /docs/page-components/showcases/
+    - name: Sponsors
+      link: /docs/page-components/sponsors/
+    - name: Tabs
+      link: /docs/page-components/tabs/
+    - name: Tags
+      link: /docs/page-components/tags/
+    - name: Video
+      link: /docs/page-components/video/
+
+
+- label: Products
+  items:
+    - name: Product Pages
+      link: /docs/products/product-pages/
+    - name: Product Reviews
+      link: /docs/products/product-reviews/
+    - name: Category Page
+      link: /docs/products/category-page/
+
+- label: Recipes
+  items:
+    - name: Recipes
+      link: /docs/recipes/recipes/
+

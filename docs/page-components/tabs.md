@@ -1,11 +1,18 @@
 ---
-title: Page with Tabs
-subtitle: Demo page with tabs
 layout: page
+title: Tabs
+subtitle: Page Components
+menubar: docs_menu
 show_sidebar: false
+toc: true
 tabs: example_tabs
-menubar: example_menu
+redirect_from:
+  - /page-4/
 ---
+
+## Tabs Component
+
+Bulma offers tabs component as another form of navigation. This page has tabs at the top as an example.
 
 ## Displaying tabs
 

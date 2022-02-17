@@ -1,11 +1,17 @@
 ---
 layout: page
-title: Page With Notifications
+title: Notifications
+subtitle: Page Components
+menubar: docs_menu
+show_sidebar: false
+toc: true
+redirect_from:
+    - /page-with-notification/
 ---
 
-This page shows how you can add [Bulma notifications](https://bulma.io/documentation/elements/notification/).
+## Bulma Notifications
 
-{% include notification.html message="This is the message for the notification" %}
+Bulma offers a [notification](https://bulma.io/documentation/elements/notification/) component to show a messages.
 
 Use the following code to include a simple notification. 
 
