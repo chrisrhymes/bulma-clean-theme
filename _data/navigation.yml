@@ -1,4 +1,4 @@
-- name: Pages
+- name: Articles
   link: /#
   dropdown:
     - name: Page With Sidebar
@@ -29,9 +29,11 @@
       link: /gallery/
     - name: Recipe Page
       link: /example-recipe/
-- name: Test
+- name: Book Reviews
   link: /test/
-- name: Books
-  link: /showcase/
 - name: About
+  link: /showcase/
+- name: Healthy Habits for the Conscious Consumer
   link: /blog/
+
+
