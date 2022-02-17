@@ -18,8 +18,6 @@ The theme uses [Alpine.js](https://github.com/alpinejs/alpine) for its interacti
 
 ## Installation
 
-**This theme requires Jekyll 3.9 to be compatible with GitHub Pages.**
-
 Add this line to your Jekyll site's `Gemfile`:
 
 ```ruby
@@ -32,7 +30,7 @@ And add this line to your Jekyll site's `_config.yml`:
 theme: bulma-clean-theme
 ```
 
-If you are deploying to GitHub pages, then you can also install the [GitHub Pages gem](https://github.com/github/pages-gem) and use `remote_theme` instead of `theme` in your `_config.yml`.
+If you are deploying to GitHub pages, then you can also install the [GitHub Pages gem](https://github.com/github/pages-gem) and use `remote_theme` instead of `theme` in your `_config.yml`. **Note that the GitHub Pages gem requires Jekyll version 3.9.**
 
 ```yaml
 # With GitHub Pages Gem
