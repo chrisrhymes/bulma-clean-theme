@@ -6,7 +6,7 @@ menubar: menu
 hero_height: is-medium
 ---
 
-<div class="columns is-multiline">
+<div class="columns is-multiline" markdown="0">
     <div class="column is-12 has-text-right">
         <a href="https://github.com/chrisrhymes/bulma-block-list/stargazers">
             <img src="https://img.shields.io/github/stars/chrisrhymes/bulma-block-list?style=social" alt="GitHub Stars" />
@@ -18,8 +18,16 @@ hero_height: is-medium
     </div>
     <div class="column is-12">
         <div class="content">
+            <h2 id="installation">Installation</h2>
+            <ul>
+                <li><code>npm i -S bulma-block-list</code></li>
+                <li><code>@import "node_modules/bulma-block-list/src/block-list";</code> after importing Bulma.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="column is-12">
+        <div class="content">
             <h2 id="how-to-use">How to use</h2>
-            <p>View the <a href="https://github.com/chrisrhymes/bulma-block-list">Bulma Block List repo on GitHub</a> and follow the instructions.</p>
             <p>Create a ul and give it the class 'block-list' then use the modifyers to style as needed. Only some of the colours are displayed below but the scss loops through the entire Bulma $colors map.</p>
         </div>
 <div class="highlight highlight-text-html-basic">
