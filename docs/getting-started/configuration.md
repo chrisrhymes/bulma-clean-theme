@@ -19,6 +19,9 @@ Below are some specific options that you might want to set in your `_config.yml`
 
 The html lang attribute is set to `en` by default but you can override this in the _config.yml file `lang: en`
 
+## Direction
+The html _dir_ attribute is set to `ltr` by default. It can be overridden in the _config.yml file like `direction: rtl`. 
+
 ## Google Analytics 
 
 To enable Google Analytics add `google_analytics: UA-xxxxxxxx` to your `_config.yml` replacing the UA-xxxxxxxx with your Google Analytics property.
