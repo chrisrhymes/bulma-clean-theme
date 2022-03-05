@@ -1,3 +1,8 @@
+# 0.13.1
+* Add dir to html tag - pull request #117 by emranbm
+* Add Jekyll feed tag to head if feed config is set - pull request #119 by rezrov
+* Fix image modal render bug in markdown page - issue #118
+
 # 0.13
 * Allow use with Jekyll 4 - pull request #113 by eheinrich
 * Navbar item highlights when subpage is active - pull request #107 by nextensible
