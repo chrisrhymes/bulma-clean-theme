@@ -12,10 +12,10 @@
       link: /location/
     - name: Soldering
       link: /people/
-    - name: How To Join
+    - name: Create A Project
       link: /location/
-    - name: Soldering
-      link: /people/
+    - name: Open House
+      link: /soldering/
 - name: Projects
   link: /blog/
 - name: FAQ
