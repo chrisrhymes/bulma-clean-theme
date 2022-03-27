@@ -4,8 +4,8 @@ title: Amp Lab
 tagline: Amp Lab
 email: rhforsythjr@v.edu
 description: VT site for the Amp Lab
-baseurl: "/Website"
-url: "https://amp-lab-at-vt.github.io"
+baseurl: "Website"
+url: ""
 permalink: pretty
 #favicon: /path/to/favicon.png
 #gh_sponsor: forsyth-creations
