@@ -1,19 +1,26 @@
-- name: Docs
-  link: /docs/
-- name: Example Pages
-  link: /#
+- name: About 
+  link: /aboutus/
   dropdown:
-    - name: Landing Page With Callouts
-      link: /landing/
-    - name: Sponsors Page
-      link: /sponsors/
-    - name: Image Gallery
-      link: /gallery/
-    - name: Products
-      link: /products/
-    - name: Recipe Page
-      link: /example-recipe/
-    - name: Showcase
-      link: /showcase/
-- name: Blog
+    - name: Location
+      link: /location/
+    - name: People
+      link: /people/
+- name: Get Involved 
+  link: /getinvolved/
+  dropdown:
+    - name: How To Join
+      link: /location/
+    - name: Soldering
+      link: /people/
+    - name: How To Join
+      link: /location/
+    - name: Soldering
+      link: /people/
+- name: Projects
+  link: /blog/
+- name: FAQ
+  link: /blog/
+- name: Resources
+  link: /blog/
+- name: Quick Links
   link: /blog/
