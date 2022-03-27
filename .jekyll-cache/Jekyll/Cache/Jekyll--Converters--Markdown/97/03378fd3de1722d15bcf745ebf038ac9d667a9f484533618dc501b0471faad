@@ -1,0 +1,2 @@
+I"<p>From version 0.12, you can now make a post a part of a series of posts, linking to the other posts in the series, by creating a <code class="language-plaintext highlighter-rouge">series</code> data file and then setting the series in each of the post’s front matter.</p>
+:ET

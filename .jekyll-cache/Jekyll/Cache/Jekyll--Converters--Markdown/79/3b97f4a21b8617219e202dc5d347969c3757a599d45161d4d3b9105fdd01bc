@@ -1,0 +1,31 @@
+I"N	<h2 id="creating-a-page">Creating A Page</h2>
+
+<p>Create your pages as individual Markdown files and when the site is built by Jekyll it will process the markdown into html.</p>
+
+<p>You can create subdirectories with files in and they will have the subdirectory in their path. For example, this page is in the <code class="language-plaintext highlighter-rouge">docs</code> subdirectory and is called <code class="language-plaintext highlighter-rouge">creating-a-page.md</code>. This will become <code class="language-plaintext highlighter-rouge">/docs/creating-a-page.html</code>, or <code class="language-plaintext highlighter-rouge">/docs/creating-a-page/</code> depending on your permalink settings.</p>
+
+<h2 id="front-matter">Front Matter</h2>
+
+<p>Ensure you use <code class="language-plaintext highlighter-rouge">layout: page</code> for normal pages.</p>
+
+<p>Set the page’s title and subtitle in the front matter and it will appear in the hero. The subtitle is optional.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">layout</span><span class="pi">:</span> <span class="s">page</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s">The page title</span>
+<span class="na">subtitle</span><span class="pi">:</span> <span class="s">The page subtitle</span>
+</code></pre></div></div>
+
+<h2 id="search-engine-optimisation">Search Engine Optimisation</h2>
+
+<p>Bulma Clean Theme uses Jekyll SEO tag to generate additional meta tags. Ensure each page and post has a unique title and description in the front matter.</p>
+
+<p>You can also set an image that will be used when the page or post is shared on social media.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">layout</span><span class="pi">:</span> <span class="s">page</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s">The page title</span>
+<span class="na">subtitle</span><span class="pi">:</span> <span class="s">The page subtitle</span>
+<span class="na">description</span><span class="pi">:</span> <span class="s">This is the meta description for this page and will help it appear in search engines</span>
+<span class="na">image</span><span class="pi">:</span> <span class="s">/img/page-image.jpg</span>
+</code></pre></div></div>
+
+:ET

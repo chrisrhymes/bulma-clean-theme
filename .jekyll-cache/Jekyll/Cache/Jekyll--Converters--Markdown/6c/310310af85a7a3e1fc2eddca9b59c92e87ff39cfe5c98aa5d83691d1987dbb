@@ -1,0 +1,57 @@
+I"œ<h2 id="what-are-callouts">What are callouts?</h2>
+
+<p>Call outs allow you to create a section on a page that has items with an icon, title, subtitle, description and a link. You can use them to promote features or links to important pages in your site and create a landing page.</p>
+
+<p><a href="/bulma-clean-theme/landing/">View the example landing page</a></p>
+
+<h2 id="create-a-callout-data-file">Create a callout data file</h2>
+
+<p>Create a data file following the below format. The style is for classes to set the background colour and sizes you would like to use of the Bulma hero container for the callouts.</p>
+
+<p>You can set the height of the callouts in the data file, such as is-small, is-medium or is-large. If unset it will be is-medium by default.</p>
+
+<p>The items have 6 fields, but only the title and subtitle are required. If the icon is a brand icon, such as GitHub in the below example, set <code class="language-plaintext highlighter-rouge">icon_brand: true</code>.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">style</span><span class="pi">:</span> <span class="s">is-light</span>
+<span class="na">height</span><span class="pi">:</span> <span class="s">is-medium</span>
+<span class="na">items</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s">Example callout </span><span class="m">1</span>
+    <span class="na">subtitle</span><span class="pi">:</span> <span class="s">Example subtitle </span><span class="m">1</span>
+    <span class="na">icon</span><span class="pi">:</span> <span class="s">fa-space-shuttle</span>
+    <span class="na">description</span><span class="pi">:</span> <span class="pi">&gt;</span>
+      <span class="s">The example description text goes here and can be multiple lines.</span>
+
+      <span class="s">For example, such as this. </span>
+    <span class="na">call_to_action_name</span><span class="pi">:</span> <span class="s">Call to action </span><span class="m">1</span>
+    <span class="na">call_to_action_link</span><span class="pi">:</span> <span class="s">/page-1/</span>
+  <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s">Example callout </span><span class="m">2</span>
+    <span class="na">subtitle</span><span class="pi">:</span> <span class="s">Example subtitle </span><span class="m">2</span>
+    <span class="na">icon</span><span class="pi">:</span> <span class="s">fa-wrench</span>
+    <span class="na">description</span><span class="pi">:</span> <span class="pi">&gt;</span>
+      <span class="s">The example description text goes here and can be multiple lines.</span>
+
+      <span class="s">For example, such as this.</span>
+    <span class="na">call_to_action_name</span><span class="pi">:</span> <span class="s">Call to action </span><span class="m">2</span>
+    <span class="na">call_to_action_link</span><span class="pi">:</span> <span class="s">/page-2/</span>
+  <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s">Example callout </span><span class="m">3</span>
+    <span class="na">subtitle</span><span class="pi">:</span> <span class="s">Example subtitle </span><span class="m">3</span>
+    <span class="na">icon</span><span class="pi">:</span> <span class="s">fa-github</span>
+    <span class="na">icon_brand</span><span class="pi">:</span> <span class="no">true</span>
+    <span class="na">description</span><span class="pi">:</span> <span class="pi">&gt;</span>
+      <span class="s">The example description text goes here and can be multiple lines.</span>
+
+      <span class="s">For example, such as this.</span>
+    <span class="na">call_to_action_name</span><span class="pi">:</span> <span class="s">Call to action </span><span class="m">3</span>
+    <span class="na">call_to_action_link</span><span class="pi">:</span> <span class="s">/page-3/</span>
+</code></pre></div></div>
+
+<h2 id="set-the-callouts-in-the-frontmatter">Set the callouts in the frontmatter</h2>
+
+<p>To display the callouts on your page, add a callouts property in the front matter and set it to the name of your data file without the extension.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">layout</span><span class="pi">:</span> <span class="s">page</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s">Example Landing Page</span>
+<span class="na">subtitle</span><span class="pi">:</span> <span class="s">This is an example landing page</span>
+<span class="na">callouts</span><span class="pi">:</span> <span class="s">example_callouts</span>
+</code></pre></div></div>
+:ET

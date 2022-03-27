@@ -1,0 +1,9 @@
+I"á<p>This <strong>message</strong> contains <em>markdown</em> and a <a href="https://www.csrhymes.com">link</a>.</p>
+
+<p>It also contains a second paragraph and a list.</p>
+
+<ul>
+  <li>List item</li>
+  <li>List item</li>
+</ul>
+:ET

@@ -1,0 +1,19 @@
+I"ã<h2 id="creating-top-navigation">Creating Top Navigation</h2>
+
+<p>For the top navigation, create a <code class="language-plaintext highlighter-rouge">navigation.yml</code> file in the <code class="language-plaintext highlighter-rouge">_data</code> directory with the following format with the pages you want to include in the top navigation. You can also add items to a dropdown menu.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Page Name</span>
+  <span class="na">link</span><span class="pi">:</span> <span class="s">/page-1/</span>
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Blog</span>
+  <span class="na">link</span><span class="pi">:</span> <span class="s">/blog/</span>
+  <span class="na">dropdown</span><span class="pi">:</span> 
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Page </span><span class="m">2</span>
+      <span class="na">link</span><span class="pi">:</span> <span class="s">/page-2/</span>
+</code></pre></div></div>
+
+<p>For the current page to have an active class, ensure the <code class="language-plaintext highlighter-rouge">link:</code> format matches your <a href="https://jekyllrb.com/docs/permalinks/#extensionless-permalinks">permalink</a> format. The above example will work with a <code class="language-plaintext highlighter-rouge">permalink: pretty</code> setting in your <code class="language-plaintext highlighter-rouge">_config.yml</code>.</p>
+
+<h2 id="fixed-navbar">Fixed Navbar</h2>
+
+<p>To have a fixed or sticky navbar on the top or bottom of your site, you can set <code class="language-plaintext highlighter-rouge">fixed_navbar: top</code> or <code class="language-plaintext highlighter-rouge">fixed_navbar: bottom</code> respectively in your <code class="language-plaintext highlighter-rouge">_config.yml</code>.</p>
+:ET

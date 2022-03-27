@@ -1,0 +1,81 @@
+I"Y<p>I created Bulma Clean Theme as a theme for my own website and decided to open source it so others could use it as well. One of the key things I wanted to do was to create a theme that worked with GitHub Pages, which also means that you can also use it as a docs site for your project.</p>
+
+<h2 id="github-pages-configuration">GitHub Pages Configuration</h2>
+
+<p>GitHub pages allows you to create a website for your project with free hosting. Go to your repo on GitHub, then click Settings, then scroll down to the GitHub Pages section. You have the option to create a site from the root of your master branch of from the /docs directory in your master branch. For this example, we are going to use the /docs directory.</p>
+
+<p>Don’t change this setting just yet as if you don’t have a docs directory there will be nothing there to publish.</p>
+
+<h2 id="creating-the-docs-directory">Creating the docs directory</h2>
+
+<p>Clone your git repo to a local directory, let’s say <code class="language-plaintext highlighter-rouge">~/code/my-project</code> for this example. The below assumes you don’t yet have a docs directory and you have <a href="https://jekyllrb.com/docs/installation/">jekyll installed</a>. If you do already have a docs directory you will have to rename it to something else.</p>
+
+<p>Create a new jekyll installation in the docs directory, ensuring you replace your username and project name in the below example.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/username/my-project.git ~/code/my-project
+<span class="nb">cd</span> ~/code/my-project
+jekyll new docs
+</code></pre></div></div>
+
+<p>You should now have a base install of Jekyll in your freshly created docs directory.</p>
+
+<h2 id="configuring-the-theme">Configuring the theme</h2>
+
+<ol>
+  <li>Replace everything in the Gemfile with the following
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>source 'https://rubygems.org'
+gem "bulma-clean-theme",  '0.7.2'
+gem 'github-pages', group: :jekyll_plugins
+</code></pre></div>    </div>
+  </li>
+  <li>Open the <code class="language-plaintext highlighter-rouge">_config.yml</code> and comment out or delete the line <code class="language-plaintext highlighter-rouge">theme: minima</code> and replace it with <code class="language-plaintext highlighter-rouge">remote_theme: chrisrhymes/bulma-clean-theme</code>, then add <code class="language-plaintext highlighter-rouge">github-pages</code> to the list of plugins. Update the baseurl to your GitHub repo name, in this example we are using <code class="language-plaintext highlighter-rouge">my-project</code> as the repo name
+    <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#theme: minima</span>
+<span class="na">remote_theme</span><span class="pi">:</span> <span class="s">chrisrhymes/bulma-clean-theme</span>
+<span class="na">baseurl</span><span class="pi">:</span> <span class="s2">"</span><span class="s">/my-project"</span>
+<span class="na">plugins</span><span class="pi">:</span>
+<span class="pi">-</span> <span class="s">github-pages</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Open the <code class="language-plaintext highlighter-rouge">index.md</code> file and update the front matter so the layout is page and then add a title
+    <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">layout</span><span class="pi">:</span> <span class="s">page</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s">Docs for My Project</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Run <code class="language-plaintext highlighter-rouge">bundle install</code> and then <code class="language-plaintext highlighter-rouge">bundle exec jekyll serve</code></p>
+  </li>
+  <li>Visit <code class="language-plaintext highlighter-rouge">http://localhost:4000/my-project/</code> to view your new docs page.</li>
+</ol>
+
+<h2 id="menu">Menu</h2>
+
+<p>To create a menu on the left on your docs page you need to create a new yaml file in _data directory, such as <code class="language-plaintext highlighter-rouge">menu.yaml</code> and then use the below format, where the label will be the menu title and the items are the menu items. Each menu item can have a list of sub menu items if needed.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="pi">-</span> <span class="na">label</span><span class="pi">:</span> <span class="s">Example Menu</span>
+  <span class="na">items</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Menu item</span>
+      <span class="na">link</span><span class="pi">:</span> <span class="s">/link/</span>
+      <span class="na">items</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Sub menu item</span> 
+          <span class="na">link</span><span class="pi">:</span> <span class="s">/sub-menu-item/</span>
+</code></pre></div></div>
+
+<h2 id="table-of-contents">Table of contents</h2>
+
+<p>If you would like auto generated table of contents for your docs page then add <code class="language-plaintext highlighter-rouge">toc: true</code> to the page’s front matter. The table of contents works for markdown pages and loops through the heading 2s and heading 3s in the markdown and then auto generates the contents.</p>
+
+<h2 id="github-sponsors">GitHub Sponsors</h2>
+
+<p>If you want to link to your GitHub sponsors profile then add <code class="language-plaintext highlighter-rouge">gh_sponsor</code> with your username to the <code class="language-plaintext highlighter-rouge">_config.yml</code> file.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gh_sponsor: chrisrhymes
+</code></pre></div></div>
+
+<h2 id="making-the-docs-page-live">Making the docs page live</h2>
+
+<p>Once you have finished creating your docs page you can commit your changes and push everything up to GitHub. Go back to the GitHub settings page and scroll back down to the GitHub Pages section. Now we can update the setting to use the Master branch /docs folder and then GitHub will build your new docs page.</p>
+
+<h2 id="want-to-see-an-example">Want to see an example?</h2>
+
+<p>I recently updated one of my own packages to use Bulma Clean Theme to power the docs page. Check out the docs for <a href="https://www.csrhymes.com/bulma-block-list">Bulma Block List</a> as an example.</p>
+:ET

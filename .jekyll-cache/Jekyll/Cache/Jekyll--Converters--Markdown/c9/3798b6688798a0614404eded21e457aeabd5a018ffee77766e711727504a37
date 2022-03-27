@@ -1,0 +1,37 @@
+I"É	<h2 id="bulma">Bulma</h2>
+
+<p>Bulma Clean Theme uses the Bulma frontend framework. Check out the <a href="https://bulma.io/documentation/">Bulma docs</a> for more information.</p>
+
+<h2 id="setting-the-primary-colour">Setting the Primary Colour</h2>
+
+<p>To overwrite the primary theme colour, create a new file called <code class="language-plaintext highlighter-rouge">assets/css/app.scss</code>. Copy and paste the below into the <code class="language-plaintext highlighter-rouge">app.scss</code> file.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+---
+$primary: #333333;
+// Import Main CSS file from theme
+@import "main";
+</code></pre></div></div>
+
+<p>To change the primary theme colour, set the sass variable <code class="language-plaintext highlighter-rouge">$primary</code> to the colour you want. Ensure this is set before the <code class="language-plaintext highlighter-rouge">@import "main";</code> line.</p>
+
+<h2 id="customising-styles">Customising styles</h2>
+
+<p>Bulma has many sass variables that allows you to fully customise your site as you wish and make it your own design.</p>
+
+<p>You can overwrite any of the <a href="http://versions.bulma.io/0.7.0/documentation/overview/variables/">Bulma initial variables</a> in this way as long as they are declared before the <code class="language-plaintext highlighter-rouge">@import "main";</code>.</p>
+
+<p>You can also add any custom css you wish in the <code class="language-plaintext highlighter-rouge">app.scss</code> file.</p>
+
+<h2 id="theme-color-meta-tag">Theme Color Meta Tag</h2>
+
+<p>If you want to update the theme color meta tag then set <code class="language-plaintext highlighter-rouge">theme_color: '#333333'</code> in your <code class="language-plaintext highlighter-rouge">_config.yml</code> file.</p>
+
+<h2 id="overriding-theme-defaults">Overriding theme defaults</h2>
+
+<p>If you want to further customise your site then you can create <code class="language-plaintext highlighter-rouge">_includes</code> or <code class="language-plaintext highlighter-rouge">_layouts</code> directories and create files with the same name as the default theme files and overwrite them as you please.</p>
+
+<p>A word of warning though, this may make it more difficult to upgrade to future versions of the theme.</p>
+
+<p>Please see the Jekyll documentation for <a href="https://jekyllrb.com/docs/themes/#overriding-theme-defaults">Overriding theme defaults</a> for more information.</p>
+:ET

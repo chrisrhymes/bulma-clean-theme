@@ -1,0 +1,145 @@
+I"?4<p>I’ve been meaning to write about some of the new features I have been rolling out to my Jekyll theme, <a href="https://www.csrhymes.com/bulma-clean-theme/">Bulma Clean Theme</a>, for a while but I have only just managed to push the update for the landing page layout last weekend. This article provides some of the thinking behind the updates, as well as a brief introduction to how to get started.</p>
+
+<h2 id="product-pages">Product Pages</h2>
+
+<p>I use the theme to power my own personal website and decided that it would be good to update my <a href="https://www.csrhymes.com/books">book pages</a>, or book page as it was then. The page had used a very simple layout with both books on one page and was not really up to scratch. I decided it would be better to make each book its own page, and if I ever get round to it and write another book it would be easy to add another to the site in the future. Rather than just building these pages for my own site, I thought it would be a nice addition to the base theme.</p>
+
+<p>I really like Jekyll as it is simple to use, but also very powerful. I decided to make the most of the frontmatter and allow you to set most of the product information in there, leaving the main content of the page for the text description.</p>
+
+<p>To get started, create your product pages inside a <code class="language-plaintext highlighter-rouge">_products</code> directory as we will make use of collections later on.</p>
+
+<p>The below is an example of the frontmatter for the product page. The product page uses the same hero, title and subtitle settings as other pages, but has additional settings for product code, image, price, rating and features. The product code is important for later on.</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s">Product 1 Name</span>
+<span class="na">subtitle</span><span class="pi">:</span> <span class="s">Product 1 tagline here</span>
+<span class="na">description</span><span class="pi">:</span> <span class="s">This is a product description</span>
+<span class="na">hero_image</span><span class="pi">:</span> <span class="s">/img/hero-img.jpg</span>
+<span class="na">product_code</span><span class="pi">:</span> <span class="s">ABC124</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">product</span>
+<span class="na">image</span><span class="pi">:</span> <span class="s">https://via.placeholder.com/640x480</span>
+<span class="na">price</span><span class="pi">:</span> <span class="s">£1.99 + VAT</span>
+<span class="na">features</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">label</span><span class="pi">:</span> <span class="s">Great addition to any home</span>
+      <span class="na">icon</span><span class="pi">:</span> <span class="s">fa-location-arrow</span>
+    <span class="pi">-</span> <span class="na">label</span><span class="pi">:</span> <span class="s">Comes in a range of styles</span>
+      <span class="na">icon</span><span class="pi">:</span> <span class="s">fa-grin-stars</span>
+    <span class="pi">-</span> <span class="na">label</span><span class="pi">:</span> <span class="s">Available in multiple sizes</span>
+      <span class="na">icon</span><span class="pi">:</span> <span class="s">fa-fighter-jet</span>
+<span class="na">rating</span><span class="pi">:</span> <span class="m">3</span>
+<span class="nn">---</span>
+</code></pre></div></div>
+
+<p>The features provides a way of making a bullet point list of the key product features, but instead of plain disc bullet points you can use font awesome icons to make it a bit more interesting.</p>
+
+<p>I don’t know about you, but sometimes I spend longer deciding on what icon to use than making the rest of the page.</p>
+
+<p>I’ve deliberately made the product pages have a 4 by 3 image ratio as I feel it works best across different screen sizes. Like all themes, if you want to change it you can override the default layouts if you want a different ratio.</p>
+
+<p>Once you have created your product pages, you will need to tell Jekyll to output them. This is done by adding collections settings in the <code class="language-plaintext highlighter-rouge">_config.yml</code> for your site.</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">collections</span><span class="pi">:</span>
+  <span class="na">products</span><span class="pi">:</span> 
+    <span class="na">output</span><span class="pi">:</span> <span class="no">true</span>
+    <span class="na">layout</span><span class="pi">:</span> <span class="s">product</span>
+    <span class="na">image</span><span class="pi">:</span> <span class="s">https://via.placeholder.com/800x600</span>
+    <span class="na">show_sidebar</span><span class="pi">:</span> <span class="no">false</span>
+</code></pre></div></div>
+
+<p>Now when you run jekyll build it will output a load of product pages for you, now we just need a way of getting to them. This is where the product category page comes in.</p>
+
+<h2 id="product-category">Product Category</h2>
+
+<p>Create a page, such as products.md or in my case books.md and set it to use the product-category layout. This will generate a list of the products, but you can also add some introduction content in the main content section of the page if you so desire.</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s">Products</span>
+<span class="na">subtitle</span><span class="pi">:</span> <span class="s">Check out our range of products</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">product-category</span>
+<span class="na">show_sidebar</span><span class="pi">:</span> <span class="no">false</span>
+<span class="na">sort</span><span class="pi">:</span> <span class="s">title</span>
+<span class="nn">---</span>
+
+
+<span class="s">This is some page content and it will appear above the product list.</span>
+</code></pre></div></div>
+
+<h2 id="product-reviews">Product Reviews</h2>
+
+<p>The last addition to the product pages is reviews. If you would like to list some customer reviews on your product pages, then you will need to create a reviews directory inside _data and create a separate file for each product with reviews, named after the product code. For example <code class="language-plaintext highlighter-rouge">_data/reviews/ABC124.yml</code></p>
+
+<p>The data file should follow the below format. The name is the customer name, the rating is how many stars out of 5, the title is the main title of the review and the avatar is a link to an image, if you have one. If you don’t have a customer image then just omit it and a user icon will be used instead. Lastly, the description is the main content of the review.</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Mr E Xample</span>
+  <span class="na">rating</span><span class="pi">:</span> <span class="m">4</span>
+  <span class="na">title</span><span class="pi">:</span> <span class="s">Great product, highly recommended</span>
+  <span class="na">date</span><span class="pi">:</span> <span class="s">01/01/2019</span>
+  <span class="na">avatar</span><span class="pi">:</span> <span class="s">https://bulma.io/images/placeholders/128x128.png</span>
+  <span class="na">description</span><span class="pi">:</span> <span class="pi">&gt;</span>
+    <span class="s">The product worked really well. I would recommend this to most people to use. Delivery was quick and reasonable. </span>
+    <span class="s">Would recommend this to my friends. </span>
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Mrs R E View</span>
+  <span class="na">rating</span><span class="pi">:</span> <span class="m">5</span>
+  <span class="na">title</span><span class="pi">:</span> <span class="s">Nice, really liked this</span>
+  <span class="na">date</span><span class="pi">:</span> <span class="s">02/02/2019</span>
+  <span class="na">description</span><span class="pi">:</span> <span class="pi">&gt;</span>
+    <span class="s">The product worked exactly as described.</span>
+</code></pre></div></div>
+
+<p>Example <a href="https://www.csrhymes.com/bulma-clean-theme/products/">product category and product pages</a> can be seen on the theme’s demo site here if you want to take a look.</p>
+
+<h2 id="landing-page-layout">Landing Page Layout</h2>
+
+<p>I was thinking it would be good to create a landing style page so I could highlight a new project or something I was working on separately from the main projects page already on my site. Rather than create a new layout I thought it would be better to enhance the existing page layout so you could choose to use these features if you so desired.</p>
+
+<p>I started by adding a call to action (otherwise known as a large button) in the hero at the top of the page. This can be used by adding hero_link and hero_link_text to the frontmatter.</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">page</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s">Example Landing Page</span>
+<span class="na">subtitle</span><span class="pi">:</span> <span class="s">This is an example landing page with callouts</span>
+<span class="na">hero_height</span><span class="pi">:</span> <span class="s">is-large</span>
+<span class="na">hero_link</span><span class="pi">:</span> <span class="s">/page-1/</span>
+<span class="na">hero_link_text</span><span class="pi">:</span> <span class="s">Example Call To Action</span>
+<span class="nn">---</span>
+</code></pre></div></div>
+
+<p>Next, I wanted to make some nice callouts to help shout about key features of whatever you are talking about on your landing page. This started out as a simple icon and a title, but slowly evolved to allow for a subtitle, description text and a call to action button as well.</p>
+
+<p>To make it more flexible, only the title and subtitle are required and the rest can be used as and when necessary.</p>
+
+<p>To make the callouts reusable in different pages on your site, the content is defined in a datafile, for example, example_callouts.yml. The below shows the example structure for the callouts.</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">style</span><span class="pi">:</span> <span class="s">is-light</span>
+<span class="na">items</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s">Example callout </span><span class="m">1</span>
+    <span class="na">subtitle</span><span class="pi">:</span> <span class="s">Example subtitle </span><span class="m">1</span>
+    <span class="na">icon</span><span class="pi">:</span> <span class="s">fa-space-shuttle</span>
+    <span class="na">description</span><span class="pi">:</span> <span class="pi">&gt;</span>
+      <span class="s">The example description text goes here and can be multiple lines.</span>
+
+      <span class="s">For example, such as this. </span>
+    <span class="na">call_to_action_name</span><span class="pi">:</span> <span class="s">Call to action </span><span class="m">1</span>
+    <span class="na">call_to_action_link</span><span class="pi">:</span> <span class="s">/page-1/</span>
+</code></pre></div></div>
+
+<p>The style is the style of the hero that the callouts are contained in. This makes use of Bulma hero styles.</p>
+
+<p>Then to display the callouts on the page, add a callouts setting to the pages frontmatter with the name of the data file without the extension.</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">page</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s">Example Landing Page</span>
+<span class="na">subtitle</span><span class="pi">:</span> <span class="s">This is an example landing page</span>
+<span class="na">callouts</span><span class="pi">:</span> <span class="s">example_callouts</span>
+<span class="nn">---</span>
+</code></pre></div></div>
+
+<p>An example <a href="https://www.csrhymes.com/bulma-clean-theme/landing/">landing page layout</a> can be seen in the theme’s demo site.</p>
+
+<h2 id="what-do-you-think">What do you think?</h2>
+
+<p>I’ve tried to make these additions easy to use and flexible where possible. I’ve updated the readme file and the theme demo site with more information to help you get started with these new features.</p>
+
+<p>If you decide to give the theme a go, it would be great to see how you are using it and if you have any ideas of how it can be developed further. You never know, if I get enough responses then I may even make a showcase page on the demo theme site to highlight how others are using it.</p>
+:ET

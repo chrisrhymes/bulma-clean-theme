@@ -1,0 +1,58 @@
+I"�<h2 id="what-is-the-menubar">What is the Menubar</h2>
+
+<p>The menubar is a menu in a column on the left of the page. The menubar gets its content from a data file in your site’s <code class="language-plaintext highlighter-rouge">_data</code> directory. Set the name of your data file in the page’s menubar setting in the front matter.</p>
+
+<p>If you have a file <code class="language-plaintext highlighter-rouge">_data/example_menu.yml</code> then set the menubar to <code class="language-plaintext highlighter-rouge">example_menu</code>.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">show_sidebar</span><span class="pi">:</span> <span class="no">false</span>
+<span class="na">menubar</span><span class="pi">:</span> <span class="s">example_menu</span>
+</code></pre></div></div>
+
+<p>You will probably want to disable <code class="language-plaintext highlighter-rouge">show_sidebar</code>. Otherwise there will be little room for the page content.</p>
+
+<h2 id="creating-a-menubar-data-file">Creating a menubar data file</h2>
+
+<p>Create a data file in the <code class="language-plaintext highlighter-rouge">_data</code> directory and use the following format.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="pi">-</span> <span class="na">label</span><span class="pi">:</span> <span class="s">Example Menu</span>
+  <span class="na">items</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Home</span>
+      <span class="na">link</span><span class="pi">:</span> <span class="s">/</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Pages</span>
+      <span class="na">link</span><span class="pi">:</span> <span class="c1">#</span>
+      <span class="na">items</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Page With Sidebar</span> 
+          <span class="na">link</span><span class="pi">:</span> <span class="s">/page-1/</span>
+        <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Page Without Sidebar</span>
+          <span class="na">link</span><span class="pi">:</span> <span class="s">/page-2/</span>
+        <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Page With Menubar</span>
+          <span class="na">link</span><span class="pi">:</span> <span class="s">/page-3/</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Blog</span>
+      <span class="na">link</span><span class="pi">:</span> <span class="s">/blog/</span>
+</code></pre></div></div>
+
+<p>For the current page to have an active class, ensure the <code class="language-plaintext highlighter-rouge">link:</code> format matches your <a href="https://jekyllrb.com/docs/permalinks/#extensionless-permalinks">permalink</a> format. The above example will work with <code class="language-plaintext highlighter-rouge">permalink: pretty</code> setting in your <code class="language-plaintext highlighter-rouge">_config.yml</code>.</p>
+
+<h2 id="multiple-menus">Multiple menus</h2>
+
+<p>You may make multiple menus in the same file, separated by labels.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="pi">-</span> <span class="na">label</span><span class="pi">:</span> <span class="s">Menu Label</span>
+  <span class="na">items</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Example item</span>
+      <span class="na">link</span><span class="pi">:</span> <span class="s">/example-item/</span>
+<span class="pi">-</span> <span class="na">label</span><span class="pi">:</span> <span class="s">Second Menu Label</span>
+  <span class="na">items</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Parent Item</span>
+      <span class="na">link</span><span class="pi">:</span> <span class="s">/parent-item/</span>
+      <span class="na">items</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Sublink</span> 
+          <span class="na">link</span><span class="pi">:</span> <span class="s">/sublink/</span>
+        <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Sublink </span><span class="m">2</span>
+          <span class="na">link</span><span class="pi">:</span> <span class="s">/sublink2/</span>
+<span class="pi">-</span> <span class="na">label</span><span class="pi">:</span> <span class="s">Third Menu Label</span>
+  <span class="na">items</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Another example item</span>
+      <span class="na">link</span><span class="pi">:</span> <span class="s">/another-example-item/</span>
+</code></pre></div></div>
+:ET

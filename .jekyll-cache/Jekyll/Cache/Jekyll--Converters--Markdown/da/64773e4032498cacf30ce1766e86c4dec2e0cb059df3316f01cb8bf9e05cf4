@@ -1,0 +1,69 @@
+I"V<h2 id="image-gallery">Image Gallery</h2>
+
+<p>You can display a gallery of images on a page. It allows you to show a small version and click on it to enlarge the image.</p>
+
+<p><a href="/bulma-clean-theme/gallery/">View the image gallery example page</a></p>
+
+<h2 id="create-an-image-gallery-data-file">Create an image gallery data file</h2>
+
+<p>Start by creating a gallery data file using the below format, for example <code class="language-plaintext highlighter-rouge">my_gallery.yml</code>. The image (link) will display on the page and when you click on the image, it will display the large_link image in a modal window.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s">Image Gallery Title</span>
+  <span class="na">images</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">link</span><span class="pi">:</span> <span class="s">https://via.placeholder.com/800x450</span>
+      <span class="na">large_link</span><span class="pi">:</span> <span class="s">https://via.placeholder.com/1200x675</span>
+      <span class="na">alt</span><span class="pi">:</span> <span class="s">The alt text for the image</span>
+      <span class="na">description</span><span class="pi">:</span> <span class="pi">|-</span>
+        <span class="s">The image description can be written in **markdown** if required</span>
+      <span class="na">ratio</span><span class="pi">:</span> <span class="s">is-16by9</span>
+    <span class="pi">-</span> <span class="na">link</span><span class="pi">:</span> <span class="s">https://via.placeholder.com/800x600</span>
+      <span class="na">large_link</span><span class="pi">:</span> <span class="s">https://via.placeholder.com/1200x900</span>
+      <span class="na">alt</span><span class="pi">:</span> <span class="s">The alt text for the image</span>
+      <span class="na">description</span><span class="pi">:</span> <span class="s">The image description</span>
+      <span class="na">ratio</span><span class="pi">:</span> <span class="s">is-4by3</span>
+</code></pre></div></div>
+
+<ul>
+  <li>If a ratio is not provided it will default to 16 by 9. Use <a href="https://bulma.io/documentation/elements/image/">Bulma image</a> classes to define the image ratio required.</li>
+  <li>The description can be plain text or it can be markdown if required.</li>
+  <li>The alt will be used as the images alt text.</li>
+</ul>
+
+<h2 id="multiple-galleries">Multiple galleries</h2>
+
+<p>If you want multiple image galleries on the same page then create additional sections in your yaml file.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s">First Image Gallery Title</span>
+  <span class="na">images</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">link</span><span class="pi">:</span> <span class="s">https://via.placeholder.com/800x450</span>
+      <span class="na">alt</span><span class="pi">:</span> <span class="s">The alt text for the image</span>
+      <span class="na">description</span><span class="pi">:</span> <span class="pi">|-</span>
+        <span class="s">The image description can be written in **markdown** if required</span>
+      <span class="na">ratio</span><span class="pi">:</span> <span class="s">is-16by9</span>
+    <span class="pi">-</span> <span class="na">link</span><span class="pi">:</span> <span class="s">https://via.placeholder.com/800x600</span>
+      <span class="na">alt</span><span class="pi">:</span> <span class="s">The alt text for the image</span>
+      <span class="na">description</span><span class="pi">:</span> <span class="s">The image description</span>
+      <span class="na">ratio</span><span class="pi">:</span> <span class="s">is-4by3</span>
+
+<span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s">Second Image Gallery Title</span>
+  <span class="na">images</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">link</span><span class="pi">:</span> <span class="s">https://via.placeholder.com/800x450</span>
+      <span class="na">alt</span><span class="pi">:</span> <span class="s">The alt text for the image</span>
+      <span class="na">description</span><span class="pi">:</span> <span class="pi">|-</span>
+        <span class="s">The image description can be written in **markdown** if required</span>
+      <span class="na">ratio</span><span class="pi">:</span> <span class="s">is-16by9</span>
+    <span class="pi">-</span> <span class="na">link</span><span class="pi">:</span> <span class="s">https://via.placeholder.com/800x600</span>
+      <span class="na">alt</span><span class="pi">:</span> <span class="s">The alt text for the image</span>
+      <span class="na">description</span><span class="pi">:</span> <span class="s">The image description</span>
+      <span class="na">ratio</span><span class="pi">:</span> <span class="s">is-4by3</span>
+</code></pre></div></div>
+
+<h2 id="displaying-the-gallery">Displaying the gallery</h2>
+
+<p>In your pages front matter add a gallery with the datafiles filename without the extension.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">layout</span><span class="pi">:</span> <span class="s">page</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s">My Image Gallery</span>
+<span class="na">gallery</span><span class="pi">:</span> <span class="s">my_gallery</span>
+</code></pre></div></div>
+:ET

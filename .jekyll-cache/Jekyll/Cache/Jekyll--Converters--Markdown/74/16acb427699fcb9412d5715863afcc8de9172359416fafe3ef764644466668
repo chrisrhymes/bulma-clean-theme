@@ -1,0 +1,10 @@
+I"<p>By default, the blog page and the latest posts (in the sidebar) will use the automatically generated post excerpt. If you would like to override this you can set the summary in the post’s front matter. The summary can be in markdown format if you like.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">layout</span><span class="pi">:</span> <span class="s">post</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s">The post title</span>
+<span class="na">summary</span><span class="pi">:</span> <span class="pi">|-</span>
+    <span class="s">This is the custom summary for the post.</span>
+
+    <span class="s">It can be in **Markdown format** if required.</span>
+</code></pre></div></div>
+:ET

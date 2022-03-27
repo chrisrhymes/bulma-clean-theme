@@ -1,0 +1,47 @@
+I"�<h2 id="sponsor-link-in-navbar">Sponsor link in navbar</h2>
+
+<p>If you have a GitHub sponsors account set up, you can add your username to <code class="language-plaintext highlighter-rouge">gh_sponsor</code> in the <code class="language-plaintext highlighter-rouge">_config.yml</code> file and it will display a link to your profile on the right of the navbar.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">gh_sponsor</span><span class="pi">:</span> <span class="s">chrisrhymes</span>
+</code></pre></div></div>
+
+<h2 id="listing-your-sponsors">Listing your sponsors</h2>
+
+<p>You can list out your sponsors easily on your site using a sponsors datafile. It allows you to list different tiers and link to the sponsors site or profile.</p>
+
+<p><a href="/bulma-clean-theme/sponsors/">View an example Sponsors page</a></p>
+
+<h2 id="creating-a-sponsors-datafile">Creating a Sponsors Datafile</h2>
+
+<p>If you would like to create a page to thank your sponsors then create a data file, such as my_sponsors.yml file with the following structure:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="pi">-</span> <span class="na">tier_name</span><span class="pi">:</span> <span class="s">Platinum Sponsors</span>
+  <span class="na">size</span><span class="pi">:</span> <span class="s">large</span>
+  <span class="na">description</span><span class="pi">:</span> <span class="pi">|-</span>
+    <span class="s">This is the description for the Platinum Tier</span>
+  <span class="na">sponsors</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Dave McDave</span>
+      <span class="na">profile</span><span class="pi">:</span> <span class="s">https://github.com/</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Sarah Lee-Cheesecake</span>
+      <span class="na">profile</span><span class="pi">:</span> <span class="s">https://github.com/</span>
+<span class="pi">-</span> <span class="na">tier_name</span><span class="pi">:</span> <span class="s">Gold Sponsors</span>
+  <span class="na">description</span><span class="pi">:</span> <span class="pi">|-</span>
+    <span class="s">This is the description for the Gold Tier</span>
+  <span class="na">sponsors</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Dave McDave</span>
+      <span class="na">profile</span><span class="pi">:</span> <span class="s">https://github.com/</span>
+</code></pre></div></div>
+
+<p>The <code class="language-plaintext highlighter-rouge">tier_name</code> and <code class="language-plaintext highlighter-rouge">description</code> are required. The <code class="language-plaintext highlighter-rouge">size</code> is not required, but can be overwritten to ‘large’ or ‘small’ to increase or decrease the size of the box and the text size.</p>
+
+<p>The sponsors require a name, but not a profile link.</p>
+
+<h2 id="displaying-the-sponsors">Displaying the Sponsors</h2>
+
+<p>To display the sponsors on your page, set the sponsors to the filename without the extension in the page’s front matter</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">layout</span><span class="pi">:</span> <span class="s">page</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s">My Sponsors Page</span>
+<span class="na">sponsors</span><span class="pi">:</span> <span class="s">my_sponsors</span>
+</code></pre></div></div>
+:ET

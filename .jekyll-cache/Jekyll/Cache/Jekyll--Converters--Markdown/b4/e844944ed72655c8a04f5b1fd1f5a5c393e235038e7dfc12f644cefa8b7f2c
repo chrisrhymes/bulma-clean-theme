@@ -1,0 +1,15 @@
+I"<h2 id="category-page">Category Page</h2>
+
+<p>To create a category page listing your products you will need to create a product category page.</p>
+
+<p>Create a page, for example <code class="language-plaintext highlighter-rouge">products.md</code>, with the <code class="language-plaintext highlighter-rouge">layout: product-category</code> in the front matter. You can set the sort order of the products using <code class="language-plaintext highlighter-rouge">sort: title</code> to sort by the title, or by any setting in your product pages, such as price, rating or any custom front matter tags you wish to set.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">title</span><span class="pi">:</span> <span class="s">Products</span>
+<span class="na">subtitle</span><span class="pi">:</span> <span class="s">Check out our range of products</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">product-category</span>
+<span class="na">show_sidebar</span><span class="pi">:</span> <span class="no">false</span>
+<span class="na">sort</span><span class="pi">:</span> <span class="s">title</span>
+</code></pre></div></div>
+
+<p><a href="/bulma-clean-theme/products/">View example Category page</a></p>
+:ET

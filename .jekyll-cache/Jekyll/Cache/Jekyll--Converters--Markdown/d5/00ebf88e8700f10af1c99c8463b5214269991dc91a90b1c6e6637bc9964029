@@ -1,0 +1,24 @@
+I"t<h2 id="product-reviews">Product Reviews</h2>
+
+<p>To add reviews to your product page, create a <code class="language-plaintext highlighter-rouge">reviews</code> directory in the <code class="language-plaintext highlighter-rouge">_data</code> directory and add a yaml file with the name of the product_code from the product page, for example <code class="language-plaintext highlighter-rouge">_data/reviews/ABC124.yml</code>.</p>
+
+<p>Create the reviews using the following format:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Mr E Xample</span>
+  <span class="na">rating</span><span class="pi">:</span> <span class="m">4</span>
+  <span class="na">title</span><span class="pi">:</span> <span class="s">Great product, highly recommended</span>
+  <span class="na">date</span><span class="pi">:</span> <span class="s">2019-01-01</span>
+  <span class="na">avatar</span><span class="pi">:</span> <span class="s">https://bulma.io/images/placeholders/128x128.png</span>
+  <span class="na">description</span><span class="pi">:</span> <span class="pi">&gt;</span>
+    <span class="s">The product worked really well. I would recommend this to most people to use. Delivery was quick and reasonable. </span>
+    <span class="s">Would recommend this to my friends. </span>
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Mrs R E View</span>
+  <span class="na">rating</span><span class="pi">:</span> <span class="m">5</span>
+  <span class="na">title</span><span class="pi">:</span> <span class="s">Nice, really liked this</span>
+  <span class="na">date</span><span class="pi">:</span> <span class="s">2019-02-02</span>
+  <span class="na">description</span><span class="pi">:</span> <span class="pi">&gt;</span>
+    <span class="s">The product worked exactly as described. </span>
+</code></pre></div></div>
+
+<p>If you don’t want to display an avatar image then a default user icon will be displayed. If you don’t want to display a rating then omit it from the yaml file.</p>
+:ET

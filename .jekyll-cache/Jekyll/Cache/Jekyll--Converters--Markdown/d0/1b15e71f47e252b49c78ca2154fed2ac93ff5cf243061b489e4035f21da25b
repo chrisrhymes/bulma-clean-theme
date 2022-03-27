@@ -1,0 +1,53 @@
+I"n<h2 id="what-is-a-showcase">What is a showcase?</h2>
+
+<p>A showcase allows you to showcase your work with a large image, description and a list of features.</p>
+
+<p><a href="/bulma-clean-theme/showcase">View an example showcase</a></p>
+
+<h2 id="creating-a-showcase-datafile">Creating A Showcase Datafile</h2>
+
+<p>Create a datafile in your sites <code class="language-plaintext highlighter-rouge">_data</code> directory in the following format. Subtitle, features and tags are not required.</p>
+
+<p>The description text accepts markdown and is run through the markdownify filter on the page.</p>
+
+<p>The image_ratio will default to is-16by9 if it is not defined and accepts the <a href="https://bulma.io/documentation/elements/image/">Bulma image</a> classes.</p>
+
+<p>To display GitHub Stars, Forks and Watchers badges add your GitHub user and repo name to the github setting, such as <code class="language-plaintext highlighter-rouge">chrisrhymes/bulma-clean-theme</code></p>
+
+<p>To change the default styles of the features, set <code class="language-plaintext highlighter-rouge">features_styles</code>. This uses the styles from <a href="https://www.csrhymes.com/bulma-block-list/">bulma-block-list</a> npm package.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">intro</span><span class="pi">:</span> <span class="pi">|-</span>
+  <span class="s">This is some introduction text for the showcases.</span>
+  
+  <span class="s">## Example Heading</span>
+  <span class="s">It can convert markdown format</span>
+
+<span class="na">items</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s">Example showcase item</span>
+    <span class="na">subtitle</span><span class="pi">:</span> <span class="s">Example subtitle</span>
+    <span class="na">description</span><span class="pi">:</span> <span class="pi">|-</span>
+      <span class="s">This is the example description for this item that you are showcasing and has an image, title, description, tags and a link.</span>
+    <span class="na">features</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">This is a feature</span>
+      <span class="pi">-</span> <span class="s">This is a feature</span>
+    <span class="na">features_styles</span><span class="pi">:</span> <span class="s">is-centered is-outlined is-primary</span>
+    <span class="na">image</span><span class="pi">:</span> <span class="s">https://via.placeholder.com/1024x788</span>
+    <span class="na">image_ratio</span><span class="pi">:</span> <span class="s">is-16by9</span>
+    <span class="na">link</span><span class="pi">:</span> <span class="s">http://www.example.com</span>
+    <span class="na">link_text</span><span class="pi">:</span> <span class="s">View example</span>
+    <span class="na">tags</span><span class="pi">:</span> <span class="s">PHP,CSS,JavaScript</span>
+    <span class="na">github</span><span class="pi">:</span> <span class="s">user/repo-name</span>
+</code></pre></div></div>
+
+<h2 id="displaying-the-showcase">Displaying the Showcase</h2>
+
+<p>Set the showcase in the page’s front matter to be the name of the showcase data file without the extension. This gives you the ability to create multiple showcases to be used on different pages.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">title</span><span class="pi">:</span> <span class="s">Showcase</span>
+<span class="na">subtitle</span><span class="pi">:</span> <span class="s">An example showcase page</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">page</span>
+<span class="na">showcase</span><span class="pi">:</span> <span class="s">showcase_example</span>
+<span class="na">show_sidebar</span><span class="pi">:</span> <span class="no">false</span>
+</code></pre></div></div>
+
+:ET

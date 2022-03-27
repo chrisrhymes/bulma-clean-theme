@@ -1,0 +1,48 @@
+I"6<h1 id="bulma-clean-theme-demo-website">Bulma Clean Theme demo website</h1>
+
+<p>This website showcases the options for the Bulma Clean theme. The theme is available as a ruby gem or can be used with GitHub pages.</p>
+
+<p><a href="https://badge.fury.io/rb/bulma-clean-theme"><img src="https://badge.fury.io/rb/bulma-clean-theme.svg" alt="Gem Version" /></a>
+<img src="https://img.shields.io/gem/dt/bulma-clean-theme.svg" alt="Gem" />
+<img src="https://img.shields.io/github/stars/chrisrhymes/bulma-clean-theme?style=social" alt="GitHub Repo stars" /></p>
+
+<h2 id="ruby-gem">Ruby Gem</h2>
+
+<p>The ruby gem is available on the Ruby Gems website at the following location. <a href="https://rubygems.org/gems/bulma-clean-theme">https://rubygems.org/gems/bulma-clean-theme</a>.</p>
+
+<h2 id="github-pages">GitHub Pages</h2>
+
+<p>The theme can be used with GitHub Pages by setting the <code class="language-plaintext highlighter-rouge">remote_theme</code> in your Jekyll sites <code class="language-plaintext highlighter-rouge">_config.yml</code></p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">remote_theme</span><span class="pi">:</span> <span class="s">chrisrhymes/bulma-clean-theme</span>
+</code></pre></div></div>
+
+<h2 id="documentation">Documentation</h2>
+
+<p>For full instructions, please see the <a href="/bulma-clean-theme/docs/">Documentation</a></p>
+
+<h2 id="page-layouts">Page Layouts</h2>
+
+<p>This demo site showcases the available page layout options.</p>
+
+<ul>
+  <li>Sidebar</li>
+  <li>Menubar</li>
+  <li>Tabs</li>
+  <li>Footer</li>
+  <li>Hero</li>
+  <li>Contents</li>
+  <li>Landing Page With Callouts</li>
+  <li>Sponsors Page</li>
+  <li>Image Gallery</li>
+  <li>Recipe Page</li>
+  <li>Blog</li>
+  <li>Post</li>
+</ul>
+
+<h2 id="supported-by-jetbrains">Supported By JetBrains</h2>
+
+<p>JetBrains have kindly provided an Open Source licence to aid in the future development of Bulma Clean Theme.</p>
+
+<p><a href="https://www.jetbrains.com/?from=bulma-clean-theme"><img src="img/jetbrains-variant-4.svg" alt="JetBrains" /></a></p>
+:ET

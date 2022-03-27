@@ -1,0 +1,22 @@
+I"}<h2 id="bulma-tags">Bulma Tags</h2>
+
+<p>Bulma tags are used in a few different layouts in Bulma Clean Theme, so it has been extracted as it’s own component. You can create a tag in your own pages using the below include tag.</p>
+
+<p><span class="tag  is-success ">
+    An example tag
+</span></p>
+
+<h2 id="tag-include">Tag Include</h2>
+
+<p>To include a tag use the following include.</p>
+
+<p><code>
+{% include tag.html tag="The tag text" %}
+</code></p>
+
+<p>You can overwrite the default style (is-primary) by passing in the style in the include tag.</p>
+
+<p><code>
+{% include tag.html tag="The tag text" style="is-light" %}
+</code></p>
+:ET

@@ -1,0 +1,54 @@
+I"�<h2 id="tabs-component">Tabs Component</h2>
+
+<p>Bulma offers tabs component as another form of navigation. This page has tabs at the top as an example.</p>
+
+<h2 id="displaying-tabs">Displaying tabs</h2>
+
+<p>The tabs gets its content from a data file in your site’s <code class="language-plaintext highlighter-rouge">_data</code> directory. Simply set the name of your data file in the page’s menubar setting in the frontmatter.</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">title</span><span class="pi">:</span> <span class="s">Page with tabs</span>
+<span class="na">subtitle</span><span class="pi">:</span> <span class="s">Demo page with tabs</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">page</span>
+<span class="na">show_sidebar</span><span class="pi">:</span> <span class="no">false</span>
+<span class="na">menubar</span><span class="pi">:</span> <span class="s">example_menu</span>
+<span class="na">tabs</span><span class="pi">:</span> <span class="s">example_tabs</span>
+</code></pre></div></div>
+
+<p>Tabs can be used in conjunction with menubar and/or sidebar if you wish.</p>
+
+<h2 id="creating-a-tabs-data-file">Creating a tabs data file</h2>
+
+<p>Create a data file in the _data directory and use the following format (if using yml)</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">alignment</span><span class="pi">:</span> <span class="s">is-left</span>
+<span class="na">style</span><span class="pi">:</span> <span class="s">is-boxed</span>
+<span class="na">size</span><span class="pi">:</span> <span class="s">is-large</span>
+<span class="na">items</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Tabs</span>
+    <span class="na">link</span><span class="pi">:</span> <span class="s">/page-4/</span>
+    <span class="na">icon</span><span class="pi">:</span> <span class="s">fa-smile-wink</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Sidebar</span>
+    <span class="na">link</span><span class="pi">:</span> <span class="s">/page-1/</span>
+    <span class="na">icon</span><span class="pi">:</span> <span class="s">fa-square</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">No Sidebar</span>
+    <span class="na">link</span><span class="pi">:</span> <span class="s">/page-2/</span>
+    <span class="na">icon</span><span class="pi">:</span> <span class="s">fa-ellipsis-v</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Menubar</span>
+    <span class="na">link</span><span class="pi">:</span> <span class="s">/page-3/</span>
+    <span class="na">icon</span><span class="pi">:</span> <span class="s">fa-bars</span>
+</code></pre></div></div>
+
+<h2 id="settings">Settings</h2>
+
+<p>You can control the alignment, style and size of the tabs by using the relevant <a href="https://bulma.io/documentation/components/tabs/">Bulma tabs classes</a>.</p>
+
+<h2 id="active-tab-highlighting">Active Tab Highlighting</h2>
+
+<p>It will automatically mark the active tab based on the current page.</p>
+
+<h2 id="icons">Icons</h2>
+
+<p>You can add icons to your tab by passing in the <a href="https://fontawesome.com/icons?d=gallery">Font Awesome icon class</a>.</p>
+
+<p>If you don’t wish to show icons then simply omit the option from your yaml file.</p>
+:ET

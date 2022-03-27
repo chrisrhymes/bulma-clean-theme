@@ -1,0 +1,34 @@
+I"�
+<h2 id="posts-directory">Posts Directory</h2>
+
+<p>If you want to start a blog, create a <code class="language-plaintext highlighter-rouge">_posts</code> directory to store your blog posts as per normal Jekyll usage, with <code class="language-plaintext highlighter-rouge">layout: post</code>.</p>
+
+<h2 id="creating-a-post">Creating a Post</h2>
+
+<p>Create a new file in the <code class="language-plaintext highlighter-rouge">_posts</code> directory with the filename format <code class="language-plaintext highlighter-rouge">yyyy-mm-dd-blog-post-name.md</code> where yyyy is the year, mm is the month and dd is the day.</p>
+
+<p>In the front matter, use the <code class="language-plaintext highlighter-rouge">layout: post</code>. You can also use the same settings as when creating a page to configure the hero.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">layout</span><span class="pi">:</span> <span class="s">post</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s">The Blog Post Title</span>
+<span class="na">subtitle</span><span class="pi">:</span> <span class="s">The blog post subtitle</span>
+<span class="na">hero_image</span><span class="pi">:</span> <span class="s">/path/to/image.jpg</span>
+<span class="na">hero_darken</span><span class="pi">:</span> <span class="no">true</span>
+</code></pre></div></div>
+
+<h2 id="blog-page">Blog Page</h2>
+
+<p>Next, create a <code class="language-plaintext highlighter-rouge">blog</code> directory with an index.html file that has <code class="language-plaintext highlighter-rouge">layout: blog</code>.</p>
+
+<h2 id="pagination">Pagination</h2>
+
+<p>Set <code class="language-plaintext highlighter-rouge">paginate</code> and <code class="language-plaintext highlighter-rouge">paginate_path</code> in your site’s <code class="language-plaintext highlighter-rouge">_config.yaml</code> to configure the posts per page and blog pagination path.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">paginate</span><span class="pi">:</span> <span class="m">5</span>
+<span class="na">paginate_path</span><span class="pi">:</span> <span class="s2">"</span><span class="s">/blog/page:num"</span>
+</code></pre></div></div>
+
+<h2 id="other-settings">Other settings</h2>
+
+<p>It will display an image in the blog page if you set <code class="language-plaintext highlighter-rouge">image: /path/to/image.jpg</code> in your post’s or page’s front matter, or in the <a href="https://jekyllrb.com/docs/configuration/front-matter-defaults/">defaults</a> in your site’s <code class="language-plaintext highlighter-rouge">_config.yml</code>.</p>
+:ET

@@ -1,0 +1,21 @@
+I"P<h2 id="footer">Footer</h2>
+
+<p>To add some footer links, create a yaml file in the <code class="language-plaintext highlighter-rouge">_data</code> directory using the following format.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Blog</span>
+  <span class="na">link</span><span class="pi">:</span> <span class="s">/blog/</span>
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">About</span>
+  <span class="na">link</span><span class="pi">:</span> <span class="s">/about/</span>
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Privacy Policy</span>
+  <span class="na">link</span><span class="pi">:</span> <span class="s">/privacy-policy/</span>
+</code></pre></div></div>
+
+<p>Then add the name of your yaml file (without the .yml extension) into the <code class="language-plaintext highlighter-rouge">footer_menu</code> setting in the <code class="language-plaintext highlighter-rouge">_config.yml</code>.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">footer_menu</span><span class="pi">:</span> <span class="s">example_footer_menu</span>
+</code></pre></div></div>
+
+<h2 id="hiding-the-footer">Hiding the footer</h2>
+
+<p>If you would like to hide the footer on a particular page then set <code class="language-plaintext highlighter-rouge">hide_footer: true</code> in the page’s front matter.</p>
+:ET

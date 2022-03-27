@@ -1,0 +1,125 @@
+I"<h2 id="bulma-notifications">Bulma Notifications</h2>
+
+<p>Bulma offers a <a href="https://bulma.io/documentation/elements/notification/">notification</a> component to show a messages.</p>
+
+<p>Use the following code to include a simple notification.</p>
+
+<div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{%</span><span class="w"> </span><span class="nt">include</span><span class="w"> </span>notification.html<span class="w"> </span><span class="na">message</span><span class="o">=</span><span class="s2">"This is the message for the notification"</span><span class="w"> </span><span class="p">%}</span>
+</code></pre></div></div>
+
+<h2 id="overriding-defaults">Overriding Defaults</h2>
+
+<p>The message is required but the status defaults to ‘is-warning’ and the icon defaults to ‘fas fa-exclamation-circle’, but can be overwritten by setting the values in the includes.</p>
+
+<div x-data="{visible: true}">
+    <div class="notification is-danger" x-show.transition.duration.300ms="visible">
+        
+        <article class="media">
+            
+                <div class="media-left">
+                    <span class="icon"><i class="fas fa-exclamation-triangle fa-lg"></i></span>
+                </div>
+            
+            <div class="media-content">
+                <div class="content"><p>This is the message for the notification</p>
+</div>
+            </div>
+        </article>
+    </div>
+</div>
+
+<div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{%</span><span class="w"> </span><span class="nt">include</span><span class="w"> </span>notification.html<span class="w"> </span><span class="na">message</span><span class="o">=</span><span class="s2">"This is the message for the notification"</span><span class="w"> </span><span class="err">
+</span><span class="na">status</span><span class="o">=</span><span class="s2">"is-danger"</span><span class="w"> </span><span class="err">
+</span><span class="na">icon</span><span class="o">=</span><span class="s2">"fas fa-exclamation-triangle"</span><span class="w"> </span><span class="p">%}</span>
+</code></pre></div></div>
+
+<h2 id="markdown-message">Markdown message</h2>
+
+<p>The notification message can also be written in markdown.</p>
+
+<div x-data="{visible: true}">
+    <div class="notification is-warning" x-show.transition.duration.300ms="visible">
+        
+        <article class="media">
+            
+                <div class="media-left">
+                    <span class="icon"><i class="fas fa-exclamation-circle fa-lg"></i></span>
+                </div>
+            
+            <div class="media-content">
+                <div class="content"><p>This <strong>message</strong> contains <em>markdown</em> and a <a href="https://www.csrhymes.com">link</a>.</p>
+
+<p>It also contains a second paragraph and a list.</p>
+
+<ul>
+  <li>List item</li>
+  <li>List item</li>
+</ul>
+</div>
+            </div>
+        </article>
+    </div>
+</div>
+
+<div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{%</span><span class="w"> </span><span class="nt">include</span><span class="w"> </span>notification.html<span class="w"> </span><span class="err">
+</span><span class="na">message</span><span class="o">=</span><span class="s2">"This **message** contains _markdown_ and a [link](https://www.csrhymes.com).
+
+It also contains a second paragraph.
+
+* List item
+* List item
+"</span><span class="w">  </span><span class="p">%}</span>
+</code></pre></div></div>
+
+<h2 id="dismissible-notifications">Dismissible Notifications</h2>
+
+<p>To set a notification to be dismissible, set dismissible to ‘true’</p>
+
+<div x-data="{visible: true}">
+    <div class="notification is-info" x-show.transition.duration.300ms="visible">
+        
+            <button class="delete" x-on:click="visible = false"></button>
+        
+        <article class="media">
+            
+                <div class="media-left">
+                    <span class="icon"><i class="fas fa-exclamation-circle fa-lg"></i></span>
+                </div>
+            
+            <div class="media-content">
+                <div class="content"><p>This notification is dismissable</p>
+</div>
+            </div>
+        </article>
+    </div>
+</div>
+
+<div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{%</span><span class="w"> </span><span class="nt">include</span><span class="w"> </span>notification.html<span class="err">
+</span><span class="na">message</span><span class="o">=</span><span class="s2">"This notification is dismissable"</span><span class="err">
+</span><span class="na">status</span><span class="o">=</span><span class="s2">"is-info"</span><span class="err">
+</span><span class="na">dismissable</span><span class="o">=</span><span class="s2">"true"</span><span class="w"> </span><span class="p">%}</span>
+</code></pre></div></div>
+
+<h2 id="iconless-notifications">Iconless Notifications</h2>
+
+<p>Omit the icon by setting icon to ‘false’</p>
+
+<div x-data="{visible: true}">
+    <div class="notification is-success" x-show.transition.duration.300ms="visible">
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content"><p>This notification does not have an icon.</p>
+</div>
+            </div>
+        </article>
+    </div>
+</div>
+
+<div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{%</span><span class="w"> </span><span class="nt">include</span><span class="w"> </span>notification.html<span class="err">
+</span><span class="na">message</span><span class="o">=</span><span class="s2">"This notification does not have an icon."</span><span class="err">
+</span><span class="na">icon</span><span class="o">=</span><span class="s2">"false"</span><span class="err">
+</span><span class="na">status</span><span class="o">=</span><span class="s2">"is-success"</span><span class="w"> </span><span class="p">%}</span>
+</code></pre></div></div>
+:ET

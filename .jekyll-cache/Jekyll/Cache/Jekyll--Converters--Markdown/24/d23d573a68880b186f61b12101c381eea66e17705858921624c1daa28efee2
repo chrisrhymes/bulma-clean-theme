@@ -1,0 +1,41 @@
+I"®<h2 id="image-modal-include">Image Modal Include</h2>
+
+<p>The image modal allows you to display a small image, which then opens a large image in an image modal.</p>
+
+<p>The include needs the ratio, link, alt and large link.</p>
+
+<p>The ratios are Bulma image classes. The link is the path to the thumbnail image, the large_link is the path to the large image.</p>
+
+<p>Below is an example for the include.</p>
+
+<p><code>
+{% include image-modal.html ratio="is-16by9" link="https://via.placeholder.com/400x225" alt="Example image" large_link="https://via.placeholder.com/1200x675" %}
+</code></p>
+
+<h2 id="example-image-modal">Example Image Modal</h2>
+
+<div class="columns">
+<div class="column is-6">
+<div x-data="{ open: false }">
+    <a x-on:click="open = true" title="View large image">
+        <figure class="image is-16by9">
+            <img src="https://via.placeholder.com/400x225" alt="Example image" />
+        </figure>
+    </a>
+    <div class="modal" x-bind:class="open ? 'is-active' : ''" x-cloak="">
+        <div class="modal-background" x-on:click="open = false"></div>
+        <div class="modal-content">
+            
+                <img src="https://via.placeholder.com/1200x675" alt="Example image" />
+            
+        </div>
+        <button class="modal-close is-large" aria-label="close" x-on:click="open = false"></button>
+    </div>
+</div>
+
+</div>
+<div class="column is-6">
+Click on the image to open the image modal.
+</div>
+</div>
+:ET

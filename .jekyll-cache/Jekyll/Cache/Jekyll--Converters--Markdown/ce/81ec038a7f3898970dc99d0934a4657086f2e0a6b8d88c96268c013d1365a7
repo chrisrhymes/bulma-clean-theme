@@ -1,0 +1,44 @@
+I"Ë<h2 id="products-directory">Products Directory</h2>
+
+<p>Start by creating a <code class="language-plaintext highlighter-rouge">_products</code> directory to hold your product pages.</p>
+
+<h2 id="product-pages">Product Pages</h2>
+
+<p>Create a new page for each product, such as <code class="language-plaintext highlighter-rouge">product1.md</code>. In the front matter for this page you can set the standard settings, such as your title, subtitle, description (for meta-description), hero_image, as well as the additional product settings such as price, product_code, image, features, and rating.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">title</span><span class="pi">:</span> <span class="s">Product 1 Name</span>
+<span class="na">subtitle</span><span class="pi">:</span> <span class="s">Product 1 tagline here</span>
+<span class="na">description</span><span class="pi">:</span> <span class="s">This is a product description</span>
+<span class="na">hero_image</span><span class="pi">:</span> <span class="s">/img/hero-img.jpg</span>
+<span class="na">product_code</span><span class="pi">:</span> <span class="s">ABC124</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">product</span>
+<span class="na">image</span><span class="pi">:</span> <span class="s">https://via.placeholder.com/640x480</span>
+<span class="na">price</span><span class="pi">:</span> <span class="s">Â£1.99 + VAT</span>
+<span class="na">features</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">label</span><span class="pi">:</span> <span class="s">Great addition to any home</span>
+      <span class="na">icon</span><span class="pi">:</span> <span class="s">fa-location-arrow</span>
+    <span class="pi">-</span> <span class="na">label</span><span class="pi">:</span> <span class="s">Comes in a range of styles</span>
+      <span class="na">icon</span><span class="pi">:</span> <span class="s">fa-grin-stars</span>
+    <span class="pi">-</span> <span class="na">label</span><span class="pi">:</span> <span class="s">Available in multiple sizes</span>
+      <span class="na">icon</span><span class="pi">:</span> <span class="s">fa-fighter-jet</span>
+<span class="na">rating</span><span class="pi">:</span> <span class="m">3</span>
+</code></pre></div></div>
+
+<p>The text you write for the page content will be displayed as the product description.</p>
+
+<p><a href="/bulma-clean-theme/products/product2/">View example Product page</a></p>
+
+<h2 id="product-collections">Product Collections</h2>
+
+<p>Next, add the following to your <code class="language-plaintext highlighter-rouge">_config.yml</code> to use collections to process the product pages and output them as individual pages.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">collections</span><span class="pi">:</span>
+  <span class="na">products</span><span class="pi">:</span> 
+    <span class="na">output</span><span class="pi">:</span> <span class="no">true</span>
+    <span class="na">layout</span><span class="pi">:</span> <span class="s">product</span>
+    <span class="na">image</span><span class="pi">:</span> <span class="s">https://via.placeholder.com/800x600</span>
+    <span class="na">show_sidebar</span><span class="pi">:</span> <span class="no">false</span>
+</code></pre></div></div>
+
+<p>You can also set default product page values here if you like, such as the layout or image.</p>
+:ET

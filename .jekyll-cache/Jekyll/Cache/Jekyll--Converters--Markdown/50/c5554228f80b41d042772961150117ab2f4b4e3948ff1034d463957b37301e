@@ -1,0 +1,29 @@
+I"ñ<h2 id="example">Example</h2>
+
+<figure class="image is-16by9"> 
+    <iframe class="has-ratio" src="https://www.youtube.com/embed/iRuJufELrWo?start=0&amp;showinfo=0" frameborder="0" allowfullscreen="">
+    </iframe>
+</figure>
+
+<h2 id="youtube">YouTube</h2>
+
+<p>To embed the YouTube video, include the youtube.html where you want the video to appear and then pass in the YouTube id as the video variable.</p>
+
+<div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{%</span><span class="w"> </span><span class="nt">include</span><span class="w"> </span>youtube.html<span class="w"> </span><span class="na">video</span><span class="o">=</span><span class="s2">"videoid"</span><span class="w"> </span><span class="p">%}</span>
+</code></pre></div></div>
+
+<h3 id="start-time">Start Time</h3>
+
+<p>You can optionally include a start time in seconds. This works the same as the ?t= parameter in Youtube URLs.</p>
+
+<div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{%</span><span class="w"> </span><span class="nt">include</span><span class="w"> </span>youtube.html<span class="w"> </span><span class="na">video</span><span class="o">=</span><span class="s2">"videoid"</span><span class="w"> </span><span class="na">time</span><span class="o">=</span><span class="mi">210</span><span class="w"> </span><span class="p">%}</span>
+</code></pre></div></div>
+
+<h2 id="vimeo-video">Vimeo Video</h2>
+
+<p>It is also possible to embed Vimeo videos in a similar way by including the vimeo.html and passing in the video id.</p>
+
+<div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{%</span><span class="w"> </span><span class="nt">include</span><span class="w"> </span>vimeo.html<span class="w"> </span><span class="na">video</span><span class="o">=</span><span class="s2">"videoid"</span><span class="w"> </span><span class="p">%}</span>
+</code></pre></div></div>
+
+:ET

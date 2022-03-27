@@ -1,0 +1,55 @@
+I"�<h2 id="page-hero">Page Hero</h2>
+
+<p>A page can have a Bulma hero at the top of the page. This allows you to display the title and subtitle, as well as a background image.</p>
+
+<h2 id="background-image">Background Image</h2>
+
+<p>Heros can display a background image if you provide a <code class="language-plaintext highlighter-rouge">hero_image: /path/to/image.jpg</code> setting in your page front matter.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">layout</span><span class="pi">:</span> <span class="s">page</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s">My page</span>
+<span class="na">hero_image</span><span class="pi">:</span> <span class="s">/path/to/image.jpg</span>
+</code></pre></div></div>
+
+<p>To set a default background image for all heros, you can set a <a href="https://jekyllrb.com/docs/configuration/front-matter-defaults/">default value</a> in your site’s <code class="language-plaintext highlighter-rouge">_config.yml</code>.</p>
+
+<h2 id="hero-height">Hero Height</h2>
+
+<p>You can set the height of the hero by providing a Bulma hero height class in your front matter, such as <code class="language-plaintext highlighter-rouge">hero_height: is-fullwidth</code>. If you do not provide this, it will revert to <code class="language-plaintext highlighter-rouge">is-medium</code>.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">layout</span><span class="pi">:</span> <span class="s">page</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s">My page</span>
+<span class="na">hero_height</span><span class="pi">:</span> <span class="s">is-fullwidth</span>
+</code></pre></div></div>
+
+<h2 id="call-to-action">Call to action</h2>
+
+<p>If you would like to add a call to action button in the hero then add <code class="language-plaintext highlighter-rouge">hero_link</code> and <code class="language-plaintext highlighter-rouge">hero_link_text</code> to the page’s front matter.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">layout</span><span class="pi">:</span> <span class="s">page</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s">My page</span>
+<span class="na">hero_link</span><span class="pi">:</span> <span class="s">/my-page/</span>
+<span class="na">hero_link_text</span><span class="pi">:</span> <span class="s">The Link Text</span>
+</code></pre></div></div>
+
+<h2 id="hiding-the-hero">Hiding the Hero</h2>
+
+<p>If you would like to hide the hero on the page, you can set <code class="language-plaintext highlighter-rouge">hide_hero: true</code> in the page’s front matter.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">layout</span><span class="pi">:</span> <span class="s">page</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s">My page</span>
+<span class="na">hide_hero</span><span class="pi">:</span> <span class="no">true</span>
+</code></pre></div></div>
+
+<h2 id="dark-overlay">Dark overlay</h2>
+
+<p>If you would like to darken the hero so the title stands out more over a light image, you can set <code class="language-plaintext highlighter-rouge">hero_darken: true</code> in the page’s front matter.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">layout</span><span class="pi">:</span> <span class="s">page</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s">My page</span>
+<span class="na">hero_image</span><span class="pi">:</span> <span class="s">/path/to/img.jpg</span>
+<span class="na">hero_darken</span><span class="pi">:</span> <span class="no">true</span>
+</code></pre></div></div>
+
+<p>You can overwrite the default hero background colour by setting the <code class="language-plaintext highlighter-rouge">$hero-darken</code> sass variable.</p>
+:ET

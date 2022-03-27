@@ -1,0 +1,44 @@
+I"ë<p>From version 0.12, you can now make a post a part of a series of posts, linking to the other posts in the series, by creating a <code class="language-plaintext highlighter-rouge">series</code> data file and then setting the series in each of the postâ€™s front matter.</p>
+
+<p>The current post in the list is highlighted to help give context of where you are in the series.</p>
+
+<h2 id="blog-series-data-file">Blog Series Data File</h2>
+
+<p>Start by creating a yml file in the _data directory, for example <code class="language-plaintext highlighter-rouge">my_blog_series.yml</code>. Give the series a title and, optionally, a description.</p>
+
+<h2 id="sections">Sections</h2>
+
+<p>Next add sections. Each section can have a label (optional) and items. Each item is the title of an existing blog post. If the title is not found then the link will be empty.</p>
+
+<p>If you just want one list without labels, then omit the label and just add the items.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">title</span><span class="pi">:</span> <span class="s">The series title</span>
+<span class="na">sections</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">items</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s">Why use a static site generator</span>
+      <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s">Getting started with Bulma Clean Theme for Jekyll</span>
+</code></pre></div></div>
+
+<p>Here is a full example with multiple sections with labels.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">title</span><span class="pi">:</span> <span class="s">The series title</span>
+<span class="na">description</span><span class="pi">:</span> <span class="s">The series description text</span>
+<span class="na">sections</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">label</span><span class="pi">:</span> <span class="s">The first section</span>
+    <span class="na">items</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s">Why use a static site generator</span>
+      <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s">Getting started with Bulma Clean Theme for Jekyll</span>
+  <span class="pi">-</span> <span class="na">label</span><span class="pi">:</span> <span class="s">Another section</span>
+    <span class="na">items</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s">Introducing some new layouts to Bulma Clean Theme</span>
+      <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s">Creating a docs site with Bulma Clean Theme</span>
+      <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s">Creating a post series</span>
+</code></pre></div></div>
+
+<h2 id="update-your-posts">Update your posts</h2>
+
+<p>Finally, add the series setting to your front matter in each post you want the series to show in.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">series</span><span class="pi">:</span> <span class="s">my_blog_series</span>
+</code></pre></div></div>
+:ET
