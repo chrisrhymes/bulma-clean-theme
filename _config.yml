@@ -1,18 +1,18 @@
 # Site Settings
 lang: en
-title: Bulma Clean Theme
+title: Amp Lab
 tagline: Bulma Clean Theme
-email: your-email@domain.com
+email: rhforsythjr@v.edu
 description: >
   The demo site for Bulma Clean Theme, made for Jekyll and GitHub pages websites
 baseurl: "/bulma-clean-theme"
 url: "https://www.csrhymes.com"
 permalink: pretty
 #favicon: /path/to/favicon.png
-gh_sponsor: chrisrhymes
+gh_sponsor: forsyth-creations
 #hide_share_buttons: true
-#theme_color: '#eeeeee'
-#fixed_navbar: top
+theme_color: '#78210a'
+fixed_bar: top
 #direction: one of <ltr, rtl, auto>, default: ltr
 
 paginate: 5
