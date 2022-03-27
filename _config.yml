@@ -1,17 +1,17 @@
 # Site Settings
 lang: en
 title: Amp Lab
-tagline: Bulma Clean Theme
+tagline: Amp Lab
 email: rhforsythjr@v.edu
-description: >
-  The demo site for Bulma Clean Theme, made for Jekyll and GitHub pages websites
+description: VT site for the Amp Lab
 baseurl: "/bulma-clean-theme"
 url: "https://www.csrhymes.com"
 permalink: pretty
 #favicon: /path/to/favicon.png
-gh_sponsor: forsyth-creations
+#gh_sponsor: forsyth-creations
 #hide_share_buttons: true
-theme_color: '#78210a'
+color: red
+navbar-background-color: red
 fixed_bar: top
 #direction: one of <ltr, rtl, auto>, default: ltr
 

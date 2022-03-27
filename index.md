@@ -1,9 +1,9 @@
 ---
-title: Bulma Clean Theme
-subtitle: This is the demo site for Bulma Clean Theme
+title: Amp Lab
 layout: page
 callouts: home_callouts
 show_sidebar: true
+theme_color: red
 ---
 
 # Bulma Clean Theme demo website
