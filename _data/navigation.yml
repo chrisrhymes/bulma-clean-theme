@@ -1,5 +1,5 @@
 - name: About 
-  link: /aboutus/
+  link: /about/
   dropdown:
     - name: Location
       link: /location/

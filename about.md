@@ -1,6 +1,6 @@
 ---
-layout: page
-title: Docs
+layout: default
+title: About
 menubar: docs_menu
 show_sidebar: false
 ---
