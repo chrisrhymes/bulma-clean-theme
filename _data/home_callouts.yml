@@ -1,12 +1,12 @@
 style: is-light
 items:
-  - title: Multiple page layouts
-    subtitle: Including sidebar, menubar, tabs and callouts
+  - title: About me
+    subtitle: More about myself
     icon: fa-copy
-  - title: Blog included
-    subtitle: Layouts for blog and post pages included
+  - title: Blog
+    subtitle: Stuff I ran into
     icon: fa-mail-bulk
-  - title: Works with GitHub Pages
-    subtitle: Quick and easy to get started
+  - title: Work
+    subtitle: More about the work I do
     icon: fa-github
     icon_brand: true
