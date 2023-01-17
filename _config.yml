@@ -1,15 +1,15 @@
 # Site Settings
 lang: en
-title: Bulma Clean Theme
-tagline: Bulma Clean Theme
-email: your-email@domain.com
+title: Koen Zomers
+tagline: Welcome
+email: koen@zomers.eu
 description: >
-  The demo site for Bulma Clean Theme, made for Jekyll and GitHub pages websites
-baseurl: "/bulma-clean-theme"
-url: "https://www.csrhymes.com"
+  Welcome to my website
+baseurl: "/"
+url: "https://www.koenzomers.nl"
 permalink: pretty
 #favicon: /path/to/favicon.png
-gh_sponsor: chrisrhymes
+gh_sponsor: 
 #hide_share_buttons: true
 #theme_color: '#eeeeee'
 #fixed_navbar: top
