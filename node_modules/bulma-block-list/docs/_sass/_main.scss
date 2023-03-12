@@ -1,7 +1,7 @@
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
 
-$family-sans-serif: 'Montserrat', sans-serif;
+$family-sans-serif: "Montserrat", sans-serif;
 $primary: #188eac !default;
 
 $tabs-link-active-color: $primary;
@@ -16,5 +16,5 @@ $hero-darken: $dark !default;
 @import "block-list.scss";
 
 .gh-sponsor {
-  color: #ea4aaa;
+    color: #ea4aaa;
 }
