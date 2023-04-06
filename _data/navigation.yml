@@ -1,19 +1,14 @@
-- name: Docs
-  link: /docs/
-- name: Example Pages
-  link: /#
+- name: Library
+  link: /library/
   dropdown:
-    - name: Landing Page With Callouts
-      link: /landing/
-    - name: Sponsors Page
-      link: /sponsors/
-    - name: Image Gallery
-      link: /gallery/
-    - name: Products
-      link: /products/
-    - name: Recipe Page
-      link: /example-recipe/
-    - name: Showcase
-      link: /showcase/
+    - name: Projects
+      link: /projects/
+    - name: Languages
+      link: /languages/
+    - name: Competitive Programming
+      link: /competitive-programming/
+    - name: Reading
+      link: /reading/
+
 - name: Blog
   link: /blog/
