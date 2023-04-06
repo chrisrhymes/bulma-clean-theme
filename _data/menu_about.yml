@@ -1,0 +1,19 @@
+- label: Topics
+  items:
+    - name: Common Questions
+      link: docs/about#common-questions
+    - name: CV
+      link: docs/about#cv
+      
+
+- label: Common Questions
+  items:
+    - name: Why code?
+      link: docs/about/questions-and-answers#why-code?
+    - name: Why a website?
+      link: docs/about/questions-and-answers#why-a-website?
+    - name: What is the direction?
+      link: docs/about/questions-and-answers#what-is-the-direction?
+    - name: How was this website built?
+      link: /about/questions-and-answers#how-was-this-website-built?
+

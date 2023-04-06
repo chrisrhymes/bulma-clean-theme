@@ -1,54 +1,54 @@
 - label: Topics
   items:
     - name: Projects
-      link: /projects/
+      link: docs/library/projects
     - name: Languages
-      link: /languages/
+      link: docs/library/languages
     - name: Competitive Programming
-      link: /competitive-programming/
+      link: docs/library/competitive-programming
     - name: Reading
-      link: /reading/
+      link: docs/library/reading
       
 
 - label: Projects
   items:
     - name: img2cap, Image Caption Generator
-      link: /docs/projects/imag2capt/
+      link: docs/projects#imag2capt
     - name: 4-in-a-Row-Game
-      link: /docs/projects/4-in-a-row/
+      link: docs/projects#4-in-a-row
     - name: DNS Sinkhole Server
-      link: /docs/projects/dns-sinkhole-server/
+      link: docs/projects#dns-sinkhole-server
     - name: Server-Client Mach IPC
-      link: /docs/projects/server-client-mach-ipc
+      link: docs/projects#server-client-mach-ipc
 
 
 - label: Languages
   items:
     - name: Python3
-      link: /docs/languages/Python3/
+      link: docs/languages#Python3
     - name: C-sharp
-      link: /docs/languages/c-sharp/
+      link: docs/languages#c-sharp
     - name: Java
-      link: /docs/languages/java
+      link: docs/languages#java
     - name: Objective-C
-      link: /docs/languages/obj-c
+      link: docs/languages#obj-c
 
 
 - label: Competitive Programming
   items:
     - name: Data Structures
-      link: /docs/competitive-programming/data-structures/
+      link: docs/competitive-programming#data-structures
     - name: Concepts
-      link: /docs/competitive-programming/concepts/
+      link: docs/competitive-programming#concepts
 
 
 - label: Reading
   items:
     - name: Modern JavaScript for the Impatient
-      link: /docs/reading/modern-javascript-for-the-impatient/
+      link: docs/reading#modern-javascript-for-the-impatient
     - name: Elements of Programming Interviews in Python3
-      link: /docs/reading/epi-judge/
+      link: docs/reading#epi-python
     - name: Operating Systems, Three Easy Pieces
-      link: /docs/reading/os-three-easy-pieces/
+      link: docs/reading#os-three-easy-pieces
     - name: Programming in Objective C
-      link: /docs/reading/programming-in-obj-c/
+      link: docs/reading#programming-in-obj-c

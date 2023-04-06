@@ -1,14 +1,22 @@
+- name: About
+  link: /about/
+  dropdown:
+    - name: Common Questions
+      link: docs/about#common-questions
+    - name: CV
+      link: docs/about#cv
+
 - name: Library
   link: /library/
   dropdown:
     - name: Projects
-      link: /projects/
+      link: docs/library/projects
     - name: Languages
-      link: /languages/
+      link: docs/library/languages
     - name: Competitive Programming
-      link: /competitive-programming/
+      link: docs/library/competitive-programming
     - name: Reading
-      link: /reading/
+      link: docs/library/reading
 
 - name: Blog
   link: /blog/
