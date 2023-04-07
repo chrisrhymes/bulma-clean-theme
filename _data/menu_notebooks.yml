@@ -9,20 +9,25 @@
 
 - label: Concepts
   items:
-    - label: Iterables
-      items:
-        - label: Errors
-          items:
-            - name: Changing iterable in loop
-              link:
-        - label: Operations
-          items:
-            - name: Flatenning iterable
-              link:
-            - name: Grouping items in iterable
-              link:
-    - label: Math
-      items: 
-        - name: Math functions with modulo
-          link:
+    - name: Changing iterable in loop
+      link:       
+    - name: Flatenning iterable
+      link:
+    - name: Grouping items in iterable
+      link:
+    - name: Math functions with modulo
+      link:
           
+- label: Algorithms
+  items:
+    - name: Binary search with variations
+      link: _notebooks/Algorithms/binary-search_with-variations/
+
+- label: Data Structures
+  items:
+    - name: Disjoint Sets (Union-Find)
+      link:
+    - name: Fenwick Tree
+      link:
+    - name: Trie
+      link:

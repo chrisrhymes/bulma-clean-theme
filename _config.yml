@@ -88,3 +88,9 @@ collections:
     layout: product
     image: https://via.placeholder.com/800x600
     show_sidebar: false
+
+plugins:
+  - jekyll-jupyter-notebook
+
+include:
+  - _notebooks
