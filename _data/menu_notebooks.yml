@@ -1,0 +1,28 @@
+- label: Topics
+  items:
+    - name: Concepts
+      link: /programming-concepts/
+    - name: Algorithms
+      link: /algorithms/
+    - name: Data Structures
+      link: /data-structures/
+
+- label: Concepts
+  items:
+    - label: Iterables
+      items:
+        - label: Errors
+          items:
+            - name: Changing iterable in loop
+              link:
+        - label: Operations
+          items:
+            - name: Flatenning iterable
+              link:
+            - name: Grouping items in iterable
+              link:
+    - label: Math
+      items: 
+        - name: Math functions with modulo
+          link:
+          
