@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Changing Iterables in Loop
+categories: [concepts]
 menubar: menu_notebooks
 show_sidebar: false
 toc: true

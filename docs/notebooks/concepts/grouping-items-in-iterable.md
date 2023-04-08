@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Wrapping elements in lists
+categories: [concepts]
 menubar: menu_notebooks
 show_sidebar: false
 toc: true

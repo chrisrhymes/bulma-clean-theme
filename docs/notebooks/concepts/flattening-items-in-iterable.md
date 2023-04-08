@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Flatenning lists
+categories: [concepts]
 menubar: menu_notebooks
 show_sidebar: false
 toc: true

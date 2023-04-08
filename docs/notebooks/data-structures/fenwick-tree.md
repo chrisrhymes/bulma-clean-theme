@@ -2,6 +2,7 @@
 layout: page
 title: Fenwick Trees
 menubar: menu_notebooks
+categories: [data-structures]
 show_sidebar: false
 toc: true
 ---

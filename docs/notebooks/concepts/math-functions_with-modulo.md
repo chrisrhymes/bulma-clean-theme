@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Math function with modulo
+categories: [concepts]
 menubar: menu_notebooks
 show_sidebar: false
 toc: true

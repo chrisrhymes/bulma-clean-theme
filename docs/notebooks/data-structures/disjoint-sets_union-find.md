@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Disjoint Sets (Union-Find)
+categories: [data-structures]
 menubar: menu_notebooks
 show_sidebar: false
 toc: true

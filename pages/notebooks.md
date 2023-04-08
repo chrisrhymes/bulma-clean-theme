@@ -21,7 +21,7 @@ A word about granularity: There can be many ontologies for dividing such topics.
     <hr class="panel-line">
 
     {% assign folder_categories = 'concepts,algorithms,data-structures' | split: ',' %}
-    {% assign sorted_docs = site.docs | sort: 'path' %}
+    {% assign sorted_docs = site.pages | sort: 'path' %}
     {% assign sorted_docs_custom = "" | split: "," %}
 
     {% for folder_category in folder_categories %}
@@ -38,10 +38,3 @@ A word about granularity: There can be many ontologies for dividing such topics.
 
 </div>
 
-<div class="section-index">
-    {% for docs_post in site.docs %}
-        <div class="entry">
-            <h5>{{ docs_post.title }}</a></h5>
-        </div>
-    {% endfor %}
-</div>
