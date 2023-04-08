@@ -1,12 +1,5 @@
 - name: Notebooks
   link: /notebooks/
-  dropdown:
-    - name: Python 3 docs
-      link: 
-    - name: Concepts
-      link: 
-    - name: Data Structures
-      link: 
 
 - name: Blog
   link: /blog/
