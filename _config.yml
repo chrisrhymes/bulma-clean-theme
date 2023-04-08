@@ -21,10 +21,7 @@ repo: "https://github.com/Matans844/my-website"
 github_user: "Matans844"
 github_repo: "my-website"
 github_branch: "master"
-
-# Optional
-twitter: vsoch
-linkedin: vsochat
+linkedin: https://www.linkedin.com/in/matan-sheskin/
 
 
 
@@ -55,6 +52,7 @@ plugins:
   - jekyll-seo-tag
   - kramdown-parser-gfm
   - jekyll-redirect-from
+  - jekyll-social-meta-tags
 
 exclude: 
   - Gemfile
