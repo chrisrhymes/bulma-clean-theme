@@ -10,5 +10,3 @@ hide_hero: true
 
 This is my personal website.
 
-{% include simple-search.html %}
-
