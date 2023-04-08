@@ -1,16 +1,7 @@
-- label:
+- label: Content
   items:
     - name: Notebooks
       link: /notebooks/
-
-- label: Topics
-  items:
-    - name: Concepts
-      link: /programming-concepts/
-    - name: Algorithms
-      link: /algorithms/
-    - name: Data Structures
-      link: /data-structures/
 
 - label: Concepts
   items:

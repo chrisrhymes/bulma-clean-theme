@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Binary Search with Variations
+url: docs/notebooks/algorithms/binary-search_with-variations/
+description: Hello
 menubar: menu_notebooks
 show_sidebar: false
 toc: true

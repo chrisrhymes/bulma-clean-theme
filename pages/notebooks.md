@@ -14,3 +14,34 @@ I enjoy solving problems. When I can do it with code, I usually have the opportu
 Each of these topics can be divided to subtopics. I created Jupyter notebooks for these subtopics, and I will show them here. I am currently focused on Python3.
 
 A word about granularity: There can be many ontologies for dividing such topics. For now, I chose to skip publishing my material in a rigid granularity policy, and mainly share the notebooks with you. As the list grows, I will address this, probably by moving material to [Jupyter books websites](https://jupyterbook.org/en/stable/intro.html).
+
+
+
+<div class="section-index">
+    <hr class="panel-line">
+
+    {% assign folder_categories = 'concepts,algorithms,data-structures' | split: ',' %}
+    {% assign sorted_docs = site.docs | sort: 'path' %}
+    {% assign sorted_docs_custom = "" | split: "," %}
+
+    {% for folder_category in folder_categories %}
+        {% assign docs_in_folder = sorted_docs | where_exp: "doc", "doc.categories contains folder_category" %}
+        {% assign sorted_docs_custom = sorted_docs_custom | concat: docs_in_folder %}
+    {% endfor %}
+
+    {% for docs_post in sorted_docs_custom %}
+        <div class="entry">
+            <h5><a href="{{ docs_post.url | prepend: site.baseurl }}">{{ docs_post.title }}</a></h5>
+            <p>{{ docs_post.description }}</p>
+        </div>
+    {% endfor %}
+
+</div>
+
+<div class="section-index">
+    {% for docs_post in site.docs %}
+        <div class="entry">
+            <h5>{{ docs_post.title }}</a></h5>
+        </div>
+    {% endfor %}
+</div>

@@ -12,8 +12,22 @@ email: matans844@gmail.com
 description: >
   A personal website to display my projects, my ideas, and my thoughts about code.
 theme: bulma-clean-theme
-# baseurl: 
+
+#baseurl: "/"
 url: "https://www.someonewholovescode.com"
+
+# Social (First three Required)
+repo: "https://github.com/Matans844/my-website"
+github_user: "Matans844"
+github_repo: "my-website"
+github_branch: "master"
+
+# Optional
+twitter: vsoch
+linkedin: vsochat
+
+
+
 permalink: pretty
 #favicon: /path/to/favicon.png
 # gh_sponsor: chrisrhymes
@@ -61,20 +75,23 @@ sass:
 #google_analytics: UA-code-here
 
 defaults:
-  -
-    scope:
+  - scope:
+      path: "_docs"
+      type: "docs"
+    values:
+      layout: page
+  - scope:
       path: ""
       type: "pages"
     values:
       show_sidebar: true
-  -
-    scope:
+  - scope:
       path: ""
       type: "posts"
     values:
       author: "Matan Sheskin"
       layout: post
-      image: https://via.placeholder.com/1200x800
+      image:
       show_sidebar: true
 
 markdown: kramdown
@@ -88,3 +105,7 @@ collections:
     layout: product
     image: https://via.placeholder.com/800x600
     show_sidebar: false
+  docs:
+    output: true
+    permalink: /:collection/:path
+  
