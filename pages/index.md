@@ -2,12 +2,15 @@
 layout: page
 title: Welcome!
 permalink: /
-show_sidebar: false
+show_sidebar: true
 hide_hero: true
 ---
 
-# Welcome
+# Matan Sheskin
 
+<div style="text-align:center; margin-top:30px; margin-bottom:20px;"><img src="/assets/photos/me-website_292x500.jpg" /></div>
+
+# About me
 My name is Matan Sheskin. I am a programmer. I finished my computer science B.Sc. in March 2022. I also finished a Psychology B.A. in 2020, and I should finish my mathematics degree in 2024. I am interested in problem solving. More specifically, I am interested in problem patterns that make up problems in programming, computer science, and math. I build this website to share my thoughts, ideas, and code.
 
 # Projects
