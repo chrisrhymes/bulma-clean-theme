@@ -2,14 +2,26 @@
 # yarn lockfile v1
 
 
-"bulma-block-list@^0.6":
-  "integrity" "sha512-Ub+5DS14YN1zTxfq2WbP7c3wfUKq2SpOTbFa8brhHUJe73WSfIgXQg02SYpbYWGalEkaflIRjzGKX35N4/jGOA=="
-  "resolved" "https://registry.npmjs.org/bulma-block-list/-/bulma-block-list-0.6.0.tgz"
-  "version" "0.6.0"
+"bulma-block-list@^0.7":
+  "integrity" "sha512-IicPQLcw4iX74waDAYhHT4LPbgc3qUPcrF5tOgNQGAUypoAcyiFjW2mBpLe+GCtQAYsDWmpu+X0nxhmUdOdAGw=="
+  "resolved" "https://registry.npmjs.org/bulma-block-list/-/bulma-block-list-0.7.0.tgz"
+  "version" "0.7.0"
   dependencies:
     "bulma" "^0.9.3"
 
 "bulma@^0.9.3":
-  "integrity" "sha512-0d7GNW1PY4ud8TWxdNcP6Cc8Bu7MxcntD/RRLGWuiw/s0a9P+XlH/6QoOIrmbj6o8WWJzJYhytiu9nFjTszk1g=="
-  "resolved" "https://registry.npmjs.org/bulma/-/bulma-0.9.3.tgz"
-  "version" "0.9.3"
+  "integrity" "sha512-86FlT5+1GrsgKbPLRRY7cGDg8fsJiP/jzTqXXVqiUZZ2aZT8uemEOHlU1CDU+TxklPEZ11HZNNWclRBBecP4CQ=="
+  "resolved" "https://registry.npmjs.org/bulma/-/bulma-0.9.4.tgz"
+  "version" "0.9.4"
+
+"fuzzysearch@^1.0.3":
+  "integrity" "sha512-s+kNWQuI3mo9OALw0HJ6YGmMbLqEufCh2nX/zzV5CrICQ/y4AwPxM+6TIiF9ItFCHXFCyM/BfCCmN57NTIJuPg=="
+  "resolved" "https://registry.npmjs.org/fuzzysearch/-/fuzzysearch-1.0.3.tgz"
+  "version" "1.0.3"
+
+"simple-jekyll-search@^1.10.0":
+  "integrity" "sha512-4SdHfAjEe9mngvj4wt8A7OsF9Rl3+onHY1ruQC+bUnecbNbdvzVcAbL+UH5mE+v2CWgUb95dyZjHhyqUGSa2hA=="
+  "resolved" "https://registry.npmjs.org/simple-jekyll-search/-/simple-jekyll-search-1.10.0.tgz"
+  "version" "1.10.0"
+  dependencies:
+    "fuzzysearch" "^1.0.3"

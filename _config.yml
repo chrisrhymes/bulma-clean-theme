@@ -1,31 +1,49 @@
+# Jekyll config file.
+
 # Site Settings
 lang: en
-title: Bulma Clean Theme
-tagline: Bulma Clean Theme
-email: your-email@domain.com
+# Change to your timezone › http://www.timezoneconverter.com/cgi-bin/findzone/findzone
+timezone: Israel
+
+# Site details and customization
+title: SomeoneWhoLovesCode.com
+tagline: Personal Website
+email: matans844@gmail.com
 description: >
-  The demo site for Bulma Clean Theme, made for Jekyll and GitHub pages websites
-baseurl: "/bulma-clean-theme"
-url: "https://www.csrhymes.com"
+  A personal website to display my projects, my ideas, and my thoughts about code.
+theme: bulma-clean-theme
+
+#baseurl: "/"
+url: "https://www.someonewholovescode.com"
+
+# Social (First three Required)
+repo: "https://github.com/Matans844/my-website"
+github_user: "Matans844"
+github_repo: "my-website"
+github_branch: "master"
+
+
+
 permalink: pretty
 #favicon: /path/to/favicon.png
-gh_sponsor: chrisrhymes
-#hide_share_buttons: true
+# gh_sponsor: chrisrhymes
+hide_share_buttons: false
 #theme_color: '#eeeeee'
 #fixed_navbar: top
 #direction: one of <ltr, rtl, auto>, default: ltr
-
 paginate: 5
 paginate_path: "/blog/page:num"
 
+# Comments
 # Disqus Comments
 disqus:
   # Leave shortname blank to disable comments site-wide.
   # Disable comments for any post by adding `comments: false` to that post's YAML Front Matter.
   # shortname: my_disqus_shortname
-  shortname: csrhymes
+  # shortname: csrhymes
+  shortname:
 
-
+# Extras
 plugins:
   - jekyll-sitemap
   - jekyll-paginate
@@ -33,6 +51,7 @@ plugins:
   - jekyll-seo-tag
   - kramdown-parser-gfm
   - jekyll-redirect-from
+  - jekyll-font-awesome-sass
 
 exclude: 
   - Gemfile
@@ -50,33 +69,37 @@ sass:
   style: compressed
   source_dir: _sass
 
+font-awesome:
+  assets: true
+
 #google_analytics: UA-code-here
 
 defaults:
-  -
-    scope:
+  - scope:
+      path: "_docs"
+      type: "docs"
+    values:
+      layout: page
+  - scope:
       path: ""
       type: "pages"
     values:
       show_sidebar: true
-  -
-    scope:
+  - scope:
       path: ""
       type: "posts"
     values:
-      author: "C.S. Rhymes"
+      author: "Matan Sheskin"
       layout: post
-      image: https://via.placeholder.com/1200x800
+      image:
       show_sidebar: true
 
 markdown: kramdown
 highlighter: rouge
 
-footer_menu: example_footer_menu
+footer_menu: social-media
 
 collections:
-  products: 
+  docs:
     output: true
-    layout: product
-    image: https://via.placeholder.com/800x600
-    show_sidebar: false
+  
