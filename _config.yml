@@ -13,7 +13,7 @@ description: >
   A personal website to display my projects, my ideas, and my thoughts about code.
 theme: bulma-clean-theme
 
-#baseurl: "/"
+baseurl:
 url: "https://www.someonewholovescode.com"
 
 # Social (First three Required)
@@ -22,10 +22,8 @@ github_user: "Matans844"
 github_repo: "my-website"
 github_branch: "master"
 
-
-
 permalink: pretty
-#favicon: /path/to/favicon.png
+# favicon: /path/to/favicon.png
 # gh_sponsor: chrisrhymes
 hide_share_buttons: false
 #theme_color: '#eeeeee'
