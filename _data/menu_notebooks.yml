@@ -1,3 +1,8 @@
+- label:
+  items:
+    - name: Notebooks
+      link: /notebooks/
+
 - label: Topics
   items:
     - name: Concepts
@@ -10,24 +15,27 @@
 - label: Concepts
   items:
     - name: Changing iterable in loop
-      link:       
+      link: docs/notebooks/concepts/changing-iterable-in-loop/      
     - name: Flatenning iterable
-      link:
+      link: docs/notebooks/concepts/flattening-items-in-iterable/
     - name: Grouping items in iterable
-      link:
+      link: docs/notebooks/concepts/grouping-items-in-iterable/
     - name: Math functions with modulo
-      link:
+      link: docs/notebooks/concepts/math-functions_with-modulo/
           
 - label: Algorithms
   items:
     - name: Binary search with variations
-      link: _notebooks/Algorithms/binary-search_with-variations/
+      link: docs/notebooks/algorithms/binary-search_with-variations/
 
 - label: Data Structures
   items:
     - name: Disjoint Sets (Union-Find)
-      link:
-    - name: Fenwick Tree
-      link:
-    - name: Trie
-      link:
+      link: docs/notebooks/data-structures/disjoint-sets_union-find/
+    - name: Fenwick Trees
+      link: docs/notebooks/data-structures/fenwick-tree/
+    - name: Tries
+      link: docs/notebooks/data-structures/trie/
+
+
+

@@ -20,6 +20,3 @@ platforms :mingw, :x64_mingw, :mswin, :jruby do
 
 # Please add the following to your Gemfile to avoid polling for changes:
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
-
-# To get Jupyter Notebook support
-gem "jekyll-jupyter-notebook"
