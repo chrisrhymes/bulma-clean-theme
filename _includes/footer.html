@@ -1,6 +1,5 @@
 <footer class="footer">
     <div class="container">
-        
         {% if site.footer_menu %}
         <div class="columns is-multiline">
             {% for item in site.data[site.footer_menu] %}
@@ -14,7 +13,15 @@
         {% endif %}
 
         <div class="content is-small has-text-centered">
+            <!---
             <p class="">Theme built by <a href="https://www.csrhymes.com">C.S. Rhymes</a></p>
+            -->
+            {% assign social_links = site.data.social-media %}
+            {% for link in social_links %}
+            <a href="{{ link.url }}" target="_blank">
+                <i class="{{ link.icon }}" style="font-size: 1.5rem; margin-right: 1rem;"></i>
+            </a>
+            {% endfor %}
         </div>
     </div>
 </footer>
