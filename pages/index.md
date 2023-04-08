@@ -9,3 +9,5 @@ hide_hero: true
 # Welcome
 
 This is my personal website.
+
+{% include social-media-links.html %}

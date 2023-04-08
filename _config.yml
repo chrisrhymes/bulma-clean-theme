@@ -52,7 +52,7 @@ plugins:
   - jekyll-seo-tag
   - kramdown-parser-gfm
   - jekyll-redirect-from
-  - jekyll-social-meta-tags
+  - jekyll-font-awesome-sass
 
 exclude: 
   - Gemfile
@@ -69,6 +69,9 @@ livereload: true
 sass:
   style: compressed
   source_dir: _sass
+
+font-awesome:
+  assets: true
 
 #google_analytics: UA-code-here
 
