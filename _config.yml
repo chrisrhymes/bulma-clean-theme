@@ -27,7 +27,7 @@ github_branch: "master"
 permalink: pretty
 #favicon: /path/to/favicon.png
 # gh_sponsor: chrisrhymes
-#hide_share_buttons: true
+hide_share_buttons: false
 #theme_color: '#eeeeee'
 #fixed_navbar: top
 #direction: one of <ltr, rtl, auto>, default: ltr

@@ -14,6 +14,7 @@ Web development is quite foreign and scary for me: There's a never ending stream
 * Jekyll.
 * Ruby.
 * JavaScript, HTML, CSS.
+
 None of which are native to me. But I thought I should leave me comfort zone and find out how these interact to give me, someone with relatively little web development knowledge, the capability to plant a flag on a small piece for myself in the vast internet continent.
 
 I hope to use this place to share my work in the following topics:
