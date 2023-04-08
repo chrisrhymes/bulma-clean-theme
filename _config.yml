@@ -13,8 +13,8 @@ description: >
   A personal website to display my projects, my ideas, and my thoughts about code.
 theme: bulma-clean-theme
 
-baseurl:
-url: "https://www.someonewholovescode.com"
+baseurl: ""
+url: "https://matans844.github.io/my-website"
 
 # Social (First three Required)
 repo: "https://github.com/Matans844/my-website"
