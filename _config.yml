@@ -103,5 +103,4 @@ footer_menu: example_footer_menu
 collections:
   docs:
     output: true
-    permalink: /:collection/:path
   

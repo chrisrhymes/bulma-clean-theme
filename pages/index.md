@@ -10,4 +10,3 @@ hide_hero: true
 
 This is my personal website.
 
-{% include social-media-links.html %}

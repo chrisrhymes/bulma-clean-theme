@@ -30,6 +30,9 @@
                     <a href="{{ item.link | relative_url }}" class="navbar-item {% if item.link == page.url %}is-active{% endif %}">{{ item.name }}</a>
                     {% endif %}
                 {% endfor %}
+
+                {% include simple-search-bar.html %}
+
                 {% endif %}
             </div>
 
