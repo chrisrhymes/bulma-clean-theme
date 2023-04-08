@@ -100,11 +100,6 @@ highlighter: rouge
 footer_menu: example_footer_menu
 
 collections:
-  products: 
-    output: true
-    layout: product
-    image: https://via.placeholder.com/800x600
-    show_sidebar: false
   docs:
     output: true
     permalink: /:collection/:path
