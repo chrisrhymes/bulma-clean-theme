@@ -1,3 +1,6 @@
+# 0.13.3
+* Fix GitHub forks link in showcase - pull request #134 by ianfab
+
 # 0.13.2
 * Update bulma-block-list to 0.7.0
 * Update bulma to 0.9.4
