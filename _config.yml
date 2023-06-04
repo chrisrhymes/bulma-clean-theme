@@ -1,16 +1,16 @@
 # Site Settings
 lang: en
-title: Bulma Clean Theme
-tagline: Bulma Clean Theme
-email: your-email@domain.com
+title: Rutten.me
+tagline: Trying is the first step to failure...
+email: sander@rutten.me
 description: >
-  The demo site for Bulma Clean Theme, made for Jekyll and GitHub pages websites
-baseurl: "/bulma-clean-theme"
-url: "https://www.csrhymes.com"
+  My personal website with some of my projects.
+baseurl: "/website-test"
+url: "https://rutten.me"
 permalink: pretty
 #favicon: /path/to/favicon.png
-gh_sponsor: chrisrhymes
-#hide_share_buttons: true
+#gh_sponsor: sanderrutten
+hide_share_buttons: true
 #theme_color: '#eeeeee'
 #fixed_navbar: top
 #direction: one of <ltr, rtl, auto>, default: ltr
@@ -19,11 +19,11 @@ paginate: 5
 paginate_path: "/blog/page:num"
 
 # Disqus Comments
-disqus:
+#disqus:
   # Leave shortname blank to disable comments site-wide.
   # Disable comments for any post by adding `comments: false` to that post's YAML Front Matter.
   # shortname: my_disqus_shortname
-  shortname: csrhymes
+#  shortname: csrhymes
 
 
 plugins:
@@ -33,8 +33,9 @@ plugins:
   - jekyll-seo-tag
   - kramdown-parser-gfm
   - jekyll-redirect-from
+  - jekyll-toc
 
-exclude: 
+exclude:
   - Gemfile
   - clean-theme.gemspec
   - Gemfile.lock
@@ -64,7 +65,7 @@ defaults:
       path: ""
       type: "posts"
     values:
-      author: "C.S. Rhymes"
+      author: "S. Rutten"
       layout: post
       image: https://via.placeholder.com/1200x800
       show_sidebar: true
@@ -72,11 +73,13 @@ defaults:
 markdown: kramdown
 highlighter: rouge
 
-footer_menu: example_footer_menu
+footer_menu: footer_menu
 
 collections:
-  products: 
+  products:
     output: true
     layout: product
     image: https://via.placeholder.com/800x600
     show_sidebar: false
+
+host: 192.168.100.80
