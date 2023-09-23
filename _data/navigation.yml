@@ -1,19 +1,37 @@
-- name: Docs
-  link: /docs/
-- name: Example Pages
-  link: /#
+- name: News
+  link: /news/
+- name: Program
+  link: /program/
   dropdown:
-    - name: Landing Page With Callouts
-      link: /landing/
-    - name: Sponsors Page
-      link: /sponsors/
-    - name: Image Gallery
-      link: /gallery/
-    - name: Products
-      link: /products/
-    - name: Recipe Page
-      link: /example-recipe/
-    - name: Showcase
-      link: /showcase/
-- name: Blog
-  link: /blog/
+    - name: Program Details
+      link: /program-detail/
+- name: Sponsors
+  link: /sponsors/
+- name: Access
+  link: /access/
+- name: Facebook
+  link: https://www.facebook.com/ONICJapan/
+- name: Archives
+  dropdown:
+    - name: ONIC 2022
+      link: /archives/2022/
+    - name: ONIC 2021
+      link: /archives/2021/
+    - name: ONIC 2020
+      link: /archives/2020/
+    - name: ONIC 2019
+      link: /archives/2019/
+    - name: ONIC 2018
+      link: /archives/2018/
+    - name: ONIC 2017
+      link: /archives/2017/
+    - name: ONIC 2016
+      link: /archives/2016/
+    - name: ONIC 2015
+      link: /archives/2015/
+    - name: ONIC 2014
+      link: /archives/2014/
+    - name: ONIC 2013
+      link: /archives/2013/
+    - name: ONIC 2012
+      link: /archives/2012/      

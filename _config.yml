@@ -1,29 +1,29 @@
 # Site Settings
-lang: en
-title: Bulma Clean Theme
-tagline: Bulma Clean Theme
-email: your-email@domain.com
+lang: ja
+title: ONIC Japan
+tagline: ONIC Japan
+email: onicjapan@e-side.co.jp
 description: >
-  The demo site for Bulma Clean Theme, made for Jekyll and GitHub pages websites
+  本サイトはOpen NetworkIng Conference Japanのホームページです。
 baseurl: ""
-url: "https://onicjapan.shin.do"
+url: "https://onic.jp"
 permalink: pretty
-#favicon: /path/to/favicon.png
-gh_sponsor: chrisrhymes
+favicon: /img/favicon.ico
+#gh_sponsor: onicjapan
 #hide_share_buttons: true
 #theme_color: '#eeeeee'
 #fixed_navbar: top
 #direction: one of <ltr, rtl, auto>, default: ltr
 
 paginate: 5
-paginate_path: "/blog/page:num"
+paginate_path: "/news/page:num"
 
 # Disqus Comments
 disqus:
   # Leave shortname blank to disable comments site-wide.
   # Disable comments for any post by adding `comments: false` to that post's YAML Front Matter.
   # shortname: my_disqus_shortname
-  shortname: csrhymes
+  # shortname: csrhymes
 
 
 plugins:
@@ -64,7 +64,7 @@ defaults:
       path: ""
       type: "posts"
     values:
-      author: "C.S. Rhymes"
+      author: "ONIC Japan"
       layout: post
       image: https://via.placeholder.com/1200x800
       show_sidebar: true
@@ -72,7 +72,7 @@ defaults:
 markdown: kramdown
 highlighter: rouge
 
-footer_menu: example_footer_menu
+footer_menu: onic_footer_menu
 
 collections:
   products: 

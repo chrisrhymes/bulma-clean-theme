@@ -1,54 +1,48 @@
 ---
-title: Bulma Clean Theme
-subtitle: This is the demo site for Bulma Clean Theme
+title: Open NetworkIng Conference Japan
+subtitle: NOVEMBER 9-10, 2023
 layout: page
-callouts: home_callouts
 show_sidebar: true
 ---
+## 開催概要
 
-# Bulma Clean Theme demo website
+| 名称     | Open Networking Conference Japan 2023 |
+| URL      | [https://onic.jp/]( {{ site.baseurl }}/) |
+| 会期     | 2023年11月9日〜10日 |
+| 主催     | Open Networking Conference Japan2023 実行委員会 |
+| 会場     | 軽井沢大賀ホール |
+|          | 〒389-0104　長野県北佐久郡軽井沢町軽井沢東28-4 |
+|          | [http://www.ohgahall.or.jp](http://www.ohgahall.or.jp) |
+| 構成     | 基調講演、講演、スポンサー講演 |
+|          | ハイブリット開催 |
+| アクセス | [詳細はこちらをご確認ください]({{ site.baseurl }}/access/) | 
+|          | ![]({{ site.baseurl }}/img/outline_access_3.png) |
 
-This website showcases the options for the Bulma Clean theme. The theme is available as a ruby gem or can be used with GitHub pages. 
+## 開催趣旨文
+Open Networking Conference Japanは今年で12回目を迎えます。これまでの開催を支えていただきました協賛企業様、講演者様、並びに参加いただきました皆様に深くお礼を申し上げます。
 
-[![Gem Version](https://badge.fury.io/rb/bulma-clean-theme.svg)](https://badge.fury.io/rb/bulma-clean-theme)
-![Gem](https://img.shields.io/gem/dt/bulma-clean-theme.svg)
-![GitHub Repo stars](https://img.shields.io/github/stars/chrisrhymes/bulma-clean-theme?style=social)
+昨年末ChatGPTの公開が大きな話題になり、さまざまな分野でAIに関して活発な議論が行われております。自動運転機能を有した車が走行し、アバターやロボットによる接客、AIを利用した未来の予見、技術伝承などが現実味を帯びてきています。その流れの中、ネットワーク分野においてもAI適用の検討が始まっております。特に、ネットワーク運用における自動化や故障予見、エンジニアの技術力向上などへの適用可能性が感じられます。さらには、高品質で低遅延・高帯域なネットワークが必須となり、技術革新が求められています。
 
-## Ruby Gem
+このようなネットワーク分野の取り組みは、これまで検討が進められてきたハードウェア技術の進化、ソフトウェア化による柔軟性の向上、運用効率化や技術者育成の延長線上にあり、AIへの技術適用・活用を一つのマイルストンとして見据え取り組むテーマを含んでいると考えます。そして、これらを実現するためには当然セキュリティを担保する必要があるとともに、ミッションクリティカルな事案を多分に含む場面もあるため、堅牢性と柔軟性を兼ね備えたシステムが必要となります。
 
-The ruby gem is available on the Ruby Gems website at the following location. [https://rubygems.org/gems/bulma-clean-theme](https://rubygems.org/gems/bulma-clean-theme).
+本カンファレンスでは、これらのテーマに対しオープンなコミュニティとしてさまざまな組織のみなさまと技術分野の違いを超えた活発な議論をさせていただければと考えております。
 
-## GitHub Pages
+今年も昨年に引き続きFace to Faceでの議論を願い、軽井沢およびオンラインでのハイブリッド開催を検討しております。また、現地のみとなりますが本会議前日にはBoFの開催を予定しておりますので、より多くの方にご参加いただいて議論ができる場を用意させていただく予定です。
 
-The theme can be used with GitHub Pages by setting the `remote_theme` in your Jekyll sites `_config.yml`
+ぜひご参加いただきますようよろしくお願いいたします。
 
-```yml
-remote_theme: chrisrhymes/bulma-clean-theme
-```
+Open Networking Conference Japan 2023 実行委員会
 
-## Documentation
+# COMMITTEE
 
-For full instructions, please see the [Documentation](/bulma-clean-theme/docs/)
+## Open Networking Conference Japan 実行委員会
 
-## Page Layouts
-
-This demo site showcases the available page layout options. 
-
-* Sidebar
-* Menubar
-* Tabs
-* Footer
-* Hero
-* Contents
-* Landing Page With Callouts
-* Sponsors Page
-* Image Gallery
-* Recipe Page
-* Blog
-* Post
-
-## Supported By JetBrains
-
-JetBrains have kindly provided an Open Source licence to aid in the future development of Bulma Clean Theme.
-
-[![JetBrains](img/jetbrains-variant-4.svg)](https://www.jetbrains.com/?from=bulma-clean-theme)
+| 委員長   | 境 智史 | NTTコミュニケーションズ株式会社 |
+| 実行委員 | 浅羽 登志也 | 株式会社インターネットイニシアティブ |
+|          | 小野寺 好広  | アレドノ合同会社/デジタル庁 |
+|          | 金海 好彦 | 日本電気株式会社 |
+|          | 河野 美也 | シスコシステムズ合同会社 |
+|          | 谷口 朋之 | 株式会社日立製作所 |
+|          | 進藤 資訓 | ヴイエムウェア株式会社 |
+|          | 中島 佳宏 | 株式会社 NTTドコモ |
+|          | 橋本 賢一郎 | Ultra Red, Inc. |
