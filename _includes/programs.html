@@ -1,0 +1,40 @@
+{% if page.programs %}
+    {% assign days=site.data.[page.programs] %}
+    <div class="content">
+        {% for day in days %}
+        <p class="title is-3 has-text-centered">
+            <span>{{ day.date }}</span>
+        </p>
+        <table>
+            <tbody>
+                <tr>
+                    <th>時間</th>
+                    <th>タイプ</th>
+                    <th>セッションタイトル</th>
+                    <th>発表者</th>
+                    <th>資料</th>
+                </tr>
+                {% for session in day.sessions %}
+                    <tr>
+                        <td>{{ session.time }}</td>
+                        <td>{{ session.type }}</td>
+                        <td>{% if session.type %}<a href="{{ site.baseurl }}/program-detail/#{{ session.tag }}">{{ session.title }}</a>{% else %}{{ session.title }}{% endif %}</td>
+                        <td>
+                        {% for presenter in session.presenters %}
+                            {{ presenter.name_and_title }}</br >
+                        {% endfor %}
+                        </td>
+                        <td>
+                        {% for slide in session.slides %}
+                            <a href="{{ site.baseurl }}/slide/{{ slide.file }}">
+                                <img src="{{ site.baseurl }}/img/pdf-logo.png" />
+                            </a>
+                        {% endfor %}
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% endfor %}
+    </div>
+{% endif %}

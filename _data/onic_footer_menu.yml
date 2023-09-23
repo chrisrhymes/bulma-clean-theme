@@ -1,0 +1,12 @@
+- name: Home
+  link: /
+- name: News
+  link: /news/
+- name: Program
+  link: /program/
+- name: Sponsors
+  link: /sponsors/
+- name: Access
+  link: /access/
+- name: Privacy Policy
+  link: /privacy-policy/

@@ -1,0 +1,40 @@
+{% if page.program_details %}
+    {% assign days=site.data.[page.program_details] %}
+    <div class="columns is-multiline">
+        {% for day in days %}
+        <div class="column is-12">
+            <p class="title is-3 has-text-centered">
+                <span>{{ day.date }}</span>
+            </p>
+                {% for session in day.sessions %}
+                    {% if session.type %}
+                        <div class="box has-text-left">
+                            <div class="subtitle is-6">
+                                {{ session.time }}
+                            </div>                           
+                            <p class="title is-5" id="{{ session.tag }}">
+                                <span>{{ session.title }}</span> 
+                            </p>
+                                {% for presenter in session.presenters %}
+                                <div class="columns is-multiline">
+                                    {% if presenter.photo %}
+                                        <div class="column is-3">
+                                            <p class="image is-128x128">
+                                                <img src="{{ site.baseurl }}/img/{{ presenter.photo }}" />
+                                            </p>
+                                        </div>
+                                    {% endif %}
+                                    <div class="column is-6">
+                                        <div><strong>{{ presenter.name_and_title }}</strong></div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                                <p style="padding: 10px">{{ session.abstract }}</p>
+                            <a href="{{ site.baseurl }}/program/" class="button is-primary">BACK TO PROGRAM</a>
+                       </div>
+                    {% endif %}
+                {% endfor %}
+        </div>
+        {% endfor %}
+    </div>
+{% endif %}
