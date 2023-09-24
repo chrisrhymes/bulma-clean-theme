@@ -12,7 +12,7 @@ show_sidebar: true
 | 主催     | Open Networking Conference Japan2023 実行委員会 |
 | 会場     | 慶應義塾日吉　協生館　藤原洋記念ホール |
 | 構成     | 基調講演、講演、スポンサー講演 |
-| アクセス | [詳細はこちらをご確認ください](https://www.kcc.keio.ac.jp/access/index.html) | 
+| アクセス | [こちら]({{site.baseurl}}/access/) | 
 
 
 ## Open Networking Conference Japan 実行委員会
