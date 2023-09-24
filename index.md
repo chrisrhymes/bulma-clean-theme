@@ -1,12 +1,12 @@
 ---
 title: Open NetworkIng Conference Japan
-subtitle: NOVEMBER 9-10, 2023
+subtitle: OCTOBER 20, 2017
 layout: page
 show_sidebar: true
 ---
 ## 開催概要
 
-| 名称     | Open Networking Conference Japan 2023 |
+| 名称     | Open Networking Conference Japan 2017 |
 | URL      | [https://onic.jp/]( {{ site.baseurl }}/) |
 | 会期     | 2017年10月20日 |
 | 主催     | Open Networking Conference Japan2023 実行委員会 |
