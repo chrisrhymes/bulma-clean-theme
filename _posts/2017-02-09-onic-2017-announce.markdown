@@ -1,0 +1,17 @@
+---
+layout: post
+title: ONIC Japan2017 開催
+description: 
+date: 2017-02-09 18:05:55 +0900
+hero_image: /img/mitsuo-komoriya-a8n0ZmlNlQ8-unsplash.jpg
+image: /img/mitsuo-komoriya-a8n0ZmlNlQ8-unsplash.jpg
+hero_height: is-middle
+hero_darken: true
+---
+Open NetworkIng Conference Japan (ONIC Japan) 2017を2017年10月20日に開催いたします。
+
+■ 日程：10月20日(金)
+■ 場所：慶応大学 藤原洋記念ホール (日吉キャンパス)
+
+詳細が決まりましたらこちらとFBで告知いたしますので
+よろしくお願いします。

@@ -13,19 +13,3 @@
     - name: 富士通株式会社
       profile: https://global.fujitsu/ja-jp/
       logo: fujitsu.jpg
-
-    - name: 日本電気株式会社
-      profile: https://jpn.nec.com/
-      logo: NEC.jpg
-
-    - name: デル株式会社
-      profile: https://www.dell.com/ja-jp
-      logo: dell.jpg
-
-    - name: 華為技術日本株式会社
-      profile: https://www.huawei.com/jp/
-      logo: HW.jpg
-
-    - name: ジュニパーネットワークス株式会社
-      profile: https://www.juniper.net/jp/ja.html
-      logo: juniper.jpg
