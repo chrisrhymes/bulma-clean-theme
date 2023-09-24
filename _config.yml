@@ -59,6 +59,7 @@ defaults:
       type: "pages"
     values:
       show_sidebar: true
+      image: /img/og_img.jpg
   -
     scope:
       path: ""
