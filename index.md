@@ -14,6 +14,7 @@ show_sidebar: true
 | 構成     | 基調講演、講演、スポンサー講演 |
 | アクセス | [こちら]({{site.baseurl}}/access/) | 
 
+## 開催趣旨
 Open NetworkIng Japan (ONIC Japan)は、前身のSDN Japan も含めて、今回で6回目の開催となります。
 これまでの開催を支えていただきました協賛企業様、講演者様、ならびに、ご参加いただきました皆様に深く御礼を申し上げます。<br />
 
