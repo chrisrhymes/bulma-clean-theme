@@ -1,220 +1,236 @@
-- date: October 20, 2017
+- date: 2F 藤原洋記念ホール
   sessions:
     - title: 開会の挨拶
-      time: 9:50-10:00
+      time: 9:20-9:30
       presenters:
         - name_and_title: |-
-            ONIC実行委員会委員長
-    - title: Open Networking（SDN/NFV）とサービスプロバイダー
+            ONIC Japan2016 実行委員会 委員長<br />
+            浅羽 登志也 (株式会社IIJイノベーションインスティテュート)
+
+    - title: Open Networking に対するNTTコミュニケーションズの挑戦
       time: 10:00-10:30
       type: 講演
       tag: s_01
       presenters:
         - name_and_title: |-
-            株式会社NTTPCコミュニケーションズ<br />
-            田中 基夫<br />
+            NTTコミュニケーションズ株式会社<br>
+            山下 達也
           photo: 
       abstract: |-
-        サービスプロバイダーの立場で、SDN/NFVを中心としたOpen Networking技術が
-        実際にどのように活用されてきたかをお話します。特に最近話題の SD-WAN分野に
-        おいて、市場やユーザーの期待、さらにNTTPC社を初めとする最新サービスの状況
-        ついて、具体的な事例を交えながら詳しくご紹介します。最後に継続的にサービスを
-        提供するうえでのOpen Networking技術のメリットと課題についても言及する予定です。
+        NTTコミュニケーションズは事業ビジョンとして、「Transform. Transcend.」と称し、 
+        お客さまのビジネスや社会、そして市場に飛躍的進化（Transform）とダイナミック な
+        変革（Transform）をもたらし、期待や想像を超える（Transcend）新たな価値や、 
+        すべての垣根を越えて（Transcend）つながる世界を創造するため、時代を先駆ける 技術や
+        サービスを提供することを目指しています。
+        この事業ビジョン実現に向けた時代を先駆ける技術の一つとして、OpenNetworking の技術開発を
+        積極的に行っております。<br/>本講演では、NTTコミュニケーションズにおけるOpenNetworkingの
+        取組みとして、 OSSを活用した技術開発動向や人材育成についてお話しします。
       slides:
         - file: NTTpc.pdf
-    - title: 愉快なソフトウェアネットワーキング
-      time: 10:30-11:00
+
+    - title: テレコムネットワークの仮想化：ETSI NFVからOPNFVまで
+      time: 10:00-10:30
       type: 講演
       tag: s_02
       presenters:
         - name_and_title: |-
-            東京大学 情報基盤センター <br />
-            関谷 勇司
+            株式会社NTTドコモ 先進技術研究所<br />
+            Khan Ashiq
           photo: 
       abstract: |-
-        ネットワークの利用用途が多彩化するにつれて、ネットワークやサービスインフラに
-        求められる利便性や機能性もより高度化、複雑化しています。従来のインフラ構築
-        手法のみならず、ソフトウェア資源を最大限に活かしたインフラ構築が求められる 時代と
-        なっています。このようなソフトウェアネットワーキングの時代における サービス
-        インフラ構築についてその課題と展望を紹介します。
+        NFVはネットワーク仮想化に基づいたテレコムネットワークの実装とオペレー ション技術を指す。<br>
+        ETSI ISG NFVは管理機構のMANO を含め、その国際標準仕様を規定している。<br>
+        ETSI NFV仕様の普及により、その実装の試みとしてOPNFVというオープンソースコミュニティも立ち
+        上がった。OPNFVは仮想化テレコムネットワークを支える仮想化ネットワークプラットフォームを
+        オープンソースソフトウェアで構築することを目的に、既に3つのリリースを公開した。本講演ではNFV
+        がこれまでに歩んできた仮想化技術のコンセプトの具現化からその商用導入までのプロセスを紹介する。
       slides:
         - file: ysekiya.pdf
+  
     - title: 休憩
-      time: 11:00-11:15
-    - title: Transport SDN in disaggregated networks
-      time: 11:15-11:45
-      type: スポンサーセッション
+      time: 10:30-11:00
+
+    - title: 制御系ネットワークの技術動向とセキュリティ対策
+      time: 11:00-11:30
+      type: 講演
       tag: s_03
       presenters:
         - name_and_title: |-
-            NTTコミュニケーションズ株式会社<br />
-            宮田 直輝
+            技術研究組合制御システムセキュリティセンター(CSSC)<br>
+            細川 嵩
           photo: 
       abstract: |-
-        NTTコミュニケーションズでは、SDNコントローラを使ってTransport（伝送）NWの動的な
-        統合管理により、リードタイムの短縮、ニーズにあったNWの提供、シンプルなオペレーショ
-        ンの実現を目指しています。<br />
-        プロプラのコントローラでAll in One タイプの伝送デバイスに対してプロビジョニング
-        することに成功しており、次のチャレンジとして、伝送デバイスのディスアグリゲーション
-        とオープンソースのSDNコントローラの導入をターゲットとした技術開発を進めており、
-        本セッションではその課題と取り組みについてご紹介します。
+        制御システムは工場や発電所、ビルなどをはじめとしてさまざまな所で稼働している。
+        近年ではIPやEthernetなどの汎用技術も取り入れた制御系ネットワークを構築することにより、
+        きめ細やかなサービスの提供や制御システムの低コスト化を実現している。しかしながら汎用
+        技術を取り入れることにより、Stuxnetをはじめとする制御システムへのサイバー攻撃が発生
+        してきている。<br>
+        本公演では、制御システムの特徴に合わせたセキュリティ対策例や制御システムセキュリティ
+        センターの研究成果などについて紹介する。
       slides:
         - file: NTTCom.pdf
-    - title: TIP における光伝送装置の標準化動向
-      time: 11:45-12:15
+
+    - title: Open Daylightで「Open SDN Continuum」 を創造<br>Creating “Open SDN Continuum” With OpenDaylight
+      time: 11:30-12:00
       type: 講演
       tag: s_04
       presenters:
         - name_and_title: |-
-            日本電気株式会社<br/>
-            松井 淳一郎
+            Fujitsu Network Communications, Inc. <br>
+            Igor Bergman
           photo: 
       abstract: |-
-        2016年2月に約30社のメンバーにて発足したTelecom Infra Project (TIP) 
-        ですが、現在では100社以上のメンバーが参加し、通信システムのオープン化に
-        ついて活発な議論が繰り広げられています。<br />
-        本講演では、TIP の中でも、光伝送装置のオープン化を議論しているOpen Optical 
-        Packet Transport プロジェクトグループの活動について紹介します。
+        新しいスタイルの競合が従来のサービスプロバイダと企業向けサービスデリバリーに挑戦している。
+        従来の音声・データネットワークでは、画像配信、ライブスポーツ、マルチプレーヤオンライン
+        ゲームを端末依存せず時には同時に複数端末を使うといった顧客ニーズを満たすのが困難になっている。<br>
+        プロバイダは、「オープン」コンセプトをテクノロジースタックに取り込むことを含め、ビジネスモデルを
+        根本から変えることに取り組んでいる。　その中でも61％のプロバイダはOpenDaylight採用を選択。<br>
+        その理由は、多くのネットワークアプリとユースケースに支えられ、柔軟かつプログラマブルなオープン
+        ソースプラットフォームであるから。<br>
+        グローバルなお客様をお手伝いすることで、富士通はOpen Daylightのパートナ一員として、経験豊富なコミュ
+        ニティから、ユーザと開発者とのコラボレーションによる900に上るコントリビューション並びに10万コード
+        コミットの恩恵を受けられています。<br>
+        本セッションでは、Fujitsu Network Communications, IncのIgor Bergmanが、「オープンコンティ
+        ニュアム」について、如何にオープンソフトとハードが最もパワフルで信頼性の高い次世代ネットワークを
+        支えていくかについて話します。<br>
+        <br>
+        New categories of competitors are challenging the traditional model of service provider and enterprise service delivery. Legacy voice and data networks struggle to meet the needs of consumers who expect to stream studio movies, live sports, and multiplayer online gaming from any device they happen to be using- sometimes concurrently.<br>
+        Providers are fundamentally changing their business models, including the introduction of “open” concepts to their entire technology stack, and 61%* of them choose OpenDaylight. Using power of flexible and programmable Open Source platform that is underpinning a wide breadth of networking applications and use cases.<br>
+        Helping our Global customers, Fujitsu is partnering with OpenDaylight to successfully draw on rich community, and collaboration of developers and user’s with almost 900 contributions and 100,000 code commits.<br>
+        In this session, Igor Bergman from Fujitsu Network Communications, will discuss the “open continuum” and how open software and hardware is the foundation of the next generation of the world’s most powerful and reliable networks.<br>
+        <br>
+        ※このプログラムは英語での講演となります。
       slides:
         - file: NEC.pdf
+
     - title: お昼休憩
-      time: 12:15-13:30
-    - title: プログラマブル・データプレーン時代に向けたネットワーク・オペレーション・スタック
-      time: 13:30-14:00
+      time: 12:00-13:10
+
+    - title: IT市場の変遷とSDN
+      time: 13:10-13:40
       type: 講演
       tag: s_05
       presenters:
         - name_and_title: |-
-            ポント・ネットワークス株式会社<br />
-            CTO 海老澤 健太郎
+            株式会社野村総合研究所<br>
+            木下 貴史
           photo: 
       abstract: |-
-        パケット処理に求められるニーズの多様化や変化のスピードに呼応し、プログラマブル
-        かつ高速処理が可能なスイッチやスマートNIC等のデータプレーン・ハードウェアが
-        登場しました。それにともない、データプレーン・プログラム言語であるP4に対応し
-        たプラットフォームが広がりつつあります。これらの技術動向を紹介すると共に、多様な
-        データプレーンが利用される時代に求められるネットワーク・オペレーション・スタック
-        の実装例として「PontOS/Zebra2」を紹介します。
+        SDNという言葉が単体で語られることはかつてより少なくなったが、
+        そのコンセプトは新しいIT市場において急速な広がりをみせている。<br>
+        一方で、IoTのようにスケーラブルで低価格、かつ柔軟な基盤の必要性を
+        感じている非IT部門の ユーザ達のニーズを、SDNを始めとする仮想化技術が
+        支えているとの側面もある。<br>
+        そのような環境の中におけるSDN市場について考える。
       slides:
         - file: ONIC2017-KentaroEbisawa-PontoNetworks.pdf
-    - title: SD-WAN/DC統合ソリューション Nuageで何ができるのか？
-      time: 14:00-14:30
-      type: スポンサーセッション
+
+    - title: GoBGP – BGP daemon in the Open Networking Era
+      time: 13:40-14:10
+      type: 講演
       tag: s_06
       presenters:
         - name_and_title: |-
-            NOKIA (Nuage Networks) <br />
-            佐藤 大輔
+            NTTソフトウエアイノベーションセンタ<br>
+            石田 渉
           photo: 
       abstract: |-
-        NOKIAのNuage Networkが提供するSDNソリューションはデータセンタネットワークと
-        エンタープライズネットワークのシームレスな接続とポリシーの一元管理、可視化を実現します。
-        多くの仮想プラットフォームに対応しており、柔軟なデプロイメントや相互接続性、ネットワーク機能の
-        拡張を提供します。<br />
-        本セッションではSD-WAN向けのサービスポータルやVNF連携、SD-DC向けのコンテナ連携や
-        可視化機能の拡張など最新のアップデート情報をご紹介します。
+        本講演ではNTTソフトウェアイノベーションセンタ発のオープンソースBGP
+        実装である、GoBGPを紹介します。<br>
+        BGPはインターネットを支えるプロトコルとして世界中で利用されていますが、
+        近年大規模データセンタ内のルーティングにも利用され、その利用用途はさらに広
+        がっています。<br>
+        Open Networkingな世界では、従来の垂直統合型のTurnkeyソリューション
+        ではなく、様々なコンポーネントと連携しやすいソフトウェアスタックが求められて
+        います。<br>
+        BGP実装も利用用途が広がるにつれ、同様のニーズが高まっており、 そのようなニーズ
+        を満たすためNTTソフトウェアイノベーションセンタではGoBGPの開 発に取り組んでいます。
       slides:
         - file: nokia.pdf
 
-    - title: ブロックチェーンで実現するデータ流通・利活用基盤
-      time: 14:30-15:00
+    - title: Zebra 2.0 – SDN, NFV, Container時代のNetworking Softwareの設計と実装
+      time: 14:10-14:40
       type: 講演
       tag: s_07
       presenters:
         - name_and_title: |-
-            富士通株式会社<br />
-            池田 栄次
+            Hash-set<br>
+            石黒 邦宏
           photo: 
       abstract: |-
-        近年、様々な企業や組織が保有するデジタルデータを相互に活用し、新たな価値創出を
-        目指す動きが加速しています。しかし、ICT環境やデータ取扱いポリシーの異なる多数の
-        組織間で安全かつスムーズにデータを受け渡し、利活用に繋げていくことは容易ではあり
-        ません。<br />
-        本講演では、本課題の解決アプローチとして、ブロックチェーンをネットワーク制御に応用
-        したデータ流通技術、及び、それを用いたデータ利活用基盤について紹介します。
+        SDN, NFV, Containerなど、これまで存在していなかったネットワーキング環境が
+        広がっていく中、スケーラビリティや、APIへの対応など様々な対応が Networking 
+        Softwareに求められている。現在広く使われているOpen Source Networking 
+        SoftwareであるQuaggaのアーキテクチャの設計を根本から見直し、 これからの
+        ネットワーキング環境に対応した新たなNetworking Softwareであ るZebra 2.0の
+        実装を進めている。その設計と実装について解説します。
 
     - title: 休憩
-      time: 15:00-15:30
+      time: 14:40-15:10
 
-    - title: SD-WANの未来予想図
-      time: 15:30-16:00
-      type: 講演
+    - title: SD-WANパネル
+      time: 15:10-16:40
+      type: パネルディスカッション
       tag: s_08
       presenters:
         - name_and_title: |-
-            シスコシステムズ合同会社<br />
-            進藤 資訓
+            モデレータ：<br>
+            NTT未来ねっと研究所 中島 佳宏
+        - name_and_title: |-
+            パネラー：<br>
+            - Viptela　進藤 資訓<br>
+            - シスコシステムズ合同会社　鈴木 昌彦<br>
+            - ジュニパーネットワークス株式会社　有村 淳矢<br>
+            - 古河電気工業株式会社　碓井 悟<br>
+            - ネットワンシステムズ株式会社　井上 直也<br>
+            - ブロケード コミュニケーションズ システムズ株式会社　尾方 一成<br>
+            - ノキアソリューションズ&ネットワークス株式会社　鹿志村 康生<br>
           photo: 
       abstract: |-
-        2016年までは話題先行だったSD-WANも、2017年に入ってからは日本でも着実に採用が
-        増えて来ています。とはいえまだまだ米国の方が採用が多いのも事実です。<br />
-        SD-WANにおける日米の違いは何なのか、日本で求められるSD-WANはどのようなものなのか、など、
-        ここ1年半ほどSD-WANに関わって得られた経験則をみなさんと共有をするとともに、今後の
-        SD-WANを展望したいと思います。
+        Software-Defined WAN (SDWAN) は、企業ネットワークなどを対象にシンプル
+        かつ高いコントロール性、高い柔軟性と拡張性、コスト削減を可能にさせるアプローチ
+        として注目されている技術です。<br>
+        この注目されているSDWANについて、有識者を一堂に集め、対象、技術、マイグレー
+        ションな側面から深掘りしていきます。
       slides:
         - file: sdone.pdf
 
-    - title: データモデリング言語 YANG を活用したマルチベンダネットワーク制御
-      time: 16:00-16:30
-      type: スポンサーセッション
+    - title: 技術の適材適所でつくるSDN/NFV@ShowNet 2016
+      time: 17:10-17:40
+      type: 講演
       tag: s_09
       presenters:
         - name_and_title: |-
-            シスコシステムズ合同会社<br />
-            Management and Orchestration Global SP, APJ<br />
-            高橋 寛嗣
+            Interop 2016 ShowNet NOCメンバー<br>
+            中村 遼
           photo: 
       abstract: |-
-        データモデリング言語 YANG を用いたネットワークのコンフィグレーションや状態データ
-        のモデル化は、近年とても注目されています。しかし、実際にデータモデリングを応用した
-        ネットワークの管理に関しては、なかなか具体例がありません。<br />
-        このセッションでは、モデル化の利点を最大限に活用し、容易にマルチベンダネットワーク
-        の制御を実現するシスコ NSO を例に取り上げ、データモデリングがネットワーク制御に
-        もたらす利点と今後の動向を、ユースケースを添えて紹介します。
+        毎年6月に開催されるInterop Tokyoでは、世界最大のデモンストレーションネッ トワークであるShowNetの構築を行っています。ShowNetでは、2012年から、実 トラフィックの流れるライブネットワークへのSDNの適用に継続してチャレンジ してきました。2016年は、バックボーンネットワークとNFVの融合を目指して、 より柔軟にトラフィックを制御できるネットワークを構築しました。また、 NFVの要であるNetwork Functionの進化、高速なソフトウェアパケット転送技術 を用いたVNFのデモンストレーションを実施しました。本発表では、ShowNetに おいて構築されたNFVについて、バックボーンの設計からソフトウェアパケット 転送技術、さらにはFPGAの利用まで、その詳細にわたってお話しいたします。
       slides:
         - file: cisco.pdf
 
-    - title: 休憩
-      time: 16:30-16:45
-
-    - title: Goldman Sachs Experience in Network Automation
+    - title: サイバーエージェントにおけるOpen Networkingへの取り組み
       time: 16:45-17:15
       type: 講演
       tag: s_10
       presenters:
         - name_and_title: |-
-            ゴールドマン・サックス・ジャパン・サービス株式会社<br />
-            沖 幸太朗
-
-    - title: ネットワークのオープン化に対する富士通の取り組み (OpenROADM, TIP, ONOS, CORD)
-      time: 17:15-17:45
-      type: 講演
-      tag: s_10
-      presenters:
-        - name_and_title: |-
-            富士通株式会社<br />
-            番場　正和
-
-    - title: 次世代のIP経路制御で作るサービスチェイニング@ShowNet 2017
-      time: 17:45-18:15
-      type: 講演
-      tag: s_10
-      presenters:
-        - name_and_title: |-
-            Interop 2017 ShowNet NOCメンバー<br />
-            /NTTコミュニケーションズ株式会社<br />
-            上野 幸杜
-          photo: 
+            株式会社サイバーエージェント<br>
+            山本 孔明
       abstract: |-
-        ShowNet 2017では、利用者の要望に応じて必要な機能を組み合わせたサービスを提供可能な
-        ”サービスチェイニング”を実現しました。今回実装したサービスチェイニングでは、<br />
-        1) 多種多様なサービスを収容可能な汎用性、<br />
-        2) 大規模イベントでの本番使用に耐える可用性、<br />
-        3) 既存のIP技術の活用による実現性、<br />
-        の3点をコンセプトとしました。本セッションでは、ShowNet 2017におけるサービスチェイ
-        ニングの実現を通して得られた知見について解説します。
+        サイバーエージェントのアドテク本部ではオープンソースの活用が進んでおり、サーバーだけではなくネットワークの分野においてもオープンソースを積極的に採用しています。本セッションではネットワークとオープンをキーワードにサイバーエージェントアドテク本部の取り組みを紹介します。
       slides:
-        - file: ShowNet.pdf
+        - file: cisco.pdf
+
+    - title: CORD(Central Office Re-architected as a Datacenter) とONOSアップデート
+      time: 18:10-18:40
+      type: 講演
+      tag: s_10
+      presenters:
+        - name_and_title: |-
+            日本電気株式会社<br>
+            金海 好彦
+
 
     - title: 閉会の挨拶
       time: 18:15-
