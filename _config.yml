@@ -15,7 +15,7 @@ favicon: /img/favicon.ico
 #fixed_navbar: top
 #direction: one of <ltr, rtl, auto>, default: ltr
 
-paginate: 5
+paginate: 6
 paginate_path: "/news/page:num"
 
 # Disqus Comments
