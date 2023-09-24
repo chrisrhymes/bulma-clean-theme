@@ -1,4 +1,4 @@
-- date: 2F 藤原洋記念ホール
+- date: 藤原洋記念ホール
   sessions:
     - title: 開会の挨拶
       time: 9:20-9:30
@@ -26,7 +26,7 @@
         積極的に行っております。<br/>本講演では、NTTコミュニケーションズにおけるOpenNetworkingの
         取組みとして、 OSSを活用した技術開発動向や人材育成についてお話しします。
       slides:
-        - file: NTTpc.pdf
+        - file: keynote.pdf
 
     - title: テレコムネットワークの仮想化：ETSI NFVからOPNFVまで
       time: 10:00-10:30
@@ -44,8 +44,6 @@
         上がった。OPNFVは仮想化テレコムネットワークを支える仮想化ネットワークプラットフォームを
         オープンソースソフトウェアで構築することを目的に、既に3つのリリースを公開した。本講演ではNFV
         がこれまでに歩んできた仮想化技術のコンセプトの具現化からその商用導入までのプロセスを紹介する。
-      slides:
-        - file: ysekiya.pdf
   
     - title: 休憩
       time: 10:30-11:00
@@ -67,8 +65,6 @@
         してきている。<br>
         本公演では、制御システムの特徴に合わせたセキュリティ対策例や制御システムセキュリティ
         センターの研究成果などについて紹介する。
-      slides:
-        - file: NTTCom.pdf
 
     - title: Open Daylightで「Open SDN Continuum」 を創造<br>Creating “Open SDN Continuum” With OpenDaylight
       time: 11:30-12:00
@@ -100,8 +96,6 @@
         In this session, Igor Bergman from Fujitsu Network Communications, will discuss the “open continuum” and how open software and hardware is the foundation of the next generation of the world’s most powerful and reliable networks.<br>
         <br>
         ※このプログラムは英語での講演となります。
-      slides:
-        - file: NEC.pdf
 
     - title: お昼休憩
       time: 12:00-13:10
@@ -122,8 +116,6 @@
         感じている非IT部門の ユーザ達のニーズを、SDNを始めとする仮想化技術が
         支えているとの側面もある。<br>
         そのような環境の中におけるSDN市場について考える。
-      slides:
-        - file: ONIC2017-KentaroEbisawa-PontoNetworks.pdf
 
     - title: GoBGP – BGP daemon in the Open Networking Era
       time: 13:40-14:10
@@ -146,7 +138,7 @@
         BGP実装も利用用途が広がるにつれ、同様のニーズが高まっており、 そのようなニーズ
         を満たすためNTTソフトウェアイノベーションセンタではGoBGPの開 発に取り組んでいます。
       slides:
-        - file: nokia.pdf
+        - file: f06.pdf
 
     - title: Zebra 2.0 – SDN, NFV, Container時代のNetworking Softwareの設計と実装
       time: 14:10-14:40
@@ -173,18 +165,16 @@
       type: パネルディスカッション
       tag: s_08
       presenters:
-        - name_and_title: |-
-            モデレータ：<br>
-            NTT未来ねっと研究所 中島 佳宏
-        - name_and_title: |-
-            パネラー：<br>
-            - Viptela　進藤 資訓<br>
-            - シスコシステムズ合同会社　鈴木 昌彦<br>
-            - ジュニパーネットワークス株式会社　有村 淳矢<br>
-            - 古河電気工業株式会社　碓井 悟<br>
-            - ネットワンシステムズ株式会社　井上 直也<br>
-            - ブロケード コミュニケーションズ システムズ株式会社　尾方 一成<br>
-            - ノキアソリューションズ&ネットワークス株式会社　鹿志村 康生<br>
+        - name_and_title: ○モデレーター<br>
+            NTT未来ねっと研究所<br> 中島 佳宏<br>
+        - name_and_title: ○パネラー<br>
+            - Viptela<br>　進藤 資訓<br>
+            - シスコシステムズ合同会社<br>　鈴木 昌彦<br>
+            - ジュニパーネットワークス株式会社<br>　有村 淳矢<br>
+            - 古河電気工業株式会社<br>　碓井 悟<br>
+            - ネットワンシステムズ株式会社<br>　井上 直也<br>
+            - ブロケード コミュニケーションズ システムズ株式会社<br>　尾方 一成<br>
+            - ノキアソリューションズ&ネットワークス株式会社<br>　鹿志村 康生<br>
           photo: 
       abstract: |-
         Software-Defined WAN (SDWAN) は、企業ネットワークなどを対象にシンプル
@@ -193,7 +183,13 @@
         この注目されているSDWANについて、有識者を一堂に集め、対象、技術、マイグレー
         ションな側面から深掘りしていきます。
       slides:
-        - file: sdone.pdf
+        - file: f08.pdf
+        - file: f08_2.pdf
+        - file: f08_3.pdf
+        - file: f08_4.pdf
+        - file: f08_5.pdf
+        - file: f08_6.pdf
+        - file: f08_7.pdf
 
     - title: 技術の適材適所でつくるSDN/NFV@ShowNet 2016
       time: 17:10-17:40
@@ -207,7 +203,7 @@
       abstract: |-
         毎年6月に開催されるInterop Tokyoでは、世界最大のデモンストレーションネッ トワークであるShowNetの構築を行っています。ShowNetでは、2012年から、実 トラフィックの流れるライブネットワークへのSDNの適用に継続してチャレンジ してきました。2016年は、バックボーンネットワークとNFVの融合を目指して、 より柔軟にトラフィックを制御できるネットワークを構築しました。また、 NFVの要であるNetwork Functionの進化、高速なソフトウェアパケット転送技術 を用いたVNFのデモンストレーションを実施しました。本発表では、ShowNetに おいて構築されたNFVについて、バックボーンの設計からソフトウェアパケット 転送技術、さらにはFPGAの利用まで、その詳細にわたってお話しいたします。
       slides:
-        - file: cisco.pdf
+        - file: f09.pdf
 
     - title: サイバーエージェントにおけるOpen Networkingへの取り組み
       time: 16:45-17:15
@@ -220,7 +216,7 @@
       abstract: |-
         サイバーエージェントのアドテク本部ではオープンソースの活用が進んでおり、サーバーだけではなくネットワークの分野においてもオープンソースを積極的に採用しています。本セッションではネットワークとオープンをキーワードにサイバーエージェントアドテク本部の取り組みを紹介します。
       slides:
-        - file: cisco.pdf
+        - file: f10.pdf
 
     - title: CORD(Central Office Re-architected as a Datacenter) とONOSアップデート
       time: 18:10-18:40
@@ -230,10 +226,149 @@
         - name_and_title: |-
             日本電気株式会社<br>
             金海 好彦
-
+      abstract: |-
+        ONOS プロジェクト内では、様々なユースケースの実装があります。このユースケース
+        の1つであるCORD (Central Office Re-architected as a Data center) が、
+        2016年5月に別プロジェクトとして独立しました。本講演では、CORDプロジェクトが
+        独立するまでの経緯と、CORDが解決を目指している課題とその効果についてご紹介いたします。<br>
+        また、ONOSの最新状況についても併せてお話しいたします。
+      slides:
+        - file: f11.pdf
 
     - title: 閉会の挨拶
-      time: 18:15-
+      time: 18:40-
       presenters:
         - name_and_title: |-
             ONIC実行委員会<br />
+
+
+- date: 多目的教室2
+  sessions:
+    - title: ファーウェイのエンタープライズ・ソリューション、CloudVPN/SD-WANを中心としたご紹介
+      time: 10:30-11:00
+      type: 講演
+      tag: s_01
+      presenters:
+        - name_and_title: |-
+            華為技術日本株式会社<br>
+            迫田 健
+            
+          photo: 
+      abstract: |-
+        ファーウェイのNFV/SDNを中心とした最新のポートフォリオをご紹介するとともに、 Cloud VPN/SD-WANなどSMEをターゲットとした新しいソリューションについてその取り組みの状況をご紹介します。
+      slides:
+        - file: NTTpc.pdf
+
+    - title: SD-WAN / SD-DCの垣根を無くすEnd-to-End SDN
+      time: 12:00-12:30
+      type: ランチセミナー
+      tag: s_01
+      presenters:
+        - name_and_title: |-
+            NOKIA　(Nuage Networks)<br>
+            安村 裕太
+          photo: 
+      abstract: |-
+        NOKIAのNuage Networkでは、統一されたSDNコントローラからSD-WAN / SD-DCのシームレスな接続性をご提供し、Underlay/Overlayを統合的に可視化可能なプラットフォームをご紹介致します。<br>
+        Nuage VSPは、SDN検討で課題視されてきたマルチテナント環境における共有資源アクセス、既存ネットワーク接続、 ハイブリッドクラウド接続、DRなどを解決するための多様な接続手段をご提供可能なプラットフォームとなっております。
+      slides:
+        - file: NTTpc.pdf
+
+    - title: オープンソースで実現するクラウドネイティブな世界
+      time: 14:40-15:10
+      type: 講演
+      tag: s_01
+      presenters:
+        - name_and_title: |-
+            日本電気株式会社<br>
+            鳥居 隆史
+          photo: 
+      abstract: |-
+        世の中にはクラウドと名前の付くシステムやソリューションが多くありますが、 それらを使うだけでは、クラウドの利点を享受できるわけではありません。<br>
+        クラウドを活用し、クラウドネイティブに仕組みを変えていくことが大切です。<br>
+        アプリケーションをクラウドネイティブ化するというだけではなく、システムと組織まで含めた仕組みを再構成していく必要があります。オープンソースは そのための道具として有効です。本セッションではオープンソースの最新トレンドから、クラウドネイティブへの取り組みを解説します。
+      slides:
+        - file: NTTpc.pdf
+
+    - title: Dell EMCのNFV & Open Networking ソリューションのご採用事例について:ベライゾン様ご登壇!
+      time: 14:40-15:10
+      type: 講演
+      tag: s_01
+      presenters:
+        - name_and_title: |-
+            デル株式会社<br>
+            杉本 直之<br>
+            ベライゾンジャパン合同会社<br>
+            生田 隆由
+          photo: 
+      abstract: |-
+        本講演では、ネットワークのオープン化を目指すDell EMCのNFV & Open Networking ソリューションについてのご紹介に加え、ベライゾンジャパン様にもご登壇頂き、2016年4月に米国ベライゾン様が発表された世界最大のNFV導入事例について、同システムの概要と同システムを使用した新サービスの内容を含めてお話し頂く予定です。<br>
+        ネットワーク機器のオープン化に関心のあるお客様は必見のセッションです。
+      slides:
+        - file: NTTpc.pdf
+
+
+- date: 多目的教室3
+  sessions:
+    - title: SDNソリューション　Contrail アップデート
+      time: 10:30-11:00
+      type: 講演
+      tag: s_01
+      presenters:
+        - name_and_title: |-
+            ジュニパーネットワークス株式会社<br>
+            中嶋 大輔
+            
+          photo: 
+      abstract: |-
+        「ジュニパーネットワークスが提供するSDNソリューション”Contrail”の最新情報をご紹介します。さらに使いやすくなったService chainingとAnalytics機能、パケット転送性能の向上、また、Openstack環境と既存環境との接続方法をご紹介します。」
+      slides:
+        - file: NTTpc.pdf
+
+    - title: シスコ データセンター向けSDN技術とアプリケーションの可視化/分析
+      time: 12:40-13:10
+      type: 講演
+      tag: s_01
+      presenters:
+        - name_and_title: |-
+            シスコシステムズ合同会社<br>
+            大平 伸一
+          photo: 
+      abstract: |-
+        シスコは2014年夏にCisco ACI (Application Centric Infrastracture)を発表し、データセンターにおけるSDNに対して具体的なソリューションをいち早く提示して参りました。<br>
+        本セミナーでは、Cisco ACI/APICによるネットワークの自動化、迅速化および物理ネットワークと仮想ネットワークの集中管理、FW/IPSやLBの集中制御などについてご紹介します。<br>
+        更に、ACIネットワーク上を流れるパケットやフロー情報を全て収集/リアルタイム分析を行い、データセンター全体のアプリケーションの可視化とゼロトラストモデルの運用を可能とするCisco Tetration Analyticsについてご紹介します。
+      slides:
+        - file: NTTpc.pdf
+
+    - title: 企業WANを変えるSD-WANの正体とは
+      time: 14:40-15:10
+      type: 講演
+      tag: s_01
+      presenters:
+        - name_and_title: |-
+            NTTコミュニケーションズ株式会社<br>
+            沈 文裕
+          photo: 
+      abstract: |-
+        クラウドの利用が進み、WANのトラフィック増大、複雑な運用管理が課題になってきました。<br>
+        そこで、アプリケーションごとのトラフィック制御やコントローラーによる集中管理を実現するSD-WANが注目されています。<br>
+        本セミナーでは、SD-WANの概要や利用シーン、弊社テストベッドでの最新テスト結果についてご紹介します。
+      slides:
+        - file: NTTpc.pdf
+
+    - title: NFV/SDN時代のネットワーク運用ライフサイクルの自動化へのアプローチ
+      time: 16:40-17:10
+      type: 講演
+      tag: s_01
+      presenters:
+        - name_and_title: |-
+            富士通株式会社<br>
+            室町 和輝
+          photo: 
+      abstract: |-
+        NFVに代表される仮想化技術の活用により、これまでできなかったネットワークの運用における柔軟性を実現することができるようになりました。一方で、NFV基盤や仮想ネットワークの操作、細やかなセキュリティ設定など新たな運用操作も増えていきます。<br>
+        そのため、運用保守部門は新たなスキル習得やこれまで以上の稼動が必要となり、負担が大きくなることが予想されます。<br>
+        本セミナーでは、保守稼動を軽減するなど富士通が考えるネットワーク運用ライフサイクルの自動化に向けたアプローチをご紹介します。
+      slides:
+        - file: NTTpc.pdf
