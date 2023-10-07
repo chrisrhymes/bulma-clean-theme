@@ -7,7 +7,7 @@
                 <span>{{ day.date }}</span>
             </p>
                 {% for session in day.sessions %}
-                    {% if session.type %}
+                    {% if session.tag %}
                         <div class="box has-text-left">
                             <div class="subtitle is-6">
                                 {{ session.time }}
