@@ -29,6 +29,7 @@ ONIC Japan では、このような情報共有と議論の場を提供してま
 
 ONIC Japan 2017 実行委員会
 
+# COMMITTEE
 ## Open Networking Conference Japan 実行委員会
 
 | 委員長 | 浅羽 登志也 | 株式会社インターネットイニシアティブ |
