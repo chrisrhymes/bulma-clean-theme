@@ -18,7 +18,7 @@
                     <tr>
                         <td>{{ session.time }}</td>
                         <td>{{ session.type }}</td>
-                        <td>{% if session.type %}<a href="{{ site.baseurl }}/program-detail/#{{ session.tag }}">{{ session.title }}</a>{% else %}{{ session.title }}{% endif %}</td>
+                        <td>{% if session.tag %}<a href="{{ site.baseurl }}/program-detail/#{{ session.tag }}">{{ session.title }}</a>{% else %}{{ session.title }}{% endif %}</td>
                         <td>
                         {% for presenter in session.presenters %}
                             {{ presenter.name_and_title }}</br >
