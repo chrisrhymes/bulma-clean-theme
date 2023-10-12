@@ -4,7 +4,7 @@ title: 参加登録開始
 description: 
 date:  2017-07-09 18:05:55 +0900
 hero_image: /archives/2017/img/mitsuo-komoriya-a8n0ZmlNlQ8-unsplash.jpg
-#image: /img/mitsuo-komoriya-a8n0ZmlNlQ8-unsplash.jpg
+image: /archives/2017/img/mitsuo-komoriya-a8n0ZmlNlQ8-unsplash.jpg
 hero_height: is-middle
 hero_darken: true
 ---
