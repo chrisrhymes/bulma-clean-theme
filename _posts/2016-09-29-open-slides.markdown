@@ -3,8 +3,8 @@ layout: post
 title:  講演の概要公開しました
 description: プログラム公開
 date:   2016-09-29 13:00:00 +0900
-hero_image:  /img/scott-graham-OQMZwNd3ThU-unsplash.jpg
-#image:  /img/scott-graham-OQMZwNd3ThU-unsplash.jpg
+hero_image:  /archives/2016/img/scott-graham-OQMZwNd3ThU-unsplash.jpg
+image:  /archives/2016/img/scott-graham-OQMZwNd3ThU-unsplash.jpg
 hero_height:  is-middle
 hero_darken:  true
 ---
