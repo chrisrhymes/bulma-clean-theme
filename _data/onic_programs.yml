@@ -180,7 +180,6 @@
     - title: Goldman Sachs Experience in Network Automation
       time: 16:45-17:15
       type: 講演
-      tag: s_10
       presenters:
         - name_and_title: |-
             ゴールドマン・サックス・ジャパン・サービス株式会社<br />
@@ -189,7 +188,6 @@
     - title: ネットワークのオープン化に対する富士通の取り組み (OpenROADM, TIP, ONOS, CORD)
       time: 17:15-17:45
       type: 講演
-      tag: s_10
       presenters:
         - name_and_title: |-
             富士通株式会社<br />
