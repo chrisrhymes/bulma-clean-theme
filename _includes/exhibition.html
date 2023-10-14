@@ -24,7 +24,7 @@
                     <span>{{ exhibitor.name }}</span>
                 </p>
             </a>
-            <p style="padding: 10px">{{ exhibitor.abstract }}</p>
+            <p style="padding: 10px">{{ exhibitor.abstract | markdownify }}</p>
         </div>
         {% endfor %}
     </div>
