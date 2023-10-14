@@ -1,0 +1,32 @@
+{% if page.exhibition %}
+{% assign exhibition=site.data.[page.exhibition] %}
+<div class="columns is-multiline">
+    <div class="column is-12">
+        <p class="title is-4">
+            <span>{{ exhibition.venue.title }}</span>
+        </p>
+        <p>
+            <img src="{{ site.baseurl }}/img/{{ exhibition.venue.map }}" />
+        </p>
+        <div class="subtitle is-7">
+            {% for exhibitor in exhibition.exhibitors %}
+            <a href="#{{exhibitor.booth}}">
+                <span>( {{ exhibitor.booth }} ) {{ exhibitor.name }}</span>
+            </a>
+            <br />
+            {% endfor %}
+        </div>
+        {% for exhibitor in exhibition.exhibitors %}
+        <div class="box has-text-left">
+            <a href="{{ exhibitor.profile }}">
+                <p class="title is-6" id="{{ exhibitor.booth }}">
+                    <img src="{{ site.baseurl }}/img/{{ exhibitor.logo }}">
+                    <span>{{ exhibitor.name }}</span>
+                </p>
+            </a>
+            <p style="padding: 10px">{{ exhibitor.abstract }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endif %}
