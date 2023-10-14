@@ -1,0 +1,36 @@
+venue:
+  title: 展示概要
+  map: placeholder-500x500.png
+exhibitors:
+  - name: サイバーファーストコネクト株式会社
+    profile: https://www.example.com/
+    logo: placeholder-200x100.png
+    booth: 1
+    abstract: |-
+      最新のネットワーク機器やサーバーテクノロジーを展示。高性能な
+      ルーターやスイッチ、クラウドベースのサービスを含む製品ライン
+      ナップを紹介し、来場者にネットワークインフラの強化や拡張の可
+      能性を提示。
+  - name: 株式会社デジタルウェイワイヤレス
+    profile: https://www.example.com/
+    logo: placeholder-200x100.png
+    booth: 2
+    abstract: |-
+      最新のセキュリティテクノロジやソフトウェアの実演を行う。脅威
+      のリアルタイムな分析や侵入検知システムのデモを通じて、来場者
+      にセキュリティ対策の必要性を認識させる。
+  - name: ネクストジェネレーションネットワークス合同会社
+    profile: https://www.example.com/
+    logo: placeholder-200x100.png
+    booth: 3
+    abstract: |-
+      最新のサイバーセキュリティトピックに焦点を当て、来場者がセキュ
+      リティリスクを理解し、適切な対策を学べるようなプログラムを提供。
+  - name: クラウドソリッドコネクト株式会社
+    profile: https://www.example.com/
+    logo: placeholder-200x100.png
+    booth: 4
+    abstract: |-
+      トラフィックの可視化やパフォーマンス分析に特化したツールのデモ
+      を行う。来場者はリアルタイムでネットワークの健全性やトラフィッ
+      クの傾向を把握し、問題の早期発見に役立つツールを知ることができる。

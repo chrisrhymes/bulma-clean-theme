@@ -5,6 +5,8 @@
   dropdown:
     - name: Program Details
       link: /program-detail/
+- name: Exibition
+  link: /exhibition/      
 - name: Sponsors
   link: /sponsors/
 - name: Access
