@@ -1,44 +1,36 @@
 venue:
   title: 展示概要
-  map: onic_tenji1017-e1476675813934.png
+  map: placeholder-500x500.png
 exhibitors:
-  - name: 富士通株式会社
-    profile: https://www.fujitsu.com/jp/products/network/carrier-router/events/index.html
-    logo: fujitsu-exhibition.jpg
+  - name: サイバーファーストコネクト株式会社
+    profile: https://www.example.com/
+    logo: placeholder-200x100.png
     booth: 1
     abstract: |-
-      展示概要については[こちら](https://www.fujitsu.com/jp/products/network/carrier-router/events/index.html)をご覧ください。
-  - name: ジュニパーネットワークス株式会社
-    profile: https://www.juniper.net/jp/
-    logo: juniper-exhibition.jpg
+      最新のネットワーク機器やサーバーテクノロジーを展示。高性能な
+      ルーターやスイッチ、クラウドベースのサービスを含む製品ライン
+      ナップを紹介し、来場者にネットワークインフラの強化や拡張の可
+      能性を提示。
+  - name: 株式会社デジタルウェイワイヤレス
+    profile: https://www.example.com/
+    logo: placeholder-200x100.png
     booth: 2
     abstract: |-
-      「ジュニパーネットワークスのブースでは、ネットワークのバーチャル化から統合クラウド管理まで実現するContrail をご紹介します。さらに使いやすくなったService chainingとAnalytics機能、パケット転送性能の向上、また、Openstack環境と既存環境との接続方法などを、デモンストレーションでご説明します。」
-  - name: NTTコミュニケーションズ株式会社
-    profile: https://www.ntt.com/index.html
-    logo: ncom-exhibition.jpg
+      最新のセキュリティテクノロジやソフトウェアの実演を行う。脅威
+      のリアルタイムな分析や侵入検知システムのデモを通じて、来場者
+      にセキュリティ対策の必要性を認識させる。
+  - name: ネクストジェネレーションネットワークス合同会社
+    profile: https://www.example.com/
+    logo: placeholder-200x100.png
     booth: 3
     abstract: |-
-      NTTコミュニケーションズでは、SD-WANのトライアル環境貸し出しを行っております。 主要SD-WAN製品を複数用意していますので、機能比較し、ニーズに合った製品選定が可能です。
-      また、トライアル用のユースケースを用意しており、SD-WANの導入シナリオや導入効果を確認頂けます。その中から、ブースでは以下のデモを実施致します。
-  - name: 日本電気株式会社
-    profile: https://jpn.nec.com/
-    logo: nec-exhibition.jpg
+      最新のサイバーセキュリティトピックに焦点を当て、来場者がセキュ
+      リティリスクを理解し、適切な対策を学べるようなプログラムを提供。
+  - name: クラウドソリッドコネクト株式会社
+    profile: https://www.example.com/
+    logo: placeholder-200x100.png
     booth: 4
     abstract: |-
-      NECは、OpenStackを始めとする主要OSSのコミュニティに参画して培った技術力、 および、クラウド基盤サービスでの提供実績を活かした”OpenStack Super Integrator”として、 クラウド基盤の構築、運用、サポートをカバーするトータルなソリューションを提供しております。
-      本展示では、NFV基盤にも活用できる、OpenStackを活用した「ピュアオープン」な クラウド基盤ソリューション、”NEC Cloud System(OSS構築モデル）”をご紹介いたします。
-  - name: NOKIA
-    profile: https://www.nokia.com/ja_jp/
-    logo: NOKIA-exhibition.jpg
-    booth: 5
-    abstract: |-
-      NOKIA(Nuage networks)のブースではSD-WANソリューションの展示を行います。 DPIエンジンによるアプリを識別した利用回線の最適化や工場出荷状態からのゼロタッチ開通のほか、 実際の金融・製造業のお客様で使われている複数事業部門・関連会社を模したマルチテナント管理のデモ、 クラウド仮想基盤と連動した権限管理など実際に使用されている具体ケースをお見せします。
-  - name: デル株式会社
-    profile: 
-    logo: dell-exhibition.jpg
-    booth: 6
-    abstract: |-
-      Dell EMCは、ネットワークのオープン化を目指す取り組みとして、以下についてブースにてご紹介致します。
-      1.独自のネットワーク機器で実現されてきた通信ネットワークの機能が仮想化技術によってx86サーバ上で安価に実現可能な「NFVソリューション」
-      2.ネットワークスイッチのハードウェアとソフトウェアを分離しユーザーに複数のネットワークOSの選択肢を提供する「オープンネットワーキングソリューション」
+      トラフィックの可視化やパフォーマンス分析に特化したツールのデモ
+      を行う。来場者はリアルタイムでネットワークの健全性やトラフィッ
+      クの傾向を把握し、問題の早期発見に役立つツールを知ることができる。
