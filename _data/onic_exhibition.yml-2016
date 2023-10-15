@@ -1,0 +1,69 @@
+venue:
+  title: 展示概要
+  map: onic_tenji.png
+exhibitors:
+  - name: 富士通株式会社
+    profile: http://www.fujitsu.com/jp/products/network/carrier-router/events/index.html
+    logo: fujitsu-small.jpg
+    booth: 1
+    abstract: |-
+      展示概要については[こちら](http://www.fujitsu.com/jp/products/network/carrier-router/events/index.html)
+      をご覧ください。
+  - name: ジュニパーネットワークス株式会社
+    profile: http://www.junper.net/jp
+    logo: juniper-small.jpg
+    booth: 2
+    abstract: |-
+      「ジュニパーネットワークスのブースでは、ネットワークのバーチャ
+      ル化から統合クラウド管理まで実現するContrail をご紹介します。
+      さらに使いやすくなったService chainingとAnalytics機能、パケッ
+      ト転送性能の向上、また、Openstack環境と既存環境との接続方法な
+      どを、デモンストレーションでご説明します。」
+  - name: NTTコミュニケーションズ株式会社
+    profile: http://www.ntt.com/index.html
+    logo: nttcom-small.jpg
+    booth: 3
+    abstract: |-
+      NTTコミュニケーションズでは、SD-WANのトライアル環境貸し出しを
+      行っております。 主要SD-WAN製品を複数用意していますので、機能
+      比較し、ニーズに合った製品選定が可能です。
+      また、トライアル用のユースケースを用意しており、SD-WANの導入シ
+      ナリオや導入効果を確認頂けます。その中から、ブースでは以下のデ
+      モを実施致します。
+  - name: 日本電気株式会社
+    profile: http://jpn.nec.com/
+    logo: nec-small.jpg
+    booth: 4
+    abstract: |-
+      NECは、OpenStackを始めとする主要OSSのコミュニティに参画
+      して培った技術力、 および、クラウド基盤サービスでの提供
+      実績を活かした”OpenStack Super Integrator”として、 ク
+      ラウド基盤の構築、運用、サポートをカバーするトータルな
+      ソリューションを提供しております。
+      本展示では、NFV基盤にも活用できる、OpenStackを活用した
+      「ピュアオープン」な クラウド基盤ソリューション、”NEC 
+      Cloud System(OSS構築モデル)”をご紹介いたします。
+  - name: NOKIA
+    profile: https://networks.nokia.com/jp
+    logo: nokia-small.jpg
+    booth: 5
+    abstract: |-
+      NOKIA(Nuage networks)のブースではSD-WANソリューションの
+      展示を行います。DPIエンジンによるアプリを識別した利用回
+      線の最適化や工場出荷状態からのゼロタッチ開通のほか、 実
+      際の金融・製造業のお客様で使われている複数事業部門・関連
+      会社を模したマルチテナント管理のデモ、 クラウド仮想基盤と
+      連動した権限管理など実際に使用されている具体ケースをお見
+      せします。
+  - name: デル株式会社
+    profile: http://www.dell.co.jp/
+    logo: dell-small.jpg
+    booth: 6
+    abstract: |-
+      Dell EMCは、ネットワークのオープン化を目指す取り組みとして、
+      以下についてブースにてご紹介致します。1) 独自のネットワーク
+      機器で実現されてきた通信ネットワークの機能が仮想化技術によっ
+      てx86サーバ上で安価に実現可能な「NFVソリューション」、2) ネッ
+      トワークスイッチのハードウェアとソフトウェアを分離しユーザー
+      に複数のネットワークOSの選択肢を提供する「オープンネットワー
+      キングソリューション」
