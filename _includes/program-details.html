@@ -19,7 +19,7 @@
                                 <div class="columns is-multiline">
                                     {% if presenter.photo %}
                                         <div class="column is-3">
-                                            <p class="image is-128x128">
+                                            <p class="image is-120x140">
                                                 <img src="{{ site.baseurl }}/img/{{ presenter.photo }}" />
                                             </p>
                                         </div>
@@ -29,7 +29,9 @@
                                     </div>
                                 </div>
                                 {% endfor %}
-                                <p style="padding: 10px">{{ session.abstract }}</p>
+                                <div class="content">
+                                    {{ session.abstract | markdownify }}
+                                </div>
                             <a href="{{ site.baseurl }}/program/" class="button is-primary">BACK TO PROGRAM</a>
                        </div>
                     {% endif %}
