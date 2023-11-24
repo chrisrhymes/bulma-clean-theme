@@ -4,6 +4,8 @@ subtitle: OCTOBER 21, 2016
 layout: page
 show_sidebar: true
 ---
+## [最新のONIC Japan のページは[こちら](https://onic.jp/)
+
 ## 開催概要
 
 | 名称     | Open Networking Conference Japan 2016 |
