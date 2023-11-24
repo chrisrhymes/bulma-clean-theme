@@ -4,7 +4,7 @@ subtitle: OCTOBER 20, 2017
 layout: page
 show_sidebar: true
 ---
-## [最新のONIC Japan のページは[こちら](https://onic.jp/)
+## 最新のONIC Japan のページは[こちら](https://onic.jp/)
 
 ## 開催概要
 
