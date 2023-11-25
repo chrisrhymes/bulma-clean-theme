@@ -6,7 +6,7 @@ email: onicjapan@e-side.co.jp
 description: >
   本サイトはOpen NetworkIng Conference Japanのホームページです。
 baseurl: "/archives/2016"
-url: "https://onicjapan.shin.do"
+url: "https://onic.jp"
 permalink: pretty
 favicon: /img/favicon.ico
 #gh_sponsor: onicjapan
@@ -81,3 +81,6 @@ collections:
     layout: product
     image: https://via.placeholder.com/800x600
     show_sidebar: false
+
+redirect_from:
+  json: false
