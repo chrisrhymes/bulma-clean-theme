@@ -10,9 +10,11 @@ show_sidebar: true
 | URL      | [https://onic.jp/]( {{ site.baseurl }}/) |
 | 会期     | 2017年10月20日 |
 | 主催     | ONIC Japan 2017 実行委員会 |
-| 会場     | 慶應義塾日吉キャンパス協生館 藤原洋記念ホール |
+| 会場     | 慶應義塾日吉キャンパス協生館 [藤原洋記念ホール](http://www.kcc.keio.ac.jp/hall/) |
 | 構成     | 基調講演、講演、スポンサー講演 |
 | アクセス | [こちら]({{site.baseurl}}/access/) | 
+| 参加費   | 無料（事前登録制） |
+| 運営     | [株式会社イーサイド](http://www.e-side.co.jp/) |
 
 ## 開催趣旨
 Open NetworkIng Japan (ONIC Japan)は、前身のSDN Japan も含めて、今回で6回目の開催となります。
@@ -30,7 +32,7 @@ ONIC Japan では、このような情報共有と議論の場を提供してま
 ONIC Japan 2017 実行委員会
 
 # COMMITTEE
-## Open Networking Conference Japan 実行委員会
+## ONIC Japan 2017 実行委員会
 
 | 委員長 | 浅羽 登志也 | 株式会社IIJイノベーションインスティテュート |
 | 実行委員 | 石田 渉 | NTTソフトウェアイノベーションセンタ |
