@@ -1,0 +1,16 @@
+---
+layout: post
+title:  2021年　閉幕
+description: 2021年　閉幕
+date:   2021-11-02 13:00:00 +0900
+hero_image:  /img/mitsuo-komoriya-a8n0ZmlNlQ8-unsplash.jpg
+image:  /img/mitsuo-komoriya-a8n0ZmlNlQ8-unsplash.jpg
+hero_height:  is-middle
+hero_darken:  true
+---
+
+お陰様で沢山の方にご視聴いただき、委員・事務局一同感謝しております。<br />
+開催にあたりご協賛くださったスポンサーの皆様にも厚く御礼申し上げます。
+
+来年度は2022年10月27日-28日軽井沢開催を予定しており<br />
+会場でお会いできること楽しみにしております。

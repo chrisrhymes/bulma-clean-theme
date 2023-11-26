@@ -1,15 +1,15 @@
 - tier_name: 協賛企業
   size: large
   sponsors:
-    - name: サイバーファーストコネクト株式会社
-      profile: https://www.example.com/
-      logo: placeholder-500x130.png
-    - name: 株式会社デジタルウェイワイヤレス
-      profile: https://www.example.com/
-      logo: placeholder-500x130.png
-    - name: ネクストジェネレーションネットワークス合同会社
-      profile: https://www.example.com/
-      logo: placeholder-500x130.png
-    - name: クラウドソリッドコネクト株式会社
-      profile: https://www.example.com/
-      logo: placeholder-500x130.png
+    - name: シスコシステムズ合同会社
+      profile: https://www.cisco.com/c/ja_jp/index.html
+      logo: Cisco.jpg
+    - name: 日本電気株式会社
+      profile: https://jpn.nec.com/
+      logo: NEC_2021.jpg
+    - name: NTTコミュニケーションズ株式会社
+      profile: https://www.ntt.com/index.html
+      logo: nttcom_logo0913.jpg
+    - name: 株式会社インターネットイニシアティブ
+      profile: https://www.iij.ad.jp/
+      logo: IIJ (1).jpg
