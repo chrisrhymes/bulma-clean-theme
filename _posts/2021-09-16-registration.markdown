@@ -3,8 +3,8 @@ layout: post
 title:  参加登録開始致しました。
 description: 参加登録開始致しました。
 date:   2021-09-16 13:00:00 +0900
-hero_image:  /img/scott-graham-OQMZwNd3ThU-unsplash.jpg
-image:  /img/scott-graham-OQMZwNd3ThU-unsplash.jpg
+hero_image:  /archives/2021/img/scott-graham-OQMZwNd3ThU-unsplash.jpg
+image:  /archives/2021/img/scott-graham-OQMZwNd3ThU-unsplash.jpg
 hero_height:  is-middle
 hero_darken:  true
 ---

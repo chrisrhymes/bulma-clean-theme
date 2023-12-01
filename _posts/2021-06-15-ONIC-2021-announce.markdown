@@ -3,8 +3,8 @@ layout: post
 title:  Open NetworkIng Conference Japan 開催
 description: ONIC 2023発表の募集をします
 date:   2021-06-15 13:00:00 +0900
-hero_image:  /img/mitsuo-komoriya-a8n0ZmlNlQ8-unsplash.jpg
-image:  /img/mitsuo-komoriya-a8n0ZmlNlQ8-unsplash.jpg
+hero_image:  /archives/2021/img/mitsuo-komoriya-a8n0ZmlNlQ8-unsplash.jpg
+image:  /archives/2021/img/mitsuo-komoriya-a8n0ZmlNlQ8-unsplash.jpg
 hero_height:  is-middle
 hero_darken:  true
 ---

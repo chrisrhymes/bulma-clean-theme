@@ -3,8 +3,8 @@ layout: post
 title:  2021年　閉幕
 description: 2021年　閉幕
 date:   2021-11-02 13:00:00 +0900
-hero_image:  /img/mitsuo-komoriya-a8n0ZmlNlQ8-unsplash.jpg
-image:  /img/mitsuo-komoriya-a8n0ZmlNlQ8-unsplash.jpg
+hero_image:  /archives/2021/img/mitsuo-komoriya-a8n0ZmlNlQ8-unsplash.jpg
+image:  /archives/2021/img/mitsuo-komoriya-a8n0ZmlNlQ8-unsplash.jpg
 hero_height:  is-middle
 hero_darken:  true
 ---
