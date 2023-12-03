@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+
+
+
+
+<html
+ dir="ltr"
+ lang="ja"
+ >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content=#ffffff>
+    <link rel="stylesheet" href="/archives/2017/assets/css/app.css">
+    <link rel="shortcut icon" type="image/png"
+           href="/archives/2017/img/favicon.ico" 
+    />
+    <script defer src="https://unpkg.com/alpinejs@3.9.0/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-social@1/bin/bulma-social.min.css">
+    
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Open NetworkIng Conference Japan | ONIC Japan</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="Open NetworkIng Conference Japan" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="本サイトはOpen NetworkIng Conference Japanのホームページです。" />
+<meta property="og:description" content="本サイトはOpen NetworkIng Conference Japanのホームページです。" />
+<link rel="canonical" href="https://onic.jp/archives/2017/index.md-2023" />
+<meta property="og:url" content="https://onic.jp/archives/2017/index.md-2023" />
+<meta property="og:site_name" content="ONIC Japan" />
+<meta property="og:image" content="https://onic.jp/archives/2017/img/og_img.jpg" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://onic.jp/archives/2017/img/og_img.jpg" />
+<meta property="twitter:title" content="Open NetworkIng Conference Japan" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"本サイトはOpen NetworkIng Conference Japanのホームページです。","headline":"Open NetworkIng Conference Japan","image":"https://onic.jp/archives/2017/img/og_img.jpg","url":"https://onic.jp/archives/2017/index.md-2023"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <!-- head scripts --></head>
+
+  <body>
+    <nav class="navbar is-primary " x-data="{ openNav: false }">
+    <div class="container">
+        <div class="navbar-brand">
+            <a href="https://onic.jp/" class="navbar-item">
+                ONIC Japan
+            </a>
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu" :class="{ 'is-active': openNav }" x-on:click="openNav = !openNav">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div class="navbar-menu" id="navMenu" :class="{ 'is-active': openNav }">
+            <div class="navbar-start">
+                <a href="/archives/2017/" class="navbar-item ">Home</a>
+                
+                
+                    
+                    <a href="/archives/2017/news/" class="navbar-item ">News</a>
+                    
+                
+                    
+                    <div class="navbar-item has-dropdown is-hoverable ">
+                        <a href="/archives/2017/program/" class="navbar-link ">Program</a>
+                        <div class="navbar-dropdown">
+                            
+                            <a href="/archives/2017/program-detail/" class="navbar-item ">Program Details</a>
+                            
+                        </div>
+                    </div>
+                    
+                
+                    
+                    <a href="/archives/2017/sponsors/" class="navbar-item ">Sponsors</a>
+                    
+                
+                    
+                    <a href="/archives/2017/access/" class="navbar-item ">Access</a>
+                    
+                
+                    
+                    <a href="https://www.facebook.com/ONICJapan/" class="navbar-item ">Facebook</a>
+                    
+                
+                    
+                    <div class="navbar-item has-dropdown is-hoverable ">
+                        <a href="" class="navbar-link ">Archives</a>
+                        <div class="navbar-dropdown">
+                            
+                            <a href="/archives/2016/" class="navbar-item ">ONIC 2016</a>
+                            
+                            <a href="/archives/2015/" class="navbar-item ">ONIC 2015</a>
+                            
+                            <a href="/archives/2014/" class="navbar-item ">ONIC 2014</a>
+                            
+                            <a href="/archives/2013/" class="navbar-item ">ONIC 2013</a>
+                            
+                            <a href="/archives/2012/" class="navbar-item ">ONIC 2012</a>
+                            
+                        </div>
+                    </div>
+                    
+                
+                
+            </div>
+
+            <div class="navbar-end">
+                
+            </div>
+
+        </div>
+    </div>
+</nav>
+
+    
+        <section class="hero  is-medium  is-bold is-primary" >
+    <div class="hero-body ">
+        <div class="container">
+            <h1 class="title is-2">Open NetworkIng Conference Japan</h1>
+            <p class="subtitle is-3">NOVEMBER 9-10, 2023</p>
+            
+        </div>
+    </div>
+</section>
+    
+    
+
+
+    <section class="section">
+        <div class="container">
+            <div class="columns is-multiline">
+                
+                <div class="column is-8">
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    
+<div class="content">
+    ## 開催概要
+
+| 名称     | Open Networking Conference Japan 2023 |
+| URL      | [https://onic.jp/]( /archives/2017/) |
+| 会期     | 2023年11月9日〜10日 |
+| 主催     | Open Networking Conference Japan2023 実行委員会 |
+| 会場     | 軽井沢大賀ホール |
+|          | 〒389-0104　長野県北佐久郡軽井沢町軽井沢東28-4 |
+|          | [http://www.ohgahall.or.jp](http://www.ohgahall.or.jp) |
+| 構成     | 基調講演、講演、スポンサー講演 |
+|          | ハイブリット開催 |
+| アクセス | [詳細はこちらをご確認ください](/archives/2017/access/) | 
+|          | ![](/archives/2017/img/outline_access_3.png) |
+
+## 開催趣旨文
+Open Networking Conference Japanは今年で12回目を迎えます。これまでの開催を支えていただきました協賛企業様、講演者様、並びに参加いただきました皆様に深くお礼を申し上げます。
+
+昨年末ChatGPTの公開が大きな話題になり、さまざまな分野でAIに関して活発な議論が行われております。自動運転機能を有した車が走行し、アバターやロボットによる接客、AIを利用した未来の予見、技術伝承などが現実味を帯びてきています。その流れの中、ネットワーク分野においてもAI適用の検討が始まっております。特に、ネットワーク運用における自動化や故障予見、エンジニアの技術力向上などへの適用可能性が感じられます。さらには、高品質で低遅延・高帯域なネットワークが必須となり、技術革新が求められています。
+
+このようなネットワーク分野の取り組みは、これまで検討が進められてきたハードウェア技術の進化、ソフトウェア化による柔軟性の向上、運用効率化や技術者育成の延長線上にあり、AIへの技術適用・活用を一つのマイルストンとして見据え取り組むテーマを含んでいると考えます。そして、これらを実現するためには当然セキュリティを担保する必要があるとともに、ミッションクリティカルな事案を多分に含む場面もあるため、堅牢性と柔軟性を兼ね備えたシステムが必要となります。
+
+本カンファレンスでは、これらのテーマに対しオープンなコミュニティとしてさまざまな組織のみなさまと技術分野の違いを超えた活発な議論をさせていただければと考えております。
+
+今年も昨年に引き続きFace to Faceでの議論を願い、軽井沢およびオンラインでのハイブリッド開催を検討しております。また、現地のみとなりますが本会議前日にはBoFの開催を予定しておりますので、より多くの方にご参加いただいて議論ができる場を用意させていただく予定です。
+
+ぜひご参加いただきますようよろしくお願いいたします。
+
+Open Networking Conference Japan 2023 実行委員会
+
+# COMMITTEE
+
+## Open Networking Conference Japan 実行委員会
+
+| 委員長   | 境 智史 | NTTコミュニケーションズ株式会社 |
+| 実行委員 | 浅羽 登志也 | 株式会社インターネットイニシアティブ |
+|          | 小野寺 好広  | アレドノ合同会社/デジタル庁 |
+|          | 金海 好彦 | 日本電気株式会社 |
+|          | 河野 美也 | シスコシステムズ合同会社 |
+|          | 谷口 朋之 | 株式会社日立製作所 |
+|          | 進藤 資訓 | ヴイエムウェア株式会社 |
+|          | 中島 佳宏 | 株式会社 NTTドコモ |
+|          | 橋本 賢一郎 | Ultra Red, Inc. |
+</div>
+                </div>
+                
+                <div class="column is-4-desktop is-4-tablet">
+                    <p class="title is-4">Latest Posts</p>
+
+<div class="columns is-multiline">
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <div class="card-image">
+        <img src="/archives/2017/img/scott-graham-OQMZwNd3ThU-unsplash.jpg" alt="資料公開">
+    </div>
+    
+    <div class="card-content">
+        <div class="content">
+            
+            <a class="title is-4" href="/archives/2017/2017/11/15/open-slides/">資料公開</a>
+            
+            
+                <p><p>お待たせしました。
+資料公開が始まりました。
+公開可能な資料は随時UPしていきますので<a href="/archives/2017/program/">プログラムページ</a>でご確認ください。</p>
+</p>
+            
+        </div>
+        <div class="has-text-centered">
+            <a href="/archives/2017/2017/11/15/open-slides/" class="button is-primary">Read more</a>
+        </div>
+    </div>
+    <footer class="card-footer">
+        <p class="card-footer-item">Published: Nov 15, 2017</p>
+    </footer>
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <div class="card-image">
+        <img src="/archives/2017/img/scott-graham-OQMZwNd3ThU-unsplash.jpg" alt="無事に閉幕いたしました。">
+    </div>
+    
+    <div class="card-content">
+        <div class="content">
+            
+            <a class="title is-4" href="/archives/2017/2017/10/23/close-announcement/">無事に閉幕いたしました。</a>
+            
+            
+                <p><p>ONIC Japan 2017は無事閉幕いたしました。
+足元の悪い中、ご参加いただき誠にありがとうございました。
+参加者の皆様、お疲れ様でした。</p>
+</p>
+            
+        </div>
+        <div class="has-text-centered">
+            <a href="/archives/2017/2017/10/23/close-announcement/" class="button is-primary">Read more</a>
+        </div>
+    </div>
+    <footer class="card-footer">
+        <p class="card-footer-item">Published: Oct 23, 2017</p>
+    </footer>
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <div class="card-image">
+        <img src="/archives/2017/img/mitsuo-komoriya-a8n0ZmlNlQ8-unsplash.jpg" alt="参加登録開始">
+    </div>
+    
+    <div class="card-content">
+        <div class="content">
+            
+            <a class="title is-4" href="/archives/2017/2017/07/09/onic-2017-registration/">参加登録開始</a>
+            
+            
+                <p><p>今年もいよいよONIC Japanの季節となり、登録が始まりました。
+下記URLサイトからの登録お申込みとなります。
+http://eventregist.com/e/onicjapan2017</p>
+</p>
+            
+        </div>
+        <div class="has-text-centered">
+            <a href="/archives/2017/2017/07/09/onic-2017-registration/" class="button is-primary">Read more</a>
+        </div>
+    </div>
+    <footer class="card-footer">
+        <p class="card-footer-item">Published: Jul 9, 2017</p>
+    </footer>
+</div>
+    </div>
+    
+</div>
+
+
+
+
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+        <footer class="footer">
+    <div class="container">
+        
+        
+        <div class="columns is-multiline">
+            
+            <div class="column has-text-centered">
+                <div>
+                    <a href="/archives/2017/" class="link">Home</a>
+                </div>
+            </div>
+            
+            <div class="column has-text-centered">
+                <div>
+                    <a href="/archives/2017/news/" class="link">News</a>
+                </div>
+            </div>
+            
+            <div class="column has-text-centered">
+                <div>
+                    <a href="/archives/2017/program/" class="link">Program</a>
+                </div>
+            </div>
+            
+            <div class="column has-text-centered">
+                <div>
+                    <a href="/archives/2017/sponsors/" class="link">Sponsors</a>
+                </div>
+            </div>
+            
+            <div class="column has-text-centered">
+                <div>
+                    <a href="/archives/2017/access/" class="link">Access</a>
+                </div>
+            </div>
+            
+            <div class="column has-text-centered">
+                <div>
+                    <a href="/archives/2017/privacy-policy/" class="link">Privacy Policy</a>
+                </div>
+            </div>
+            
+        </div>
+        
+
+        <div class="content is-small has-text-centered">
+            Copyright ©️ Open Networking Conference Japan 実行委員会 All rights reserved.
+            <p class="">Theme built by <a href="https://www.csrhymes.com">C.S. Rhymes</a></p>
+        </div>
+    </div>
+</footer>
+
+    
+    <script src="/archives/2017/assets/js/app.js" type="text/javascript"></script><!-- footer scripts --></body>
+</html>
