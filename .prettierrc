@@ -1,0 +1,20 @@
+{
+    "plugins": ["@shopify/prettier-plugin-liquid"],
+    "tabWidth": 4,
+    "overrides": [
+        {
+            "files": "_includes/*.html",
+            "options": {
+                "parser": "liquid-html",
+                "tabWidth": 4
+            }
+        },
+        {
+            "files": "_layouts/*.html",
+            "options": {
+                "parser": "liquid-html",
+                "tabWidth": 4
+            }
+        }
+    ]
+}

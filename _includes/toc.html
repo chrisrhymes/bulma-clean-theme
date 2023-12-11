@@ -70,7 +70,8 @@
         {% capture my_toc %}{: #{{ include.id }}}
 {{ my_toc | lstrip }}{% endcapture %}
     {% endif %}
-{% endcapture %}{% assign tocWorkspace = '' %}
+{% endcapture -%}
+{%- assign tocWorkspace = '' %}
 
 <div class="contents">
     <div class="menu">
@@ -78,5 +79,3 @@
         {{ my_toc | markdownify | strip }}
     </div>
 </div>
-
-

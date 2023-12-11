@@ -1,11 +1,17 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content={{ site.theme_color | default: '#ffffff' }}>
+    <meta name="theme-color" content="{{ site.theme_color | default: '#ffffff' }}">
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/app.css">
-    <link rel="shortcut icon" type="image/png"
-          {% if site.favicon %} href="{{ site.favicon | relative_url }}" {% else %} href="{{ site.baseurl }}/favicon.png" {% endif %}
-    />
+    <link
+        rel="shortcut icon"
+        type="image/png"
+        {% if site.favicon %}
+            href="{{ site.favicon | relative_url }}"
+        {% else %}
+            href="{{ site.baseurl }}/favicon.png"
+        {% endif %}
+    >
     <script defer src="https://unpkg.com/alpinejs@3.9.0/dist/cdn.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
     {% unless site.hide_share_buttons %}
@@ -13,10 +19,10 @@
     {% endunless %}
     {% seo %}
     {% if site.feed %}
-    {% feed_meta %}
+        {% feed_meta %}
     {% endif %}
     {%- if site.google_analytics -%}
-      {%- include google-analytics.html -%}
+        {%- include google-analytics.html -%}
     {%- endif -%}
     {%- include head-scripts.html -%}
 </head>

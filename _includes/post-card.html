@@ -1,17 +1,17 @@
 <div class="card">
     {% if post.image %}
-    <div class="card-image">
-        <img src="{{ post.image }}" alt="{{ post.title }}">
-    </div>
+        <div class="card-image">
+            <img src="{{ post.image }}" alt="{{ post.title }}">
+        </div>
     {% else %}
-    <header class="card-header">
-        <a class="card-header-title" href="{{ site.baseurl }}{{ post.url }}">{{ post.title}}</a>
-    </header>
+        <header class="card-header">
+            <a class="card-header-title" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+        </header>
     {% endif %}
     <div class="card-content">
         <div class="content">
             {% if post.image %}
-            <a class="title is-4" href="{{ site.baseurl }}{{ post.url }}">{{ post.title}}</a>
+                <a class="title is-4" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
             {% endif %}
             {% if post.summary %}
                 {{ post.summary | markdownify }}
@@ -24,6 +24,6 @@
         </div>
     </div>
     <footer class="card-footer">
-        <p class="card-footer-item">Published: {{ post.date | date: "%b %-d, %Y" }}</p>
+        <p class="card-footer-item">Published: {{ post.date | date: '%b %-d, %Y' }}</p>
     </footer>
 </div>

@@ -6,7 +6,9 @@
         <article class="media">
             {% if include.icon != 'false' %}
                 <div class="media-left">
-                    <span class="icon"><i class="{{ include.icon | default: 'fas fa-exclamation-circle' }} fa-lg"></i></span>
+                    <span class="icon">
+                        <i class="{{ include.icon | default: 'fas fa-exclamation-circle' }} fa-lg"></i>
+                    </span>
                 </div>
             {% endif %}
             <div class="media-content">
