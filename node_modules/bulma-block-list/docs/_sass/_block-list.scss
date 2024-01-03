@@ -1,20 +1,47 @@
 @charset "utf-8";
 
+// Custom divide function by @mdo from https://github.com/twbs/bootstrap/pull/34245
+// Replaces old slash division deprecated in Dart Sass
+@function customDivide($dividend, $divisor, $precision: 10) {
+    $sign: if($dividend > 0 and $divisor > 0, 1, -1);
+    $dividend: abs($dividend);
+    $divisor: abs($divisor);
+    $quotient: 0;
+    $remainder: $dividend;
+    @if $dividend == 0 {
+        @return 0;
+    }
+    @if $divisor == 0 {
+        @error "Cannot divide by 0";
+    }
+    @if $divisor == 1 {
+        @return $dividend;
+    }
+    @while $remainder >= $divisor {
+        $quotient: $quotient + 1;
+        $remainder: $remainder - $divisor;
+    }
+    @if $remainder > 0 and $precision > 0 {
+        $remainder: divide($remainder * 10, $divisor, $precision - 1) * 0.1;
+    }
+    @return ($quotient + $remainder) * $sign;
+}
+
 $block-list-separator: 0.25rem !default;
 $block-list-highlight-width: 5px !default;
 
 .content {
     ul.block-list {
-      list-style: none;
-      margin-left: 0;
+        list-style: none;
+        margin-left: 0;
     }
-  }
+}
 
 .block-list {
     list-style: none;
 
     li {
-        padding: ($gap / 2);
+        padding: customDivide($gap, 2);
         background: $light;
         margin-bottom: $block-list-separator;
     }
@@ -23,7 +50,6 @@ $block-list-highlight-width: 5px !default;
     &.is-left > li {
         text-align: left;
     }
-
 
     li.is-centered,
     &.is-centered > li {
@@ -38,7 +64,7 @@ $block-list-highlight-width: 5px !default;
     li.is-small,
     &.is-small > li {
         font-size: $small-font-size;
-        padding: ($gap / 3);
+        padding: customDivide($gap, 3);
     }
 
     li.is-normal,
@@ -90,13 +116,12 @@ $block-list-highlight-width: 5px !default;
         &.is-right {
             .icon {
                 margin-right: 0;
-                margin-left: 1em
+                margin-left: 1em;
             }
         }
     }
 
     @each $name, $pair in $colors {
-
         $color: nth($pair, 1);
         $color-invert: nth($pair, 2);
 
