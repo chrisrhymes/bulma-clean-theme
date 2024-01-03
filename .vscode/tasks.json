@@ -1,0 +1,15 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "jekyll dev",
+        "command": "bundle exec jekyll serve",
+        "type": "shell"
+      },
+      {
+        "label": "jekyll production",
+        "command": "$env:JEKYLL_ENV='production'; bundle exec jekyll serve",
+        "type": "shell"
+      }
+    ]
+  }

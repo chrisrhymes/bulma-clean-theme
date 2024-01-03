@@ -1,0 +1,17 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "type": "edge",
+        "request": "attach",
+        "name": "Attach Development",
+        "preLaunchTask": "jekyll dev"
+      },
+      {
+        "type": "edge",
+        "request": "attach",
+        "name": "Attach Production",
+        "preLaunchTask": "jekyll production"
+      }      
+    ]
+  }
