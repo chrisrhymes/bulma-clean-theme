@@ -1,6 +1,6 @@
 ---
-title: Bulma Clean Theme
-subtitle: This is the demo site for Bulma Clean Theme
+title: MediqWise Regulatory & Quality
+subtitle: Share notes and thoughts on Software as Medical Devices
 layout: page
 callouts: home_callouts
 show_sidebar: true
