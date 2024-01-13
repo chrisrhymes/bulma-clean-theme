@@ -2,10 +2,10 @@
 lang: en
 remote_theme: chrisrhymes/bulma-clean-theme
 title: MediqWise Regulatory & Quality
-tagline: Share notes and thoughts on Software as Medical Devices
+tagline: Regulatory Affairs and Quality Assurance Services on Software as Medical Devices
 email: Yu-Wen@mediqwiserq.com
 description: >
-  Share notes and thoughts on Software as Medical Devices
+  testing
 #baseurl: "/bulma-clean-theme"
 #url: "https://www.csrhymes.com"
 permalink: pretty
