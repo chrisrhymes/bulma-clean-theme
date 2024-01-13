@@ -2,10 +2,10 @@
 lang: en
 remote_theme: chrisrhymes/bulma-clean-theme
 title: MediqWise Regulatory & Quality
-tagline: Bulma Clean Theme
-email: your-email@domain.com
+tagline: Share notes and thoughts on Software as Medical Devices
+email: Yu-Wen@mediqwiserq.com
 description: >
-  The demo site for Bulma Clean Theme, made for Jekyll and GitHub pages websites
+  Share notes and thoughts on Software as Medical Devices
 baseurl: "/bulma-clean-theme"
 url: "https://www.csrhymes.com"
 permalink: pretty
