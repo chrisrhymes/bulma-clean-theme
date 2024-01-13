@@ -31,12 +31,15 @@
                 {% endif %}
             </div>
 
+        {% if site.data.Contact_Me %}
             <div class="navbar-end">
-                <a class="navbar-item" href="./_includes/sponsors.html">
+                <a class="navbar-item" href="{{ item.link | relative_url }}">
                     <span>About Me</span>
                 </a>
             </div>
+        {% endif %}
 
+            
         </div>
     </div>
 </nav>
