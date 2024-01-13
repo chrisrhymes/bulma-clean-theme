@@ -1,6 +1,6 @@
 ---
 title: <img src="./img/Logo.tiff" alt="MediqWise Regulatory & Quality">
-subtitle: Regulatory Affairs and Quality Assurance Services for Medical Devices Companies
+subtitle: 
 layout: page
 callouts: home_callouts
 show_sidebar: true
