@@ -1,6 +1,6 @@
 ---
-title: MediqWise Regulatory & Quality
-subtitle: Share notes and thoughts on Software as Medical Devices
+title: <img src="./img/Logo.tiff" alt="MediqWise Regulatory & Quality">
+subtitle: Regulatory Affairs and Quality Assurance Services for Medical Devices Companies
 layout: page
 callouts: home_callouts
 show_sidebar: true
