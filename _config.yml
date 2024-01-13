@@ -1,5 +1,6 @@
 # Site Settings
 lang: en
+theme: bulma-clean-theme
 title: MediqWise Regulatory & Quality
 tagline: Bulma Clean Theme
 email: your-email@domain.com
