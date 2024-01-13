@@ -5,8 +5,6 @@
   dropdown:
     - name: Landing Page With Callouts
       link: /landing/
-    - name: Sponsors Page
-      link: /sponsors/
     - name: Image Gallery
       link: /gallery/
     - name: Products
