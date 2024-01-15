@@ -1,12 +1,12 @@
 style: is-light
 items:
-  - title: Multiple page layouts
-    subtitle: Including sidebar, menubar, tabs and callouts
-    icon: fa-copy
-  - title: Blog included
-    subtitle: Layouts for blog and post pages included
-    icon: fa-mail-bulk
-  - title: Works with GitHub Pages
-    subtitle: Quick and easy to get started
-    icon: fa-github
+  - title: Empowering Startups
+    subtitle: Suiting the unique requirements of early-stage companies and crafting savvy regulatory strategies that align with your vision and objectives
+    icon: <img src="./img/ICon2.svg" alt="Empowering Startups">
+  - title: Customize your QMS
+    subtitle: Bringing regulatory requirements, quality assurance, and Company needs altogether
+    icon: <img src="./img/ICon1.svg" alt="Build your QMS">
+  - title: Technical Proficiency
+    subtitle: Helping your product lifecycle, including AI/ML-based, mobile-based, and/or cloud-based medical devices
+    icon: <img src="./img/ICon3.svg" alt="Technical Support">
     icon_brand: true
