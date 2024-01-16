@@ -2,11 +2,11 @@ style: is-light
 items:
   - title: Empowering Startups
     subtitle: Suiting the unique requirements of early-stage companies and crafting savvy regulatory strategies that align with your vision and objectives
-    icon: <img src="./img/ICon2.svg" alt="Empowering Startups">
+    icon: /img/ICon2.svg
   - title: Customize your QMS
     subtitle: Bringing regulatory requirements, quality assurance, and Company needs altogether
-    icon: <img src="./img/ICon1.svg" alt="Build your QMS">
+    icon: ./img/ICon1.svg
   - title: Technical Proficiency
     subtitle: Helping your product lifecycle, including AI/ML-based, mobile-based, and/or cloud-based medical devices
-    icon: <img src="./img/ICon3.svg" alt="Technical Support">
+    icon: ./img/ICon3.svg
     icon_brand: true
