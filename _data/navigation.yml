@@ -1,6 +1,9 @@
 - name: Services
   link: /#
+  dropdown:
     - name: Regulatory Consulting
       link: /Regulatory_Consulting/
+    - name: QMS Consulting
+      link: /QMS_Consulting/
 - name: Blog
   link: /blog/
