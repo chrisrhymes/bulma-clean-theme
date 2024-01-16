@@ -8,5 +8,5 @@ items:
     link: /img/ICon1.svg
   - title: Technical Proficiency
     subtitle: Helping your product lifecycle, including AI/ML-based, mobile-based, and/or cloud-based medical devices
-    link: /img/ICon3.svg
-    icon_brand: true
+    content: /img/ICon3.svg
+    icon_brand: false
