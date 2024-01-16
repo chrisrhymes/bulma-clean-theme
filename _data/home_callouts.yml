@@ -6,7 +6,6 @@ items:
   - title: Customize your QMS
     subtitle: Bringing regulatory requirements, quality assurance, and Company needs altogether
     link: /img/ICon1.svg
-  - title: Technical Proficiency
-    subtitle: Helping your product lifecycle, including AI/ML-based, mobile-based, and/or cloud-based medical devices
-    content: /img/ICon3.svg
+  - title: /img/ICon3.svg
+    subtitle: Technical Proficiency
     icon_brand: false
