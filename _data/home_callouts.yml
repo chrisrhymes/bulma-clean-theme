@@ -1,9 +1,9 @@
 style: is-light
 items:
-  - title: <img src="./img/ICon2.svg" alt="Empowering Startups">
+  - title: <img src="./img/ICon2.svg" width="300" alt="Empowering Startups">
     subtitle: Empowering Startups
-  - title: <img src="./img/ICon1.svg" alt="Customize your QMS">
+  - title: <img src="./img/ICon1.svg" width="300" alt="Customize your QMS">
     subtitle: Customize your QMS
-  - title: <img src="./img/ICon3.svg" alt="Technical Proficiency">
+  - title: <img src="./img/ICon3.svg" width="300" alt="Technical Proficiency">
     subtitle: Technical Proficiency
     icon_brand: false
