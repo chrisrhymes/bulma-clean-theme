@@ -9,7 +9,7 @@ description: >
 #baseurl: "/bulma-clean-theme"
 #url: "https://www.csrhymes.com"
 permalink: pretty
-#favicon: /path/to/favicon.png
+favicon: /img/Logo.svg
 #gh_sponsor: chrisrhymes
 #hide_share_buttons: true
 theme_color: '#e1eded'
