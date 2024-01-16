@@ -1,8 +1,4 @@
 - name: Services
   link: /products/
-  - name: QMS Consulting
-    link: /_products/product1/
-  - name: Regulatory Consulting
-    link: /_products/product1/
 - name: Blog
   link: /blog/
