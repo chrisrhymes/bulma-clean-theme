@@ -1,11 +1,9 @@
 style: is-light
 items:
-  - title: Empowering Startups
-    subtitle: Suiting the unique requirements of early-stage companies and crafting savvy regulatory strategies that align with your vision and objectives
-    link: /img/ICon2.svg
-  - title: Customize your QMS
-    subtitle: Bringing regulatory requirements, quality assurance, and Company needs altogether
-    link: /img/ICon1.svg
-  - title: /img/ICon3.svg
+  - title: <img src="./img//img/ICon2.svg" alt="Empowering Startups">
+    subtitle: Empowering Startups
+  - title: <img src="./img//img/ICon1.svg" alt="Customize your QMS">
+    subtitle: Customize your QMS
+  - title: <img src="./img//img/ICon3.svg" alt="Technical Proficiency">
     subtitle: Technical Proficiency
     icon_brand: false
