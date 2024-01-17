@@ -8,6 +8,6 @@ MediqWise is located in metro Vancouver and provides consulting services for loc
 
 If you would like to discuss your project and how MediqWise can help your medical device company meet your regulatory and quality goals, please get in touch with me directly below:
 
-<a href="mailto:yu-wen@mediqwiserq.com?subject=Consulting%20Inquiry">Email to Yu-Wen (Weny)</a>
+<a href="mailto:info@mediqwiserq.com?subject=Consulting%20Inquiry">Email Us</a>
 
-You can also find me and my profile on <a href="www.linkedin.com/in/yu-wen-wang" target="_blank" class="linkedin-icon">LinkedIn</a>.
+You can also find Yu-Wen(Weny)'s profile on <a href="www.linkedin.com/in/yu-wen-wang" target="_blank" class="linkedin-icon">LinkedIn</a>.
