@@ -1,25 +1,12 @@
 ---
 layout: post
-title: Creating a post series
-description: How to create a post series with Bulma Clean Theme
-date: 2021-10-30 09:00:07
-hero_image: /bulma-clean-theme/img/blog-post-series.jpg
-image: /bulma-clean-theme/img/blog-post-series.jpg
-hero_height: is-large
+title: Unraveling the SaMD Lingo: Anomaly, Defect, Bug, and Nonconformity
+date: 2023-07-01
 hero_darken: true
-tags: bulma-clean-theme jekyll blog
-series: example_blog_series
+categories: General QMS
+tags: IEC_62304 FDA SaMD
 ---
 
----
-title: "Unraveling the SaMD Lingo: Anomaly, Defect, Bug, and Nonconformity"
-categories:
-  - General QMS
-tags:
-  - IEC 62304
-  - FDA
-  - SaMD
----
 
 If you are stepping into the Software as Medical Devices (SaMD) world, chances are you will come across terms like "anomaly," "defect," "bug," or "software failure" in various standards, guidance, white papers, and such. These words often seem interchangeable, but have you ever wondered if there are any nuances you need to be aware of?
 This post dives head-first into the regulatory/software language. We'll unravel how these terms are defined by different entities – from the FDA's perspective to the guidelines laid down by IS 62304, and of course, in the everyday lingo of our very own software engineers.
