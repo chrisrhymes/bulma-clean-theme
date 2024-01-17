@@ -5,6 +5,7 @@ date: 2023-07-01
 hero_darken: true
 categories: General_QMS
 tags: IEC_62304 FDA SaMD
+hide_hero: true
 ---
 
 
