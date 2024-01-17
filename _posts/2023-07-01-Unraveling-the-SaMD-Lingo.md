@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Unraveling the SaMD Lingo: Anomaly, Defect, Bug, and Nonconformity
+title: "Unraveling the SaMD Lingo: Anomaly, Defect, Bug, and Nonconformity"
 date: 2023-07-01
 hero_darken: true
-categories: General QMS
+categories: General_QMS
 tags: IEC_62304 FDA SaMD
 ---
 
