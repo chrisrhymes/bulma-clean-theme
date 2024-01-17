@@ -6,9 +6,8 @@ layout: page
 show_sidebar: false
 ---
 
-MediqWise is here to help if you want to
-- Perform gap assessment with specific regulations
-- Prepare for a new market entering
-    - Submission Preparation
-    - Document Review
-- Establish the post-market compliance activities
+- Conduct a gap assessment aligned with specific regulations.
+- Introduce your Software as a Medical Device (SaMD) or digital health products to new markets.
+    - Prepare for submission.
+    - Review essential documentation.
+- Establish and manage post-market compliance activities.
