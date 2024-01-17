@@ -16,7 +16,7 @@ theme_color: '#e1eded'
 #fixed_navbar: top
 #direction: one of <ltr, rtl, auto>, default: ltr
 
-paginate: 5
+paginate: 3
 paginate_path: "/blog/page:num"
 
 # Disqus Comments
