@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About Me
+title: About MediqWise Regulatory & Quality
 subtitle: 
 show_sidebar: false
 ---
