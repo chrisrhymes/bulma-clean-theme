@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Contact Us
+title: Contact Me
 show_sidebar: false
 ---
 
@@ -10,4 +10,4 @@ If you would like to discuss your project and how MediqWise can help your medica
 
 <a href="mailto:info@mediqwiserq.com?subject=Consulting%20Inquiry">Email Us</a> at info@mediqwiserq.com.
 
-You can also find Yu-Wen(Weny)'s profile on <a href="https://www.linkedin.com/in/yu-wen-wang" target="_blank" class="linkedin-icon">LinkedIn</a>.
+You can also find my profile on <a href="https://www.linkedin.com/in/yu-wen-wang" target="_blank" class="linkedin-icon">LinkedIn</a>.
