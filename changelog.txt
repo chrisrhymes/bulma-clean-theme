@@ -1,3 +1,7 @@
+# master
+
+* Upgrade to bulma 1.0
+
 # 0.13.3
 * Fix GitHub forks link in showcase - pull request #134 by ianfab
 
