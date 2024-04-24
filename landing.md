@@ -13,4 +13,4 @@ This is an example landing page. It is built using the Hero and Callouts.
 
 [View the Hero docs](/bulma-clean-theme/docs/pages/hero/)
 
-[View the Callouts docs](/bulma-clean-theme/docs/page-components/callouts)
+[View the Callouts docs](/bulma-clean-theme/docs/page-components/callouts/)

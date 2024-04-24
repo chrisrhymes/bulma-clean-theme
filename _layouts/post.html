@@ -1,10 +1,8 @@
 ---
 layout: default
 ---
-
 <div class="content">
-
-    <p>Published: {{ page.date | date: "%b %-d, %Y" }} by {{ page.author }}</p>
+    <p>Published: {{ page.date | date: '%b %-d, %Y' }} by {{ page.author }}</p>
 
     {% if page.series %}
         {% include series.html %}
@@ -15,14 +13,14 @@ layout: default
 
 <div class="tags">
     {% for tag in page.tags %}
-      {% include tag.html tag=tag %}
+        {% include tag.html tag=tag %}
     {% endfor %}
 </div>
 
 {% unless site.hide_share_buttons %}
-{% include share-buttons.html %}
+    {% include share-buttons.html %}
 {% endunless %}
 
 {% if site.disqus.shortname %}
-  {% include disqus.html %}
+    {% include disqus.html %}
 {% endif %}
