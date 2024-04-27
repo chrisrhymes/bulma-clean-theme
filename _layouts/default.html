@@ -20,6 +20,9 @@
 >
     {% include head.html %}
     <body>
+        {% if site.cookie_policy %}
+            {% include cookie-banner.html %}
+        {% endif %}
         {% include header.html %}
         {% unless page.hide_hero %}
             {% include hero.html %}
