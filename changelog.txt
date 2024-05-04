@@ -1,3 +1,7 @@
+# 0.14.0
+* Add cookie banner
+* Update Google Analytics to v4 and use consent mode
+
 # 0.13.3
 * Fix GitHub forks link in showcase - pull request #134 by ianfab
 
