@@ -43,6 +43,8 @@
   items: 
     - name: Callouts
       link: /docs/page-components/callouts/
+    - name: Cookie Banner
+      link: /docs/page-components/cookie-banner/
     - name: Image Gallery
       link: /docs/page-components/image-gallery/
     - name: Image Modal

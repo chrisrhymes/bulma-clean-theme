@@ -51,6 +51,7 @@ sass:
   source_dir: _sass
 
 #google_analytics: UA-code-here
+cookie_policy: /cookie-policy/
 
 defaults:
   -

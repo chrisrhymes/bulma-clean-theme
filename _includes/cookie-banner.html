@@ -1,0 +1,53 @@
+<div class="">
+    <script
+        src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"
+    ></script>
+
+    <div class="container py-6 px-4" id="cookieBanner">
+        <div class="columns">
+            <div class="column is-fullwidth ">
+                <div class="content">
+                    <p>We use cookies on this site to enhance your user experience</p>
+                    <p>
+                        By clicking the Accept button, you agree to us doing so.
+                        <a href="{{ site.cookie_policy | relative_url }}">More info on our cookie policy</a>
+                    </p>
+                </div>
+
+                <div class="buttons">
+                    <button class="button is-primary" onclick="acceptCookies()">Accept all cookies</button>
+                    <button class="button is-primary" onclick="rejectCookies()">Reject all cookies</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function acceptCookies() {
+            {% if site.google_analytics %}
+                consentGrantedAdStorage();
+            {% endif %}
+            Cookies.set('showCookieBanner', 'false', { expires: 7, path: '/' });
+            Cookies.set('cookiesAccepted', 'true', {expires: 7, path: '/'});
+            toggleCookieBanner();
+        }
+
+        function rejectCookies() {
+            Cookies.set('showCookieBanner', 'false', { expires: 7, path: '/' });
+            toggleCookieBanner();
+        }
+
+        function toggleCookieBanner() {
+            var showBanner = Cookies.get('showCookieBanner');
+            var banner = document.getElementById('cookieBanner');
+
+            if (showBanner === 'false') {
+                banner.setAttribute('style', 'display: none;');
+            } else {
+                banner.setAttribute('style', 'display: block;');
+            }
+        }
+
+        toggleCookieBanner();
+    </script>
+</div>
