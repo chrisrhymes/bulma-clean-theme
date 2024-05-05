@@ -10,12 +10,12 @@ $modal-content-width: 800px;
 
 @import "../node_modules/bulma/sass";
 @import "../node_modules/bulma/sass/utilities/mixins";
+@import "../node_modules/bulma-block-list/src/block-list.scss";
 $hero-darken: $dark !default;
 
 @import "layout";
 @import "syntax";
 @import "showcase";
-// @import "../node_modules/bulma-block-list/src/block-list.scss";
 
 .gh-sponsor {
   color: #ea4aaa;
