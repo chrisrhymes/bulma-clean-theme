@@ -17,7 +17,7 @@
                         <p class="subtitle">{{ item.subtitle }}</p>
 
                         {% if item.github %}
-                            <div class="buttons is-centered">
+                            <div class="buttons is-centered my-4">
                                 <a
                                     href="https://github.com/{{ item.github }}/stargazers"
                                     class="button is-white is-small"
@@ -53,7 +53,7 @@
                         </div>
 
                         {% if item.features %}
-                            <ul class="block-list {{ item.features_styles }}">
+                            <ul class="block-list is-dark {{ item.features_styles }}">
                                 {% for feature in item.features %}
                                     <li>{{ feature }}</li>
                                 {% endfor %}
@@ -62,16 +62,18 @@
 
                         {% if item.tags %}
                             {% assign tags = item.tags | split: ',' %}
-                            <div class="tags is-centered">
+                            <div class="tags is-centered my-4">
                                 {% for tag in tags %}
                                     {% include tag.html tag=tag style="is-dark" %}
                                 {% endfor %}
                             </div>
                         {% endif %}
 
-                        <a href="{{ item.link }}" class="button is-primary">
-                            {{ item.link_text }}
-                        </a>
+                        <div class="my-4">
+                            <a href="{{ item.link }}" class="button is-primary">
+                                {{ item.link_text }}
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>

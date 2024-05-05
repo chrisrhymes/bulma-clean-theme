@@ -49,6 +49,8 @@ livereload: true
 sass:
   style: compressed
   source_dir: _sass
+  load_paths: 
+    - node_modules
 
 #google_analytics: UA-code-here
 cookie_policy: /cookie-policy/

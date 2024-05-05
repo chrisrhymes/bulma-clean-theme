@@ -19,15 +19,22 @@
                             <p class="subtitle is-5">{{ callout.subtitle }}</p>
 
                             {% if callout.description %}
-                                <div class="content">
-                                    <p>{{ callout.description | newline_to_br }}</p>
+                                <div class="my-4">
+                                    <div class="content">
+                                        <p>{{ callout.description | newline_to_br }}</p>
+                                    </div>
                                 </div>
                             {% endif %}
 
                             {% if callout.call_to_action_name %}
-                                <a href="{{ callout.call_to_action_link | relative_url }}" class="button is-primary">
-                                    {{ callout.call_to_action_name }}
-                                </a>
+                                <div class="my-4">
+                                    <a
+                                        href="{{ callout.call_to_action_link | relative_url }}"
+                                        class="button is-primary"
+                                    >
+                                        {{ callout.call_to_action_name }}
+                                    </a>
+                                </div>
                             {% endif %}
                         </div>
                     {% endfor %}

@@ -1,13 +1,15 @@
 {
     "name": "bulma-block-list",
-    "version": "0.7.0",
+    "version": "1.0.0",
     "description": "A simple scss package extending Bulma with block style list elements",
     "homepage": "https://github.com/chrisrhymes/bulma-block-list#readme",
     "bugs": {
         "url": "https://github.com/chrisrhymes/bulma-block-list/issues"
     },
     "main": "src/block-list.scss",
-    "scripts": {},
+    "scripts": {
+        "dev": "sass --load-path=node_modules src/docs.scss docs/docs.css"
+    },
     "keywords": [
         "Bulma",
         "List",
@@ -17,6 +19,9 @@
     "author": "chrisrhymes",
     "license": "MIT",
     "dependencies": {
-        "bulma": "^0.9.3"
+        "bulma": "^1.0.0"
+    },
+    "devDependencies": {
+        "sass": "^1.75.0"
     }
 }

@@ -11,6 +11,7 @@ The theme uses [Alpine.js](https://github.com/alpinejs/alpine) for its interacti
 
 * [Installation](#installation)
 * [Documentation](#documentation)
+* [Upgrading to v1](#upgrading-to-v1)
 * [Contributing](#contributing)
 * [Development](#development)
 * [Licence](#licence)
@@ -48,6 +49,10 @@ Or install it yourself as:
 ## Documentation
 
 Check out the demo site for the [Documentation](https://www.csrhymes.com/bulma-clean-theme/docs/)
+
+## Upgrading to v1
+
+There are several breaking changes for v1. Please read the [upgrade guide](https://www.csrhymes.com/bulma-clean-theme/docs/upgrading-to-v1/) for more information.
 
 ## Contributing
 
