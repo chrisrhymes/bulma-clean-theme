@@ -1,6 +1,6 @@
 # 1.0.0
 * Upgrade to Bulma v1
-* Upgrade to bulma-block-list v1
+* Include bulma-block-list within the _scss folder due to load_path issues with dart sass. 
 
 ## Breaking changes
 * v1 only supports Jekyll <=4.3 due to bulma requiring dart sass

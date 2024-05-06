@@ -12,20 +12,7 @@ Version 1 of Bulma Clean Theme uses version 1 of Bulma. Bulma v1 has been update
 
 ## Changes to Bulma
 
-Please read through the [Bulma migration guide](https://bulma.io/documentation/start/migrating-to-v1/) for any changes to Bulma that may affect your site. 
-
-## Sass options
-
-The sass import paths have been updated so you will now need to specify the `load_paths` in your `_config.yml` file. 
-
-```yaml
-sass:
-  style: compressed
-  source_dir: _sass
-#   Add the load_paths
-  load_paths: 
-    - node_modules
-```
+Please read through the [Bulma migration guide](https://bulma.io/documentation/start/migrating-to-v1/) for any changes to Bulma that may affect your site.  
 
 ## GitHub pages deploy
 
