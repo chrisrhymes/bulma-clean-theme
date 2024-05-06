@@ -1,3 +1,11 @@
+# 1.0.0
+* Upgrade to Bulma v1
+* Include bulma-block-list within the _scss folder due to load_path issues with dart sass. 
+
+## Breaking changes
+* v1 only supports Jekyll <=4.3 due to bulma requiring dart sass
+* GitHub pages native builds will no longer work as GitHub pages requires Jekyll 3.9. Use GitHub actions to build and deploy to GitHub pages instead. 
+
 # 0.14.0
 * Add cookie banner
 * Update Google Analytics to v4 and use consent mode

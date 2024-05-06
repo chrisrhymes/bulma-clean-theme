@@ -2,6 +2,8 @@
   items:
     - name: Installation
       link: /docs/getting-started/installation/
+    - name: Upgrading to v1
+      link: /docs/getting-started/upgrading-to-v1/
     - name: Configuration
       link: /docs/getting-started/configuration/
     - name: Theming
