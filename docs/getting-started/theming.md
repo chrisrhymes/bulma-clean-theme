@@ -11,6 +11,13 @@ show_sidebar: false
 
 Bulma Clean Theme uses the Bulma frontend framework. Check out the [Bulma docs](https://bulma.io/documentation/) for more information.
 
+## Bulma Themes
+
+Bulma v1 has the concept of [themes](https://bulma.io/documentation/features/themes/) and auto detects the browsers choice for dark or light theme. 
+
+To disable this behaviour and force a theme, set the `force_theme:` in the _config.yml to either 'dark' or 'light'.
+
+
 ## Setting the Primary Colour
 
 To overwrite the primary theme colour, create a new file called `assets/css/app.scss`. Copy and paste the below into the `app.scss` file.

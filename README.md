@@ -31,13 +31,6 @@ And add this line to your Jekyll site's `_config.yml`:
 theme: bulma-clean-theme
 ```
 
-If you are deploying to GitHub pages, then you can also install the [GitHub Pages gem](https://github.com/github/pages-gem) and use `remote_theme` instead of `theme` in your `_config.yml`. **Note that the GitHub Pages gem requires Jekyll version 3.9.**
-
-```yaml
-# With GitHub Pages Gem
-remote_theme: chrisrhymes/bulma-clean-theme
-```
-
 And then execute:
 
     $ bundle
@@ -45,6 +38,25 @@ And then execute:
 Or install it yourself as:
 
     $ gem install bulma-clean-theme
+
+### GitHub pages
+
+### v1.0
+
+To deploy to GitHub pages using v1.x you will need to use GitHub Actions. Please see the [upgrade guide](https://www.csrhymes.com/bulma-clean-theme/docs/getting-started/upgrading-to-v1/) for more information.
+
+### v0.x
+
+If you are deploying to GitHub pages using their default build process, then you can install v0.x of the [GitHub Pages gem](https://github.com/github/pages-gem) and use `remote_theme` instead of `theme` in your `_config.yml`. 
+
+**Note that the GitHub Pages gem requires Jekyll version 3.9 and version 0.x of Bulma Clean Theme**
+
+```yaml
+# With GitHub Pages Gem
+remote_theme: chrisrhymes/bulma-clean-theme:v0.14.0
+```
+
+
 
 ## Documentation
 

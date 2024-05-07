@@ -1,5 +1,8 @@
 <div x-data="{visible: true}" markdown="0">
-    <div class="notification {{ include.status | default: 'is-warning' }}" x-show.transition.duration.300ms="visible">
+    <div
+        class="notification {{ include.status | default: 'is-warning' }} my-4"
+        x-show.transition.duration.300ms="visible"
+    >
         {% if include.dismissable %}
             <button class="delete" x-on:click="visible = false"></button>
         {% endif %}
