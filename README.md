@@ -56,8 +56,6 @@ If you are deploying to GitHub pages using their default build process, then you
 remote_theme: chrisrhymes/bulma-clean-theme:v0.14.0
 ```
 
-
-
 ## Documentation
 
 Check out the demo site for the [Documentation](https://www.csrhymes.com/bulma-clean-theme/docs/)
@@ -79,4 +77,3 @@ Your theme is set up just like a normal Jekyll site! To test your theme, run `bu
 ## License
 
 The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-
