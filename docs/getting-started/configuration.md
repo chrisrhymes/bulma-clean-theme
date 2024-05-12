@@ -24,11 +24,13 @@ The html _dir_ attribute is set to `ltr` by default. It can be overridden in the
 
 ## Google Analytics 
 
-To enable Google Analytics add `google_analytics: UA-xxxxxxxx` to your `_config.yml` replacing the UA-xxxxxxxx with your Google Analytics property.
+To enable Google Analytics add `google_analytics: UA-xxxxxxxx` to your `_config.yml` replacing the UA-xxxxxxxx with your Google Analytics property. 
 
 ```yaml
 google_analytics: UA-xxxxxxxx
 ```
+
+The Google Analytics implementation uses Google Analytics v4 and consent mode. Please see the [cookie banner](/bulma-clean-theme/docs/page-components/cookie-banner/) for more information.
 
 ## GitHub Sponsor
 

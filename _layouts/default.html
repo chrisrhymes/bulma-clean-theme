@@ -14,10 +14,7 @@
 <html
     dir="{{ site.direction | default: 'ltr' }}"
     lang="{{ site.lang | default: 'en' }}"
-    {% if site.fixed_navbar %}
-        class="has-navbar-fixed-{{ site.fixed_navbar }}"
-    {% endif %}
-    class="theme-light"
+    class="{% if site.fixed_navbar %} has-navbar-fixed-{{ site.fixed_navbar }} {% endif %} {% if site.force_theme %} theme-{{ site.force_theme }} {% endif %}"
 >
     {% include head.html %}
     <body>
