@@ -13,7 +13,7 @@ Bulma Clean Theme uses the Bulma frontend framework. Check out the [Bulma docs](
 
 ## Bulma Themes
 
-Bulma v1 has the concept of [themes](https://bulma.io/documentation/features/themes/) and auto detects the browsers choice for dark or light theme. 
+Bulma v1 has the concept of [themes](https://bulma.io/documentation/features/themes/) and auto detects the browser's choice for dark or light theme. 
 
 To disable this behaviour and force a theme, set the `force_theme:` in the _config.yml to either 'dark' or 'light'.
 

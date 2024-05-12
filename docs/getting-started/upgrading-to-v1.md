@@ -32,7 +32,7 @@ If you are using Jekyll Remote Theme, then you can [add a version number](https:
 
 ```yaml
 # _config.yml
-remote_theme: chrisrhymes/bulma-clean-theme@v1.0.0
+remote_theme: chrisrhymes/bulma-clean-theme:v1.0.0
 ```
 
 ## Changes to Bulma
