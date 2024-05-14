@@ -41,7 +41,7 @@ Ensure you specify the version number at the end of the remote_theme, otherwise 
 
 ```yaml
 # _config.yml
-remote_theme: chrisrhymes/bulma-clean-theme:v0.14.0
+remote_theme: chrisrhymes/bulma-clean-theme@v0.14.0
 ```
 
 ### v1.x of Bulma Clean Theme

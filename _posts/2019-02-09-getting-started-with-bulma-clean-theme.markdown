@@ -128,7 +128,7 @@ For the site to work with Github Pages, all you need to do is update the _config
 
 ```yaml
 #theme: bulma-clean-theme
-remote_theme: chrisrhymes/bulma-clean-theme
+remote_theme: chrisrhymes/bulma-clean-theme@v0.14.0
 ```
 
 And then push up your changes to Github as normal. 
