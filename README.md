@@ -53,7 +53,7 @@ If you are deploying to GitHub pages using their default build process, then you
 
 ```yaml
 # With GitHub Pages Gem
-remote_theme: chrisrhymes/bulma-clean-theme:v0.14.0
+remote_theme: chrisrhymes/bulma-clean-theme@v0.14.0
 ```
 
 ## Documentation

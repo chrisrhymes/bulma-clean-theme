@@ -42,10 +42,10 @@ gem "bulma-clean-theme",  '0.7.2'
 gem 'github-pages', group: :jekyll_plugins
 ```
 
-2. Open the `_config.yml` and comment out or delete the line `theme: minima` and replace it with `remote_theme: chrisrhymes/bulma-clean-theme`, then add `github-pages` to the list of plugins. Update the baseurl to your GitHub repo name, in this example we are using `my-project` as the repo name
+2. Open the `_config.yml` and comment out or delete the line `theme: minima` and replace it with `remote_theme: chrisrhymes/bulma-clean-theme@v0.14.0`, then add `github-pages` to the list of plugins. Update the baseurl to your GitHub repo name, in this example we are using `my-project` as the repo name
 ```yaml
 #theme: minima
-remote_theme: chrisrhymes/bulma-clean-theme
+remote_theme: chrisrhymes/bulma-clean-theme@v0.14.0
 baseurl: "/my-project"
 plugins:
 - github-pages
