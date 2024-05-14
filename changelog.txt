@@ -1,3 +1,6 @@
+# 1.0.2
+* Update Google Analytics to set default as 'granted' when cookies are already accepted
+
 # 1.0.1
 * Fix auto dark mode and allow forcing a theme
 
