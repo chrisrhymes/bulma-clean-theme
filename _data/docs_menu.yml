@@ -32,6 +32,11 @@
     - name: Table of Contents
       link: /docs/pages/table-of-contents/
 
+- label: Promo Pages
+  items:
+    - name: Creating a promo page
+      link: /docs/promo-pages/creating-a-promo-page/
+
 - label: Posts
   items:
     - name: Creating a Post
