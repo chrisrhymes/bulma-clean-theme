@@ -33,6 +33,7 @@ This demo site showcases the available page layout options.
 * Hero
 * Contents
 * Landing Page With Callouts
+* Promo Page
 * Sponsors Page
 * Image Gallery
 * Recipe Page

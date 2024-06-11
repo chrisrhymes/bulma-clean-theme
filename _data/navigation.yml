@@ -5,6 +5,8 @@
   dropdown:
     - name: Landing Page With Callouts
       link: /landing/
+    - name: Promo Page
+      link: /promo-page/
     - name: Sponsors Page
       link: /sponsors/
     - name: Image Gallery

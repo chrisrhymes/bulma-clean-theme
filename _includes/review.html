@@ -2,7 +2,7 @@
     <figure class="media-left">
         {% if review.avatar %}
             <p class="image is-48x48">
-                <img src="https://bulma.io/images/placeholders/128x128.png">
+                <img src="{{ review.avatar }}" alt="{{ review.name }}" class="is-rounded">
             </p>
         {% else %}
             <div class="icon is-large">
@@ -15,7 +15,7 @@
             <p>
                 <strong>{{ review.name }}</strong> <small>{{ review.date }}</small>
                 <br>
-                {{ review.title }}
+                <strong>{{ review.title }}</strong>
                 <br>
                 {{ review.description }}
             </p>
