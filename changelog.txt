@@ -1,5 +1,7 @@
 # 1.0.3
 * Update Bulma to 1.0.1
+* Add Promo Page layout
+* Fix reviews avatar not displaying
 
 # 1.0.2
 * Update Google Analytics to set default as 'granted' when cookies are already accepted
