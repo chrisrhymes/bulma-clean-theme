@@ -1,0 +1,103 @@
+<!doctype html>
+<html
+    dir="{{ site.direction | default: 'ltr' }}"
+    lang="{{ site.lang | default: 'en' }}"
+    class="{% if site.fixed_navbar %} has-navbar-fixed-{{ site.fixed_navbar }} {% endif %} {% if site.force_theme %} theme-{{ site.force_theme }} {% endif %}"
+>
+    {% include head.html %}
+    <body>
+        {% if site.cookie_policy %}
+            {% include cookie-banner.html %}
+        {% endif %}
+        {% include header.html %}
+        <section class="hero hero-banner is-primary">
+            <div class="hero-body">
+                <div class="container">
+                    <div class="columns is-centered">
+                        <div class="column is-6-tablet is-6-desktop">
+                            <h1 class="title is-1">{{ page.title }}</h1>
+                            {% if page.subtitle %}
+                                <p class="subtitle is-1">{{ page.subtitle }}</p>
+                            {% endif %}
+
+                            <div class="card mt-6">
+                                <div class="card-content">
+                                    <div class="content">
+                                        {{ page.snippet | markdownify }}
+                                    </div>
+                                    {% if page.hero_link %}
+                                        <div class="is-flex mt-6 is-justify-content-center">
+                                            <a href="{{ page.hero_link }}" class="button is-large is-primary">
+                                                {{- page.hero_link_text -}}
+                                            </a>
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column is-6-tablet is-6-desktop is-relative">
+                            <figure class="image {{ page.hero_image_ratio | default: 'is-4by3' }}">
+                                <img src="{{ page.hero_image }}" alt="{{ page.hero_image_alt }}">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        {% if site.data.reviews[page.product_code] %}
+            <section class="section mt-6">
+                <div class="container">
+                    <div class="columns is-centered is-multiline">
+                        <div class="column is-full">
+                            <h2 class="title is-3 mb-3 has-text-centered">Reviews</h2>
+                        </div>
+                        {% for review in site.data.reviews[page.product_code] %}
+                            <div class="column is-4-desktop is-6-tablet">
+                                <div class="card">
+                                    <div class="card-content">
+                                        {% include review.html %}
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </section>
+        {% endif %}
+        <section class="hero is-light mt-6">
+            <div class="hero-body">
+                <div class="container">
+                    <div class="columns is-centered">
+                        <div class="column is-6">
+                            {% include newsletter.html %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section my-6">
+            <div class="container">
+                <div class="columns is-multiline is-centered">
+                    <div class="column is-full">
+                        <h2 class="title is-3 mb-3 has-text-centered">{{ page.about_title }}</h2>
+                    </div>
+                    <div class="column is-4-tablet is-3-desktop">
+                        <figure class="image is-square">
+                            <img class="is-rounded" src="{{ page.about_image }}" alt="{{ page.about_image_alt }}">
+                        </figure>
+                    </div>
+                    <div class="column is-8-tablet is-6-desktop">
+                        <div class="content">
+                            {{ content }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        {% unless page.hide_footer %}
+            {% include footer.html %}
+        {% endunless %}
+        <script src="{{ site.baseurl }}/assets/js/app.js" type="text/javascript"></script>
+        {%- include footer-scripts.html -%}
+    </body>
+</html>

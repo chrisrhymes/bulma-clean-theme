@@ -1,0 +1,8 @@
+.hero-banner {
+    background: $primary;
+    background: linear-gradient(180deg, $primary 75%, $white 75%);
+
+    .image img {
+        box-shadow: var(--bulma-shadow);
+    }
+}
