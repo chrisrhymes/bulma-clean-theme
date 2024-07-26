@@ -54,7 +54,7 @@ Feel free to raise an issue or submit a pull request.
 
 Bulma is a **CSS** framework. As such, the sole output is a single CSS file: [bulma.css](https://github.com/jgthms/bulma/blob/master/css/bulma.css)
 
-You can either use that file, "out of the box", or download the Sass source files to customize the [variables](https://bulma.io/documentation/overview/variables/).
+You can either use that file, "out of the box", or download the Sass source files to customize the [variables](https://bulma.io/documentation/customize/#docsNav).
 
 There is **no** JavaScript included. People generally want to use their own JS implementation (and usually already have one). Bulma can be considered "environment agnostic": it's just the style layer on top of the logic.
 
@@ -133,6 +133,8 @@ Browse the [online documentation here.](https://bulma.io/documentation/start/ove
 | [Crispy-Bulma](https://github.com/ckrybus/crispy-bulma)                              | Bulma template pack for django-crispy-forms                                                                      |
 | [CASE](https://case.app)                                                             | CASE is Lightweight Backend-as-a-Service with essential features: DB, Admin panel, API, JS SDK         |
 | [Reactive Bulma](https://github.com/NicolasOmar/reactive-bulma)                                                             | A component library based on React, Bulma, Typescript and Rollup         |
+
+<p>Browser testing via <a href="https://www.lambdatest.com/" target="_blank"><img src="https://www.lambdatest.com/resources/images/logo-white.svg" style="vertical-align: middle;margin-left:5px" width="147" height="26" /></a></p>
 
 ## Copyright and license ![Github](https://img.shields.io/github/license/jgthms/bulma?logo=Github)
 

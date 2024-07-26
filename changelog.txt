@@ -1,3 +1,7 @@
+# 1.0.4
+* Update Bulma to 1.0.2
+* Add TikTok video include
+
 # 1.0.3
 * Update Bulma to 1.0.1
 * Add Promo Page layout
