@@ -9,7 +9,11 @@ toc: true
 
 ## Products Directory
 
-Start by creating a `_products` directory to hold your product pages.
+The default collection name for products is `products`, so create a `_products` directory to hold your product pages.
+
+## Custom Collection Directory
+
+You can override the default and create a folder with your own collection name. For example, using a collection of `books` would require you to create a folder called `_books`.
 
 ## Product Pages
 
@@ -52,3 +56,7 @@ collections:
 ```
 
 You can also set default product page values here if you like, such as the layout or image. 
+
+{% include notification.html message="If you use a custom collection name then update `products` to your custom collection name. In the example above for the `_books` folder use `books` as the collection name." %}
+
+For more information on collections, please refer to the [Jekyll documentation](https://jekyllrb.com/docs/collections/). 
