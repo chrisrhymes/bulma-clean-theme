@@ -22,3 +22,18 @@ sort: title
 ```
 
 [View example Category page](/bulma-clean-theme/products/)
+
+## Customising the collection
+
+To use a different collection than `products`, set the collection name in the category page's front matter. 
+
+The below example uses a collection called `books`. 
+
+```yaml
+title: Books
+subtitle: Check out our range of books
+layout: product-category
+show_sidebar: false
+sort: title
+collection: books
+```
