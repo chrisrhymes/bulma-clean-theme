@@ -33,6 +33,18 @@ You can optionally include a start time in seconds. This works the same as the ?
 ```
 {% endraw %}
 
+## TikTok Video
+
+You can include a TikTok video by passing in the video id to the tiktok.html.
+
+{% raw %}
+```liquid
+{% include tiktok.html video="videoid" %}
+```
+{% endraw %}
+
+
+{% include tiktok.html video="7342927568523283755" %}
 
 ## Vimeo Video
 
