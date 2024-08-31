@@ -2,6 +2,7 @@
 title: Products
 subtitle: Check out our range of products
 layout: product-category
+product_collection: software
 show_sidebar: false
 sort: price
 ---
