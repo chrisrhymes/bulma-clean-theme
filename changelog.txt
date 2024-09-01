@@ -1,8 +1,12 @@
+# 1.1.0
+* Update FontAwesome to v6.6
+* Add social links to the footer
+
 # 1.0.4
 * Update Bulma to 1.0.2
 * Add TikTok video include
 * Allow customising product collection name
-* Increse cookie expiry time in cookie banner
+* Increase cookie expiry time in cookie banner
 
 # 1.0.3
 * Update Bulma to 1.0.1

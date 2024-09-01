@@ -31,3 +31,17 @@ footer_menu: example_footer_menu
 ## Hiding the footer
 
 If you would like to hide the footer on a particular page then set `hide_footer: true` in the page's front matter.
+
+## Footer social links
+
+You can add social links to your footer by setting the links to your social profiles in the `_config.yml` file. 
+
+```yaml
+social:
+  facebook: https://www.facebook.com/
+  instagram: https://www.instagram.com/
+  threads: https://www.threads.net/
+  tiktok: https://www.tiktok.com/
+  x: https://www.x.com/
+  youtube: https://www.youtube.com/
+```
