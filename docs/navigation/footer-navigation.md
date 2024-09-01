@@ -34,6 +34,8 @@ If you would like to hide the footer on a particular page then set `hide_footer:
 
 ## Footer social links
 
+**Added in v1.1.0**
+
 You can add social links to your footer by setting the links to your social profiles in the `_config.yml` file. 
 
 ```yaml

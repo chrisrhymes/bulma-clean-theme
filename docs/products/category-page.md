@@ -25,6 +25,8 @@ sort: title
 
 ## Customising the collection
 
+**Added in v1.0.4**
+
 To use a different collection than `products`, set the collection name in the category page's front matter. 
 
 The below example uses a collection called `books`. 
