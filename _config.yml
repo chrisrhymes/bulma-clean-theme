@@ -84,3 +84,12 @@ collections:
     layout: product
     image: https://via.placeholder.com/800x600
     show_sidebar: false
+
+social:
+  facebook: https://www.facebook.com/
+  instagram: https://www.instagram.com/
+  threads: https://www.threads.net/
+  tiktok: https://www.tiktok.com/
+  x: https://www.x.com/
+  youtube: https://www.youtube.com/
+  

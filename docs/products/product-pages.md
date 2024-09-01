@@ -13,6 +13,8 @@ The default collection name for products is `products`, so create a `_products` 
 
 ## Custom Collection Directory
 
+**Added in v1.0.4**
+
 You can override the default and create a folder with your own collection name. For example, using a collection of `books` would require you to create a folder called `_books`.
 
 ## Product Pages
