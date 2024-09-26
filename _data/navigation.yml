@@ -1,5 +1,5 @@
-#- name: Docs
-#  link: /docs/
+- name: Docs
+  link: /docs/
 #- name: Example Pages
 #  link: /#
 #  dropdown:
