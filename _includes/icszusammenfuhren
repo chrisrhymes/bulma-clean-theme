@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICS Kalender Zusammenführen</title>
+</head>
+<body>
+    <h1>ICS Kalender Zusammenführen</h1>
+    <p>Lade zwei ICS-Dateien hoch, die zusammengeführt werden sollen:</p>
+
+    <form>
+        <label for="file1">ICS Datei 1:</label>
+        <input type="file" id="file1" accept=".ics"><br><br>
+
+        <label for="file2">ICS Datei 2:</label>
+        <input type="file" id="file2" accept=".ics"><br><br>
+
+        <button type="button" onclick="mergeICSFiles()">ICS Dateien zusammenführen</button>
+    </form>
+
+    <h2>Zusammengeführte ICS-Datei:</h2>
+    <pre id="output"></pre>
+
+    <script src="script.js"></script>
+</body>
+</html>
