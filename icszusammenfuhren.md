@@ -86,9 +86,10 @@ function mergeMultipleICS(filesData) {
             if (insideEvent) {
                 veventEntries.push(line);
 
-                // Finde den SUMMARY-Eintrag und speichere ihn in das Set
+                // Finde den SUMMARY-Eintrag, bereinige ihn und speichere ihn im Set
                 if (line.startsWith("SUMMARY:")) {
-                    summaries.add(line.replace("SUMMARY:", "").trim());
+                    const cleanedSummary = cleanSummary(line.replace("SUMMARY:", "").trim());
+                    summaries.add(cleanedSummary);
                 }
             }
 
@@ -110,11 +111,16 @@ function mergeMultipleICS(filesData) {
     return { mergedData: result, summaries: Array.from(summaries) }; // Konvertiere Set zurück in Array
 }
 
+function cleanSummary(summary) {
+    // Regulärer Ausdruck, um Ziffern, Daten oder Sonderzeichen am Ende des Summary zu entfernen
+    return summary.replace(/\s[\d\.\-\/]+$/, ''); // Entfernt Ziffern und Sonderzeichen am Ende
+}
+
 function displaySummaries(summaries) {
     const summaryContainer = document.getElementById('summaryList');
     summaryContainer.innerHTML = ""; // Vorherige Inhalte löschen
 
-    // Zeige die Liste der SUMMARY-Einträge an
+    // Zeige die Liste der bereinigten SUMMARY-Einträge an
     if (summaries.length > 0) {
         const summaryTitle = document.createElement("h2");
         summaryTitle.textContent = "Deine ICS enthält folgende Einträge:";
