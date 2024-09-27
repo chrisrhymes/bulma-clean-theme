@@ -46,10 +46,11 @@ function mergeICSFiles() {
         document.getElementById('file6').files[0]
     ];
 
-    const validFiles = files.filter(file => file !== undefined); // Nur die hochgeladenen Dateien auswählen
+    // Nur die Dateien verarbeiten, die tatsächlich hochgeladen wurden
+    const validFiles = files.filter(file => file !== undefined);
 
-    if (validFiles.length < 2) {
-        alert("Bitte mindestens zwei ICS-Dateien hochladen.");
+    if (validFiles.length === 0) {
+        alert("Bitte mindestens eine ICS-Datei hochladen.");
         return;
     }
 
@@ -63,16 +64,45 @@ function mergeICSFiles() {
         reader.onload = () => resolve(reader.result);
     })))
     .then(results => {
-        const { mergedData, summaries } = mergeMultipleICS(results);
-        document.getElementById('output').value = mergedData;
-        displaySummaries(summaries);
+        if (validFiles.length === 1) {
+            // Wenn nur eine Datei hochgeladen wurde, verarbeite nur diese
+            const data = results[0];
+            processSingleICSFile(data);
+        } else {
+            // Wenn mehrere Dateien hochgeladen wurden, führe sie zusammen
+            const { mergedData, summaries } = mergeMultipleICS(results);
+            document.getElementById('output').value = mergedData;
+            displaySummaries(summaries);
+        }
     });
+}
+
+function processSingleICSFile(data) {
+    const lines = data.split('\n');
+    let veventEntries = [];
+    let summaries = new Set();
+
+    lines.forEach(line => {
+        veventEntries.push(line);
+
+        // Finde den SUMMARY-Eintrag, bereinige ihn und speichere ihn im Set
+        if (line.startsWith("SUMMARY:")) {
+            const cleanedSummary = cleanSummary(line.replace("SUMMARY:", "").trim());
+            summaries.add(cleanedSummary);
+        }
+    });
+
+    // Kalenderdaten im Ausgabe-Textfeld anzeigen
+    document.getElementById('output').value = lines.join("\n");
+
+    // Zeige die zusammengefassten Einträge an
+    displaySummaries(Array.from(summaries));
 }
 
 function mergeMultipleICS(filesData) {
     let result = "";
     let veventEntries = [];
-    let summaries = new Set(); // Verwende ein Set für eindeutige SUMMARY-Einträge
+    let summaries = new Set();
 
     // Verarbeite jede Datei, um die VEVENT-Einträge und die SUMMARYs zu extrahieren
     filesData.forEach(data => {
@@ -121,30 +151,29 @@ function displaySummaries(summaries) {
     const summaryContainer = document.getElementById('summaryList');
     summaryContainer.innerHTML = ""; // Vorherige Inhalte löschen
 
-    let umlautWarning = false; // Flag, um festzustellen, ob Umlaute vorhanden sind
+    let umlautWarning = false;
 
-    // Zeige die Liste der bereinigten SUMMARY-Einträge an
     if (summaries.length > 0) {
         const summaryTitle = document.createElement("h2");
         summaryTitle.textContent = "Deine ICS enthält folgende Einträge (bearbeitbar):";
         summaryContainer.appendChild(summaryTitle);
 
-        const summaryList = document.createElement("ol"); // Geordnete Liste
+        const summaryList = document.createElement("ol");
         summaries.forEach((summary, index) => {
             const listItem = document.createElement("li");
-            
+
             // Eingabefeld für die Bearbeitung der SUMMARY-Einträge
             const inputField = document.createElement("input");
             inputField.type = "text";
             inputField.value = summary;
             inputField.id = `summary-input-${index}`;
-            inputField.dataset.originalSummary = summary; // Speichere das Original
+            inputField.dataset.originalSummary = summary;
             listItem.appendChild(inputField);
             summaryList.appendChild(listItem);
 
             // Prüfe, ob der Eintrag Umlaute enthält
             if (/[äöüß]/i.test(summary)) {
-                umlautWarning = true; // Umlaute gefunden
+                umlautWarning = true;
             }
         });
         summaryContainer.appendChild(summaryList);
@@ -159,7 +188,7 @@ function displaySummaries(summaries) {
         // Zeige Warnung, falls Umlaute gefunden wurden
         updateUmlautWarning(umlautWarning);
     } else {
-        summaryContainer.textContent = "Keine Einträge in den ICS-Dateien gefunden.";
+        summaryContainer.textContent = "Keine Einträge in der ICS-Datei gefunden.";
     }
 }
 
@@ -168,8 +197,8 @@ function updateSummaries() {
 
     // Sammle die aktualisierten Einträge aus den Eingabefeldern
     document.querySelectorAll("[id^=summary-input-]").forEach(input => {
-        const originalSummary = input.dataset.originalSummary; // Hol das Original
-        const newSummary = input.value.trim(); // Das neue vom Benutzer eingegebene
+        const originalSummary = input.dataset.originalSummary;
+        const newSummary = input.value.trim();
         updatedSummaries.push({ original: originalSummary, updated: newSummary });
     });
 
@@ -178,8 +207,8 @@ function updateSummaries() {
 
     // Suche und ersetze die Einträge
     updatedSummaries.forEach(({ original, updated }) => {
-        const regex = new RegExp(`SUMMARY:${original}`, 'g'); // Suchen nach altem `SUMMARY`
-        updatedICS = updatedICS.replace(regex, `SUMMARY:${updated}`); // Ersetzen durch den neuen Wert
+        const regex = new RegExp(`SUMMARY:${original}`, 'g');
+        updatedICS = updatedICS.replace(regex, `SUMMARY:${updated}`);
     });
 
     // Aktualisiere das Textfeld mit der neuen ICS-Datei
@@ -196,7 +225,6 @@ function updateUmlautWarning(umlautWarning) {
     const warningElement = document.getElementById("umlautWarning");
 
     if (umlautWarning) {
-        // Wenn die Warnung nicht bereits existiert, füge sie hinzu
         if (!warningElement) {
             const warningMessage = document.createElement("p");
             warningMessage.style.color = "red";
@@ -205,7 +233,6 @@ function updateUmlautWarning(umlautWarning) {
             document.getElementById("summaryList").appendChild(warningMessage);
         }
     } else {
-        // Entferne die Warnung, wenn keine Umlaute mehr vorhanden sind
         if (warningElement) {
             warningElement.remove();
         }
