@@ -231,10 +231,10 @@ function updateUmlautWarning(umlautWarning) {
 }
 
 function copyToClipboard() {
-    var copyText = document.getElementById("output");
+    var copyText = document.getElementById('output');
     copyText.select();
-    document.execCommand("copy");
-    alert("ICS-Datei in die Zwischenablage kopiert!");
+    document.execCommand('copy');
+    alert('ICS-Datei in die Zwischenablage kopiert!');
 }
 </script>
 
