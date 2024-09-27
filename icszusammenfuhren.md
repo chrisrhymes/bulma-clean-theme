@@ -1,15 +1,23 @@
 ---
 title: ICS Code Generator
-subtitle: ICS-Dateien hochladen und bearbeiten
-description: Lade eine oder mehrere ICS-Dateien hoch, um sie zu bearbeiten oder zusammenzuführen.
+subtitle: ICS-Dateien hochladen oder von URL abrufen
+description: Lade ICS-Dateien hoch oder rufe sie von einer URL ab, um sie zu bearbeiten oder zusammenzuführen.
 show_sidebar: false
 layout: page
 ---
 
-<p>Lade eine ICS-Datei hoch, um sie zu bearbeiten, oder lade bis zu sechs ICS-Dateien hoch, um sie zusammenzuführen:</p>
+<p>Lade eine oder mehrere ICS-Dateien hoch oder gib die URL einer ICS-Datei an, um sie zu verarbeiten:</p>
 
+<!-- URL-Eingabe -->
+<div>
+    <label for="ics-url">ICS URL (optional):</label>
+    <input type="text" id="ics-url" placeholder="Gib die URL einer ICS-Datei ein">
+    <button class="button is-primary" onclick="fetchICSFromURL()">Kalender von URL laden</button>
+</div>
+
+<!-- Datei-Upload -->
 <form>
-    <label for="file1">ICS Datei 1 (erforderlich):</label>
+    <label for="file1">ICS Datei 1 (erforderlich, wenn keine URL):</label>
     <input type="file" id="file1" accept=".ics"><br><br>
 
     <label for="file2">ICS Datei 2 (optional):</label>
@@ -35,7 +43,33 @@ layout: page
 <br>
 <button class="button is-info" onclick="copyToClipboard()">In Zwischenablage kopieren</button>
 
+<div id="summaryList"></div> <!-- Container für die Summary-Einträge -->
+
 <script>
+function fetchICSFromURL() {
+    const url = document.getElementById('ics-url').value;
+
+    if (!url) {
+        alert("Bitte eine gültige URL eingeben.");
+        return;
+    }
+
+    fetch(url)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Netzwerkfehler oder ungültige URL.");
+            }
+            return response.text();
+        })
+        .then(data => {
+            processSingleICSFile(data); // Die heruntergeladene Datei verarbeiten
+        })
+        .catch(error => {
+            console.error("Fehler beim Abrufen der ICS-Datei:", error);
+            alert("Fehler beim Abrufen der ICS-Datei. Überprüfen Sie die URL.");
+        });
+}
+
 function mergeICSFiles() {
     const files = [
         document.getElementById('file1').files[0],
@@ -50,7 +84,7 @@ function mergeICSFiles() {
     const validFiles = files.filter(file => file !== undefined);
 
     if (validFiles.length === 0) {
-        alert("Bitte mindestens eine ICS-Datei hochladen.");
+        alert("Bitte mindestens eine ICS-Datei hochladen oder eine gültige URL eingeben.");
         return;
     }
 
@@ -240,11 +274,9 @@ function updateUmlautWarning(umlautWarning) {
 }
 
 function copyToClipboard() {
-    var copyText = document.getElementById("output");
+    var copyText = document.getElementById('output');
     copyText.select();
-    document.execCommand("copy");
-    alert("ICS-Datei in die Zwischenablage kopiert!");
+    document.execCommand('copy');
+    alert('ICS-Datei in die Zwischenablage kopiert!');
 }
 </script>
-
-<div id="summaryList"></div> <!-- Container für die Summary-Einträge -->
