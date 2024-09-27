@@ -21,7 +21,9 @@ show_sidebar: false
 </form>
 
 <h2>Zusammengeführte ICS-Datei:</h2>
-<pre id="output"></pre>
+<textarea id="output" rows="20" cols="80" readonly></textarea>
+<br>
+<button onclick="copyToClipboard()">In Zwischenablage kopieren</button>
 
 <script>
 function mergeICSFiles() {
@@ -29,7 +31,7 @@ function mergeICSFiles() {
     const file2 = document.getElementById('file2').files[0];
 
     if (!file1 || !file2) {
-        alert("Bitte beide ICS Dateien hochladen.");
+        alert("Bitte beide ICS-Dateien hochladen.");
         return;
     }
 
@@ -42,7 +44,7 @@ function mergeICSFiles() {
             const data2 = e.target.result;
 
             const mergedData = mergeICS(data1, data2);
-            document.getElementById('output').textContent = mergedData;
+            document.getElementById('output').value = mergedData;
         };
         reader2.readAsText(file2);
     };
@@ -56,26 +58,55 @@ function mergeICS(data1, data2) {
     let result = "";
     let veventEntries = [];
 
+    // Beginne mit dem ersten Kalenderkopf (alle Zeilen bis BEGIN:VEVENT)
+    for (let line of lines1) {
+        result += line + "\n";
+        if (line.trim() === "BEGIN:VEVENT") {
+            break;
+        }
+    }
+
+    // Füge VEVENT-Einträge aus der ersten Datei hinzu
+    let insideEvent = false;
     for (let line of lines1) {
         if (line.trim() === "BEGIN:VEVENT") {
+            insideEvent = true;
+        }
+        if (insideEvent) {
             veventEntries.push(line);
-        } else {
-            result += line + "\n";
         }
         if (line.trim() === "END:VEVENT") {
-            veventEntries.push(line + "\n");
+            insideEvent = false;
         }
     }
 
+    // Füge VEVENT-Einträge aus der zweiten Datei hinzu
+    insideEvent = false;
     for (let line of lines2) {
-        if (line.trim() === "BEGIN:VEVENT" || veventEntries.includes(line)) {
+        if (line.trim() === "BEGIN:VEVENT") {
+            insideEvent = true;
+        }
+        if (insideEvent) {
             veventEntries.push(line);
         }
+        if (line.trim() === "END:VEVENT") {
+            insideEvent = false;
+        }
     }
 
+    // Füge VEVENT-Einträge zur Kalenderdatei hinzu
     result += veventEntries.join("\n");
+
+    // Füge das Kalenderende hinzu
     result += "END:VCALENDAR\n";
 
     return result;
+}
+
+function copyToClipboard() {
+    var copyText = document.getElementById("output");
+    copyText.select();
+    document.execCommand("copy");
+    alert("ICS-Datei in die Zwischenablage kopiert!");
 }
 </script>
