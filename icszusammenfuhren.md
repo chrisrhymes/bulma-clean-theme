@@ -3,10 +3,9 @@ title: ICS Code Generator
 subtitle: Kombiniere ICS-Dateien für Home Assistant
 description: Ein einfacher Codegenerator, um ICS-Dateien zusammenzuführen.
 layout: page
-show_sidebar: false
 ---
 
-<p>Lade zwei ICS-Dateien hoch, die zusammengeführt werden sollen:</p>
+<p>Lade bis zu sechs ICS-Dateien hoch, die zusammengeführt werden sollen (du kannst auch nur zwei hochladen):</p>
 
 <form>
     <label for="file1">ICS Datei 1:</label>
@@ -14,6 +13,18 @@ show_sidebar: false
 
     <label for="file2">ICS Datei 2:</label>
     <input type="file" id="file2" accept=".ics"><br><br>
+
+    <label for="file3">ICS Datei 3 (optional):</label>
+    <input type="file" id="file3" accept=".ics"><br><br>
+
+    <label for="file4">ICS Datei 4 (optional):</label>
+    <input type="file" id="file4" accept=".ics"><br><br>
+
+    <label for="file5">ICS Datei 5 (optional):</label>
+    <input type="file" id="file5" accept=".ics"><br><br>
+
+    <label for="file6">ICS Datei 6 (optional):</label>
+    <input type="file" id="file6" accept=".ics"><br><br>
 
     <button type="button" class="button is-primary" onclick="mergeICSFiles()">ICS Dateien zusammenführen</button>
 </form>
@@ -23,31 +34,37 @@ show_sidebar: false
 <br>
 <button class="button is-info" onclick="copyToClipboard()">In Zwischenablage kopieren</button>
 
-
 <script>
 function mergeICSFiles() {
-    const file1 = document.getElementById('file1').files[0];
-    const file2 = document.getElementById('file2').files[0];
+    const files = [
+        document.getElementById('file1').files[0],
+        document.getElementById('file2').files[0],
+        document.getElementById('file3').files[0],
+        document.getElementById('file4').files[0],
+        document.getElementById('file5').files[0],
+        document.getElementById('file6').files[0]
+    ];
 
-    if (!file1 || !file2) {
-        alert("Bitte beide ICS-Dateien hochladen.");
+    const validFiles = files.filter(file => file !== undefined); // Nur die hochgeladenen Dateien auswählen
+
+    if (validFiles.length < 2) {
+        alert("Bitte mindestens zwei ICS-Dateien hochladen.");
         return;
     }
 
-    const reader1 = new FileReader();
-    const reader2 = new FileReader();
+    const readers = validFiles.map(file => {
+        const reader = new FileReader();
+        reader.readAsText(file);
+        return reader;
+    });
 
-    reader1.onload = function(e) {
-        const data1 = e.target.result;
-        reader2.onload = function(e) {
-            const data2 = e.target.result;
-
-            const mergedData = mergeICS(data1, data2);
-            document.getElementById('output').value = mergedData;
-        };
-        reader2.readAsText(file2);
-    };
-    reader1.readAsText(file1);
+    Promise.all(readers.map(reader => new Promise((resolve) => {
+        reader.onload = () => resolve(reader.result);
+    })))
+    .then(results => {
+        const mergedData = results.reduce((acc, curr) => mergeICS(acc, curr), results[0]);
+        document.getElementById('output').value = mergedData;
+    });
 }
 
 function mergeICS(data1, data2) {
