@@ -1,39 +1,3 @@
----
-title: ICS Code Generator
-subtitle: Kombiniere ICS-Dateien für Home Assistant
-description: Ein einfacher Codegenerator, um ICS-Dateien zusammenzuführen.
-layout: page
----
-
-<p>Lade bis zu sechs ICS-Dateien hoch, die zusammengeführt werden sollen (du kannst auch nur zwei hochladen):</p>
-
-<form>
-    <label for="file1">ICS Datei 1:</label>
-    <input type="file" id="file1" accept=".ics"><br><br>
-
-    <label for="file2">ICS Datei 2:</label>
-    <input type="file" id="file2" accept=".ics"><br><br>
-
-    <label for="file3">ICS Datei 3 (optional):</label>
-    <input type="file" id="file3" accept=".ics"><br><br>
-
-    <label for="file4">ICS Datei 4 (optional):</label>
-    <input type="file" id="file4" accept=".ics"><br><br>
-
-    <label for="file5">ICS Datei 5 (optional):</label>
-    <input type="file" id="file5" accept=".ics"><br><br>
-
-    <label for="file6">ICS Datei 6 (optional):</label>
-    <input type="file" id="file6" accept=".ics"><br><br>
-
-    <button type="button" class="button is-primary" onclick="mergeICSFiles()">ICS Dateien zusammenführen</button>
-</form>
-
-<h2>Zusammengeführte ICS-Datei:</h2>
-<textarea id="output" rows="20" cols="80" readonly></textarea>
-<br>
-<button class="button is-info" onclick="copyToClipboard()">In Zwischenablage kopieren</button>
-
 <script>
 function mergeICSFiles() {
     const files = [
@@ -62,58 +26,42 @@ function mergeICSFiles() {
         reader.onload = () => resolve(reader.result);
     })))
     .then(results => {
-        const mergedData = results.reduce((acc, curr) => mergeICS(acc, curr), results[0]);
+        const mergedData = mergeMultipleICS(results);
         document.getElementById('output').value = mergedData;
     });
 }
 
-function mergeICS(data1, data2) {
-    const lines1 = data1.split('\n');
-    const lines2 = data2.split('\n');
-
+function mergeMultipleICS(filesData) {
     let result = "";
     let veventEntries = [];
 
-    // Beginne mit dem ersten Kalenderkopf (alle Zeilen bis BEGIN:VEVENT)
-    for (let line of lines1) {
-        result += line + "\n";
-        if (line.trim() === "BEGIN:VEVENT") {
-            break;
-        }
-    }
+    // Verarbeite jede Datei, um nur die VEVENT-Einträge zu extrahieren
+    filesData.forEach(data => {
+        const lines = data.split('\n');
+        let insideEvent = false;
 
-    // Füge VEVENT-Einträge aus der ersten Datei hinzu
-    let insideEvent = false;
-    for (let line of lines1) {
-        if (line.trim() === "BEGIN:VEVENT") {
-            insideEvent = true;
-        }
-        if (insideEvent) {
-            veventEntries.push(line);
-        }
-        if (line.trim() === "END:VEVENT") {
-            insideEvent = false;
-        }
-    }
+        lines.forEach(line => {
+            if (line.trim() === "BEGIN:VEVENT") {
+                insideEvent = true;
+            }
 
-    // Füge VEVENT-Einträge aus der zweiten Datei hinzu
-    insideEvent = false;
-    for (let line of lines2) {
-        if (line.trim() === "BEGIN:VEVENT") {
-            insideEvent = true;
-        }
-        if (insideEvent) {
-            veventEntries.push(line);
-        }
-        if (line.trim() === "END:VEVENT") {
-            insideEvent = false;
-        }
-    }
+            if (insideEvent) {
+                veventEntries.push(line);
+            }
 
-    // Füge VEVENT-Einträge zur Kalenderdatei hinzu
-    result += veventEntries.join("\n");
+            if (line.trim() === "END:VEVENT") {
+                insideEvent = false;
+            }
+        });
+    });
 
-    // Füge das Kalenderende hinzu
+    // Kalenderkopf hinzufügen (BEGIN:VCALENDAR)
+    result += "BEGIN:VCALENDAR\n";
+    
+    // Alle VEVENT-Einträge hinzufügen
+    result += veventEntries.join("\n") + "\n";
+
+    // Kalenderende hinzufügen (END:VCALENDAR)
     result += "END:VCALENDAR\n";
 
     return result;
