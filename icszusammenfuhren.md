@@ -2,6 +2,7 @@
 title: ICS Code Generator
 subtitle: Kombiniere ICS-Dateien für Home Assistant
 description: Ein einfacher Codegenerator, um ICS-Dateien zusammenzuführen.
+show_sidebar: false
 layout: page
 ---
 
