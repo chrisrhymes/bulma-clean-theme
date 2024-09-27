@@ -140,11 +140,5 @@ function copyToClipboard() {
 }
 </script>
 
-<!-- HTML für die Ausgabe -->
-<h2>Zusammengeführte ICS-Datei:</h2>
-<textarea id="output" rows="20" cols="80" readonly></textarea>
-<br>
-<button class="button is-info" onclick="copyToClipboard()">In Zwischenablage kopieren</button>
-
 <div id="summaryList"></div> <!-- Container für die Summary-Einträge -->
 
