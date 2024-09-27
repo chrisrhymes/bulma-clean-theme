@@ -173,9 +173,12 @@ function updateSummaries() {
     // Ersetze die zusammengeführte ICS-Datei mit den aktualisierten `SUMMARY`-Einträgen
     let updatedICS = document.getElementById('output').value;
 
+    // Nur der jeweilige Eintrag wird geändert, basierend auf der Position
     updatedSummaries.forEach((newSummary, index) => {
-        const regex = new RegExp(`SUMMARY:[^\\n]*`, 'g');
-        updatedICS = updatedICS.replace(regex, `SUMMARY:${newSummary}`);
+        const regex = new RegExp(`SUMMARY:.*?(?=\\n)`, 'g'); // Findet den nächsten `SUMMARY`-Eintrag
+        updatedICS = updatedICS.replace(regex, (match, position) => {
+            return `SUMMARY:${newSummary}`;
+        });
     });
 
     // Aktualisiere das Textfeld mit der neuen ICS-Datei
