@@ -121,22 +121,70 @@ function displaySummaries(summaries) {
     const summaryContainer = document.getElementById('summaryList');
     summaryContainer.innerHTML = ""; // Vorherige Inhalte löschen
 
+    let umlautWarning = false; // Flag, um festzustellen, ob Umlaute vorhanden sind
+
     // Zeige die Liste der bereinigten SUMMARY-Einträge an
     if (summaries.length > 0) {
         const summaryTitle = document.createElement("h2");
-        summaryTitle.textContent = "Deine ICS enthält folgende Einträge:";
+        summaryTitle.textContent = "Deine ICS enthält folgende Einträge (bearbeitbar):";
         summaryContainer.appendChild(summaryTitle);
 
         const summaryList = document.createElement("ol"); // Geordnete Liste
         summaries.forEach((summary, index) => {
             const listItem = document.createElement("li");
-            listItem.textContent = summary;
+            
+            // Eingabefeld für den Bearbeitung der SUMMARY-Einträge
+            const inputField = document.createElement("input");
+            inputField.type = "text";
+            inputField.value = summary;
+            inputField.id = `summary-input-${index}`;
+            listItem.appendChild(inputField);
             summaryList.appendChild(listItem);
+
+            // Prüfe, ob der Eintrag Umlaute enthält
+            if (/[äöüß]/i.test(summary)) {
+                umlautWarning = true; // Umlaute gefunden
+            }
         });
         summaryContainer.appendChild(summaryList);
+
+        // Füge einen Button hinzu, um die Änderungen auf die zusammengeführte Datei anzuwenden
+        const updateButton = document.createElement("button");
+        updateButton.textContent = "Änderungen übernehmen";
+        updateButton.className = "button is-primary";
+        updateButton.onclick = updateSummaries;
+        summaryContainer.appendChild(updateButton);
+
+        // Zeige Warnung, falls Umlaute gefunden wurden
+        if (umlautWarning) {
+            const warningMessage = document.createElement("p");
+            warningMessage.style.color = "red";
+            warningMessage.textContent = "Warnung: Einige Einträge enthalten Umlaute (ä, ö, ü, ß). Diese können bei der Weiterverarbeitung zu Problemen führen.";
+            summaryContainer.appendChild(warningMessage);
+        }
     } else {
         summaryContainer.textContent = "Keine Einträge in den ICS-Dateien gefunden.";
     }
+}
+
+function updateSummaries() {
+    const updatedSummaries = [];
+
+    // Sammle die aktualisierten Einträge aus den Eingabefeldern
+    document.querySelectorAll("[id^=summary-input-]").forEach(input => {
+        updatedSummaries.push(input.value.trim());
+    });
+
+    // Ersetze die zusammengeführte ICS-Datei mit den aktualisierten `SUMMARY`-Einträgen
+    let updatedICS = document.getElementById('output').value;
+
+    updatedSummaries.forEach((newSummary, index) => {
+        const regex = new RegExp(`SUMMARY:[^\\n]*`, 'g');
+        updatedICS = updatedICS.replace(regex, `SUMMARY:${newSummary}`);
+    });
+
+    // Aktualisiere das Textfeld mit der neuen ICS-Datei
+    document.getElementById('output').value = updatedICS;
 }
 
 function copyToClipboard() {
@@ -148,4 +196,3 @@ function copyToClipboard() {
 </script>
 
 <div id="summaryList"></div> <!-- Container für die Summary-Einträge -->
-
