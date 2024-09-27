@@ -62,16 +62,18 @@ function mergeICSFiles() {
         reader.onload = () => resolve(reader.result);
     })))
     .then(results => {
-        const mergedData = mergeMultipleICS(results);
+        const { mergedData, summaries } = mergeMultipleICS(results);
         document.getElementById('output').value = mergedData;
+        displaySummaries(summaries);
     });
 }
 
 function mergeMultipleICS(filesData) {
     let result = "";
     let veventEntries = [];
+    let summaries = [];
 
-    // Verarbeite jede Datei, um nur die VEVENT-Einträge zu extrahieren
+    // Verarbeite jede Datei, um die VEVENT-Einträge und die SUMMARYs zu extrahieren
     filesData.forEach(data => {
         const lines = data.split('\n');
         let insideEvent = false;
@@ -83,6 +85,11 @@ function mergeMultipleICS(filesData) {
 
             if (insideEvent) {
                 veventEntries.push(line);
+
+                // Finde den SUMMARY-Eintrag und speichere ihn
+                if (line.startsWith("SUMMARY:")) {
+                    summaries.push(line.replace("SUMMARY:", "").trim());
+                }
             }
 
             if (line.trim() === "END:VEVENT") {
@@ -100,7 +107,29 @@ function mergeMultipleICS(filesData) {
     // Kalenderende hinzufügen (END:VCALENDAR)
     result += "END:VCALENDAR\n";
 
-    return result;
+    return { mergedData: result, summaries };
+}
+
+function displaySummaries(summaries) {
+    const summaryContainer = document.getElementById('summaryList');
+    summaryContainer.innerHTML = ""; // Vorherige Inhalte löschen
+
+    // Zeige die Liste der SUMMARY-Einträge an
+    if (summaries.length > 0) {
+        const summaryTitle = document.createElement("h2");
+        summaryTitle.textContent = "Deine ICS enthält folgende Einträge:";
+        summaryContainer.appendChild(summaryTitle);
+
+        const summaryList = document.createElement("ol"); // Geordnete Liste
+        summaries.forEach((summary, index) => {
+            const listItem = document.createElement("li");
+            listItem.textContent = summary;
+            summaryList.appendChild(listItem);
+        });
+        summaryContainer.appendChild(summaryList);
+    } else {
+        summaryContainer.textContent = "Keine Einträge in den ICS-Dateien gefunden.";
+    }
 }
 
 function copyToClipboard() {
@@ -110,4 +139,12 @@ function copyToClipboard() {
     alert("ICS-Datei in die Zwischenablage kopiert!");
 }
 </script>
+
+<!-- HTML für die Ausgabe -->
+<h2>Zusammengeführte ICS-Datei:</h2>
+<textarea id="output" rows="20" cols="80" readonly></textarea>
+<br>
+<button class="button is-info" onclick="copyToClipboard()">In Zwischenablage kopieren</button>
+
+<div id="summaryList"></div> <!-- Container für die Summary-Einträge -->
 
