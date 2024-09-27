@@ -1,18 +1,18 @@
 ---
 title: ICS Code Generator
-subtitle: Kombiniere ICS-Dateien für Home Assistant
-description: Ein einfacher Codegenerator, um ICS-Dateien zusammenzuführen.
+subtitle: ICS-Dateien hochladen und bearbeiten
+description: Lade eine oder mehrere ICS-Dateien hoch, um sie zu bearbeiten oder zusammenzuführen.
 show_sidebar: false
 layout: page
 ---
 
-<p>Lade bis zu sechs ICS-Dateien hoch, die zusammengeführt werden sollen (du kannst auch nur zwei hochladen):</p>
+<p>Lade eine ICS-Datei hoch, um sie zu bearbeiten, oder lade bis zu sechs ICS-Dateien hoch, um sie zusammenzuführen:</p>
 
 <form>
-    <label for="file1">ICS Datei 1:</label>
+    <label for="file1">ICS Datei 1 (erforderlich):</label>
     <input type="file" id="file1" accept=".ics"><br><br>
 
-    <label for="file2">ICS Datei 2:</label>
+    <label for="file2">ICS Datei 2 (optional):</label>
     <input type="file" id="file2" accept=".ics"><br><br>
 
     <label for="file3">ICS Datei 3 (optional):</label>
@@ -27,10 +27,10 @@ layout: page
     <label for="file6">ICS Datei 6 (optional):</label>
     <input type="file" id="file6" accept=".ics"><br><br>
 
-    <button type="button" class="button is-primary" onclick="mergeICSFiles()">ICS Dateien zusammenführen</button>
+    <button type="button" class="button is-primary" onclick="mergeICSFiles()">ICS Datei(en) verarbeiten</button>
 </form>
 
-<h2>Zusammengeführte ICS-Datei:</h2>
+<h2>Verarbeitete ICS-Datei:</h2>
 <textarea id="output" rows="20" cols="80" readonly></textarea>
 <br>
 <button class="button is-info" onclick="copyToClipboard()">In Zwischenablage kopieren</button>
