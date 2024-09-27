@@ -156,12 +156,7 @@ function displaySummaries(summaries) {
         summaryContainer.appendChild(updateButton);
 
         // Zeige Warnung, falls Umlaute gefunden wurden
-        if (umlautWarning) {
-            const warningMessage = document.createElement("p");
-            warningMessage.style.color = "red";
-            warningMessage.textContent = "Warnung: Einige Einträge enthalten Umlaute (ä, ö, ü, ß). Diese können bei der Weiterverarbeitung zu Problemen führen.";
-            summaryContainer.appendChild(warningMessage);
-        }
+        updateUmlautWarning(umlautWarning);
     } else {
         summaryContainer.textContent = "Keine Einträge in den ICS-Dateien gefunden.";
     }
@@ -185,6 +180,32 @@ function updateSummaries() {
 
     // Aktualisiere das Textfeld mit der neuen ICS-Datei
     document.getElementById('output').value = updatedICS;
+
+    // Prüfe nach der Änderung erneut auf Umlaute
+    let umlautWarning = updatedSummaries.some(summary => /[äöüß]/i.test(summary));
+
+    // Aktualisiere die Warnung
+    updateUmlautWarning(umlautWarning);
+}
+
+function updateUmlautWarning(umlautWarning) {
+    const warningElement = document.getElementById("umlautWarning");
+
+    if (umlautWarning) {
+        // Wenn die Warnung nicht bereits existiert, füge sie hinzu
+        if (!warningElement) {
+            const warningMessage = document.createElement("p");
+            warningMessage.style.color = "red";
+            warningMessage.id = "umlautWarning";
+            warningMessage.textContent = "Warnung: Einige Einträge enthalten Umlaute (ä, ö, ü, ß). Diese können bei der Weiterverarbeitung zu Problemen führen.";
+            document.getElementById("summaryList").appendChild(warningMessage);
+        }
+    } else {
+        // Entferne die Warnung, wenn keine Umlaute mehr vorhanden sind
+        if (warningElement) {
+            warningElement.remove();
+        }
+    }
 }
 
 function copyToClipboard() {
