@@ -36,8 +36,6 @@ layout: page
 <button class="button is-info" onclick="copyToClipboard()">In Zwischenablage kopieren</button>
 
 <script>
-let summaryMap = {}; // Global, damit sie überall zugänglich ist
-
 function mergeICSFiles() {
     const files = [
         document.getElementById('file1').files[0],
@@ -65,9 +63,8 @@ function mergeICSFiles() {
         reader.onload = () => resolve(reader.result);
     })))
     .then(results => {
-        const { mergedData, summaries, summaryMapLocal } = mergeMultipleICS(results);
+        const { mergedData, summaries } = mergeMultipleICS(results);
         document.getElementById('output').value = mergedData;
-        summaryMap = summaryMapLocal; // Speichere die Mapping-Daten global
         displaySummaries(summaries);
     });
 }
@@ -76,14 +73,13 @@ function mergeMultipleICS(filesData) {
     let result = "";
     let veventEntries = [];
     let summaries = new Set(); // Verwende ein Set für eindeutige SUMMARY-Einträge
-    let summaryMapLocal = {}; // Um zu wissen, welche Zeilen bearbeitet werden sollen
 
     // Verarbeite jede Datei, um die VEVENT-Einträge und die SUMMARYs zu extrahieren
     filesData.forEach(data => {
         const lines = data.split('\n');
         let insideEvent = false;
 
-        lines.forEach((line, lineIndex) => {
+        lines.forEach(line => {
             if (line.trim() === "BEGIN:VEVENT") {
                 insideEvent = true;
             }
@@ -91,16 +87,10 @@ function mergeMultipleICS(filesData) {
             if (insideEvent) {
                 veventEntries.push(line);
 
-                // Finde den SUMMARY-Eintrag, bereinige ihn und speichere ihn im Set und der Map
+                // Finde den SUMMARY-Eintrag, bereinige ihn und speichere ihn im Set
                 if (line.startsWith("SUMMARY:")) {
                     const cleanedSummary = cleanSummary(line.replace("SUMMARY:", "").trim());
                     summaries.add(cleanedSummary);
-
-                    // Mappe den originalen SUMMARY-Eintrag zu seiner Position in den VEVENT-Einträgen
-                    if (!summaryMapLocal[cleanedSummary]) {
-                        summaryMapLocal[cleanedSummary] = [];
-                    }
-                    summaryMapLocal[cleanedSummary].push(veventEntries.length - 1); // Speichere die Position
                 }
             }
 
@@ -119,7 +109,7 @@ function mergeMultipleICS(filesData) {
     // Kalenderende hinzufügen (END:VCALENDAR)
     result += "END:VCALENDAR\n";
 
-    return { mergedData: result, summaries: Array.from(summaries), summaryMapLocal }; // Rückgabe auch der Map
+    return { mergedData: result, summaries: Array.from(summaries) };
 }
 
 function cleanSummary(summary) {
@@ -185,23 +175,15 @@ function updateSummaries() {
 
     // Ersetze die zusammengeführte ICS-Datei mit den aktualisierten `SUMMARY`-Einträgen
     let updatedICS = document.getElementById('output').value;
-    const icsLines = updatedICS.split('\n');
 
-    // Gehe durch die aktualisierten Einträge
+    // Suche und ersetze die Einträge
     updatedSummaries.forEach(({ original, updated }) => {
-        // Finde die Positionen, an denen das Original steht
-        const positions = summaryMap[original];
-
-        // Gehe durch jede Position und ersetze den jeweiligen Eintrag
-        if (positions) {
-            positions.forEach(position => {
-                icsLines[position] = `SUMMARY:${updated}`;
-            });
-        }
+        const regex = new RegExp(`SUMMARY:${original}`, 'g'); // Suchen nach altem `SUMMARY`
+        updatedICS = updatedICS.replace(regex, `SUMMARY:${updated}`); // Ersetzen durch den neuen Wert
     });
 
     // Aktualisiere das Textfeld mit der neuen ICS-Datei
-    document.getElementById('output').value = icsLines.join('\n');
+    document.getElementById('output').value = updatedICS;
 
     // Prüfe nach der Änderung erneut auf Umlaute
     let umlautWarning = updatedSummaries.some(summary => /[äöüß]/i.test(summary.updated));
@@ -231,10 +213,10 @@ function updateUmlautWarning(umlautWarning) {
 }
 
 function copyToClipboard() {
-    var copyText = document.getElementById('output');
+    var copyText = document.getElementById("output");
     copyText.select();
-    document.execCommand('copy');
-    alert('ICS-Datei in die Zwischenablage kopiert!');
+    document.execCommand("copy");
+    alert("ICS-Datei in die Zwischenablage kopiert!");
 }
 </script>
 
