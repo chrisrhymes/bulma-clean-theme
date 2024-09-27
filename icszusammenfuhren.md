@@ -6,7 +6,7 @@ layout: page
 show_sidebar: false
 ---
 
-<h1>ICS Code Generator</h1>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
 
 <p>Lade zwei ICS-Dateien hoch, die zusammengeführt werden sollen:</p>
 
@@ -17,13 +17,14 @@ show_sidebar: false
     <label for="file2">ICS Datei 2:</label>
     <input type="file" id="file2" accept=".ics"><br><br>
 
-    <button type="button" onclick="mergeICSFiles()">ICS Dateien zusammenführen</button>
+    <button type="button" class="button is-primary" onclick="mergeICSFiles()">ICS Dateien zusammenführen</button>
 </form>
 
 <h2>Zusammengeführte ICS-Datei:</h2>
 <textarea id="output" rows="20" cols="80" readonly></textarea>
 <br>
-<button onclick="copyToClipboard()">In Zwischenablage kopieren</button>
+<button class="button is-info" onclick="copyToClipboard()">In Zwischenablage kopieren</button>
+
 
 <script>
 function mergeICSFiles() {
