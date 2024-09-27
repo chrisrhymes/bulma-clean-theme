@@ -36,6 +36,8 @@ layout: page
 <button class="button is-info" onclick="copyToClipboard()">In Zwischenablage kopieren</button>
 
 <script>
+let summaryMap = {}; // Global, damit sie überall zugänglich ist
+
 function mergeICSFiles() {
     const files = [
         document.getElementById('file1').files[0],
@@ -63,8 +65,9 @@ function mergeICSFiles() {
         reader.onload = () => resolve(reader.result);
     })))
     .then(results => {
-        const { mergedData, summaries } = mergeMultipleICS(results);
+        const { mergedData, summaries, summaryMapLocal } = mergeMultipleICS(results);
         document.getElementById('output').value = mergedData;
+        summaryMap = summaryMapLocal; // Speichere die Mapping-Daten global
         displaySummaries(summaries);
     });
 }
@@ -73,7 +76,7 @@ function mergeMultipleICS(filesData) {
     let result = "";
     let veventEntries = [];
     let summaries = new Set(); // Verwende ein Set für eindeutige SUMMARY-Einträge
-    let summaryMap = {}; // Um zu wissen, welche Zeilen bearbeitet werden sollen
+    let summaryMapLocal = {}; // Um zu wissen, welche Zeilen bearbeitet werden sollen
 
     // Verarbeite jede Datei, um die VEVENT-Einträge und die SUMMARYs zu extrahieren
     filesData.forEach(data => {
@@ -94,10 +97,10 @@ function mergeMultipleICS(filesData) {
                     summaries.add(cleanedSummary);
 
                     // Mappe den originalen SUMMARY-Eintrag zu seiner Position in den VEVENT-Einträgen
-                    if (!summaryMap[cleanedSummary]) {
-                        summaryMap[cleanedSummary] = [];
+                    if (!summaryMapLocal[cleanedSummary]) {
+                        summaryMapLocal[cleanedSummary] = [];
                     }
-                    summaryMap[cleanedSummary].push(lineIndex); // Speichere die Position
+                    summaryMapLocal[cleanedSummary].push(veventEntries.length - 1); // Speichere die Position
                 }
             }
 
@@ -116,7 +119,7 @@ function mergeMultipleICS(filesData) {
     // Kalenderende hinzufügen (END:VCALENDAR)
     result += "END:VCALENDAR\n";
 
-    return { mergedData: result, summaries: Array.from(summaries), summaryMap }; // Rückgabe auch der Map
+    return { mergedData: result, summaries: Array.from(summaries), summaryMapLocal }; // Rückgabe auch der Map
 }
 
 function cleanSummary(summary) {
@@ -190,9 +193,11 @@ function updateSummaries() {
         const positions = summaryMap[original];
 
         // Gehe durch jede Position und ersetze den jeweiligen Eintrag
-        positions.forEach(position => {
-            icsLines[position] = `SUMMARY:${updated}`;
-        });
+        if (positions) {
+            positions.forEach(position => {
+                icsLines[position] = `SUMMARY:${updated}`;
+            });
+        }
     });
 
     // Aktualisiere das Textfeld mit der neuen ICS-Datei
