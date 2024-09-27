@@ -71,7 +71,7 @@ function mergeICSFiles() {
 function mergeMultipleICS(filesData) {
     let result = "";
     let veventEntries = [];
-    let summaries = [];
+    let summaries = new Set(); // Verwende ein Set für eindeutige SUMMARY-Einträge
 
     // Verarbeite jede Datei, um die VEVENT-Einträge und die SUMMARYs zu extrahieren
     filesData.forEach(data => {
@@ -86,9 +86,9 @@ function mergeMultipleICS(filesData) {
             if (insideEvent) {
                 veventEntries.push(line);
 
-                // Finde den SUMMARY-Eintrag und speichere ihn
+                // Finde den SUMMARY-Eintrag und speichere ihn in das Set
                 if (line.startsWith("SUMMARY:")) {
-                    summaries.push(line.replace("SUMMARY:", "").trim());
+                    summaries.add(line.replace("SUMMARY:", "").trim());
                 }
             }
 
@@ -107,7 +107,7 @@ function mergeMultipleICS(filesData) {
     // Kalenderende hinzufügen (END:VCALENDAR)
     result += "END:VCALENDAR\n";
 
-    return { mergedData: result, summaries };
+    return { mergedData: result, summaries: Array.from(summaries) }; // Konvertiere Set zurück in Array
 }
 
 function displaySummaries(summaries) {
