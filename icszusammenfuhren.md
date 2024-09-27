@@ -73,13 +73,14 @@ function mergeMultipleICS(filesData) {
     let result = "";
     let veventEntries = [];
     let summaries = new Set(); // Verwende ein Set für eindeutige SUMMARY-Einträge
+    let summaryMap = {}; // Um zu wissen, welche Zeilen bearbeitet werden sollen
 
     // Verarbeite jede Datei, um die VEVENT-Einträge und die SUMMARYs zu extrahieren
     filesData.forEach(data => {
         const lines = data.split('\n');
         let insideEvent = false;
 
-        lines.forEach(line => {
+        lines.forEach((line, lineIndex) => {
             if (line.trim() === "BEGIN:VEVENT") {
                 insideEvent = true;
             }
@@ -87,10 +88,16 @@ function mergeMultipleICS(filesData) {
             if (insideEvent) {
                 veventEntries.push(line);
 
-                // Finde den SUMMARY-Eintrag, bereinige ihn und speichere ihn im Set
+                // Finde den SUMMARY-Eintrag, bereinige ihn und speichere ihn im Set und der Map
                 if (line.startsWith("SUMMARY:")) {
                     const cleanedSummary = cleanSummary(line.replace("SUMMARY:", "").trim());
                     summaries.add(cleanedSummary);
+
+                    // Mappe den originalen SUMMARY-Eintrag zu seiner Position in den VEVENT-Einträgen
+                    if (!summaryMap[cleanedSummary]) {
+                        summaryMap[cleanedSummary] = [];
+                    }
+                    summaryMap[cleanedSummary].push(lineIndex); // Speichere die Position
                 }
             }
 
@@ -109,7 +116,7 @@ function mergeMultipleICS(filesData) {
     // Kalenderende hinzufügen (END:VCALENDAR)
     result += "END:VCALENDAR\n";
 
-    return { mergedData: result, summaries: Array.from(summaries) }; // Konvertiere Set zurück in Array
+    return { mergedData: result, summaries: Array.from(summaries), summaryMap }; // Rückgabe auch der Map
 }
 
 function cleanSummary(summary) {
@@ -133,11 +140,12 @@ function displaySummaries(summaries) {
         summaries.forEach((summary, index) => {
             const listItem = document.createElement("li");
             
-            // Eingabefeld für den Bearbeitung der SUMMARY-Einträge
+            // Eingabefeld für die Bearbeitung der SUMMARY-Einträge
             const inputField = document.createElement("input");
             inputField.type = "text";
             inputField.value = summary;
             inputField.id = `summary-input-${index}`;
+            inputField.dataset.originalSummary = summary; // Speichere das Original
             listItem.appendChild(inputField);
             summaryList.appendChild(listItem);
 
@@ -167,25 +175,31 @@ function updateSummaries() {
 
     // Sammle die aktualisierten Einträge aus den Eingabefeldern
     document.querySelectorAll("[id^=summary-input-]").forEach(input => {
-        updatedSummaries.push(input.value.trim());
+        const originalSummary = input.dataset.originalSummary; // Hol das Original
+        const newSummary = input.value.trim(); // Das neue vom Benutzer eingegebene
+        updatedSummaries.push({ original: originalSummary, updated: newSummary });
     });
 
     // Ersetze die zusammengeführte ICS-Datei mit den aktualisierten `SUMMARY`-Einträgen
     let updatedICS = document.getElementById('output').value;
+    const icsLines = updatedICS.split('\n');
 
-    // Nur der jeweilige Eintrag wird geändert, basierend auf der Position
-    updatedSummaries.forEach((newSummary, index) => {
-        const regex = new RegExp(`SUMMARY:.*?(?=\\n)`, 'g'); // Findet den nächsten `SUMMARY`-Eintrag
-        updatedICS = updatedICS.replace(regex, (match, position) => {
-            return `SUMMARY:${newSummary}`;
+    // Gehe durch die aktualisierten Einträge
+    updatedSummaries.forEach(({ original, updated }) => {
+        // Finde die Positionen, an denen das Original steht
+        const positions = summaryMap[original];
+
+        // Gehe durch jede Position und ersetze den jeweiligen Eintrag
+        positions.forEach(position => {
+            icsLines[position] = `SUMMARY:${updated}`;
         });
     });
 
     // Aktualisiere das Textfeld mit der neuen ICS-Datei
-    document.getElementById('output').value = updatedICS;
+    document.getElementById('output').value = icsLines.join('\n');
 
     // Prüfe nach der Änderung erneut auf Umlaute
-    let umlautWarning = updatedSummaries.some(summary => /[äöüß]/i.test(summary));
+    let umlautWarning = updatedSummaries.some(summary => /[äöüß]/i.test(summary.updated));
 
     // Aktualisiere die Warnung
     updateUmlautWarning(umlautWarning);
