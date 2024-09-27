@@ -72,7 +72,7 @@ function mergeICSFiles() {
 function mergeMultipleICS(filesData) {
     let result = "";
     let veventEntries = [];
-    let summaries = []; // Verwende ein Array für die Reihenfolge der SUMMARY-Einträge
+    let summaries = new Set(); // Verwende ein Set für eindeutige SUMMARY-Einträge
 
     // Verarbeite jede Datei, um die VEVENT-Einträge und die SUMMARYs zu extrahieren
     filesData.forEach(data => {
@@ -87,10 +87,10 @@ function mergeMultipleICS(filesData) {
             if (insideEvent) {
                 veventEntries.push(line);
 
-                // Finde den SUMMARY-Eintrag, bereinige ihn und füge ihn der Liste hinzu
+                // Finde den SUMMARY-Eintrag, bereinige ihn und speichere ihn im Set
                 if (line.startsWith("SUMMARY:")) {
                     const cleanedSummary = cleanSummary(line.replace("SUMMARY:", "").trim());
-                    summaries.push(cleanedSummary);
+                    summaries.add(cleanedSummary);
                 }
             }
 
@@ -109,7 +109,7 @@ function mergeMultipleICS(filesData) {
     // Kalenderende hinzufügen (END:VCALENDAR)
     result += "END:VCALENDAR\n";
 
-    return { mergedData: result, summaries }; // Rückgabe als Array, um Reihenfolge zu behalten
+    return { mergedData: result, summaries: Array.from(summaries) }; // Konvertiere Set zurück in Array
 }
 
 function cleanSummary(summary) {
@@ -133,7 +133,7 @@ function displaySummaries(summaries) {
         summaries.forEach((summary, index) => {
             const listItem = document.createElement("li");
             
-            // Eingabefeld für die Bearbeitung der SUMMARY-Einträge
+            // Eingabefeld für den Bearbeitung der SUMMARY-Einträge
             const inputField = document.createElement("input");
             inputField.type = "text";
             inputField.value = summary;
@@ -173,10 +173,12 @@ function updateSummaries() {
     // Ersetze die zusammengeführte ICS-Datei mit den aktualisierten `SUMMARY`-Einträgen
     let updatedICS = document.getElementById('output').value;
 
-    // Ersetze nur den jeweiligen `SUMMARY`-Eintrag anhand der Position im Text
+    // Nur der jeweilige Eintrag wird geändert, basierend auf der Position
     updatedSummaries.forEach((newSummary, index) => {
-        const regex = new RegExp(`(SUMMARY:)[^\\n]*`); // Nur den nächsten `SUMMARY:` finden
-        updatedICS = updatedICS.replace(regex, `SUMMARY:${newSummary}`);
+        const regex = new RegExp(`SUMMARY:.*?(?=\\n)`, 'g'); // Findet den nächsten `SUMMARY`-Eintrag
+        updatedICS = updatedICS.replace(regex, (match, position) => {
+            return `SUMMARY:${newSummary}`;
+        });
     });
 
     // Aktualisiere das Textfeld mit der neuen ICS-Datei
