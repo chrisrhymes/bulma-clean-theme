@@ -222,7 +222,7 @@ function mergeMultipleICS(filesData) {
 
 function cleanSummary(summary) {
     // Regulärer Ausdruck, um Ziffern, Daten, Sonderzeichen oder Leerzeichen am Ende des Summary zu entfernen
-    return summary.replace(/\s[\d\.\-\/:]+$/, ''); // Entfernt Ziffern, Daten und Sonderzeichen am Ende
+    return summary.replace(/\s[\d\.\-\/:]+(?:\s[\d\.\-\/:]+)*$/, '').trim();
 }
 
 function displaySummaries(summaries) {
