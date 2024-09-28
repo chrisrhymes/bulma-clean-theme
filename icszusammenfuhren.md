@@ -46,6 +46,8 @@ layout: page
 <div id="summaryList"></div> <!-- Container für die Summary-Einträge -->
 
 <script>
+let isFromURL = false; // Variable zum Überprüfen, ob die Datei von einer URL stammt
+
 function fetchICSFromURL() {
     const url = document.getElementById('ics-url').value;
 
@@ -53,6 +55,8 @@ function fetchICSFromURL() {
         alert("Bitte eine gültige URL eingeben.");
         return;
     }
+
+    isFromURL = true; // Markiere, dass die Datei von einer URL kommt
 
     fetch(url)
         .then(response => {
@@ -71,6 +75,7 @@ function fetchICSFromURL() {
 }
 
 function mergeICSFiles() {
+    isFromURL = false; // Setze auf false, wenn Dateien hochgeladen werden
     const files = [
         document.getElementById('file1').files[0],
         document.getElementById('file2').files[0],
@@ -189,8 +194,17 @@ function displaySummaries(summaries) {
 
     if (summaries.length > 0) {
         const summaryTitle = document.createElement("h2");
-        summaryTitle.textContent = "Deine ICS enthält folgende Einträge (bearbeitbar):";
+        summaryTitle.textContent = "Deine ICS enthält folgende Einträge:";
         summaryContainer.appendChild(summaryTitle);
+
+        // Beschreibung je nach Quelle (URL oder Datei)
+        const description = document.createElement("p");
+        if (isFromURL) {
+            description.textContent = "Das Bearbeiten der Einträge ist bei einer ICS von einer URL leider nicht möglich.";
+        } else {
+            description.textContent = "Du kannst die Bezeichnungen individuell ändern, indem du diese in die jeweiligen Textfelder einträgst und auf 'Änderungen übernehmen' klickst.";
+        }
+        summaryContainer.appendChild(description);
 
         const summaryList = document.createElement("ol");
         summaries.forEach((summary, index) => {
@@ -209,15 +223,22 @@ function displaySummaries(summaries) {
             if (/[äöüß]/i.test(summary)) {
                 umlautWarning = true;
             }
+
+            // Eingabefelder deaktivieren, wenn die Datei von einer URL stammt
+            if (isFromURL) {
+                inputField.disabled = true;
+            }
         });
         summaryContainer.appendChild(summaryList);
 
-        // Füge einen Button hinzu, um die Änderungen auf die zusammengeführte Datei anzuwenden
-        const updateButton = document.createElement("button");
-        updateButton.textContent = "Änderungen übernehmen";
-        updateButton.className = "button is-primary";
-        updateButton.onclick = updateSummaries;
-        summaryContainer.appendChild(updateButton);
+        // Füge einen Button hinzu, um die Änderungen auf die zusammengeführte Datei anzuwenden (nur bei lokalen Dateien)
+        if (!isFromURL) {
+            const updateButton = document.createElement("button");
+            updateButton.textContent = "Änderungen übernehmen";
+            updateButton.className = "button is-primary";
+            updateButton.onclick = updateSummaries;
+            summaryContainer.appendChild(updateButton);
+        }
 
         // Zeige Warnung, falls Umlaute gefunden wurden
         updateUmlautWarning(umlautWarning);
