@@ -301,7 +301,7 @@ function updateSummaries() {
 
     // Suche und ersetze die Einträge
     updatedSummaries.forEach(({ original, updated }) => {
-        const regex = new RegExp(`SUMMARY:${original}`, 'g');
+        const regex = new RegExp(`SUMMARY:${original}(\\s[\\d\\.\\-\\/]+(?:\\s[\\d\\.\\-\\/]+)*)?`, 'g');
         updatedICS = updatedICS.replace(regex, `SUMMARY:${updated}`);
     });
 
