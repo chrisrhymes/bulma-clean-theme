@@ -221,8 +221,8 @@ function mergeMultipleICS(filesData) {
 }
 
 function cleanSummary(summary) {
-    // Regulärer Ausdruck, um Ziffern, Daten oder Sonderzeichen am Ende des Summary zu entfernen
-    return summary.replace(/\s[\d\.\-\/]+$/, ''); // Entfernt Ziffern und Sonderzeichen am Ende
+    // Regulärer Ausdruck, um Ziffern, Daten, Sonderzeichen oder Leerzeichen am Ende des Summary zu entfernen
+    return summary.replace(/\s[\d\.\-\/:]+$/, ''); // Entfernt Ziffern, Daten und Sonderzeichen am Ende
 }
 
 function displaySummaries(summaries) {
