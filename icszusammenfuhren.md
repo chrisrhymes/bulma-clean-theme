@@ -9,31 +9,38 @@ layout: page
 <p>Lade eine oder mehrere ICS-Dateien hoch oder gib die URL einer ICS-Datei an, um sie zu verarbeiten:</p>
 
 <!-- URL-Eingabe -->
-<div>
+<div class="ics-input-container">
     <label for="ics-url">ICS URL (optional):</label>
     <input type="text" id="ics-url" placeholder="Gib die URL einer ICS-Datei ein">
     <button class="button is-primary" onclick="fetchICSFromURL()">Kalender von URL laden</button>
 </div>
 
 <!-- Datei-Upload -->
-<form>
-    <label for="file1">ICS Datei 1 (erforderlich, wenn keine URL):</label>
-    <input type="file" id="file1" accept=".ics"><br><br>
-
-    <label for="file2">ICS Datei 2 (optional):</label>
-    <input type="file" id="file2" accept=".ics"><br><br>
-
-    <label for="file3">ICS Datei 3 (optional):</label>
-    <input type="file" id="file3" accept=".ics"><br><br>
-
-    <label for="file4">ICS Datei 4 (optional):</label>
-    <input type="file" id="file4" accept=".ics"><br><br>
-
-    <label for="file5">ICS Datei 5 (optional):</label>
-    <input type="file" id="file5" accept=".ics"><br><br>
-
-    <label for="file6">ICS Datei 6 (optional):</label>
-    <input type="file" id="file6" accept=".ics"><br><br>
+<form class="ics-input-container">
+    <div class="file-input-group">
+        <label for="file1">ICS Datei 1 (erforderlich, wenn keine URL):</label>
+        <input type="file" id="file1" accept=".ics">
+    </div>
+    <div class="file-input-group">
+        <label for="file2">ICS Datei 2 (optional):</label>
+        <input type="file" id="file2" accept=".ics">
+    </div>
+    <div class="file-input-group">
+        <label for="file3">ICS Datei 3 (optional):</label>
+        <input type="file" id="file3" accept=".ics">
+    </div>
+    <div class="file-input-group">
+        <label for="file4">ICS Datei 4 (optional):</label>
+        <input type="file" id="file4" accept=".ics">
+    </div>
+    <div class="file-input-group">
+        <label for="file5">ICS Datei 5 (optional):</label>
+        <input type="file" id="file5" accept=".ics">
+    </div>
+    <div class="file-input-group">
+        <label for="file6">ICS Datei 6 (optional):</label>
+        <input type="file" id="file6" accept=".ics">
+    </div>
 
     <button type="button" class="button is-primary" onclick="mergeICSFiles()">ICS Datei(en) verarbeiten</button>
 </form>
@@ -44,6 +51,38 @@ layout: page
 <button class="button is-info" onclick="copyToClipboard()">In Zwischenablage kopieren</button>
 
 <div id="summaryList"></div> <!-- Container für die Summary-Einträge -->
+
+<style>
+    .ics-input-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .file-input-group {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .file-input-group label {
+        min-width: 250px;
+    }
+
+    .file-input-group input[type="file"] {
+        flex-grow: 1;
+    }
+
+    .ics-input-container button {
+        align-self: flex-start;
+    }
+
+    textarea {
+        width: 100%;
+        max-width: 600px;
+    }
+</style>
 
 <script>
 let isFromURL = false; // Variable zum Überprüfen, ob die Datei von einer URL stammt
