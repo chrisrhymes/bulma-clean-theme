@@ -15,16 +15,21 @@ Hier die notwendigen Schritte und Codes zum Nachmachen:
 
 ![Digitale Uhr](/img/blog-post-eigene-schriftart-digital-uhr.png)
 
-1. Lade dir eine Schrift deiner Wahl aus dem Internet z.B von https://www.1001fonts.com/technology-font.html
+1. Lade dir eine Schrift deiner Wahl aus dem Internet z.B von [https://www.1001fonts.com/technology-font.html](https://www.1001fonts.com/technology-font.html)
+
 
 2. Dann musst du die heruntergeladene "ttf-Datei" in ein "woff2" konvertieren. Nutze dazu diesen [Konverter](https://www.fontconverter.io/de)
 
+
 3. Entpacke die erstellte Datei und speichere das `<deine-Schrift>.woff2` in deinen `www-Ordner` in Home Assistant. In meinem Fall ist es `Technology.woff2`
+
 
 4. Nun öffne in Home Assistant deinen File-Editor oder Studio Code Server und erstelle im `www-Ordner` ein neues File mit Namen
 `font.css`
 und füge folgende Codezeilen ein:
 
+
+### CSS
 ```css
 /* Ersetze "Technology" mit dem Namen deiner Schriftart */
 
@@ -34,11 +39,11 @@ und füge folgende Codezeilen ein:
 }
 ```
 
-5. Füge ein weiteres File in deinen "www-Order" hinzu und gib ihm den Namen 
-`loadfonts.js`
+5. Füge ein weiteres File in deinen "www-Order" hinzu und gib ihm den Namen `loadfonts.js`.
 In dieses File füge folgenden Code ein:
 
-```Javascript
+### Javascript
+```js
 function loadcss() {
     let css = '/local/fonts.css?v=0.005'
 
