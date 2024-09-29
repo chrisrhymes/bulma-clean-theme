@@ -230,6 +230,7 @@ function displaySummaries(summaries) {
     summaryContainer.innerHTML = ""; // Vorherige Inhalte löschen
 
     let umlautWarning = false;
+    let numberWarning = false; // Variable für Ziffern-Warnung
 
     if (summaries.length > 0) {
         const summaryTitle = document.createElement("h2");
@@ -263,6 +264,11 @@ function displaySummaries(summaries) {
                 umlautWarning = true;
             }
 
+            // Prüfe, ob der Eintrag Ziffern enthält
+            if (/\d/.test(summary)) {
+                numberWarning = true;
+            }
+
             // Eingabefelder deaktivieren, wenn die Datei von einer URL stammt
             if (isFromURL) {
                 inputField.disabled = true;
@@ -281,6 +287,9 @@ function displaySummaries(summaries) {
 
         // Zeige Warnung, falls Umlaute gefunden wurden
         updateUmlautWarning(umlautWarning);
+
+        // Zeige Warnung, falls Ziffern oder Zeichen gefunden wurden
+        updateNumberWarning(numberWarning);
     } else {
         summaryContainer.textContent = "Keine Einträge in der ICS-Datei gefunden.";
     }
@@ -311,8 +320,14 @@ function updateSummaries() {
     // Prüfe nach der Änderung erneut auf Umlaute
     let umlautWarning = updatedSummaries.some(summary => /[äöüß]/i.test(summary.updated));
 
-    // Aktualisiere die Warnung
+    // Aktualisiere die Warnung für Umlaute
     updateUmlautWarning(umlautWarning);
+
+    // Prüfe nach der Änderung erneut auf Ziffern oder Zeichen
+    let numberWarning = updatedSummaries.some(summary => /\d/.test(summary.updated));
+
+    // Aktualisiere die Warnung für Ziffern oder Zeichen
+    updateNumberWarning(numberWarning);
 }
 
 function updateUmlautWarning(umlautWarning) {
@@ -324,6 +339,24 @@ function updateUmlautWarning(umlautWarning) {
             warningMessage.style.color = "red";
             warningMessage.id = "umlautWarning";
             warningMessage.textContent = "Warnung: Einige Einträge enthalten Umlaute (ä, ö, ü, ß). Diese können bei der Weiterverarbeitung zu Problemen führen.";
+            document.getElementById("summaryList").appendChild(warningMessage);
+        }
+    } else {
+        if (warningElement) {
+            warningElement.remove();
+        }
+    }
+}
+
+function updateNumberWarning(numberWarning) {
+    const warningElement = document.getElementById("numberWarning");
+
+    if (numberWarning) {
+        if (!warningElement) {
+            const warningMessage = document.createElement("p");
+            warningMessage.style.color = "orange";
+            warningMessage.id = "numberWarning";
+            warningMessage.textContent = "Warnung: Einige Einträge enthalten Ziffern oder Zeichen, die unerwünscht sein könnten.";
             document.getElementById("summaryList").appendChild(warningMessage);
         }
     } else {
