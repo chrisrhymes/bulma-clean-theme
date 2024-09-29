@@ -1,8 +1,7 @@
 ---
-title: Bulma Clean Theme
-subtitle: This is the demo site for Bulma Clean Theme
+title: Smart Home bastler
+subtitle: Schritt für Schritt ins smarte Zuhause!
 layout: page
-callouts: home_callouts
 show_sidebar: true
 ---
 
