@@ -4,9 +4,8 @@ title:  "Eigene Schriftart in Home Assistant integrieren"
 date:   2023-05-03 06:58:00
 categories: Dashboard
 description: "Einen Weg, eigene Schriftarten in Home Assistant einzufügen, zeige ich hier."
-image: 'https://www.csrhymes.com//img/static-site-generator.jpg'
+image: /img/blog-post-eigene-schriftarten.png
 published: true
-canonical_url: https://www.csrhymes.com/development/2018/05/28/why-use-a-static-site-generator.html
 ---
 
 There are many ways to make a website and many different CMS platforms you can use, such as WordPress and Joomla, as well as site builder tools that offer you drag and drop interfaces, but what about static site generators? 
