@@ -8,6 +8,55 @@ image: /img/blog-post-eigene-schriftarten.png
 published: true
 ---
 
+Ich wollte unbedingt für meine Dashboards eine Schriftart zur Auswahl haben, welche meine Uhr in digitaler Schrift anzeigt.
+
+Da ich als "font-family" keine passende Schrift gefunden habe, fügte ich mir eine im Netz gefundene in Home Assistant hinzu.
+Hier die notwendigen Schritte und Codes zum Nachmachen:
+
+![Digitale Uhr](/img/blog-post-eigene-schriftart-digital-uhr.png)
+
+1. Lade dir eine Schrift deiner Wahl aus dem Internet z.B von https://www.1001fonts.com/technology-font.html
+
+2. Dann musst du die heruntergeladene "ttf-Datei" in ein "woff2" konvertieren. Nutze dazu diesen [Konverter](https://www.fontconverter.io/de)
+
+3. Entpacke die erstellte Datei und speichere das `<deine-Schrift>.woff2` in deinen `www-Ordner` in Home Assistant. In meinem Fall ist es `Technology.woff2`
+
+4. Nun öffne in Home Assistant deinen File-Editor oder Studio Code Server und erstelle im `www-Ordner` ein neues File mit Namen
+`font.css`
+und füge folgende Codezeilen ein:
+
+```css
+/* Ersetze "Technology" mit dem Namen deiner Schriftart */
+
+@font-face {
+  font-family: "DJBGetDigital";
+  src: url(/local/Technology.woff2) format('woff2');
+}
+```
+
+5. Füge ein weiteres File in deinen "www-Order" hinzu und gib ihm den Namen 
+`loadfonts.js`
+In dieses File füge folgenden Code ein:
+
+```Javascript
+function loadcss() {
+    let css = '/local/fonts.css?v=0.005'
+
+    let link = document.createElement('link');
+    let head = document.getElementsByTagName('head')[0];
+    let tmp;
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+
+    tmp = link.cloneNode(true);
+    tmp.href = css;
+    head.appendChild(tmp);
+    console.info('%c Font Style sheet loaded', 'color: white; background: #000; font-weight: 700;');
+}
+loadcss();
+```
+
+
 There are many ways to make a website and many different CMS platforms you can use, such as WordPress and Joomla, as well as site builder tools that offer you drag and drop interfaces, but what about static site generators? 
 
 A static site is pretty much what it sounds like, a set of pre generated html pages. Other platforms take what you enter into the CMS and process the information stored in the database, alongside a template or many template partials and dynamically construct the page before serving the html to you in your browser.  
