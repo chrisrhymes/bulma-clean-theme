@@ -150,7 +150,7 @@ function mergeICSFiles() {
             // Wenn mehrere Dateien hochgeladen wurden, führe sie zusammen
             const { mergedData, summaries } = mergeMultipleICS(results);
             document.getElementById('output').value = mergedData;
-            displaySummaries(summaries);
+            displaySummaries(summaries, results.join('\n')); // Übergib die unbereinigten Daten zur Ziffernprüfung
         }
     });
 }
@@ -174,7 +174,7 @@ function processSingleICSFile(data) {
     document.getElementById('output').value = lines.join("\n");
 
     // Zeige die zusammengefassten Einträge an
-    displaySummaries(Array.from(summaries));
+    displaySummaries(Array.from(summaries), data); // Übergib die unbereinigten Daten zur Ziffernprüfung
 }
 
 function mergeMultipleICS(filesData) {
@@ -225,7 +225,7 @@ function cleanSummary(summary) {
     return summary.replace(/\s[\d\.\-\/:]+(?:\s[\d\.\-\/:]+)*$/, '').trim();
 }
 
-function displaySummaries(summaries) {
+function displaySummaries(summaries, rawData) {
     const summaryContainer = document.getElementById('summaryList');
     summaryContainer.innerHTML = ""; // Vorherige Inhalte löschen
 
@@ -264,11 +264,6 @@ function displaySummaries(summaries) {
                 umlautWarning = true;
             }
 
-            // Prüfe, ob der Eintrag Ziffern enthält
-            if (/\d/.test(summary)) {
-                numberWarning = true;
-            }
-
             // Eingabefelder deaktivieren, wenn die Datei von einer URL stammt
             if (isFromURL) {
                 inputField.disabled = true;
@@ -288,10 +283,30 @@ function displaySummaries(summaries) {
         // Zeige Warnung, falls Umlaute gefunden wurden
         updateUmlautWarning(umlautWarning);
 
-        // Zeige Warnung, falls Ziffern oder Zeichen gefunden wurden
-        updateNumberWarning(numberWarning);
+        // Zeige Warnung, falls Ziffern oder Zeichen gefunden wurden (prüfe auf den unbereinigten `SUMMARY`-Eintrag)
+        updateNumberWarning(rawData);
     } else {
         summaryContainer.textContent = "Keine Einträge in der ICS-Datei gefunden.";
+    }
+}
+
+function updateNumberWarning(rawData) {
+    const warningElement = document.getElementById("numberWarning");
+
+    const hasNumbers = /SUMMARY:.*\d/.test(rawData); // Prüfe auf Ziffern in den rohen Daten
+
+    if (hasNumbers) {
+        if (!warningElement) {
+            const warningMessage = document.createElement("p");
+            warningMessage.style.color = "orange";
+            warningMessage.id = "numberWarning";
+            warningMessage.textContent = "Warnung: Einige Einträge enthalten Ziffern oder Zeichen, die unerwünscht sein könnten.";
+            document.getElementById("summaryList").appendChild(warningMessage);
+        }
+    } else {
+        if (warningElement) {
+            warningElement.remove();
+        }
     }
 }
 
@@ -324,10 +339,8 @@ function updateSummaries() {
     updateUmlautWarning(umlautWarning);
 
     // Prüfe nach der Änderung erneut auf Ziffern oder Zeichen
-    let numberWarning = updatedSummaries.some(summary => /\d/.test(summary.updated));
-
-    // Aktualisiere die Warnung für Ziffern oder Zeichen
-    updateNumberWarning(numberWarning);
+    let rawData = document.getElementById('output').value;
+    updateNumberWarning(rawData);
 }
 
 function updateUmlautWarning(umlautWarning) {
@@ -348,24 +361,6 @@ function updateUmlautWarning(umlautWarning) {
     }
 }
 
-function updateNumberWarning(numberWarning) {
-    const warningElement = document.getElementById("numberWarning");
-
-    if (numberWarning) {
-        if (!warningElement) {
-            const warningMessage = document.createElement("p");
-            warningMessage.style.color = "orange";
-            warningMessage.id = "numberWarning";
-            warningMessage.textContent = "Warnung: Einige Einträge enthalten Ziffern oder Zeichen, die unerwünscht sein könnten.";
-            document.getElementById("summaryList").appendChild(warningMessage);
-        }
-    } else {
-        if (warningElement) {
-            warningElement.remove();
-        }
-    }
-}
-
 function copyToClipboard() {
     var copyText = document.getElementById('output');
     copyText.select();
@@ -373,3 +368,4 @@ function copyToClipboard() {
     alert('ICS-Datei in die Zwischenablage kopiert!');
 }
 </script>
+
