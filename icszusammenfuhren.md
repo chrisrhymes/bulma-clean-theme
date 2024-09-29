@@ -82,6 +82,13 @@ layout: page
         width: 100%;
         max-width: 600px;
     }
+
+    #summaryList input[type="text"] {
+        width: 100%;
+        max-width: 500px;
+        padding: 5px;
+        box-sizing: border-box;
+    }
 </style>
 
 <script>
