@@ -10,4 +10,5 @@ group :jekyll_plugins do
     gem "jekyll-seo-tag"
     gem 'jekyll-redirect-from'
 end
+gem 'sass-embedded', '~> 1.83'
 
