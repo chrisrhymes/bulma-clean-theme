@@ -1,3 +1,8 @@
+# 1.2.0
+* Update to Bulma v1.0.3
+* Update to rake v13
+* Sass to use @use instead of @import statements
+
 # 1.1.0
 * Update FontAwesome to v6.6
 * Add social links to the footer

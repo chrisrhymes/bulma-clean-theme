@@ -1,6 +1,8 @@
+@use "../node_modules/bulma/sass/utilities/css-variables" as cv;
+
 .showcase {
     margin-bottom: 3rem;
-    box-shadow: $box-shadow;
+    box-shadow: cv.getVar("box-shadow");
 
     &-content {
         padding: 1.5rem;
