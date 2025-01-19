@@ -2,8 +2,8 @@
 
 @use 'sass:math';
 
-@use '../node_modules/bulma/sass/utilities/initial-variables' as iv;
-@use '../node_modules/bulma/sass/utilities/derived-variables' as dv;
+@import '../node_modules/bulma/sass/utilities/initial-variables';
+@import '../node_modules/bulma/sass/utilities/derived-variables';
 
 $block-list-separator: 0.25rem !default;
 $block-list-highlight-width: 5px !default;
@@ -19,7 +19,7 @@ $block-list-highlight-width: 5px !default;
   list-style: none;
 
   li {
-    padding: math.div(iv.$gap, 2);
+    padding: math.div($gap, 2);
     background: var(--bulma-body-background-color);
     margin-bottom: $block-list-separator;
   }
@@ -41,23 +41,23 @@ $block-list-highlight-width: 5px !default;
 
   li.is-small,
   &.is-small > li {
-    font-size: iv.$size-7;
-    padding: math.div(iv.$gap, 3);
+    font-size: $size-7;
+    padding: math.div($gap, 3);
   }
 
   li.is-normal,
   &.is-normal > li {
-    font-size: iv.$size-6;
+    font-size: $size-6;
   }
 
   li.is-large,
   &.is-large > li {
-    font-size: iv.$size-5;
+    font-size: $size-5;
   }
 
   li.has-radius,
   &.has-radius > li {
-    border-radius: iv.$radius;
+    border-radius: $radius;
   }
 
   li.is-highlighted,
@@ -98,7 +98,7 @@ $block-list-highlight-width: 5px !default;
     }
   }
 
-  @each $name, $pair in dv.$colors {
+  @each $name, $pair in $colors {
     li.is-#{$name},
     &.is-#{$name} > li {
       background: var(--bulma-#{$name});

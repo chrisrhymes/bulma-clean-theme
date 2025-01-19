@@ -1,14 +1,8 @@
-@use "../node_modules/bulma/sass/utilities/mixins";
-@use "../node_modules/bulma/sass/utilities/css-variables" as cv;
-@use "../node_modules/bulma/sass/utilities/derived-variables" as dv;
-
-$hero-darken: dv.$dark !default;
-
 div.highlight {
     margin-bottom: 1rem;
 }
 
-@include mixins.desktop {
+@include desktop {
     .navbar-item {
         &.is-hoverable:hover {
             .navbar-dropdown {
@@ -19,7 +13,7 @@ div.highlight {
 }
 
 .contents {
-    box-shadow: cv.getVar("box-shadow");
+    box-shadow: $box-shadow;
     padding: 1.5rem;
     margin-bottom: 3rem;
 }
