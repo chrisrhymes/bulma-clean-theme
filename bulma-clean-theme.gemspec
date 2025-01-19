@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "bulma-clean-theme"
-  spec.version       = "1.1.0"
+  spec.version       = "1.2.0"
   spec.authors       = ["chrisrhymes"]
   spec.email         = ["csrhymes@gmail.com"]
 
@@ -20,5 +20,5 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "kramdown-parser-gfm", "~> 1.1"
 
   spec.add_development_dependency "bundler", "~> 2.0"
-  spec.add_development_dependency "rake", "~> 12.0"
+  spec.add_development_dependency "rake", "~> 13.0"
 end

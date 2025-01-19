@@ -52,7 +52,7 @@ Feel free to raise an issue or submit a pull request.
 
 ## CSS only
 
-Bulma is a **CSS** framework. As such, the sole output is a single CSS file: [bulma.css](https://github.com/jgthms/bulma/blob/master/css/bulma.css)
+Bulma is a **CSS** framework. As such, the sole output is a single CSS file: [bulma.css](https://github.com/jgthms/bulma/blob/main/css/bulma.css)
 
 You can either use that file, "out of the box", or download the Sass source files to customize the [variables](https://bulma.io/documentation/customize/#docsNav).
 
@@ -131,14 +131,14 @@ Browse the [online documentation here.](https://bulma.io/documentation/start/ove
 | [@angular-bulma](https://quinnjr.github.io/angular-bulma)                            | [Angular](https://angular.io/) directives and components to use in your Bulma projects                           |
 | [Bulma CSS Class Completion](https://github.com/eliutdev/bulma-css-class-completion) | CSS class name completion for the HTML class attribute based on Bulma CSS classes.                               |
 | [Crispy-Bulma](https://github.com/ckrybus/crispy-bulma)                              | Bulma template pack for django-crispy-forms                                                                      |
-| [CASE](https://case.app)                                                             | CASE is Lightweight Backend-as-a-Service with essential features: DB, Admin panel, API, JS SDK         |
+| [Manifest](https://manifest.build)                                                   | Manifest is a lightweight Backend-as-a-Service with essential features: DB, Admin panel, API, JS SDK             |
 | [Reactive Bulma](https://github.com/NicolasOmar/reactive-bulma)                                                             | A component library based on React, Bulma, Typescript and Rollup         |
 
-<p>Browser testing via <a href="https://www.lambdatest.com/" target="_blank"><img src="https://www.lambdatest.com/resources/images/logo-white.svg" style="vertical-align: middle;margin-left:5px" width="147" height="26" /></a></p>
+<p>Browser testing via<br /><a href="https://www.lambdatest.com/" target="_blank"><img src="https://bulma.io/assets/images/amis/lambdatest-logo.png" width="168" height="40" /></a></p>
 
 ## Copyright and license ![Github](https://img.shields.io/github/license/jgthms/bulma?logo=Github)
 
-Code copyright 2023 Jeremy Thomas. Code released under [the MIT license](https://github.com/jgthms/bulma/blob/master/LICENSE).
+Code copyright 2023 Jeremy Thomas. Code released under [the MIT license](https://github.com/jgthms/bulma/blob/main/LICENSE).
 
 [npm-link]: https://www.npmjs.com/package/bulma
 [awesome-link]: https://github.com/awesome-css-group/awesome-css
