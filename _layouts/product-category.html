@@ -8,14 +8,14 @@ show_sidebar: false
     </div>
 
     {% if page.collection %}
-        {% assign sorted_products = site.[page.collection] | sort: page.sort %}
+        {% assign sorted_products = site[page.collection] | sort: page.sort %}
     {% else %}
         {% assign sorted_products = site.products | sort: page.sort %}
     {% endif %}
 
     {% for product in sorted_products %}
         <div class="column is-4-desktop is-6-tablet">
-            <a href="{{ product.url | relative_url }}">
+            <a href="{{ product.url | relative_url }}" class="category-product">
                 <div class="card">
                     {% if product.image %}
                         <div class="card-image">

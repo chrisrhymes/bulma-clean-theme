@@ -18,6 +18,7 @@
 >
     {% include head.html %}
     <body>
+        {% include skip-to-content.html %}
         {% if site.cookie_policy %}
             {% include cookie-banner.html %}
         {% endif %}
@@ -39,13 +40,13 @@
                             {% include menubar.html %}
                         </div>
                     {% endif %}
-                    <div class="column {{ content_width }}">
+                    <main class="column {{ content_width }}" id="main-content">
                         {% include tabs.html %}
                         {% include showcase.html %}
                         {% include sponsors.html %}
                         {% include gallery.html %}
                         {{ content }}
-                    </div>
+                    </main>
                     {% if site.posts and page.show_sidebar %}
                         <div class="column is-4-desktop is-4-tablet">
                             {% include latest-posts.html %}

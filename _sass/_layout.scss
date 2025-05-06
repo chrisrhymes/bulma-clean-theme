@@ -38,3 +38,14 @@ div.highlight {
 
 // Alpine.js hide on initial load
 [x-cloak] { display: none !important; }
+
+.skip-link {
+    &:focus {
+        display: block !important;
+        width: 100% !important;
+        height: auto !important;
+        padding: 1rem !important;
+        position: relative !important;
+        text-decoration: underline;
+    }
+}

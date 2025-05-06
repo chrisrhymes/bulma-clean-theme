@@ -70,7 +70,7 @@ defaults:
     values:
       author: "C.S. Rhymes"
       layout: post
-      image: https://via.placeholder.com/1200x800
+      image: https://picsum.photos/id/16/800/600
       show_sidebar: true
 
 markdown: kramdown
@@ -82,7 +82,7 @@ collections:
   products: 
     output: true
     layout: product
-    image: https://via.placeholder.com/800x600
+    image: https://picsum.photos/id/16/800/600
     show_sidebar: false
 
 social:
