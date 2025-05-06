@@ -2,12 +2,12 @@
     &-product {
         display: block;
         &:hover {
-            outline: solid 2px $primary;
+            outline: solid 2px $link;
             border-radius: 0.75rem;
         }
         &:focus, 
         &:active {
-            outline: solid 2px $primary;
+            outline: solid 2px $link;
             border-radius: 0.75rem;
             box-shadow: $box-shadow;
         }

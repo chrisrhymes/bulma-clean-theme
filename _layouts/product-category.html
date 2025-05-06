@@ -8,7 +8,7 @@ show_sidebar: false
     </div>
 
     {% if page.collection %}
-        {% assign sorted_products = site.[page.collection] | sort: page.sort %}
+        {% assign sorted_products = site[page.collection] | sort: page.sort %}
     {% else %}
         {% assign sorted_products = site.products | sort: page.sort %}
     {% endif %}
