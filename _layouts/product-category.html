@@ -15,7 +15,7 @@ show_sidebar: false
 
     {% for product in sorted_products %}
         <div class="column is-4-desktop is-6-tablet">
-            <a href="{{ product.url | relative_url }}">
+            <a href="{{ product.url | relative_url }}" class="category-product">
                 <div class="card">
                     {% if product.image %}
                         <div class="card-image">

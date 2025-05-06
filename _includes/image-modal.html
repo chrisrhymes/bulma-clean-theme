@@ -7,11 +7,13 @@
     <div class="modal" x-bind:class="open ? 'is-active' : ''" x-cloak>
         <div class="modal-background" x-on:click="open = false"></div>
         <div class="modal-content">
-            {% if include.large_link %}
-                <img src="{{ include.large_link | absolute_url }}" alt="{{ include.alt }}">
-            {% else %}
-                <img src="{{ include.link | absolute_url }}" alt="{{ include.alt }}">
-            {% endif %}
+            <p class="image {{ include.ratio | default: is-16by9 }}">
+                {% if include.large_link %}
+                    <img src="{{ include.large_link | absolute_url }}" alt="{{ include.alt }}">
+                {% else %}
+                    <img src="{{ include.link | absolute_url }}" alt="{{ include.alt }}">
+                {% endif %}
+            </p>
         </div>
         <button class="modal-close is-large" aria-label="close" x-on:click="open = false"></button>
     </div>

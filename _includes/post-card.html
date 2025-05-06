@@ -20,7 +20,9 @@
             {% endif %}
         </div>
         <div class="has-text-centered">
-            <a href="{{ site.baseurl }}{{ post.url }}" class="button is-primary">Read more</a>
+            <a href="{{ site.baseurl }}{{ post.url }}" class="button is-primary"
+                >Read more <span class="is-sr-only"> about {{ post.title }}</span></a
+            >
         </div>
     </div>
     <footer class="card-footer">

@@ -1,3 +1,10 @@
+# 1.2.1
+* Update to Bulma v1.0.4
+* Add hover and focus states to products in the category page
+* Add post title to the read more links (visible to screen readers)
+* Add skip to content link
+* Slightly darken the default theme colour for better colour contrast
+
 # 1.2.0
 * Update to Bulma v1.0.3
 * Update to rake v13
