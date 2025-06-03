@@ -1,3 +1,6 @@
+# 1.3.0
+* Add links page layout and documentation
+
 # 1.2.1
 * Update to Bulma v1.0.4
 * Add hover and focus states to products in the category page
