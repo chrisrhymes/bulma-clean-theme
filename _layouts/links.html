@@ -1,0 +1,118 @@
+<!doctype html>
+<html
+    dir="{{ site.direction | default: 'ltr' }}"
+    lang="{{ site.lang | default: 'en' }}"
+    class="{% if site.fixed_navbar %} has-navbar-fixed-{{ site.fixed_navbar }} {% endif %} {% if site.force_theme %} theme-{{ site.force_theme }} {% endif %}"
+>
+    {% include head.html %}
+    <body>
+        {% include skip-to-content.html %}
+        {% if site.cookie_policy %}
+            {% include cookie-banner.html %}
+        {% endif %}
+
+        <div
+            {% if page.background_image %}
+                style="background: url('{{ page.background_image | relative_url }}') no-repeat center center; background-size: cover;"
+            {% else %}
+                style="background-color: var(--bulma-dark);"
+            {% endif %}
+        >
+            <div
+                class="container pb-6"
+            >
+                <section class="section">
+                    <div class="columns is-centered is-multiline">
+                        <div class="column is-two-thirds-tablet is-half-desktop">
+                            <div class="is-flex is-flex-direction-column is-justify-content-center is-align-items-center">
+                                <figure class="image is-128x128">
+                                    <img
+                                        class="is-rounded"
+                                        src="{{ page.avatar | relative_url }}"
+                                        alt="{{ page.avatar_alt }}"
+                                    >
+                                </figure>
+
+                                <h1 class="title has-text-white is-size-2">{{ page.title }}</h1>
+                                <p class="subtitle has-text-white">{{ page.subtitle }}</p>
+
+                                <div class="">
+                                    {% include follow.html %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="columns is-centered is-multiline">
+                        <div class="column is-two-thirds-tablet is-half-desktop">
+                            <main class="is-flex-grow-1" id="main-content">
+                                {% for section in page.link_sections %}
+                                    <h2 class="is-size-3 has-text-centered has-text-white has-text-weight-bold">
+                                        {{ section.title }}
+                                    </h2>
+                                    <ul class="mb-6">
+                                        {% for section_link in section.links %}
+                                            <li class="mb-4">
+                                                <a
+                                                    href="{{ section_link.link | relative_url}}"
+                                                    class="is-block category-product"
+                                                >
+                                                    {% if section_link.image_large %}
+                                                        <section
+                                                            class="hero is-medium"
+                                                            style="background: url('{{ section_link.image | relative_url }}') no-repeat center center; background-size: cover;"
+                                                        >
+                                                            <div class="hero-body">
+                                                                <div class="is-size-4 has-text-white content">
+                                                                    {{ section_link.name | markdownify }}
+                                                                </div>
+                                                            </div>
+                                                        </section>
+                                                    {% else %}
+                                                        <div class="card">
+                                                            <div class="card-content">
+                                                                <article class="media">
+                                                                    <figure class="media-left">
+                                                                        <span
+                                                                            class="image is-48x48"
+                                                                        >
+                                                                            <img
+                                                                                src="{{ section_link.image | relative_url }}"
+                                                                                alt="{{ section_link.image_alt }}"
+                                                                            >
+                                                                        </span>
+                                                                    </figure>
+                                                                    <div class="media-content">
+                                                                        <div class="content">
+                                                                            <p class="is-size-4">
+                                                                                <strong>{{ section_link.name }}</strong>
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </article>
+                                                            </div>
+                                                        </div>
+                                                    {% endif %}
+                                                </a>
+                                            </li>
+                                        {% endfor %}
+                                    </ul>
+                                {% endfor %}
+
+                                {% if content %}
+                                    <div class="card mt-6">
+                                        <div class="card-content">
+                                            <div class="content">
+                                                {{ content }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endif %}
+                            </main>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        {% include footer.html %}
+    </body>
+</html>

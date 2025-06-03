@@ -37,6 +37,11 @@
     - name: Creating a promo page
       link: /docs/promo-pages/creating-a-promo-page/
 
+- label: Links Pages
+  items:
+    - name: Creating a links page
+      link: /docs/links-pages/creating-a-links-page/
+
 - label: Posts
   items:
     - name: Creating a Post
