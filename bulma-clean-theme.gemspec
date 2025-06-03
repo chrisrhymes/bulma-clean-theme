@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "bulma-clean-theme"
-  spec.version       = "1.2.1"
+  spec.version       = "1.3.0"
   spec.authors       = ["chrisrhymes"]
   spec.email         = ["csrhymes@gmail.com"]
 
