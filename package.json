@@ -3,13 +3,19 @@
     "description": "This is a clean and simple Jekyll Theme built with the Bulma framework, providing a modern looking site to start with.",
     "version": "1.0.0",
     "main": "index.js",
-    "devDependencies": {},
+    "devDependencies": {
+        "tailwindcss": "^3.3.2",
+        "postcss": "^8.4.21",
+        "autoprefixer": "^10.4.13",
+        "daisyui": "^2.52.1",
+        "@tailwindcss/typography": "^0.5.9"
+    },
     "scripts": {
+        "build:css": "tailwindcss -i assets/css/app.css -o assets/css/main.css --minify",
+        "watch:css": "tailwindcss -i assets/css/app.css -o assets/css/main.css --watch",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "author": "chrisrhymes",
     "license": "MIT",
-    "dependencies": {
-        "bulma": "^1.0"
-    }
+    "dependencies": {}
 }
