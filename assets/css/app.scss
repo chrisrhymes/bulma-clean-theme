@@ -1,5 +1,8 @@
 ---
 ---
 
-// Import Main CSS file from theme
-@import "main";
+// Tailwind CSS entry point
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+// ...existing custom styles...

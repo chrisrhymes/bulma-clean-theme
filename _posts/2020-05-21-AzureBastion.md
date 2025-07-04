@@ -1,14 +1,13 @@
 ---
 layout: post
-title:  "Why use a static site generator"
-date:   2024-07-09 10:50:07
-categories: development
-description: "There are many ways to make a website, but what about static site generators"
-image: 'https://www.csrhymes.com//img/static-site-generator.jpg'
-published: true
-canonical_url: https://www.csrhymes.com/development/2018/05/28/why-use-a-static-site-generator.html
+title: Azure Bastion
+description: "Private and fully managed remote access to your virtual machines"
+modified: 2020-05-21
+tags: [Azure, AzureExam]
+categories: [Azure]
+author: Ajeet
+production: true
 ---
-
 
 Organizations always have issues and concerns that how to remove the risk of threats and malware attacks when users connect to VMs (using RDP or SSH) inside the network.
 

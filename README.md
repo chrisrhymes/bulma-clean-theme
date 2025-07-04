@@ -1,11 +1,6 @@
-# bulma-clean-theme
+# blogv2 Jekyll Site
 
-[![Gem Version](https://badge.fury.io/rb/bulma-clean-theme.svg)](https://badge.fury.io/rb/bulma-clean-theme)
-![Gem](https://img.shields.io/gem/dt/bulma-clean-theme.svg)
-
-This is a clean and simple Jekyll Theme built with the [Bulma](https://bulma.io/) framework, providing a modern-looking site to start with. 
-
-The theme uses [Alpine.js](https://github.com/alpinejs/alpine) for its interactive components, such as mobile navbar and notifications.
+This is a modern Jekyll site styled with Tailwind CSS and DaisyUI, inspired by Azure DevOps and MLOps design.
 
 ## Contents
 
@@ -70,9 +65,27 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/chrisr
 
 ## Development
 
-To set up your environment to develop this theme, run `bundle install`.
-
-Your theme is set up just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
+To set up your development environment:
+1. Install Ruby dependencies:
+   ```bash
+   bundle install
+   ```
+2. Install Node.js packages:
+   ```bash
+   npm install
+   ```
+3. Build Tailwind CSS:
+   ```bash
+   npm run build:css
+   ```
+4. Serve locally with Jekyll:
+   ```bash
+   bundle exec jekyll serve
+   ```
+5. For continuous CSS rebuilds, in a separate terminal:
+   ```bash
+   npm run watch:css
+   ```
 
 ## License
 
