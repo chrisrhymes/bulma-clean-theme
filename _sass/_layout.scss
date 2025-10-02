@@ -12,6 +12,14 @@ div.highlight {
     }
 }
 
+.navbar-item .navbar-logo {
+    background: url(../../img/logo_transparent.png) no-repeat;
+    background-size: 172px auto;
+    background-position: 7px;
+    text-indent: -9999px;
+    width: 182px;
+}
+
 .contents {
     box-shadow: $box-shadow;
     padding: 1.5rem;
@@ -37,7 +45,9 @@ div.highlight {
 }
 
 // Alpine.js hide on initial load
-[x-cloak] { display: none !important; }
+[x-cloak] {
+    display: none !important;
+}
 
 .skip-link {
     &:focus {

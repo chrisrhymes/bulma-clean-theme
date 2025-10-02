@@ -1,21 +1,11 @@
-- name: Docs
-  link: /docs/
-- name: Example Pages
-  link: /#
+- name: Projects
+  link: /projects/
   dropdown:
-    - name: Landing Page With Callouts
-      link: /landing/
-    - name: Promo Page
-      link: /promo-page/
-    - name: Sponsors Page
-      link: /sponsors/
-    - name: Image Gallery
-      link: /gallery/
-    - name: Products
-      link: /products/
-    - name: Recipe Page
-      link: /example-recipe/
-    - name: Showcase
-      link: /showcase/
-- name: Blog
-  link: /blog/
+    - name: MMPUG
+      link: /projects/mmpug
+    - name: BOSS
+      link: /projects/boss
+- name: Publications
+  link: /publications/
+- name: People
+  link: /people/
