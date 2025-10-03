@@ -6,7 +6,7 @@ email: your-email@domain.com
 description: >
   We do Robot Autonomy, for the real-world!
 baseurl: ""
-url: "https://www.csrhymes.com"
+# url: "https://www.csrhymes.com"
 
 permalink: pretty
 #favicon: /path/to/favicon.png
@@ -57,20 +57,11 @@ defaults:
       type: "pages"
     values:
       show_sidebar: true
-  -
-    scope:
-      path: ""
-      type: "posts"
-    values:
-      author: "C.S. Rhymes"
-      layout: post
-      image: https://picsum.photos/id/16/800/600
-      show_sidebar: true
 
 markdown: kramdown
 highlighter: rouge
 
-footer_menu: example_footer_menu
+# footer_menu: example_footer_menu
 
 collections:
   products: 
@@ -80,10 +71,5 @@ collections:
     show_sidebar: false
 
 social:
-  facebook: https://www.facebook.com/
-  instagram: https://www.instagram.com/
-  threads: https://www.threads.net/
-  tiktok: https://www.tiktok.com/
-  x: https://www.x.com/
   youtube: https://www.youtube.com/
   
