@@ -1,15 +1,18 @@
+@use '../node_modules/bulma/sass/utilities/derived-variables' as derived;
+@use '../node_modules/bulma/sass/elements/box' as box;
+
 .category {
     &-product {
         display: block;
         &:hover {
-            outline: solid 2px $link;
+            outline: solid 2px derived.$link;
             border-radius: 0.75rem;
         }
-        &:focus, 
+        &:focus,
         &:active {
-            outline: solid 2px $link;
+            outline: solid 2px derived.$link;
             border-radius: 0.75rem;
-            box-shadow: $box-shadow;
+            box-shadow: box.$box-shadow;
         }
     }
 }

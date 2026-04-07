@@ -1,6 +1,9 @@
+@use '../node_modules/bulma/sass/utilities/initial-variables' as initial;
+@use '../node_modules/bulma/sass/utilities/derived-variables' as derived;
+
 .hero-banner {
-    background: $primary;
-    background: linear-gradient(180deg, $primary 75%, $white 75%);
+    background: derived.$primary;
+    background: linear-gradient(180deg, derived.$primary 75%, initial.$white 75%);
 
     .image img {
         box-shadow: var(--bulma-shadow);
