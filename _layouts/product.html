@@ -69,6 +69,47 @@ layout: default
         </div>
     </div>
 
+    {% assign show_related_posts = page.show_related_posts | default: true %}
+    {% if page.product_code and show_related_posts %}
+        {% assign related_posts = site.posts | where_exp: "post", "post.hidden != true and post.tags contains page.product_code" %}
+        {% if related_posts.size > 0 %}
+            <div class="column is-12">
+                <p class="title is-4">Related Blog Posts</p>
+                <div class="columns is-multiline">
+                    {% for post in related_posts %}
+                        <div class="column is-12-mobile is-6-tablet is-4-desktop">
+                            <div class="card" style="height: 100%; display: flex; flex-direction: column;">
+                                {% if post.image %}
+                                    <div class="card-image">
+                                        <a href="{{ site.baseurl }}{{ post.url }}">
+                                            <img src="{{ post.image }}" alt="{{ post.title }}" style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block;">
+                                        </a>
+                                    </div>
+                                {% endif %}
+                                <div class="card-content" style="display: flex; flex-direction: column; flex: 1;">
+                                    <div class="content" style="flex: 1;">
+                                        <a class="title is-5" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+                                        <p class="is-size-7 has-text-grey mb-3">{{ post.date | date: '%b %-d, %Y' }}</p>
+                                        {% if post.description %}
+                                            <p>{{ post.description }}</p>
+                                        {% elsif post.summary %}
+                                            {{ post.summary | markdownify }}
+                                        {% else %}
+                                            <p>{{ post.excerpt | strip_html | truncate: 180 }}</p>
+                                        {% endif %}
+                                    </div>
+                                    <div class="mt-4">
+                                        <a href="{{ site.baseurl }}{{ post.url }}" class="button is-primary is-small">Read more</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endif %}
+    {% endif %}
+
     {% if site.data.reviews[page.product_code] %}
         <div class="column is-12">
             <p class="title is-4">Reviews</p>

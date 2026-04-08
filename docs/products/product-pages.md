@@ -82,6 +82,36 @@ buttons:
       text: Buy it
 ```
 
+### Related Blog Posts
+
+Product pages can automatically display related blog posts. The feature matches posts by their tags against the product's `product_code`. Any blog post that includes the product code in its `tags` will appear as a card in the "Related Blog Posts" section below the product description.
+
+Related posts are enabled by default when `product_code` is set. To disable them, add the following to the product's front matter:
+
+```yaml
+show_related_posts: false
+```
+
+Each post card displays:
+- Post image (if available, shown with 16:9 aspect ratio)
+- Post title and date
+- Post description, summary, or excerpt (truncated to 180 characters)
+- A "Read more" link
+
+Cards are displayed in a responsive grid — 1 column on mobile, 2 on tablet, and 3 on desktop.
+
+Hidden posts (`hidden: true` in post front matter) are automatically excluded from the list.
+
+**Example blog post tagged with a product code:**
+```yaml
+---
+title: "New features for Product 1"
+tags: ABC124
+image: /img/blog-post.jpg
+description: A short summary of the post.
+---
+```
+
 [View example Product page](/bulma-clean-theme/products/product2/)
 
 ## Product Collections 
